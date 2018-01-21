@@ -1,0 +1,228 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indiv.dev.grad.hit.pro.mapper.AppUriIssueMapper" >
+  <resultMap id="BaseResultMap" type="indiv.dev.grad.hit.pro.pojo.AppUriIssue" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="app_name" property="appName" jdbcType="VARCHAR" />
+    <result column="uri" property="uri" jdbcType="VARCHAR" />
+    <result column="issue_id" property="issueId" jdbcType="INTEGER" />
+    <result column="convert_uri" property="convertUri" jdbcType="VARCHAR" />
+    <result column="issue_level" property="issueLevel" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, app_name, uri, issue_id, convert_uri, issue_level
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="indiv.dev.grad.hit.pro.example.AppUriIssueExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from app_uri_issue
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from app_uri_issue
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from app_uri_issue
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="indiv.dev.grad.hit.pro.example.AppUriIssueExample" >
+    delete from app_uri_issue
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriIssue" >
+    insert into app_uri_issue (id, app_name, uri, 
+      issue_id, convert_uri, issue_level
+      )
+    values (#{id,jdbcType=INTEGER}, #{appName,jdbcType=VARCHAR}, #{uri,jdbcType=VARCHAR}, 
+      #{issueId,jdbcType=INTEGER}, #{convertUri,jdbcType=VARCHAR}, #{issueLevel,jdbcType=TINYINT}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriIssue" >
+    insert into app_uri_issue
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="appName != null" >
+        app_name,
+      </if>
+      <if test="uri != null" >
+        uri,
+      </if>
+      <if test="issueId != null" >
+        issue_id,
+      </if>
+      <if test="convertUri != null" >
+        convert_uri,
+      </if>
+      <if test="issueLevel != null" >
+        issue_level,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="appName != null" >
+        #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="uri != null" >
+        #{uri,jdbcType=VARCHAR},
+      </if>
+      <if test="issueId != null" >
+        #{issueId,jdbcType=INTEGER},
+      </if>
+      <if test="convertUri != null" >
+        #{convertUri,jdbcType=VARCHAR},
+      </if>
+      <if test="issueLevel != null" >
+        #{issueLevel,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="indiv.dev.grad.hit.pro.example.AppUriIssueExample" resultType="java.lang.Integer" >
+    select count(*) from app_uri_issue
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update app_uri_issue
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.appName != null" >
+        app_name = #{record.appName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uri != null" >
+        uri = #{record.uri,jdbcType=VARCHAR},
+      </if>
+      <if test="record.issueId != null" >
+        issue_id = #{record.issueId,jdbcType=INTEGER},
+      </if>
+      <if test="record.convertUri != null" >
+        convert_uri = #{record.convertUri,jdbcType=VARCHAR},
+      </if>
+      <if test="record.issueLevel != null" >
+        issue_level = #{record.issueLevel,jdbcType=TINYINT},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update app_uri_issue
+    set id = #{record.id,jdbcType=INTEGER},
+      app_name = #{record.appName,jdbcType=VARCHAR},
+      uri = #{record.uri,jdbcType=VARCHAR},
+      issue_id = #{record.issueId,jdbcType=INTEGER},
+      convert_uri = #{record.convertUri,jdbcType=VARCHAR},
+      issue_level = #{record.issueLevel,jdbcType=TINYINT}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriIssue" >
+    update app_uri_issue
+    <set >
+      <if test="appName != null" >
+        app_name = #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="uri != null" >
+        uri = #{uri,jdbcType=VARCHAR},
+      </if>
+      <if test="issueId != null" >
+        issue_id = #{issueId,jdbcType=INTEGER},
+      </if>
+      <if test="convertUri != null" >
+        convert_uri = #{convertUri,jdbcType=VARCHAR},
+      </if>
+      <if test="issueLevel != null" >
+        issue_level = #{issueLevel,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriIssue" >
+    update app_uri_issue
+    set app_name = #{appName,jdbcType=VARCHAR},
+      uri = #{uri,jdbcType=VARCHAR},
+      issue_id = #{issueId,jdbcType=INTEGER},
+      convert_uri = #{convertUri,jdbcType=VARCHAR},
+      issue_level = #{issueLevel,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

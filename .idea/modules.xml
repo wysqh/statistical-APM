@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/pinpoint-controller/pinpoint-controller.iml" filepath="$PROJECT_DIR$/pinpoint-controller/pinpoint-controller.iml" />
+      <module fileurl="file://$PROJECT_DIR$/pinpoint-service/pinpoint-service.iml" filepath="$PROJECT_DIR$/pinpoint-service/pinpoint-service.iml" />
+      <module fileurl="file://$PROJECT_DIR$/statistical-APM.iml" filepath="$PROJECT_DIR$/statistical-APM.iml" />
+    </modules>
+  </component>
+</project>

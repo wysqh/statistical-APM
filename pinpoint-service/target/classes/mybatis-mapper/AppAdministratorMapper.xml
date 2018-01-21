@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indiv.dev.grad.hit.pro.mapper.AppAdministratorMapper" >
+  <resultMap id="BaseResultMap" type="indiv.dev.grad.hit.pro.pojo.AppAdministrator" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="app_name" property="appName" jdbcType="VARCHAR" />
+    <result column="app_administrator" property="appAdministrator" jdbcType="VARCHAR" />
+    <result column="app_level" property="appLevel" jdbcType="INTEGER" />
+    <result column="app_system" property="appSystem" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, app_name, app_administrator, app_level, app_system
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="indiv.dev.grad.hit.pro.example.AppAdministratorExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from app_administrator
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from app_administrator
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from app_administrator
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="indiv.dev.grad.hit.pro.example.AppAdministratorExample" >
+    delete from app_administrator
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="indiv.dev.grad.hit.pro.pojo.AppAdministrator" >
+    insert into app_administrator (id, app_name, app_administrator, 
+      app_level, app_system)
+    values (#{id,jdbcType=INTEGER}, #{appName,jdbcType=VARCHAR}, #{appAdministrator,jdbcType=VARCHAR}, 
+      #{appLevel,jdbcType=INTEGER}, #{appSystem,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="indiv.dev.grad.hit.pro.pojo.AppAdministrator" >
+    insert into app_administrator
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="appName != null" >
+        app_name,
+      </if>
+      <if test="appAdministrator != null" >
+        app_administrator,
+      </if>
+      <if test="appLevel != null" >
+        app_level,
+      </if>
+      <if test="appSystem != null" >
+        app_system,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="appName != null" >
+        #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="appAdministrator != null" >
+        #{appAdministrator,jdbcType=VARCHAR},
+      </if>
+      <if test="appLevel != null" >
+        #{appLevel,jdbcType=INTEGER},
+      </if>
+      <if test="appSystem != null" >
+        #{appSystem,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="indiv.dev.grad.hit.pro.example.AppAdministratorExample" resultType="java.lang.Integer" >
+    select count(*) from app_administrator
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update app_administrator
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.appName != null" >
+        app_name = #{record.appName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.appAdministrator != null" >
+        app_administrator = #{record.appAdministrator,jdbcType=VARCHAR},
+      </if>
+      <if test="record.appLevel != null" >
+        app_level = #{record.appLevel,jdbcType=INTEGER},
+      </if>
+      <if test="record.appSystem != null" >
+        app_system = #{record.appSystem,jdbcType=VARCHAR},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update app_administrator
+    set id = #{record.id,jdbcType=INTEGER},
+      app_name = #{record.appName,jdbcType=VARCHAR},
+      app_administrator = #{record.appAdministrator,jdbcType=VARCHAR},
+      app_level = #{record.appLevel,jdbcType=INTEGER},
+      app_system = #{record.appSystem,jdbcType=VARCHAR}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="indiv.dev.grad.hit.pro.pojo.AppAdministrator" >
+    update app_administrator
+    <set >
+      <if test="appName != null" >
+        app_name = #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="appAdministrator != null" >
+        app_administrator = #{appAdministrator,jdbcType=VARCHAR},
+      </if>
+      <if test="appLevel != null" >
+        app_level = #{appLevel,jdbcType=INTEGER},
+      </if>
+      <if test="appSystem != null" >
+        app_system = #{appSystem,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="indiv.dev.grad.hit.pro.pojo.AppAdministrator" >
+    update app_administrator
+    set app_name = #{appName,jdbcType=VARCHAR},
+      app_administrator = #{appAdministrator,jdbcType=VARCHAR},
+      app_level = #{appLevel,jdbcType=INTEGER},
+      app_system = #{appSystem,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

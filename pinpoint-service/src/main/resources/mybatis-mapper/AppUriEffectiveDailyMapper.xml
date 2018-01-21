@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="indiv.dev.grad.hit.pro.mapper.AppUriEffectiveDailyMapper" >
+  <resultMap id="BaseResultMap" type="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="day" property="day" jdbcType="INTEGER" />
+    <result column="app_name" property="appName" jdbcType="VARCHAR" />
+    <result column="uri" property="uri" jdbcType="VARCHAR" />
+    <result column="amount" property="amount" jdbcType="INTEGER" />
+    <result column="avg_rsp" property="avgRsp" jdbcType="REAL" />
+    <result column="max_rsp" property="maxRsp" jdbcType="REAL" />
+    <result column="min_rsp" property="minRsp" jdbcType="REAL" />
+    <result column="slow_count" property="slowCount" jdbcType="INTEGER" />
+    <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
+  </resultMap>
+  <sql id="Example_Where_Clause" >
+    <where >
+      <foreach collection="oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Update_By_Example_Where_Clause" >
+    <where >
+      <foreach collection="example.oredCriteria" item="criteria" separator="or" >
+        <if test="criteria.valid" >
+          <trim prefix="(" suffix=")" prefixOverrides="and" >
+            <foreach collection="criteria.criteria" item="criterion" >
+              <choose >
+                <when test="criterion.noValue" >
+                  and ${criterion.condition}
+                </when>
+                <when test="criterion.singleValue" >
+                  and ${criterion.condition} #{criterion.value}
+                </when>
+                <when test="criterion.betweenValue" >
+                  and ${criterion.condition} #{criterion.value} and #{criterion.secondValue}
+                </when>
+                <when test="criterion.listValue" >
+                  and ${criterion.condition}
+                  <foreach collection="criterion.value" item="listItem" open="(" close=")" separator="," >
+                    #{listItem}
+                  </foreach>
+                </when>
+              </choose>
+            </foreach>
+          </trim>
+        </if>
+      </foreach>
+    </where>
+  </sql>
+  <sql id="Base_Column_List" >
+    id, day, app_name, uri, amount, avg_rsp, max_rsp, min_rsp, slow_count, update_time
+  </sql>
+  <select id="selectByExample" resultMap="BaseResultMap" parameterType="indiv.dev.grad.hit.pro.example.AppUriEffectiveDailyExample" >
+    select
+    <if test="distinct" >
+      distinct
+    </if>
+    <include refid="Base_Column_List" />
+    from app_uri_effective_daily
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+    <if test="orderByClause != null" >
+      order by ${orderByClause}
+    </if>
+  </select>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from app_uri_effective_daily
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from app_uri_effective_daily
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <delete id="deleteByExample" parameterType="indiv.dev.grad.hit.pro.example.AppUriEffectiveDailyExample" >
+    delete from app_uri_effective_daily
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </delete>
+  <insert id="insert" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily" >
+    insert into app_uri_effective_daily (id, day, app_name, 
+      uri, amount, avg_rsp, max_rsp, 
+      min_rsp, slow_count, update_time
+      )
+    values (#{id,jdbcType=INTEGER}, #{day,jdbcType=INTEGER}, #{appName,jdbcType=VARCHAR}, 
+      #{uri,jdbcType=VARCHAR}, #{amount,jdbcType=INTEGER}, #{avgRsp,jdbcType=REAL}, #{maxRsp,jdbcType=REAL}, 
+      #{minRsp,jdbcType=REAL}, #{slowCount,jdbcType=INTEGER}, #{updateTime,jdbcType=TIMESTAMP}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily" >
+    insert into app_uri_effective_daily
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="day != null" >
+        day,
+      </if>
+      <if test="appName != null" >
+        app_name,
+      </if>
+      <if test="uri != null" >
+        uri,
+      </if>
+      <if test="amount != null" >
+        amount,
+      </if>
+      <if test="avgRsp != null" >
+        avg_rsp,
+      </if>
+      <if test="maxRsp != null" >
+        max_rsp,
+      </if>
+      <if test="minRsp != null" >
+        min_rsp,
+      </if>
+      <if test="slowCount != null" >
+        slow_count,
+      </if>
+      <if test="updateTime != null" >
+        update_time,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="day != null" >
+        #{day,jdbcType=INTEGER},
+      </if>
+      <if test="appName != null" >
+        #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="uri != null" >
+        #{uri,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        #{amount,jdbcType=INTEGER},
+      </if>
+      <if test="avgRsp != null" >
+        #{avgRsp,jdbcType=REAL},
+      </if>
+      <if test="maxRsp != null" >
+        #{maxRsp,jdbcType=REAL},
+      </if>
+      <if test="minRsp != null" >
+        #{minRsp,jdbcType=REAL},
+      </if>
+      <if test="slowCount != null" >
+        #{slowCount,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null" >
+        #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </trim>
+  </insert>
+  <select id="countByExample" parameterType="indiv.dev.grad.hit.pro.example.AppUriEffectiveDailyExample" resultType="java.lang.Integer" >
+    select count(*) from app_uri_effective_daily
+    <if test="_parameter != null" >
+      <include refid="Example_Where_Clause" />
+    </if>
+  </select>
+  <update id="updateByExampleSelective" parameterType="map" >
+    update app_uri_effective_daily
+    <set >
+      <if test="record.id != null" >
+        id = #{record.id,jdbcType=INTEGER},
+      </if>
+      <if test="record.day != null" >
+        day = #{record.day,jdbcType=INTEGER},
+      </if>
+      <if test="record.appName != null" >
+        app_name = #{record.appName,jdbcType=VARCHAR},
+      </if>
+      <if test="record.uri != null" >
+        uri = #{record.uri,jdbcType=VARCHAR},
+      </if>
+      <if test="record.amount != null" >
+        amount = #{record.amount,jdbcType=INTEGER},
+      </if>
+      <if test="record.avgRsp != null" >
+        avg_rsp = #{record.avgRsp,jdbcType=REAL},
+      </if>
+      <if test="record.maxRsp != null" >
+        max_rsp = #{record.maxRsp,jdbcType=REAL},
+      </if>
+      <if test="record.minRsp != null" >
+        min_rsp = #{record.minRsp,jdbcType=REAL},
+      </if>
+      <if test="record.slowCount != null" >
+        slow_count = #{record.slowCount,jdbcType=INTEGER},
+      </if>
+      <if test="record.updateTime != null" >
+        update_time = #{record.updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByExample" parameterType="map" >
+    update app_uri_effective_daily
+    set id = #{record.id,jdbcType=INTEGER},
+      day = #{record.day,jdbcType=INTEGER},
+      app_name = #{record.appName,jdbcType=VARCHAR},
+      uri = #{record.uri,jdbcType=VARCHAR},
+      amount = #{record.amount,jdbcType=INTEGER},
+      avg_rsp = #{record.avgRsp,jdbcType=REAL},
+      max_rsp = #{record.maxRsp,jdbcType=REAL},
+      min_rsp = #{record.minRsp,jdbcType=REAL},
+      slow_count = #{record.slowCount,jdbcType=INTEGER},
+      update_time = #{record.updateTime,jdbcType=TIMESTAMP}
+    <if test="_parameter != null" >
+      <include refid="Update_By_Example_Where_Clause" />
+    </if>
+  </update>
+  <update id="updateByPrimaryKeySelective" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily" >
+    update app_uri_effective_daily
+    <set >
+      <if test="day != null" >
+        day = #{day,jdbcType=INTEGER},
+      </if>
+      <if test="appName != null" >
+        app_name = #{appName,jdbcType=VARCHAR},
+      </if>
+      <if test="uri != null" >
+        uri = #{uri,jdbcType=VARCHAR},
+      </if>
+      <if test="amount != null" >
+        amount = #{amount,jdbcType=INTEGER},
+      </if>
+      <if test="avgRsp != null" >
+        avg_rsp = #{avgRsp,jdbcType=REAL},
+      </if>
+      <if test="maxRsp != null" >
+        max_rsp = #{maxRsp,jdbcType=REAL},
+      </if>
+      <if test="minRsp != null" >
+        min_rsp = #{minRsp,jdbcType=REAL},
+      </if>
+      <if test="slowCount != null" >
+        slow_count = #{slowCount,jdbcType=INTEGER},
+      </if>
+      <if test="updateTime != null" >
+        update_time = #{updateTime,jdbcType=TIMESTAMP},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily" >
+    update app_uri_effective_daily
+    set day = #{day,jdbcType=INTEGER},
+      app_name = #{appName,jdbcType=VARCHAR},
+      uri = #{uri,jdbcType=VARCHAR},
+      amount = #{amount,jdbcType=INTEGER},
+      avg_rsp = #{avgRsp,jdbcType=REAL},
+      max_rsp = #{maxRsp,jdbcType=REAL},
+      min_rsp = #{minRsp,jdbcType=REAL},
+      slow_count = #{slowCount,jdbcType=INTEGER},
+      update_time = #{updateTime,jdbcType=TIMESTAMP}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

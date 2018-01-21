@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" name="pinpoint-controller:war">
+    <output-path>$PROJECT_DIR$/pinpoint-controller/target</output-path>
+    <root id="archive" name="pinpoint-controller.war">
+      <element id="artifact" artifact-name="pinpoint-controller:war exploded" />
+    </root>
+  </artifact>
+</component>
