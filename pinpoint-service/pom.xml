@@ -39,9 +39,9 @@
         </dependency>
 
         <dependency>
-            <groupId>org.apache.ibatis</groupId>
-            <artifactId>ibatis-core</artifactId>
-            <version>3.0</version>
+            <groupId>org.mybatis</groupId>
+            <artifactId>mybatis</artifactId>
+            <version>3.3.0</version>
         </dependency>
 
         <!-- 添加dubbo和zookeeper的jar包,-->

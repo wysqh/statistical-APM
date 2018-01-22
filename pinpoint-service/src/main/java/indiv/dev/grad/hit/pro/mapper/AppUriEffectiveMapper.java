@@ -3,6 +3,7 @@ package indiv.dev.grad.hit.pro.mapper;
 import indiv.dev.grad.hit.pro.example.AppUriEffectiveExample;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import org.apache.ibatis.annotations.Param;
+import org.apache.ibatis.annotations.Select;
 
 import java.util.List;
 
@@ -18,6 +19,8 @@ public interface AppUriEffectiveMapper {
     int insertSelective(AppUriEffective record);
 
     List<AppUriEffective> selectByExample(AppUriEffectiveExample example);
+
+    List<String> selectApplication();
 
     AppUriEffective selectByPrimaryKey(Integer id);
 

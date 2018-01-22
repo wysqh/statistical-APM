@@ -335,4 +335,7 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectApplication" resultType="java.lang.String">
+      SELECT DISTINCT app_name FROM app_uri_effective
+  </select>
 </mapper>

@@ -10,7 +10,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class TestApi {
-    public static void main(String[] args) {
+    public void getAllapplicationName() {
         SqlSession session = DbConnUtils.getSession().openSession();
         List<AppUriEffective> appUriEffectives = null;
         List<String> appNameList = null;
@@ -32,5 +32,30 @@ public class TestApi {
         for (String str: appNameList) {
             System.out.println(str);
         }
+    }
+
+    List<String> getApplicationDistinct() {
+        SqlSession session = DbConnUtils.getSession().openSession();
+
+        List<String> appNames = null;
+        try {
+            AppUriEffectiveMapper appUriEffectiveMapper = session.getMapper(AppUriEffectiveMapper.class);
+            appNames = appUriEffectiveMapper.selectApplication();
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        for (String str: appNames) {
+            System.out.println(str);
+        }
+
+        return appNames;
+    }
+
+    public static void main(String[] args) {
+        TestApi testApi = new TestApi();
+        testApi.getApplicationDistinct();
     }
 }

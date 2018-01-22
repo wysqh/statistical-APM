@@ -19,4 +19,10 @@ public class ModulePerformanceController {
     List<String> getAllApplications() {
         return modulePerformanceService.getAllApplications();
     }
+
+    @RequestMapping("/getApplications")
+    @ResponseBody
+    List<String> getApplications() {
+        return modulePerformanceService.getApplications();
+    }
 }
