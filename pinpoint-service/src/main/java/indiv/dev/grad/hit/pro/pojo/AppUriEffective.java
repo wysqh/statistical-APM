@@ -8,27 +8,27 @@ public class AppUriEffective implements Serializable {
 
     private Integer start;
 
-    private String appName;
+    private String app_name;
 
     private String uri;
 
-    private String ipPort;
+    private String ip_port;
 
     private Integer amount;
 
-    private Float avgRsp;
+    private Float avg_rsp;
 
-    private Float maxRsp;
+    private Float max_rsp;
 
-    private Float minRsp;
+    private Float min_rsp;
 
     private String slow;
 
-    private Integer slowCount;
+    private Integer slow_count;
 
     private String exception;
 
-    private Date updateTime;
+    private Date update_time;
 
     public Integer getId() {
         return id;
@@ -46,12 +46,12 @@ public class AppUriEffective implements Serializable {
         this.start = start;
     }
 
-    public String getAppName() {
-        return appName;
+    public String getApp_name() {
+        return app_name;
     }
 
-    public void setAppName(String appName) {
-        this.appName = appName == null ? null : appName.trim();
+    public void setApp_name(String app_name) {
+        this.app_name = app_name;
     }
 
     public String getUri() {
@@ -59,15 +59,15 @@ public class AppUriEffective implements Serializable {
     }
 
     public void setUri(String uri) {
-        this.uri = uri == null ? null : uri.trim();
+        this.uri = uri;
     }
 
-    public String getIpPort() {
-        return ipPort;
+    public String getIp_port() {
+        return ip_port;
     }
 
-    public void setIpPort(String ipPort) {
-        this.ipPort = ipPort == null ? null : ipPort.trim();
+    public void setIp_port(String ip_port) {
+        this.ip_port = ip_port;
     }
 
     public Integer getAmount() {
@@ -78,28 +78,28 @@ public class AppUriEffective implements Serializable {
         this.amount = amount;
     }
 
-    public Float getAvgRsp() {
-        return avgRsp;
+    public Float getAvg_rsp() {
+        return avg_rsp;
     }
 
-    public void setAvgRsp(Float avgRsp) {
-        this.avgRsp = avgRsp;
+    public void setAvg_rsp(Float avg_rsp) {
+        this.avg_rsp = avg_rsp;
     }
 
-    public Float getMaxRsp() {
-        return maxRsp;
+    public Float getMax_rsp() {
+        return max_rsp;
     }
 
-    public void setMaxRsp(Float maxRsp) {
-        this.maxRsp = maxRsp;
+    public void setMax_rsp(Float max_rsp) {
+        this.max_rsp = max_rsp;
     }
 
-    public Float getMinRsp() {
-        return minRsp;
+    public Float getMin_rsp() {
+        return min_rsp;
     }
 
-    public void setMinRsp(Float minRsp) {
-        this.minRsp = minRsp;
+    public void setMin_rsp(Float min_rsp) {
+        this.min_rsp = min_rsp;
     }
 
     public String getSlow() {
@@ -107,15 +107,15 @@ public class AppUriEffective implements Serializable {
     }
 
     public void setSlow(String slow) {
-        this.slow = slow == null ? null : slow.trim();
+        this.slow = slow;
     }
 
-    public Integer getSlowCount() {
-        return slowCount;
+    public Integer getSlow_count() {
+        return slow_count;
     }
 
-    public void setSlowCount(Integer slowCount) {
-        this.slowCount = slowCount;
+    public void setSlow_count(Integer slow_count) {
+        this.slow_count = slow_count;
     }
 
     public String getException() {
@@ -123,14 +123,14 @@ public class AppUriEffective implements Serializable {
     }
 
     public void setException(String exception) {
-        this.exception = exception == null ? null : exception.trim();
+        this.exception = exception;
     }
 
-    public Date getUpdateTime() {
-        return updateTime;
+    public Date getUpdate_time() {
+        return update_time;
     }
 
-    public void setUpdateTime(Date updateTime) {
-        this.updateTime = updateTime;
+    public void setUpdate_time(Date update_time) {
+        this.update_time = update_time;
     }
 }

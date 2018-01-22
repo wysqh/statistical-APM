@@ -22,6 +22,8 @@ public interface AppUriEffectiveMapper {
 
     List<String> selectApplication();
 
+    List<AppUriEffective> selectPerformanceByAppName(@Param("appName") String appName);
+
     AppUriEffective selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") AppUriEffective record, @Param("indiv/dev/grad/hit/pro/example") AppUriEffectiveExample example);

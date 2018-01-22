@@ -1,16 +1,39 @@
 package indiv.dev.grad.hit.pro.VO;
 
+import java.io.Serializable;
 import java.util.Map;
 
-public class PerformanceStatistics {
+public class PerformanceStatistics implements Serializable {
     String uri;
     Integer requests;
-    Double avgResTime;
-    Double maxResTime;
-    Double minResTime;
+    Float avgResTime;
+    Float maxResTime;
+    Float minResTime;
     Integer slowReq;
     Map<String, String> slowTop10;
     Map<String, String> exceptionTop10;
+
+    public PerformanceStatistics(String uri, Integer requests, Float avgResTime, Float maxResTime, Float minResTime, Integer slowReq, Map<String, String> slowTop10, Map<String, String> exceptionTop10) {
+        this.uri = uri;
+        this.requests = requests;
+        this.avgResTime = avgResTime;
+        this.maxResTime = maxResTime;
+        this.minResTime = minResTime;
+        this.slowReq = slowReq;
+        this.slowTop10 = slowTop10;
+        this.exceptionTop10 = exceptionTop10;
+    }
+
+    public PerformanceStatistics(String uri, Integer requests, Float avgResTime, Float maxResTime, Float minResTime, Integer slowReq) {
+        this.uri = uri;
+        this.requests = requests;
+        this.avgResTime = avgResTime;
+        this.maxResTime = maxResTime;
+        this.minResTime = minResTime;
+        this.slowReq = slowReq;
+        this.slowTop10 = null;
+        this.exceptionTop10 = null;
+    }
 
     public String getUri() {
         return uri;
@@ -28,27 +51,27 @@ public class PerformanceStatistics {
         this.requests = requests;
     }
 
-    public Double getAvgResTime() {
+    public Float getAvgResTime() {
         return avgResTime;
     }
 
-    public void setAvgResTime(Double avgResTime) {
+    public void setAvgResTime(Float avgResTime) {
         this.avgResTime = avgResTime;
     }
 
-    public Double getMaxResTime() {
+    public Float getMaxResTime() {
         return maxResTime;
     }
 
-    public void setMaxResTime(Double maxResTime) {
+    public void setMaxResTime(Float maxResTime) {
         this.maxResTime = maxResTime;
     }
 
-    public Double getMinResTime() {
+    public Float getMinResTime() {
         return minResTime;
     }
 
-    public void setMinResTime(Double minResTime) {
+    public void setMinResTime(Float minResTime) {
         this.minResTime = minResTime;
     }
 

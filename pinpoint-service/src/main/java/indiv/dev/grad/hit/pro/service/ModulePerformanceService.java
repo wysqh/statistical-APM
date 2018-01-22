@@ -9,4 +9,5 @@ public interface ModulePerformanceService {
     public List<String> getAllApplications();
     public AppUriEffective getAppUriEffectiveById(Integer id);
     public List<PerformanceStatistics> getStatisticalGroupByUri();
+    public List<PerformanceStatistics> getPerformanceStatisByAppName(String appName);
 }

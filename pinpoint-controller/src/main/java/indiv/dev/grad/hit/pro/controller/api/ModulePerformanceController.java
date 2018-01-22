@@ -1,9 +1,11 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
+import indiv.dev.grad.hit.pro.VO.PerformanceStatistics;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.List;
@@ -20,9 +22,9 @@ public class ModulePerformanceController {
         return modulePerformanceService.getAllApplications();
     }
 
-    @RequestMapping("/getApplications")
+    @RequestMapping("/getPerformanceByAppName")
     @ResponseBody
-    List<String> getApplications() {
-        return modulePerformanceService.getApplications();
+    List<PerformanceStatistics> getPerformanceByAppName(@RequestParam(value="appName")String appName) {
+        return modulePerformanceService.getPerformanceStatisByAppName(appName);
     }
 }

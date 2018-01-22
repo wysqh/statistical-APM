@@ -338,4 +338,8 @@
   <select id="selectApplication" resultType="java.lang.String">
       SELECT DISTINCT app_name FROM app_uri_effective
   </select>
+  <select id="selectPerformanceByAppName" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
+      SELECT *
+       FROM app_uri_effective WHERE app_name = #{appName, jdbcType=VARCHAR}
+  </select>
 </mapper>
