@@ -1,6 +1,9 @@
 package indiv.dev.grad.hit.pro.VO;
 
+import indiv.dev.grad.hit.pro.serializable.MetaTrace;
+
 import java.io.Serializable;
+import java.util.List;
 import java.util.Map;
 
 public class PerformanceStatistics implements Serializable {
@@ -10,18 +13,18 @@ public class PerformanceStatistics implements Serializable {
     Float maxResTime;
     Float minResTime;
     Integer slowReq;
-    Map<String, String> slowTop10;
-    Map<String, String> exceptionTop10;
+    Map<String, List<MetaTrace>> slows;
+    Map<String, List<MetaTrace>> exceptions;
 
-    public PerformanceStatistics(String uri, Integer requests, Float avgResTime, Float maxResTime, Float minResTime, Integer slowReq, Map<String, String> slowTop10, Map<String, String> exceptionTop10) {
+    public PerformanceStatistics(String uri, Integer requests, Float avgResTime, Float maxResTime, Float minResTime, Integer slowReq, Map<String, List<MetaTrace>> slows, Map<String, List<MetaTrace>> exceptions) {
         this.uri = uri;
         this.requests = requests;
         this.avgResTime = avgResTime;
         this.maxResTime = maxResTime;
         this.minResTime = minResTime;
         this.slowReq = slowReq;
-        this.slowTop10 = slowTop10;
-        this.exceptionTop10 = exceptionTop10;
+        this.slows = slows;
+        this.exceptions = exceptions;
     }
 
     public PerformanceStatistics(String uri, Integer requests, Float avgResTime, Float maxResTime, Float minResTime, Integer slowReq) {
@@ -31,8 +34,6 @@ public class PerformanceStatistics implements Serializable {
         this.maxResTime = maxResTime;
         this.minResTime = minResTime;
         this.slowReq = slowReq;
-        this.slowTop10 = null;
-        this.exceptionTop10 = null;
     }
 
     public String getUri() {
@@ -83,19 +84,19 @@ public class PerformanceStatistics implements Serializable {
         this.slowReq = slowReq;
     }
 
-    public Map<String, String> getSlowTop10() {
-        return slowTop10;
+    public Map<String, List<MetaTrace>> getSlows() {
+        return slows;
     }
 
-    public void setSlowTop10(Map<String, String> slowTop10) {
-        this.slowTop10 = slowTop10;
+    public void setSlows(Map<String, List<MetaTrace>> slows) {
+        this.slows = slows;
     }
 
-    public Map<String, String> getExceptionTop10() {
-        return exceptionTop10;
+    public Map<String, List<MetaTrace>> getExceptions() {
+        return exceptions;
     }
 
-    public void setExceptionTop10(Map<String, String> exceptionTop10) {
-        this.exceptionTop10 = exceptionTop10;
+    public void setExceptions(Map<String, List<MetaTrace>> exceptions) {
+        this.exceptions = exceptions;
     }
 }
