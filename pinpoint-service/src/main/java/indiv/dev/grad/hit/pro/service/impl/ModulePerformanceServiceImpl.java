@@ -66,8 +66,8 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
 
         for (AppUriEffective appUriEffective : appUriEffectivesList) {
             PerformanceStatistics performanceStatistics = new PerformanceStatistics(appUriEffective.getUri(),
-                    appUriEffective.getAmount(), appUriEffective.getAvg_rsp(), appUriEffective.getMax_rsp(), appUriEffective.getMin_rsp(),
-                    appUriEffective.getSlow_count());
+                    appUriEffective.getAmount(), appUriEffective.getAvgRsp(), appUriEffective.getMaxRsp(), appUriEffective.getMinRsp(),
+                    appUriEffective.getSlowCount());
             Map<String, String> exceptions = new HashMap<String, String>();
             Map<String, String> slows = new HashMap<String, String>();
 

@@ -15,10 +15,10 @@ public class TestByAppName {
         List<AppUriEffective> effectivesList = appUriEffectiveMapper.selectPerformanceByAppName("sc-api");
         for (AppUriEffective appUriEffective : effectivesList) {
             System.out.println(appUriEffective.getApp_name() + ","
-            + appUriEffective.getIp_port() + ","
+            + appUriEffective.getIpPort() + ","
             + appUriEffective.getUri() + ","
-            + appUriEffective.getMax_rsp() + ","
-            + appUriEffective.getMin_rsp());
+            + appUriEffective.getMaxRsp() + ","
+            + appUriEffective.getMinRsp());
         }
         System.out.println(effectivesList.size());
     }
