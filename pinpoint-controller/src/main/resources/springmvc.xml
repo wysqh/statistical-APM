@@ -29,6 +29,9 @@
     <!--视图解析器-->
     <bean class="org.springframework.web.servlet.view.InternalResourceViewResolver"/>
 
+    <!--Angular 前端映射-->
+    <mvc:resources mapping="/dist/**" location="/dist/" />
+    
     <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
     <!-- 使用zookeeper注册中心暴露位置 -->
     <dubbo:application name="dubbo_consumer"></dubbo:application>
