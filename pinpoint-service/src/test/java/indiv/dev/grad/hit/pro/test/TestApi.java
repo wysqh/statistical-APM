@@ -27,7 +27,7 @@ public class TestApi {
 
         appNameList = new ArrayList<String>();
         for (AppUriEffective e : appUriEffectives) {
-            appNameList.add(e.getApp_name());
+            appNameList.add(e.getAppName());
         }
         for (String str: appNameList) {
             System.out.println(str);

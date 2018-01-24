@@ -8,7 +8,7 @@ public class AppUriEffective implements Serializable {
 
     private Integer start;
 
-    private String app_name;
+    private String appName;
 
     private String uri;
 
@@ -46,12 +46,12 @@ public class AppUriEffective implements Serializable {
         this.start = start;
     }
 
-    public String getApp_name() {
-        return app_name;
+    public String getAppName() {
+        return appName;
     }
 
-    public void setApp_name(String app_name) {
-        this.app_name = app_name;
+    public void setAppName(String appName) {
+        this.appName = appName;
     }
 
     public String getUri() {

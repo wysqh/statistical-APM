@@ -342,4 +342,12 @@
       SELECT *
        FROM app_uri_effective WHERE app_name = #{appName, jdbcType=VARCHAR}
   </select>
+  <select id="selectExceptionsByAppName" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
+    SELECT *
+    FROM app_uri_effective WHERE app_name = #{appName, jdbcType=VARCHAR} AND exception <![CDATA[ <> ]]> '[]'
+  </select>
+  <select id="selectSlowsByAppName" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
+      SELECT *
+      FROM app_uri_effective WHERE app_name = #{appName, jdbcType=VARCHAR} AND slow <![CDATA[ <> ]]> '[]'
+  </select>
 </mapper>

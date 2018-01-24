@@ -14,7 +14,7 @@ public class TestByAppName {
         AppUriEffectiveMapper appUriEffectiveMapper = session.getMapper(AppUriEffectiveMapper.class);
         List<AppUriEffective> effectivesList = appUriEffectiveMapper.selectPerformanceByAppName("sc-api");
         for (AppUriEffective appUriEffective : effectivesList) {
-            System.out.println(appUriEffective.getApp_name() + ","
+            System.out.println(appUriEffective.getAppName() + ","
             + appUriEffective.getIpPort() + ","
             + appUriEffective.getUri() + ","
             + appUriEffective.getMaxRsp() + ","

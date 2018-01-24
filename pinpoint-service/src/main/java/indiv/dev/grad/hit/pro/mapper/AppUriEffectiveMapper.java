@@ -24,6 +24,10 @@ public interface AppUriEffectiveMapper {
 
     List<AppUriEffective> selectPerformanceByAppName(@Param("appName") String appName);
 
+    List<AppUriEffective> selectExceptionsByAppName(@Param("appName") String appName);
+
+    List<AppUriEffective> selectSlowsByAppName(@Param("appName") String appName);
+
     AppUriEffective selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") AppUriEffective record, @Param("indiv/dev/grad/hit/pro/example") AppUriEffectiveExample example);

@@ -1,5 +1,7 @@
 package indiv.dev.grad.hit.pro.serializable;
 
+import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
+
 import java.io.Serializable;
 import java.math.BigInteger;
 
