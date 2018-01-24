@@ -15,7 +15,7 @@ import java.util.Map;
 
 @Controller
 @RequestMapping("/pinpoint")
-public class ModulePerformanceController {
+public class ModulePerformanceApiController {
     @Autowired
     private ModulePerformanceService modulePerformanceService;
 

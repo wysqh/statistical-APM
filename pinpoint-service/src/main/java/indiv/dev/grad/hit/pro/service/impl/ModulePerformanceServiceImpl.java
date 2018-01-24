@@ -5,7 +5,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import indiv.dev.grad.hit.pro.VO.PerformanceStatistics;
 import indiv.dev.grad.hit.pro.example.AppUriEffectiveExample;
+import indiv.dev.grad.hit.pro.mapper.AppAdministratorMapper;
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
+import indiv.dev.grad.hit.pro.pojo.AppAdministrator;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.serializable.ExceptionInfo;
 import indiv.dev.grad.hit.pro.serializable.MetaTrace;
@@ -34,6 +36,21 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         }
 
         return appNameList;
+    }
+
+    public String getApplicationById(Integer appId) {
+        SqlSession session = DbConnUtils.getSession().openSession();
+        String appName = "";
+        try {
+            AppAdministratorMapper administratorMapper = session.getMapper(AppAdministratorMapper.class);
+            appName = administratorMapper.selectApplicationById(appId);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return appName;
     }
 
     public AppUriEffective getAppUriEffectiveById(Integer id) {

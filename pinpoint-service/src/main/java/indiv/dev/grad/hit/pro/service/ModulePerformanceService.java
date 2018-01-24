@@ -11,6 +11,7 @@ import java.util.Map;
 
 public interface ModulePerformanceService {
     public List<String> getAllApplications();
+    public String getApplicationById(Integer appId);
     public AppUriEffective getAppUriEffectiveById(Integer id);
     public List<PerformanceStatistics> getPerformanceStatisByAppName(String appName);
     public List<MetaTrace> transferString2Json(String slow);

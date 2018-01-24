@@ -25,6 +25,8 @@ public interface AppAdministratorMapper {
 
     int updateByExample(@Param("record") AppAdministrator record, @Param("indiv/dev/grad/hit/pro/example") AppAdministratorExample example);
 
+    String selectApplicationById(@Param("id") Integer id);
+
     int updateByPrimaryKeySelective(AppAdministrator record);
 
     int updateByPrimaryKey(AppAdministrator record);

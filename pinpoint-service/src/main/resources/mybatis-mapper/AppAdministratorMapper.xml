@@ -208,4 +208,7 @@
       app_system = #{appSystem,jdbcType=VARCHAR}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectApplicationById" parameterType="java.lang.Integer" resultType="java.lang.String">
+    SELECT app_name FROM app_administrator WHERE id = #{id, jdbcType=INTEGER}
+  </select>
 </mapper>
