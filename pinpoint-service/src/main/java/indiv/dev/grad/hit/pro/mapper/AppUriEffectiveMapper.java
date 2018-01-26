@@ -28,6 +28,12 @@ public interface AppUriEffectiveMapper {
 
     List<AppUriEffective> selectSlowsByAppName(@Param("appName") String appName);
 
+    List<AppUriEffective> selectAppEffectives();
+
+    List<AppUriEffective> selectAppEffectivesWithLimit(@Param("limits")Integer limits);
+
+    int selectTotalCount();
+
     AppUriEffective selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") AppUriEffective record, @Param("indiv/dev/grad/hit/pro/example") AppUriEffectiveExample example);

@@ -5,6 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import indiv.dev.grad.hit.pro.VO.PerformanceStatistics;
 import indiv.dev.grad.hit.pro.example.AppUriEffectiveExample;
+import indiv.dev.grad.hit.pro.exceptions.QueryTimeoutException;
 import indiv.dev.grad.hit.pro.mapper.AppAdministratorMapper;
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
 import indiv.dev.grad.hit.pro.pojo.AppAdministrator;
@@ -188,5 +189,26 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         }
 
         return slowMap;
+    }
+
+    public List<AppUriEffective> getAppUriEffectives() {
+        SqlSession session = DbConnUtils.getSession().openSession();
+        List<AppUriEffective> appUriEffectiveList = null;
+        final Integer LIMITS = 100;
+
+        try {
+            AppUriEffectiveMapper appUriEffectiveMapper = session.getMapper(AppUriEffectiveMapper.class);
+            if (appUriEffectiveMapper.selectTotalCount() > LIMITS) {
+                appUriEffectiveList = appUriEffectiveMapper.selectAppEffectivesWithLimit(LIMITS);
+            } else {
+                appUriEffectiveList = appUriEffectiveMapper.selectAppEffectives();
+            }
+        } catch (Exception e){
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return appUriEffectiveList;
     }
 }

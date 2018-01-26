@@ -1,5 +1,7 @@
 package indiv.dev.grad.hit.pro.controller.rest;
 
+import indiv.dev.grad.hit.pro.exceptions.NoContentException;
+import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -11,8 +13,8 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.List;
 
 @Controller
-@RequestMapping("/module")
-public class MdlPfmRestController {
+@RequestMapping("/api")
+public class ApplicationRestController {
     @Autowired
     private ModulePerformanceService modulePerformanceService;
 
@@ -26,5 +28,21 @@ public class MdlPfmRestController {
     @ResponseBody
     public String getApplicationsById(@PathVariable("id") Integer appId) {
         return modulePerformanceService.getApplicationById(appId);
+    }
+
+    @RequestMapping(value = "/effectives", method = RequestMethod.GET)
+    @ResponseBody
+    public List<AppUriEffective> getAllEffectives() {
+        return modulePerformanceService.getAppUriEffectives();
+    }
+
+    @RequestMapping(value = "/effectives/{id}", method = RequestMethod.GET)
+    @ResponseBody
+    public AppUriEffective getEffectiveById(@PathVariable("id") Integer id) {
+        AppUriEffective appUriEffective = modulePerformanceService.getAppUriEffectiveById(id);
+        if (appUriEffective == null) {
+            throw new NoContentException();
+        }
+        return appUriEffective;
     }
 }

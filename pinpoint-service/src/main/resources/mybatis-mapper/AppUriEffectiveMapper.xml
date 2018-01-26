@@ -350,4 +350,16 @@
       SELECT *
       FROM app_uri_effective WHERE app_name = #{appName, jdbcType=VARCHAR} AND slow <![CDATA[ <> ]]> '[]'
   </select>
+  <select id="selectAppEffectives" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
+    SELECT *
+    FROM app_uri_effective
+  </select>
+  <select id="selectAppEffectivesWithLimit" parameterType="java.lang.Integer" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
+    SELECT *
+    FROM app_uri_effective limit #{limits, jdbcType=INTEGER}
+  </select>
+  <select id="selectTotalCount" resultType="java.lang.Integer">
+    SELECT COUNT(*) FROM
+    app_uri_effective
+  </select>
 </mapper>
