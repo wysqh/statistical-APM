@@ -225,7 +225,7 @@ var ApplicationsService = /** @class */ (function () {
     }
     ApplicationsService.prototype.getApplications = function () {
         var _this = this;
-        return this.http.get("/pinpoint/applications")
+        return this.http.get("/api/applications")
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["b" /* tap */])(function (applications) { return _this.log("fetches applications"); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError("getApplications", [])));
     };
     ApplicationsService.prototype.log = function (message) {
