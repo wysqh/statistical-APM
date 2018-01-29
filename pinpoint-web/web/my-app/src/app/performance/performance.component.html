@@ -1,0 +1,26 @@
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+  <tr>
+    <th>接口</th>
+    <th>区间内请求数</th>
+    <th>平均相应时间(ms)</th>
+    <th>max(ms)</th>
+    <th>min(ms)</th>
+    <th>3s以上请求数</th>
+    <th>3s以上相应Top10</th>
+    <th>异常请求</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let performance of performances">
+    <td> {{ performance.uri }}</td>
+    <td> {{ performance.reqInPeriod }}</td>
+    <td> {{ performance.avgRspTime }}</td>
+    <td> {{ performance.maxRspTime }}</td>
+    <td> {{ performance.minRspTime }}</td>
+    <td> {{ performance.reqOver3s }}</td>
+    <td> {{ performance.slowTop10 }}</td>
+    <td> {{ performance.exceptionTop10 }}</td>
+  </tr>
+  </tbody>
+</table>

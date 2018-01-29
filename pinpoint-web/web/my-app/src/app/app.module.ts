@@ -13,7 +13,12 @@ import { MessagesComponent }    from './messages/messages.component';
 import { AppRoutingModule }     from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { TestComponent } from './test/test.component';
+import { DataTablesModule } from 'angular-datatables';
 import {ApplicationsService} from "./applications.service";
+import { ChartsComponent } from './charts/charts.component';
+import {HttpModule} from "@angular/http";
+import { PerformanceComponent } from './performance/performance.component';
+import {EffectivesService} from "./effectives.service";
 
 @NgModule({
   imports: [
@@ -21,6 +26,8 @@ import {ApplicationsService} from "./applications.service";
     FormsModule,
     AppRoutingModule,
     HttpClientModule,
+    HttpModule,
+    DataTablesModule,
   ],
   declarations: [
     AppComponent,
@@ -28,9 +35,11 @@ import {ApplicationsService} from "./applications.service";
     HeroesComponent,
     HeroDetailComponent,
     MessagesComponent,
-    TestComponent
+    TestComponent,
+    ChartsComponent,
+    PerformanceComponent
   ],
-  providers: [ HeroService, MessageService, ApplicationsService ],
+  providers: [ HeroService, MessageService, ApplicationsService, EffectivesService ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

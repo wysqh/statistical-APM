@@ -8,8 +8,6 @@ import { of } from 'rxjs/observable/of';
 @Injectable()
 export class ApplicationsService {
 
-  //private baseUrl = 'localhost:8080';
-
   constructor(private http: HttpClient,
               private messageService: MessageService) { }
 

@@ -41,7 +41,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 var routes = [
-    { path: '', redirectTo: '/test', pathMatch: 'full' },
+    //{ path: '', redirectTo: '/test', pathMatch: 'full'},  //思考一下如何解决index.html问题 index.html -> test
     { path: 'heroes', component: __WEBPACK_IMPORTED_MODULE_2__hero_heroes_component__["a" /* HeroesComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_4__hero_detail_hero_detail_component__["a" /* HeroDetailComponent */] },
@@ -89,7 +89,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<h1>{{title}}</h1>-->\n<!--<nav>-->\n  <!--<a routerLink=\"/dashboard\">Dashboard</a>-->\n  <!--<a routerLink=\"/heroes\">Heroes</a>-->\n<!--</nav>-->\n<!--<router-outlet></router-outlet>-->\n<!--<app-messages></app-messages>-->\n<app-test></app-test>\n"
+module.exports = "<!--<h1>{{title}}</h1>-->\n<!--<nav>-->\n  <!--<a routerLink=\"/dashboard\">Dashboard</a>-->\n  <!--<a routerLink=\"/heroes\">Heroes</a>-->\n<!--</nav>-->\n<!--<router-outlet></router-outlet>-->\n<!--<app-messages></app-messages>-->\n<app-performance></app-performance>\n"
 
 /***/ }),
 
@@ -142,13 +142,23 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__app_routing_module__ = __webpack_require__("../../../../../src/app/app-routing.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_12__test_test_component__ = __webpack_require__("../../../../../src/app/test/test.component.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13__applications_service__ = __webpack_require__("../../../../../src/app/applications.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_13_angular_datatables__ = __webpack_require__("../../../../angular-datatables/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_14__applications_service__ = __webpack_require__("../../../../../src/app/applications.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_15__charts_charts_component__ = __webpack_require__("../../../../../src/app/charts/charts.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__performance_performance_component__ = __webpack_require__("../../../../../src/app/performance/performance.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__effectives_service__ = __webpack_require__("../../../../../src/app/effectives.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
+
 
 
 
@@ -173,6 +183,8 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_10__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["b" /* HttpClientModule */],
+                __WEBPACK_IMPORTED_MODULE_16__angular_http__["b" /* HttpModule */],
+                __WEBPACK_IMPORTED_MODULE_13_angular_datatables__["a" /* DataTablesModule */],
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
@@ -180,9 +192,11 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_6__hero_heroes_component__["a" /* HeroesComponent */],
                 __WEBPACK_IMPORTED_MODULE_5__hero_detail_hero_detail_component__["a" /* HeroDetailComponent */],
                 __WEBPACK_IMPORTED_MODULE_9__messages_messages_component__["a" /* MessagesComponent */],
-                __WEBPACK_IMPORTED_MODULE_12__test_test_component__["a" /* TestComponent */]
+                __WEBPACK_IMPORTED_MODULE_12__test_test_component__["a" /* TestComponent */],
+                __WEBPACK_IMPORTED_MODULE_15__charts_charts_component__["a" /* ChartsComponent */],
+                __WEBPACK_IMPORTED_MODULE_17__performance_performance_component__["a" /* PerformanceComponent */]
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__hero_service__["a" /* HeroService */], __WEBPACK_IMPORTED_MODULE_8__message_service__["a" /* MessageService */], __WEBPACK_IMPORTED_MODULE_13__applications_service__["a" /* ApplicationsService */]],
+            providers: [__WEBPACK_IMPORTED_MODULE_7__hero_service__["a" /* HeroService */], __WEBPACK_IMPORTED_MODULE_8__message_service__["a" /* MessageService */], __WEBPACK_IMPORTED_MODULE_14__applications_service__["a" /* ApplicationsService */], __WEBPACK_IMPORTED_MODULE_18__effectives_service__["a" /* EffectivesService */]],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -218,7 +232,6 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 var ApplicationsService = /** @class */ (function () {
-    //private baseUrl = 'localhost:8080';
     function ApplicationsService(http, messageService) {
         this.http = http;
         this.messageService = messageService;
@@ -255,6 +268,81 @@ var ApplicationsService = /** @class */ (function () {
             __WEBPACK_IMPORTED_MODULE_3__message_service__["a" /* MessageService */]])
     ], ApplicationsService);
     return ApplicationsService;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/charts/charts.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>ID</th>\n    <th>First name</th>\n    <th>Last name</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let person of persons\">\n    <td>{{ person.id }}</td>\n    <td>{{ person.firstName }}</td>\n    <td>{{ person.lastName }}</td>\n  </tr>\n  </tbody>\n</table>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/charts/charts.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return ChartsComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_add_operator_map__ = __webpack_require__("../../../../rxjs/_esm5/add/operator/map.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var Person = /** @class */ (function () {
+    function Person() {
+    }
+    return Person;
+}());
+var ChartsComponent = /** @class */ (function () {
+    function ChartsComponent(http) {
+        this.http = http;
+        this.dtOptions = {};
+        this.persons = [];
+        // We use this trigger because fetching the list of persons can be quite long,
+        // thus we ensure the data is fetched before rendering
+        this.dtTrigger = new __WEBPACK_IMPORTED_MODULE_2_rxjs_Subject__["a" /* Subject */]();
+    }
+    ChartsComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dtOptions = {
+            pagingType: 'full_numbers',
+            pageLength: 4
+        };
+        this.http.get('mock-data/data.json')
+            .map(this.extractData)
+            .subscribe(function (persons) {
+            _this.persons = persons;
+            // Calling the DT trigger to manually render the table
+            _this.dtTrigger.next();
+        });
+    };
+    ChartsComponent.prototype.extractData = function (res) {
+        var body = res.json();
+        return body.data || {};
+    };
+    ChartsComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-charts',
+            template: __webpack_require__("../../../../../src/app/charts/charts.component.html")
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_http__["a" /* Http */]])
+    ], ChartsComponent);
+    return ChartsComponent;
 }());
 
 
@@ -326,6 +414,70 @@ var DashboardComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__hero_service__["a" /* HeroService */]])
     ], DashboardComponent);
     return DashboardComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/effectives.service.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return EffectivesService; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_common_http__ = __webpack_require__("../../../common/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__message_service__ = __webpack_require__("../../../../../src/app/message.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_rxjs_observable_of__ = __webpack_require__("../../../../rxjs/_esm5/observable/of.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+
+var EffectivesService = /** @class */ (function () {
+    function EffectivesService(http, messageService) {
+        this.http = http;
+        this.messageService = messageService;
+    }
+    // public get(url: string, body: any, cb, options) {
+    //   const ops = Object.assign({}, {params: body}, options);
+    //   this.http.get(url, ops).subscribe(data => {
+    //     this.format(data, cb, options.notload);
+    //   });
+    // }
+    EffectivesService.prototype.getEffectives = function () {
+        var _this = this;
+        return this.http.get("/api/effectives")
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetches effectivws"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
+    };
+    EffectivesService.prototype.log = function (message) {
+        this.messageService.add("Effectives Service: " + message);
+    };
+    EffectivesService.prototype.handleError = function (op, result) {
+        var _this = this;
+        if (op === void 0) { op = 'operation'; }
+        return function (error) {
+            console.log(error);
+            _this.log(op + " failed: " + error.message);
+            return Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_of__["a" /* of */])(result);
+        };
+    };
+    EffectivesService = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1__angular_common_http__["a" /* HttpClient */],
+            __WEBPACK_IMPORTED_MODULE_2__message_service__["a" /* MessageService */]])
+    ], EffectivesService);
+    return EffectivesService;
 }());
 
 
@@ -670,6 +822,98 @@ var MessagesComponent = /** @class */ (function () {
         __metadata("design:paramtypes", [])
     ], MessagesComponent);
     return MessagesComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/performance/performance.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/performance/performance.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>接口</th>\n    <th>区间内请求数</th>\n    <th>平均相应时间(ms)</th>\n    <th>max(ms)</th>\n    <th>min(ms)</th>\n    <th>3s以上请求数</th>\n    <th>3s以上相应Top10</th>\n    <th>异常请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let performance of performances\">\n    <td> {{ performance.uri }}</td>\n    <td> {{ performance.reqInPeriod }}</td>\n    <td> {{ performance.avgRspTime }}</td>\n    <td> {{ performance.maxRspTime }}</td>\n    <td> {{ performance.minRspTime }}</td>\n    <td> {{ performance.reqOver3s }}</td>\n    <td> {{ performance.slowTop10 }}</td>\n    <td> {{ performance.exceptionTop10 }}</td>\n  </tr>\n  </tbody>\n</table>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/performance/performance.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return PerformanceComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__effectives_service__ = __webpack_require__("../../../../../src/app/effectives.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var PerformanceComponent = /** @class */ (function () {
+    function PerformanceComponent(http, effectiveService) {
+        this.http = http;
+        this.effectiveService = effectiveService;
+        this.dtOptions = {};
+        this.performances = [];
+        this.dtTrigger = new __WEBPACK_IMPORTED_MODULE_1_rxjs_Subject__["a" /* Subject */]();
+    }
+    PerformanceComponent.prototype.ngOnInit = function () {
+        var _this = this;
+        this.dtOptions = {
+            pagingType: 'full_numbers',
+            pageLength: 10
+        };
+        this.effectiveService.getEffectives()
+            .subscribe(function (effectives) {
+            _this.performances = effectives;
+            _this.dtTrigger.next();
+        });
+        // this.http.get('mock-data/effectives.json')
+        //   .map(res => res.json())
+        //   .subscribe(effectives => {
+        //     this.performances = effectives;
+        //     console.log("hello");
+        //     console.log(effectives);
+        //     console.log(this.performances);
+        //     this.dtTrigger.next();
+        //   })
+    };
+    PerformanceComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-performance',
+            template: __webpack_require__("../../../../../src/app/performance/performance.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/performance/performance.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_3__effectives_service__["a" /* EffectivesService */]])
+    ], PerformanceComponent);
+    return PerformanceComponent;
 }());
 
 

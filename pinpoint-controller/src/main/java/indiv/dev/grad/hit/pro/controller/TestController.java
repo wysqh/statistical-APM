@@ -28,7 +28,7 @@ public class TestController {
     @RequestMapping(value = "/testToken")
     @ResponseBody
     public String testString(String token) {
-        if (!this.token.equals(token)) {
+        if (this.token != token) {
             return "error";
         }
 
