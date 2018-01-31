@@ -49,7 +49,7 @@ public class TestController {
     @RequestMapping("/remindExpiredTotal")
     @ResponseBody
     public Map<String, Date> remindExpiredTotal() {
-        Map<String, Date> rtVals = new HashMap<>();
+        Map<String, Date> rtVals = new HashMap<String, Date>();
 
         String dateFormat = "yyyy-MM-dd";
         Long millSec = 24 * 60 * 60 * 1000L;
