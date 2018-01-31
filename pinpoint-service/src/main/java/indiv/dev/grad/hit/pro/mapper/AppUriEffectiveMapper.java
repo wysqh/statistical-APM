@@ -32,6 +32,8 @@ public interface AppUriEffectiveMapper {
 
     List<AppUriEffective> selectAppEffectivesWithLimit(@Param("limits")Integer limits);
 
+    List<AppUriEffective> selectAppUriEffectiveByConditions(@Param("appName")String appName, @Param("start")Long start, @Param("end")Long end);
+
     int selectTotalCount();
 
     AppUriEffective selectByPrimaryKey(Integer id);

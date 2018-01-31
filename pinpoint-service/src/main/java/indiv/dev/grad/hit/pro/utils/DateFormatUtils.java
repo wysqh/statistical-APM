@@ -1,9 +1,8 @@
-package indiv.dev.grad.hit.pro.util;
+package indiv.dev.grad.hit.pro.utils;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import java.text.DateFormat;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
@@ -112,7 +111,7 @@ public class DateFormatUtils {
      * @return
      */
     public static String getStringLastTime(String format, Date dateSrc) {
-        if (StringUtils.isEmpty(format)) {
+        if (format == null || format.length() == 0) {
             format = fullFormat;
         }
         Date lastTime = getLastTime(dateSrc);

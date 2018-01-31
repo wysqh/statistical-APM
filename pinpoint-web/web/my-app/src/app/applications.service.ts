@@ -12,7 +12,7 @@ export class ApplicationsService {
               private messageService: MessageService) { }
 
   getApplications(): Observable<string[]> {
-    return this.http.get<string[]>("/api/applications")
+    return this.http.get<string[]>("/rest/applications")
       .pipe(
         tap(applications=>this.log(`fetches applications`)),
         catchError(this.handleError(`getApplications`, []))

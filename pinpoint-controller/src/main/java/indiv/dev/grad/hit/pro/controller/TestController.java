@@ -57,13 +57,10 @@ public class TestController {
         SimpleDateFormat df = new SimpleDateFormat(dateFormat);
         Date fifteenDaysLater = null;
         Date startTime = null;
-        try {
-            startTime = DateFormatUtils.getDateFromString(dateFormat, "1970-01-01");
-            fifteenDaysLater = DateFormatUtils.getDateFromString(dateFormat, df.format(new Date(date.getTime()
-            +  15 * millSec)));
-        } catch (ParseException e) {
-            e.printStackTrace();
-        }
+
+        startTime = DateFormatUtils.string2date(dateFormat, "1970-01-01");
+        fifteenDaysLater = DateFormatUtils.string2date(dateFormat, df.format(new Date(date.getTime()
+        +  15 * millSec)));
 
         logger.info("testTime: " + startTime);
         logger.info("testTime: " + fifteenDaysLater);

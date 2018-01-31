@@ -362,4 +362,11 @@
     SELECT COUNT(*) FROM
     app_uri_effective
   </select>
+  <select id="selectAppUriEffectiveByConditions" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
+      SELECT *
+    FROM app_uri_effective
+    WHERE app_name = #{appName}
+     AND start &gt;= #{start}
+     AND start &lt;= #{end}
+  </select>
 </mapper>

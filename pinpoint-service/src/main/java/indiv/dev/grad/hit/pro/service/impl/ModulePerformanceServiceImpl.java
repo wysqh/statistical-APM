@@ -211,4 +211,20 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
 
         return appUriEffectiveList;
     }
+
+    public List<AppUriEffective> getUriEffectiveByConditions(Date start, Date end, String appName) {
+        SqlSession sqlSession = DbConnUtils.getSession().openSession();
+        List<AppUriEffective> appUriEffectiveList = null;
+
+        try {
+            AppUriEffectiveMapper appUriEffectiveMapper = sqlSession.getMapper(AppUriEffectiveMapper.class);
+//            appUriEffectiveList = appUriEffectiveMapper.selectAppUriEffectiveByConditions(start.getTime(), end.getTime(), appName);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            sqlSession.close();
+        }
+
+        return appUriEffectiveList;
+    }
 }

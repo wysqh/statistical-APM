@@ -7,13 +7,11 @@ import java.util.Date;
 public class TestDate {
     public static void main(String[] args) {
         Date date = new Date();
-        String dateFormat = "yyyy-MM-dd";
+        String dateFormat = "yyyy-MM-dd HH:mm";
         SimpleDateFormat df = new SimpleDateFormat(dateFormat);
-        Long fifteenDaysLater =  24 * 60 * 60 * 1000L * 15;
-        df.format(new Date(date.getTime() + fifteenDaysLater));
 
         try {
-            System.out.println(df.parse("1970-01-01"));
+            System.out.println(df.parse("2018-01-01 20:30"));
         } catch (ParseException e) {
             e.printStackTrace();
         }
