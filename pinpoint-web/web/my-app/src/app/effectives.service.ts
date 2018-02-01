@@ -20,7 +20,7 @@ export class EffectivesService {
   // }
 
   getEffectives(): Observable<Performance[]> {
-    return this.http.get<Performance[]>("/api/effectives")
+    return this.http.get<Performance[]>("/rest/effectives")
       .pipe(
         tap(effectives => this.log(`fetches effectivws`)),
         catchError(this.handleError(`getEffecives`, []))

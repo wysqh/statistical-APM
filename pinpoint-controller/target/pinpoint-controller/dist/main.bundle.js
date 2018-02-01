@@ -238,7 +238,7 @@ var ApplicationsService = /** @class */ (function () {
     }
     ApplicationsService.prototype.getApplications = function () {
         var _this = this;
-        return this.http.get("/api/applications")
+        return this.http.get("/rest/applications")
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["b" /* tap */])(function (applications) { return _this.log("fetches applications"); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError("getApplications", [])));
     };
     ApplicationsService.prototype.log = function (message) {
@@ -457,7 +457,7 @@ var EffectivesService = /** @class */ (function () {
     // }
     EffectivesService.prototype.getEffectives = function () {
         var _this = this;
-        return this.http.get("/api/effectives")
+        return this.http.get("/rest/effectives")
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetches effectivws"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
     };
     EffectivesService.prototype.log = function (message) {
@@ -849,7 +849,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/performance/performance.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>接口</th>\n    <th>区间内请求数</th>\n    <th>平均相应时间(ms)</th>\n    <th>max(ms)</th>\n    <th>min(ms)</th>\n    <th>3s以上请求数</th>\n    <th>3s以上相应Top10</th>\n    <th>异常请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let performance of performances\">\n    <td> {{ performance.uri }}</td>\n    <td> {{ performance.reqInPeriod }}</td>\n    <td> {{ performance.avgRspTime }}</td>\n    <td> {{ performance.maxRspTime }}</td>\n    <td> {{ performance.minRspTime }}</td>\n    <td> {{ performance.reqOver3s }}</td>\n    <td> {{ performance.slowTop10 }}</td>\n    <td> {{ performance.exceptionTop10 }}</td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>接口</th>\n    <th>区间内请求数</th>\n    <th>平均相应时间(ms)</th>\n    <th>max(ms)</th>\n    <th>min(ms)</th>\n    <th>3s以上请求数</th>\n    <th>3s以上相应Top10</th>\n    <th>异常请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let performance of performances\">\n    <td> {{ performance.uri }}</td>\n    <td> {{ performance.reqInPeriod }}</td>\n    <td> {{ performance.avgRspTime }}</td>\n    <td> {{ performance.maxRspTime }}</td>\n    <td> {{ performance.minRspTime }}</td>\n    <td> {{ performance.reqOver3s }}</td>\n    <td> {{ performance.slowTop10 }}</td>\n    <td> {{ performance.exceptionTop10 }}</td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 

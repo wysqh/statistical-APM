@@ -19,6 +19,8 @@ import { ChartsComponent } from './charts/charts.component';
 import {HttpModule} from "@angular/http";
 import { PerformanceComponent } from './performance/performance.component';
 import {EffectivesService} from "./effectives.service";
+import {BsDatepickerModule, TimepickerModule} from "ngx-bootstrap";
+import { MyTimepickerComponent } from './my-timepicker/my-timepicker.component';
 
 @NgModule({
   imports: [
@@ -28,6 +30,8 @@ import {EffectivesService} from "./effectives.service";
     HttpClientModule,
     HttpModule,
     DataTablesModule,
+    BsDatepickerModule.forRoot(),
+    TimepickerModule.forRoot()
   ],
   declarations: [
     AppComponent,
@@ -37,7 +41,8 @@ import {EffectivesService} from "./effectives.service";
     MessagesComponent,
     TestComponent,
     ChartsComponent,
-    PerformanceComponent
+    PerformanceComponent,
+    MyTimepickerComponent,
   ],
   providers: [ HeroService, MessageService, ApplicationsService, EffectivesService ],
   bootstrap: [ AppComponent ]
