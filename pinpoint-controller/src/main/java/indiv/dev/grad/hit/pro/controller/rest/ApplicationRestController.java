@@ -75,8 +75,8 @@ public class ApplicationRestController {
                 effectiveQuery.getAppName());
 
         if (appUriEffectiveList == null || appUriEffectiveList.isEmpty()) {
-            logger.info("List: " + DateFormatUtils.string2date(format, start).getTime());
-            logger.info("List: " + DateFormatUtils.string2date(format, end).getTime());
+            logger.info("List info:", DateFormatUtils.string2date(format, start).getTime());
+            logger.info("List info:", DateFormatUtils.string2date(format, end).getTime());
         }
         return  appUriEffectiveList;
     }

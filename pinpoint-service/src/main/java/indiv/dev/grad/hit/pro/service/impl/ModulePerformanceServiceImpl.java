@@ -14,6 +14,7 @@ import indiv.dev.grad.hit.pro.serializable.ExceptionInfo;
 import indiv.dev.grad.hit.pro.serializable.MetaTrace;
 import indiv.dev.grad.hit.pro.serializable.SlowInfo;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
+import indiv.dev.grad.hit.pro.utils.DateFormatUtils;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
 import javafx.util.Pair;
 import org.apache.ibatis.jdbc.SQL;
@@ -218,7 +219,10 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
 
         try {
             AppUriEffectiveMapper appUriEffectiveMapper = sqlSession.getMapper(AppUriEffectiveMapper.class);
-//            appUriEffectiveList = appUriEffectiveMapper.selectAppUriEffectiveByConditions(start.getTime(), end.getTime(), appName);
+//            appUriEffectiveList = appUriEffectiveMapper.selectAppUriEffectiveByConditions(appName,
+//                    DateFormatUtils.date2secs(start),
+//                    DateFormatUtils.date2secs(end)
+//                    );
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

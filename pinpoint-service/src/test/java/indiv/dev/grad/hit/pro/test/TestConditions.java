@@ -2,16 +2,12 @@ package indiv.dev.grad.hit.pro.test;
 
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
-import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
-import indiv.dev.grad.hit.pro.service.impl.ModulePerformanceServiceImpl;
 import indiv.dev.grad.hit.pro.utils.DateFormatUtils;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
 import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import org.springframework.beans.factory.annotation.Autowired;
 
-import java.text.DateFormat;
 import java.util.Date;
 import java.util.List;
 
