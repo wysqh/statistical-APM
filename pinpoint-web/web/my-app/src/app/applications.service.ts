@@ -11,11 +11,36 @@ export class ApplicationsService {
   constructor(private http: HttpClient,
               private messageService: MessageService) { }
 
+  private mockUrl: string = "/mock-data/applications.json"; //测试uri
+
+  /*
+      获取所有模块名称
+   */
   getApplications(): Observable<string[]> {
-    return this.http.get<string[]>("/rest/applications")
+    let requestUrl: string = "/rest/applications";  //后端url
+
+    return this.http.get<string[]>(requestUrl)
       .pipe(
         tap(applications=>this.log(`fetches applications`)),
         catchError(this.handleError(`getApplications`, []))
+      )
+  }
+
+  /*
+       获取相似模块名称
+   */
+  getApplicationsBySimilar(term: string): Observable<string[]> {
+    let requestUrl = "/rest/applications/name";   //后端url
+
+    if (!term.trim()) {
+      return of([]);
+    }
+
+    return this.http.get<string[]>(this.mockUrl)
+      .pipe(
+        tap(_ => this.log(`getApplicationsBySimilar`)),
+        catchError(this.handleError<string[]>('searchTerm', [])),
+        tap(_ => this.messageService.clear())
       )
   }
 

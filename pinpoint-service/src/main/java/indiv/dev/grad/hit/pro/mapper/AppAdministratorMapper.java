@@ -19,6 +19,8 @@ public interface AppAdministratorMapper {
 
     List<AppAdministrator> selectByExample(AppAdministratorExample example);
 
+    List<String> selectAppsBySimilar(@Param("word")String word);
+
     AppAdministrator selectByPrimaryKey(Integer id);
 
     int updateByExampleSelective(@Param("record") AppAdministrator record, @Param("indiv/dev/grad/hit/pro/example") AppAdministratorExample example);

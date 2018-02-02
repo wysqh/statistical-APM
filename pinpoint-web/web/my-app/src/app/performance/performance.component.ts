@@ -30,8 +30,7 @@ export class PerformanceComponent implements OnInit {
       })
     // this.http.get('mock-data/effectives.json')
     //   .map(res => res.json())
-    //   .subscribe(effectives => {
-    //     this.performances = effectives;
+    //   .subscribe(effectives => {    //     this.performances = effectives;
     //     console.log("hello");
     //     console.log(effectives);
     //     console.log(this.performances);

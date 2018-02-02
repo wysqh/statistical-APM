@@ -219,10 +219,10 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
 
         try {
             AppUriEffectiveMapper appUriEffectiveMapper = sqlSession.getMapper(AppUriEffectiveMapper.class);
-//            appUriEffectiveList = appUriEffectiveMapper.selectAppUriEffectiveByConditions(appName,
-//                    DateFormatUtils.date2secs(start),
-//                    DateFormatUtils.date2secs(end)
-//                    );
+            appUriEffectiveList = appUriEffectiveMapper.selectAppUriEffectiveByConditions(appName,
+                    DateFormatUtils.date2secs(start),
+                    DateFormatUtils.date2secs(end)
+                    );
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
@@ -230,5 +230,21 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         }
 
         return appUriEffectiveList;
+    }
+
+    public List<String> getAppsNameBySimilar(String name) {
+        SqlSession session = DbConnUtils.getSession().openSession();
+        List<String> list = null;
+
+        try {
+            AppAdministratorMapper appAdministratorMapper = session.getMapper(AppAdministratorMapper.class);
+            list = appAdministratorMapper.selectAppsBySimilar(name);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return list;
     }
 }

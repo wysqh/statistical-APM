@@ -9,6 +9,9 @@ import {Performance} from "./performance";
 @Injectable()
 export class EffectivesService {
 
+  private queryStr: string;
+  private baseUrl: string;
+
   constructor(private http: HttpClient,
               private messageService: MessageService) { }
 
@@ -22,8 +25,26 @@ export class EffectivesService {
   getEffectives(): Observable<Performance[]> {
     return this.http.get<Performance[]>("/rest/effectives")
       .pipe(
-        tap(effectives => this.log(`fetches effectivws`)),
+        tap(effectives => this.log(`fetches effectives`)),
         catchError(this.handleError(`getEffecives`, []))
+      )
+  }
+
+  getEffectivesByConditions(start: string, end: string, app: string): Observable<Performance[]> {
+    this.baseUrl = "/rest/effectives/params?query=";
+    this.queryStr = encodeURI("{") +
+          this.encodeQuery("start") + ":" +
+          this.encodeQuery(start) + "," +
+          this.encodeQuery("end") + ":"   +
+          this.encodeQuery(end) + "," +
+          this.encodeQuery("appName") + ":" +
+          this.encodeQuery(app) +
+      encodeURI("}");
+    console.log(this.baseUrl + this.queryStr);
+    return this.http.get<Performance[]>(this.baseUrl+ this.queryStr)
+      .pipe(
+        tap(effectives => this.log(`fetchs effectives`)),
+        catchError(this.handleError(`getEffecitves`, []))
       )
   }
 
@@ -37,5 +58,9 @@ export class EffectivesService {
       this.log(`${op} failed: ${error.message}`);
       return of(result as T);
     }
+  }
+
+  private encodeQuery(param: string): string {
+    return encodeURI("\"") + encodeURI(param) + encodeURI("\"");
   }
 }

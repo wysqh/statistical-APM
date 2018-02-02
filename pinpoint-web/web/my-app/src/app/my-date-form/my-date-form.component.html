@@ -1,0 +1,35 @@
+<form [formGroup]="dateForm">
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <label>start:
+        <input class="form-control" formControlName="startTime"/>
+      </label>
+      <label>end:
+        <input class="form-control" formControlName="endTime" />
+      </label>
+      <label>appName:
+        <input #searchBox class="form-control"
+               (keyup)="search(searchBox.value)" formControlName="appName"/>
+        <ul class="search-box">
+          <li *ngFor="let sim of similarList | async">
+            {{sim}}
+          </li>
+        </ul>
+      </label>
+    </div>
+    <div class="col-xs-12 col-12 col-md-8 form-group">
+      <button class="btn btn-success" (click)="queryByConditions()">性能概述</button>
+    </div>
+  </div>
+</form>
+
+<pre>
+  <p>{{dateForm.value | json}}</p>
+  <p> {{dateForm.status | json}}</p>
+</pre>
+
+<pre>
+  <div *ngFor="let p of performances">
+    {{p | json}}
+  </div>
+</pre>

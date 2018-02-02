@@ -28,6 +28,7 @@ webpackEmptyAsyncContext.id = "../../../../../src/$$_lazy_route_resource lazy re
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__ = __webpack_require__("../../../../../src/app/dashboard/dashboard.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__hero_detail_hero_detail_component__ = __webpack_require__("../../../../../src/app/hero-detail/hero-detail.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__test_test_component__ = __webpack_require__("../../../../../src/app/test/test.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__my_timepicker_my_timepicker_component__ = __webpack_require__("../../../../../src/app/my-timepicker/my-timepicker.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -40,12 +41,14 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
+
 var routes = [
-    //{ path: '', redirectTo: '/test', pathMatch: 'full'},  //思考一下如何解决index.html问题 index.html -> test
+    //{ path: '', redirectTo: '/timepicker', pathMatch: 'full'},  //思考一下如何解决index.html问题 index.html -> test
     { path: 'heroes', component: __WEBPACK_IMPORTED_MODULE_2__hero_heroes_component__["a" /* HeroesComponent */] },
     { path: 'dashboard', component: __WEBPACK_IMPORTED_MODULE_3__dashboard_dashboard_component__["a" /* DashboardComponent */] },
     { path: 'detail/:id', component: __WEBPACK_IMPORTED_MODULE_4__hero_detail_hero_detail_component__["a" /* HeroDetailComponent */] },
-    { path: 'test', component: __WEBPACK_IMPORTED_MODULE_5__test_test_component__["a" /* TestComponent */] }
+    { path: 'test', component: __WEBPACK_IMPORTED_MODULE_5__test_test_component__["a" /* TestComponent */] },
+    { path: 'timepicker', component: __WEBPACK_IMPORTED_MODULE_6__my_timepicker_my_timepicker_component__["a" /* MyTimepickerComponent */] }
 ];
 var AppRoutingModule = /** @class */ (function () {
     function AppRoutingModule() {
@@ -89,7 +92,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/app.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<!--<h1>{{title}}</h1>-->\n<!--<nav>-->\n  <!--<a routerLink=\"/dashboard\">Dashboard</a>-->\n  <!--<a routerLink=\"/heroes\">Heroes</a>-->\n<!--</nav>-->\n<!--<router-outlet></router-outlet>-->\n<!--<app-messages></app-messages>-->\n<app-performance></app-performance>\n"
+module.exports = "<!--<h1>{{title}}</h1>-->\n<!--<nav>-->\n  <!--<a routerLink=\"/dashboard\">Dashboard</a>-->\n  <!--<a routerLink=\"/heroes\">Heroes</a>-->\n<!--</nav>-->\n<!--<router-outlet></router-outlet>-->\n<!--<app-messages></app-messages>-->\n<!--<app-performance></app-performance>-->\n<!--<app-my-timepicker></app-my-timepicker>-->\n<!--<app-my-datepicker></app-my-datepicker>-->\n<app-my-date-form></app-my-date-form>\n"
 
 /***/ }),
 
@@ -148,12 +151,20 @@ var AppComponent = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_16__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_17__performance_performance_component__ = __webpack_require__("../../../../../src/app/performance/performance.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_18__effectives_service__ = __webpack_require__("../../../../../src/app/effectives.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_19_ngx_bootstrap__ = __webpack_require__("../../../../ngx-bootstrap/index.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_20__my_timepicker_my_timepicker_component__ = __webpack_require__("../../../../../src/app/my-timepicker/my-timepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_21__my_datepicker_my_datepicker_component__ = __webpack_require__("../../../../../src/app/my-datepicker/my-datepicker.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_22__my_date_form_my_date_form_component__ = __webpack_require__("../../../../../src/app/my-date-form/my-date-form.component.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
+
+
 
 
 
@@ -180,11 +191,14 @@ var AppModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["I" /* NgModule */])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_1__angular_platform_browser__["a" /* BrowserModule */],
-                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["a" /* FormsModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["c" /* FormsModule */],
                 __WEBPACK_IMPORTED_MODULE_10__app_routing_module__["a" /* AppRoutingModule */],
                 __WEBPACK_IMPORTED_MODULE_11__angular_common_http__["b" /* HttpClientModule */],
                 __WEBPACK_IMPORTED_MODULE_16__angular_http__["b" /* HttpModule */],
                 __WEBPACK_IMPORTED_MODULE_13_angular_datatables__["a" /* DataTablesModule */],
+                __WEBPACK_IMPORTED_MODULE_2__angular_forms__["g" /* ReactiveFormsModule */],
+                __WEBPACK_IMPORTED_MODULE_19_ngx_bootstrap__["a" /* BsDatepickerModule */].forRoot(),
+                __WEBPACK_IMPORTED_MODULE_19_ngx_bootstrap__["c" /* TimepickerModule */].forRoot()
             ],
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */],
@@ -194,9 +208,18 @@ var AppModule = /** @class */ (function () {
                 __WEBPACK_IMPORTED_MODULE_9__messages_messages_component__["a" /* MessagesComponent */],
                 __WEBPACK_IMPORTED_MODULE_12__test_test_component__["a" /* TestComponent */],
                 __WEBPACK_IMPORTED_MODULE_15__charts_charts_component__["a" /* ChartsComponent */],
-                __WEBPACK_IMPORTED_MODULE_17__performance_performance_component__["a" /* PerformanceComponent */]
+                __WEBPACK_IMPORTED_MODULE_17__performance_performance_component__["a" /* PerformanceComponent */],
+                __WEBPACK_IMPORTED_MODULE_20__my_timepicker_my_timepicker_component__["a" /* MyTimepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_21__my_datepicker_my_datepicker_component__["a" /* MyDatepickerComponent */],
+                __WEBPACK_IMPORTED_MODULE_22__my_date_form_my_date_form_component__["a" /* MyDateFormComponent */],
             ],
-            providers: [__WEBPACK_IMPORTED_MODULE_7__hero_service__["a" /* HeroService */], __WEBPACK_IMPORTED_MODULE_8__message_service__["a" /* MessageService */], __WEBPACK_IMPORTED_MODULE_14__applications_service__["a" /* ApplicationsService */], __WEBPACK_IMPORTED_MODULE_18__effectives_service__["a" /* EffectivesService */]],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_7__hero_service__["a" /* HeroService */],
+                __WEBPACK_IMPORTED_MODULE_8__message_service__["a" /* MessageService */],
+                __WEBPACK_IMPORTED_MODULE_14__applications_service__["a" /* ApplicationsService */],
+                __WEBPACK_IMPORTED_MODULE_18__effectives_service__["a" /* EffectivesService */],
+                __WEBPACK_IMPORTED_MODULE_19_ngx_bootstrap__["b" /* BsLocaleService */],
+            ],
             bootstrap: [__WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* AppComponent */]]
         })
     ], AppModule);
@@ -458,7 +481,22 @@ var EffectivesService = /** @class */ (function () {
     EffectivesService.prototype.getEffectives = function () {
         var _this = this;
         return this.http.get("/rest/effectives")
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetches effectivws"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetches effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
+    };
+    EffectivesService.prototype.getEffectivesByConditions = function (start, end, app) {
+        var _this = this;
+        this.baseUrl = "/rest/effectives/params?query=";
+        this.queryStr = encodeURI("{") +
+            this.encodeQuery("start") + ":" +
+            this.encodeQuery(start) + "," +
+            this.encodeQuery("end") + ":" +
+            this.encodeQuery(end) + "," +
+            this.encodeQuery("appName") + ":" +
+            this.encodeQuery(app) +
+            encodeURI("}");
+        console.log(this.baseUrl + this.queryStr);
+        return this.http.get(this.baseUrl + this.queryStr)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetchs effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecitves", [])));
     };
     EffectivesService.prototype.log = function (message) {
         this.messageService.add("Effectives Service: " + message);
@@ -471,6 +509,9 @@ var EffectivesService = /** @class */ (function () {
             _this.log(op + " failed: " + error.message);
             return Object(__WEBPACK_IMPORTED_MODULE_3_rxjs_observable_of__["a" /* of */])(result);
         };
+    };
+    EffectivesService.prototype.encodeQuery = function (param) {
+        return encodeURI("\"") + encodeURI(param) + encodeURI("\"");
     };
     EffectivesService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["A" /* Injectable */])(),
@@ -828,6 +869,259 @@ var MessagesComponent = /** @class */ (function () {
 
 /***/ }),
 
+/***/ "../../../../../src/app/my-date-form/my-date-form.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-date-form/my-date-form.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<form [formGroup]=\"dateForm\">\n  <div class=\"row\">\n    <div class=\"col-xs-12 col-12 col-md-4 form-group\">\n      <label>start:\n        <input class=\"form-control\" formControlName=\"startTime\"/>\n      </label>\n      <label>end:\n        <input class=\"form-control\" formControlName=\"endTime\" />\n      </label>\n      <label>appName:\n        <input class=\"form-control\" formControlName=\"appName\"/>\n      </label>\n    </div>\n    <div class=\"col-xs-12 col-12 col-md-8 form-group\">\n      <button class=\"btn btn-success\" (click)=\"queryByConditions()\">性能概述</button>\n    </div>\n  </div>\n</form>\n\n<pre>\n  <p>{{dateForm.value | json}}</p>\n  <p> {{dateForm.status | json}}</p>\n</pre>\n\n<pre>\n  <div *ngFor=\"let p of performances\">\n    {{p | json}}\n  </div>\n</pre>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-date-form/my-date-form.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyDateFormComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__effectives_service__ = __webpack_require__("../../../../../src/app/effectives.service.ts");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+
+var MyDateFormComponent = /** @class */ (function () {
+    function MyDateFormComponent(http, effectiveService) {
+        this.http = http;
+        this.effectiveService = effectiveService;
+        this.performances = [];
+    }
+    MyDateFormComponent.prototype.ngOnInit = function () {
+        this.initComponent();
+    };
+    MyDateFormComponent.prototype.initComponent = function () {
+        this.dateForm = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
+            startTime: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](),
+            endTime: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](),
+            appName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]()
+        });
+    };
+    MyDateFormComponent.prototype.queryByConditions = function () {
+        var _this = this;
+        //调试信息
+        console.log(this.dateForm.value.startTime, this.dateForm.value.endTime, this.dateForm.value.appName);
+        this.effectiveService.getEffectivesByConditions(this.dateForm.value.startTime, this.dateForm.value.endTime, this.dateForm.value.appName)
+            .subscribe(function (effectives) {
+            _this.performances = effectives;
+            //调试回调参数
+            console.log(effectives);
+        });
+    };
+    MyDateFormComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-my-date-form',
+            template: __webpack_require__("../../../../../src/app/my-date-form/my-date-form.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/my-date-form/my-date-form.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */],
+            __WEBPACK_IMPORTED_MODULE_3__effectives_service__["a" /* EffectivesService */]])
+    ], MyDateFormComponent);
+    return MyDateFormComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-datepicker/my-datepicker.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-datepicker/my-datepicker.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<link rel=\"stylesheet\" href=\"https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css\">\n<div><br/></div>\n\n<div class=\"row\">\n  <div class=\"col-xs-12 col-12 col-md-4 form-group\">\n    <form [formGroup]=\"myForm\">\n      <input class=\"form-control\"\n              [minDate]=\"minDate\"\n              [maxDate]=\"maxDate\"\n              #dp=\"bsDatepicker\"\n              bsDatepicker [bsValue]=\"bsValue\"\n              formControlName=\"myDate\"\n              [bsConfig]=\"{dateInputFormat: 'YYYY-MM-DD'}\"/>\n    </form>\n  </div>\n  <div class=\"col-xs-12 col-12 col-md-3 form-group\">\n    <button class=\"btn btn-success\" (click)=\"dp.toggle()\">Date Picker</button>\n  </div>\n</div>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-datepicker/my-datepicker.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyDatepickerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap__ = __webpack_require__("../../../../ngx-bootstrap/index.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+
+var MyDatepickerComponent = /** @class */ (function () {
+    function MyDatepickerComponent(_localService) {
+        this._localService = _localService;
+        this.locale = 'en';
+        this.minDate = new Date(2017, 1, 1);
+        this.maxDate = new Date(2018, 12, 31);
+        this.bsValue = new Date();
+        this.myForm = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
+            myDate: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](new Date())
+        });
+    }
+    MyDatepickerComponent.prototype.ngOnInit = function () {
+        this.applyLocale();
+    };
+    MyDatepickerComponent.prototype.applyLocale = function () {
+        this._localService.use(this.locale);
+    };
+    MyDatepickerComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-my-datepicker',
+            template: __webpack_require__("../../../../../src/app/my-datepicker/my-datepicker.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/my-datepicker/my-datepicker.component.css")]
+        }),
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2_ngx_bootstrap__["b" /* BsLocaleService */]])
+    ], MyDatepickerComponent);
+    return MyDatepickerComponent;
+}());
+
+
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-timepicker/my-timepicker.component.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-base.js")(false);
+// imports
+
+
+// module
+exports.push([module.i, "", ""]);
+
+// exports
+
+
+/*** EXPORTS FROM exports-loader ***/
+module.exports = module.exports.toString();
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-timepicker/my-timepicker.component.html":
+/***/ (function(module, exports) {
+
+module.exports = "<div class=\"row\">\n  <div class=\"col-xs-6 col-6 col-md-3\">\n    Hours step is:\n    <select class=\"form-control\" [(ngModel)]=\"hstep\">\n      <option *ngFor=\"let opt of options.hstep\" [value]=\"opt\">{{opt}}</option>\n    </select>\n  </div>\n  <div class=\"col-xs-6 col-6 col-md-3\">\n    Minutes step is:\n    <select class=\"form-control\" [(ngModel)]=\"mstep\">\n      <option *ngFor=\"let opt of options.mstep\" [value]=\"opt\">{{opt}}</option>\n    </select>\n  </div>\n</div>\n\n<timepicker [(ngModel)]=\"mytime\"\n            [showMeridian]=\"ismerdian\"\n            [min]=\"mintime\"\n            [max]=\"maxtime\"\n            [readonlyInput]=\"!isenabled\"\n            [hourStep]=\"hstep\"\n            [minuteStep]=\"mstep\">\n</timepicker>\n\n<pre class=\"alert alert-info\">Time is: {{mytime}}</pre>\n\n<br/>\n\n<button type=\"button\" class=\"btn btn-info\" (click)=\"toggleMode()\">\n  12H / 24H\n</button>\n\n<button type=\"button\" class=\"btn btn-info\" (click)=\"enableMode()\">\n  Enable / Disable input\n</button>\n"
+
+/***/ }),
+
+/***/ "../../../../../src/app/my-timepicker/my-timepicker.component.ts":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyTimepickerComponent; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+var MyTimepickerComponent = /** @class */ (function () {
+    function MyTimepickerComponent() {
+        this.mytime = new Date();
+        this.mintime = new Date(); //设置最小时间
+        this.maxtime = new Date(); //设置最大时间
+        this.hstep = 1; //设置时钟间隔
+        this.mstep = 1; //设置分钟间隔
+        this.ismerdian = false;
+        this.isenabled = true;
+        this.options = {
+            hstep: [1, 2, 3],
+            mstep: [1, 5, 10, 15, 25, 30],
+        };
+    }
+    MyTimepickerComponent.prototype.ngOnInit = function () {
+        console.log(this.mytime.getTime()); //转化到mill second
+        this.setTimeLimits();
+    };
+    MyTimepickerComponent.prototype.setTimeLimits = function () {
+        this.mintime.setHours(6);
+        this.mintime.setMinutes(0);
+        this.maxtime.setHours(22);
+        this.maxtime.setMinutes(0);
+    };
+    MyTimepickerComponent.prototype.toggleMode = function () {
+        this.ismerdian = !this.ismerdian;
+    };
+    MyTimepickerComponent.prototype.enableMode = function () {
+        this.isenabled = !this.isenabled;
+    };
+    MyTimepickerComponent = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
+            selector: 'app-my-timepicker',
+            template: __webpack_require__("../../../../../src/app/my-timepicker/my-timepicker.component.html"),
+            styles: [__webpack_require__("../../../../../src/app/my-timepicker/my-timepicker.component.css")]
+        }),
+        __metadata("design:paramtypes", [])
+    ], MyTimepickerComponent);
+    return MyTimepickerComponent;
+}());
+
+
+
+/***/ }),
+
 /***/ "../../../../../src/app/performance/performance.component.css":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -849,7 +1143,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/performance/performance.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" rel=\"stylesheet\">\n\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>接口</th>\n    <th>区间内请求数</th>\n    <th>平均相应时间(ms)</th>\n    <th>max(ms)</th>\n    <th>min(ms)</th>\n    <th>3s以上请求数</th>\n    <th>3s以上相应Top10</th>\n    <th>异常请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let performance of performances\">\n    <td> {{ performance.uri }}</td>\n    <td> {{ performance.reqInPeriod }}</td>\n    <td> {{ performance.avgRspTime }}</td>\n    <td> {{ performance.maxRspTime }}</td>\n    <td> {{ performance.minRspTime }}</td>\n    <td> {{ performance.reqOver3s }}</td>\n    <td> {{ performance.slowTop10 }}</td>\n    <td> {{ performance.exceptionTop10 }}</td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>接口</th>\n    <th>区间内请求数</th>\n    <th>平均相应时间(ms)</th>\n    <th>max(ms)</th>\n    <th>min(ms)</th>\n    <th>3s以上请求数</th>\n    <th>3s以上相应Top10</th>\n    <th>异常请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let performance of performances\">\n    <td> {{ performance.uri }}</td>\n    <td> {{ performance.reqInPeriod }}</td>\n    <td> {{ performance.avgRspTime }}</td>\n    <td> {{ performance.maxRspTime }}</td>\n    <td> {{ performance.minRspTime }}</td>\n    <td> {{ performance.reqOver3s }}</td>\n    <td> {{ performance.slowTop10 }}</td>\n    <td> {{ performance.exceptionTop10 }}</td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -896,8 +1190,7 @@ var PerformanceComponent = /** @class */ (function () {
         });
         // this.http.get('mock-data/effectives.json')
         //   .map(res => res.json())
-        //   .subscribe(effectives => {
-        //     this.performances = effectives;
+        //   .subscribe(effectives => {    //     this.performances = effectives;
         //     console.log("hello");
         //     console.log(effectives);
         //     console.log(this.performances);
@@ -1020,7 +1313,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 if (__WEBPACK_IMPORTED_MODULE_3__environments_environment__["a" /* environment */].production) {
-    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_13" /* enableProdMode */])();
+    Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_16" /* enableProdMode */])();
 }
 Object(__WEBPACK_IMPORTED_MODULE_1__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_2__app_app_module__["a" /* AppModule */])
     .catch(function (err) { return console.log(err); });

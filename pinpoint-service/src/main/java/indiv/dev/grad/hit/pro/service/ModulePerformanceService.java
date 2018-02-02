@@ -13,6 +13,7 @@ import java.util.Map;
 
 public interface ModulePerformanceService {
     public List<String> getAllApplications();
+    public List<String> getAppsNameBySimilar(String name);
     public String getApplicationById(Integer appId);
     public List<AppUriEffective> getAppUriEffectives();
     public AppUriEffective getAppUriEffectiveById(Integer id);

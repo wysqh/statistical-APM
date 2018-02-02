@@ -39,6 +39,12 @@ public class ApplicationRestController {
         return modulePerformanceService.getApplicationById(appId);
     }
 
+    @RequestMapping(value = "/applications/name/{module}")
+    @ResponseBody
+    public List<String> getSimilarWordsByName(@PathVariable("module")String module) {
+        return modulePerformanceService.getAppsNameBySimilar(module);
+    }
+
     @RequestMapping(value = "/effectives", method = RequestMethod.GET)
     @ResponseBody
     public List<Performance> getAllEffectives() {
@@ -75,8 +81,8 @@ public class ApplicationRestController {
                 effectiveQuery.getAppName());
 
         if (appUriEffectiveList == null || appUriEffectiveList.isEmpty()) {
-            logger.info("List info:", DateFormatUtils.string2date(format, start).getTime());
-            logger.info("List info:", DateFormatUtils.string2date(format, end).getTime());
+            logger.info("List info:" + DateFormatUtils.string2date(format, start).getTime());
+            logger.info("List info:" + DateFormatUtils.string2date(format, end).getTime());
         }
         return  appUriEffectiveList;
     }

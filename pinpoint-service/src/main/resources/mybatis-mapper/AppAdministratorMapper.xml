@@ -211,4 +211,7 @@
   <select id="selectApplicationById" parameterType="java.lang.Integer" resultType="java.lang.String">
     SELECT app_name FROM app_administrator WHERE id = #{id, jdbcType=INTEGER}
   </select>
+  <select id="selectAppsBySimilar" parameterType="java.lang.String" resultType="java.lang.String">
+    SELECT app_name FROM  app_administrator WHERE app_name LIKE  concat('%', #{word, jdbcType=VARCHAR},'%')
+  </select>
 </mapper>

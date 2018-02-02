@@ -1,6 +1,6 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
-import { FormsModule }    from '@angular/forms';
+import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
@@ -19,8 +19,10 @@ import { ChartsComponent } from './charts/charts.component';
 import {HttpModule} from "@angular/http";
 import { PerformanceComponent } from './performance/performance.component';
 import {EffectivesService} from "./effectives.service";
-import {BsDatepickerModule, TimepickerModule} from "ngx-bootstrap";
+import {BsDatepickerModule, BsLocaleService, TimepickerModule} from "ngx-bootstrap";
 import { MyTimepickerComponent } from './my-timepicker/my-timepicker.component';
+import { MyDatepickerComponent } from './my-datepicker/my-datepicker.component';
+import { MyDateFormComponent } from './my-date-form/my-date-form.component';
 
 @NgModule({
   imports: [
@@ -30,6 +32,7 @@ import { MyTimepickerComponent } from './my-timepicker/my-timepicker.component';
     HttpClientModule,
     HttpModule,
     DataTablesModule,
+    ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
     TimepickerModule.forRoot()
   ],
@@ -43,8 +46,16 @@ import { MyTimepickerComponent } from './my-timepicker/my-timepicker.component';
     ChartsComponent,
     PerformanceComponent,
     MyTimepickerComponent,
+    MyDatepickerComponent,
+    MyDateFormComponent,
   ],
-  providers: [ HeroService, MessageService, ApplicationsService, EffectivesService ],
+  providers: [
+    HeroService,
+    MessageService,
+    ApplicationsService,
+    EffectivesService,
+    BsLocaleService,
+  ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }
