@@ -1,11 +1,10 @@
 package indiv.dev.grad.hit.pro.service;
 
-import indiv.dev.grad.hit.pro.VO.PerformanceStatistics;
+import indiv.dev.grad.hit.pro.model.PerformanceStatistics;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.serializable.ExceptionInfo;
 import indiv.dev.grad.hit.pro.serializable.MetaTrace;
 import indiv.dev.grad.hit.pro.serializable.SlowInfo;
-import org.springframework.stereotype.Service;
 
 import java.util.Date;
 import java.util.List;

@@ -10,6 +10,9 @@ public class DbConnUtils {
     private static SqlSessionFactory sqlSessionFactory = null;
     private static Reader reader = null;
 
+    /*
+        多线程单例
+     */
     public static SqlSessionFactory getSession() {
        if (sqlSessionFactory == null) {
            synchronized (SqlSessionFactory.class) {

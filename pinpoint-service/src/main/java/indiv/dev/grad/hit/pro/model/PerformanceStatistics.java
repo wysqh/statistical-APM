@@ -1,4 +1,4 @@
-package indiv.dev.grad.hit.pro.VO;
+package indiv.dev.grad.hit.pro.model;
 
 import indiv.dev.grad.hit.pro.serializable.MetaTrace;
 

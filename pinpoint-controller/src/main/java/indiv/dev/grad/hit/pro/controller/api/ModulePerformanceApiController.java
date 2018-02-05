@@ -1,6 +1,6 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
-import indiv.dev.grad.hit.pro.VO.PerformanceStatistics;
+import indiv.dev.grad.hit.pro.model.PerformanceStatistics;
 import indiv.dev.grad.hit.pro.serializable.ExceptionInfo;
 import indiv.dev.grad.hit.pro.serializable.SlowInfo;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
