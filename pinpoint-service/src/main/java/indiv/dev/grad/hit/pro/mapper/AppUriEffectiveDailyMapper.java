@@ -29,5 +29,9 @@ public interface AppUriEffectiveDailyMapper {
 
     int updateByPrimaryKey(AppUriEffectiveDaily record);
 
-    List<AppUriEffectiveDaily> selectAverageRspByDate(@Param("day")Integer day);
+    List<AppUriEffectiveDaily> selectAverageRspByDate(@Param("day") Integer day);
+
+    List<AppUriEffectiveDaily> selectMaxRspByDate(@Param("day") Integer day);
+
+    List<AppUriEffectiveDaily> selectRequestByDate(@Param("day") Integer day);
 }

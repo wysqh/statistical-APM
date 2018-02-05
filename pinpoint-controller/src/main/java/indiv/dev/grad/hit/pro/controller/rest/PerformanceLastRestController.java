@@ -2,6 +2,7 @@ package indiv.dev.grad.hit.pro.controller.rest;
 
 import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily;
 import indiv.dev.grad.hit.pro.service.ModuleLastPerformanceService;
+import indiv.dev.grad.hit.pro.util.BaseObjectResult;
 import indiv.dev.grad.hit.pro.vo.AverageResponseVO;
 import indiv.dev.grad.hit.pro.vo.MaxResponseVO;
 import indiv.dev.grad.hit.pro.vo.RequestVO;
@@ -32,30 +33,56 @@ public class PerformanceLastRestController {
 
     @RequestMapping(value = "/statistics/avgRsp/{period}", method = RequestMethod.GET)
     @ResponseBody
-    public List<AverageResponseVO> getAverageResponse(@PathVariable(value = "period") Integer period){
+    public BaseObjectResult<List<AverageResponseVO>> getAverageResponse(@PathVariable(value = "period") Integer period){
         List<AppUriEffectiveDaily> appUriEffectiveDailyList =
                 moduleLastPerformanceService.getAverageResponseDaily(period);
         List<AverageResponseVO> averageResponseVOList = null;
         if (appUriEffectiveDailyList == null || appUriEffectiveDailyList.isEmpty()) {
-            logger.info("In avgRsp periodId: " +  period);
+            logger.info("In avgRsp periodId: " +  period);;
         } else {
             averageResponseVOList = new ArrayList<AverageResponseVO>();
             for (AppUriEffectiveDaily appUriEffectiveDaily : appUriEffectiveDailyList) {
                 averageResponseVOList.add(AverageResponseVO.doTransform(appUriEffectiveDaily));
             }
         }
-        return averageResponseVOList;
+        return new BaseObjectResult<List<AverageResponseVO>>("success", true,
+                averageResponseVOList);
     }
 
-    @RequestMapping(value = "/statistics/maxRsp", method = RequestMethod.GET)
+    @RequestMapping(value = "/statistics/maxRsp/{period}", method = RequestMethod.GET)
     @ResponseBody
-    public List<MaxResponseVO> getMaxResponse() {
-        return null;
+    public BaseObjectResult<List<MaxResponseVO>> getMaxResponse(@PathVariable(value = "period") Integer period) {
+        List<AppUriEffectiveDaily> appUriEffectiveDailyList =
+                moduleLastPerformanceService.getMaxResponseDaily(period);
+        List<MaxResponseVO> maxResponseVOList = null;
+        if (appUriEffectiveDailyList == null || appUriEffectiveDailyList.isEmpty()) {
+            logger.info("In maxRsp periodId: " + period);
+        } else {
+            maxResponseVOList = new ArrayList<MaxResponseVO>();
+            for (AppUriEffectiveDaily appUriEffectiveDaily: appUriEffectiveDailyList) {
+                maxResponseVOList.add(MaxResponseVO.doTransform(appUriEffectiveDaily));
+            }
+        }
+        return new BaseObjectResult<List<MaxResponseVO>>("success", true,
+                maxResponseVOList);
     }
 
-    @RequestMapping(value = "/statistics/request", method = RequestMethod.GET)
+    @RequestMapping(value = "/statistics/request/{period}", method = RequestMethod.GET)
     @ResponseBody
-    public List<RequestVO> getAllRequests() {
-        return null;
+    public BaseObjectResult<List<RequestVO>> getAllRequests(@PathVariable(value = "period") Integer period) {
+        List<AppUriEffectiveDaily> appUriEffectiveDailyList
+                = moduleLastPerformanceService.getRequestsDaily(period);
+        List<RequestVO> requestVOList = null;
+        if (appUriEffectiveDailyList == null || appUriEffectiveDailyList.isEmpty()) {
+            logger.info("In Request periodId: " + period);
+        } else {
+            requestVOList = new ArrayList<RequestVO>();
+            for (AppUriEffectiveDaily appUriEffectiveDaily: appUriEffectiveDailyList) {
+                requestVOList.add(RequestVO.doTransform(appUriEffectiveDaily));
+            }
+        }
+
+        return new BaseObjectResult<List<RequestVO>>("success", true,
+                requestVOList);
     }
 }

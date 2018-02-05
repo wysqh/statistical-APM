@@ -24,18 +24,27 @@ public class TestController {
      */
     String token = "NjlkMmYxZjY1ODUwNTRhZjJiNmQ0YWUwODFjYWRmNzY=";
 
+    /*
+        测试环境是否搭建成功,项目开始的第一步
+     */
     @RequestMapping(value = "/admin")
     @ResponseBody
     public String testSpring() {
         return "Hello, SpringMVC";
     }
 
+    /*
+        测试异常,与项目弱相关
+     */
     @RequestMapping(value = "/exceptions")
     @ResponseBody
     public String testExceptions() {
         throw new TestException();
     }
 
+    /*
+        测试RD的代码,与项目无关
+     */
     @RequestMapping(value = "/testToken")
     @ResponseBody
     public String testString(String token) {
@@ -46,6 +55,9 @@ public class TestController {
         return "success";
     }
 
+    /*
+        测试项目资质通知用,与该项目无关
+     */
     @RequestMapping("/remindExpiredTotal")
     @ResponseBody
     public Map<String, Date> remindExpiredTotal() {

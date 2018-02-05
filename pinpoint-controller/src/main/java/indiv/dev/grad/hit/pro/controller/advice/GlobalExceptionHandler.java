@@ -10,6 +10,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.text.ParseException;
 
 //
+/*
+    暂时注释, 项目完成后打开注释
+    实现前端隐藏错误信息,在后端查看具体的错误信息
+ */
 //@ControllerAdvice
 //public class GlobalExceptionHandler {
 //    private static final Logger logger = LoggerFactory.getLogger(GlobalExceptionHandler.class);

@@ -1,5 +1,7 @@
 package indiv.dev.grad.hit.pro.vo;
 
+import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily;
+
 /**
  * @Author: Created By Gu Tiankai
  * @Date: 2018-02-05 16:00
@@ -7,8 +9,26 @@ package indiv.dev.grad.hit.pro.vo;
 public class MaxResponseVO {
     public String appName;
     public String uri;
-    public String maxRsp;
+    public Float maxRsp;
     public String linkage;
+
+    public MaxResponseVO() {
+
+    }
+
+    public MaxResponseVO(String appName, String uri, Float maxRsp) {
+        this.appName = appName;
+        this.uri = uri;
+        this.maxRsp = maxRsp;
+        this.linkage = null;
+    }
+
+    public MaxResponseVO(String appName, String uri, Float maxRsp, String linkage) {
+        this.appName = appName;
+        this.uri = uri;
+        this.maxRsp = maxRsp;
+        this.linkage = linkage;
+    }
 
     public String getAppName() {
         return appName;
@@ -26,11 +46,11 @@ public class MaxResponseVO {
         this.uri = uri;
     }
 
-    public String getMaxRsp() {
+    public Float getMaxRsp() {
         return maxRsp;
     }
 
-    public void setMaxRsp(String maxRsp) {
+    public void setMaxRsp(Float maxRsp) {
         this.maxRsp = maxRsp;
     }
 
@@ -40,5 +60,11 @@ public class MaxResponseVO {
 
     public void setLinkage(String linkage) {
         this.linkage = linkage;
+    }
+
+    public static MaxResponseVO doTransform(AppUriEffectiveDaily appUriEffectiveDaily) {
+        return new MaxResponseVO(appUriEffectiveDaily.getAppName(),
+                appUriEffectiveDaily.getUri(),
+                appUriEffectiveDaily.getMaxRsp());
     }
 }

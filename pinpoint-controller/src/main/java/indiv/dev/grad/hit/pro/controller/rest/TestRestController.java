@@ -9,6 +9,10 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import java.util.Arrays;
 import java.util.List;
 
+/*
+    测试用Controller
+    注：所有以Test开头的均与实际项目弱相关
+ */
 @Controller
 @RequestMapping("exceptions")
 public class TestRestController {

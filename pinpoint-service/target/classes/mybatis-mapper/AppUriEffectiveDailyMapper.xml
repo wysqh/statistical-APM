@@ -291,6 +291,18 @@
           resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily">
     SELECT * FROM app_uri_effective_daily
       WHERE day = #{day}
-      ORDER BY avg_rsp DESC limit 10;
+      ORDER BY avg_rsp DESC limit 10
   </select>
+   <select id="selectMaxRspByDate" parameterType="java.lang.Integer"
+           resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily">
+       SELECT * FROM app_uri_effective_daily
+       WHERE day = #{day}
+       ORDER BY max_rsp DESC limit 10
+   </select>
+   <select id="selectRequestByDate" parameterType="java.lang.Integer"
+           resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily">
+       SELECT * FROM app_uri_effective_daily
+       WHERE day = #{day}
+       ORDER BY amount DESC limit 10;
+   </select>
 </mapper>

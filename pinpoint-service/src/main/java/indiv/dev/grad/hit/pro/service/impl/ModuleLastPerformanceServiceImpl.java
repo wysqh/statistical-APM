@@ -47,10 +47,53 @@ public class ModuleLastPerformanceServiceImpl implements ModuleLastPerformanceSe
     }
 
     public List<AppUriEffectiveDaily> getMaxResponseDaily(Integer period) {
-        return null;
+        String format = "yyyyMMdd";
+        String str = DateFormatUtils.getArbitraryByToday(format, period);
+        Integer iDate = null;
+        try {
+            iDate = DateFormatUtils.string2int(str);
+        } catch (NumberFormatException nfe) {
+            logger.error("Date string to int error: " + nfe.getMessage());
+            nfe.printStackTrace();
+        }
+        SqlSession session = DbConnUtils.getSession().openSession();
+        List<AppUriEffectiveDaily> appUriEffectiveDailyList = null;
+        AppUriEffectiveDailyMapper appUriEffectiveDailyMapper =
+                session.getMapper(AppUriEffectiveDailyMapper.class);
+        try {
+            appUriEffectiveDailyList = appUriEffectiveDailyMapper.selectAverageRspByDate(iDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return appUriEffectiveDailyList;
     }
 
     public List<AppUriEffectiveDaily> getRequestsDaily(Integer period) {
-        return null;
+        String format = "yyyyMMdd";
+        String str = DateFormatUtils.getArbitraryByToday(format, period);
+        Integer iDate = null;
+        try {
+            iDate = DateFormatUtils.string2int(str);
+        } catch (NumberFormatException nfe) {
+            logger.error("Date string to int error: " + nfe.getMessage());
+            nfe.printStackTrace();
+        }
+
+        SqlSession session = DbConnUtils.getSession().openSession();
+        List<AppUriEffectiveDaily> appUriEffectiveDailyList = null;
+        try {
+            AppUriEffectiveDailyMapper appUriEffectiveDailyMapper =
+                    session.getMapper(AppUriEffectiveDailyMapper.class);
+            appUriEffectiveDailyList = appUriEffectiveDailyMapper.selectRequestByDate(iDate);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return appUriEffectiveDailyList;
     }
 }
