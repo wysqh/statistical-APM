@@ -1,23 +1,20 @@
 package indiv.dev.grad.hit.pro.controller.rest;
 
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import indiv.dev.grad.hit.pro.exceptions.NoContentException;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import indiv.dev.grad.hit.pro.util.DateFormatUtils;
 import indiv.dev.grad.hit.pro.vo.EffectiveQuery;
-import indiv.dev.grad.hit.pro.vo.Performance;
+import indiv.dev.grad.hit.pro.vo.PerformanceVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.expression.ParseException;
-import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
-import sun.misc.Perf;
 
 import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 @Controller
@@ -36,22 +33,22 @@ public class ApplicationRestController {
 
     @RequestMapping(value = "/applications/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public String getApplicationsById(@PathVariable("id") Integer appId) {
+    public String getApplicationsById(@PathVariable(value = "id") Integer appId) {
         return modulePerformanceService.getApplicationById(appId);
     }
 
-    @RequestMapping(value = "/applications/name/{module}")
+    @RequestMapping(value = "/applications/name/{module}", method = RequestMethod.GET)
     @ResponseBody
-    public List<String> getSimilarWordsByName(@PathVariable("module")String module) {
+    public List<String> getSimilarWordsByName(@PathVariable(value = "module")String module) {
         return modulePerformanceService.getAppsNameBySimilar(module);
     }
 
     @RequestMapping(value = "/effectives", method = RequestMethod.GET)
     @ResponseBody
-    public List<Performance> getAllEffectives() {
-        List<Performance> performances = new ArrayList<Performance>();
+    public List<PerformanceVO> getAllEffectives() {
+        List<PerformanceVO> performances = new ArrayList<PerformanceVO>();
         for (AppUriEffective appUriEffective: modulePerformanceService.getAppUriEffectives()) {
-            performances.add(Performance.doTransform(appUriEffective));
+            performances.add(PerformanceVO.doTransform(appUriEffective));
         }
 
         return performances;
@@ -59,7 +56,7 @@ public class ApplicationRestController {
 
     @RequestMapping(value = "/effectives/{id}", method = RequestMethod.GET)
     @ResponseBody
-    public AppUriEffective getEffectiveById(@PathVariable("id") Integer id) {
+    public AppUriEffective getEffectiveById(@PathVariable(value = "id") Integer id) {
         AppUriEffective appUriEffective = modulePerformanceService.getAppUriEffectiveById(id);
         if (appUriEffective == null) {
             throw new NoContentException();
@@ -69,14 +66,20 @@ public class ApplicationRestController {
 
     @RequestMapping(value = "/effectives/params")
     @ResponseBody
-    public List<Performance> getEffectiveByQuery(@RequestParam String query) {
-        EffectiveQuery effectiveQuery = new GsonBuilder().create().fromJson(
-                query, EffectiveQuery.class
-        );
+    public List<PerformanceVO> getEffectiveByQuery(@RequestParam String query) {
+        EffectiveQuery effectiveQuery = null;
+        try {
+            effectiveQuery = new GsonBuilder().create().fromJson(
+                    query, EffectiveQuery.class
+            );
+        } catch (JsonSyntaxException jse) {
+            jse.printStackTrace();
+        }
+
         String format = "yyyy-MM-dd HH:mm";
         String start = effectiveQuery.getStart();
         String end = effectiveQuery.getEnd();
-        List<Performance> performanceList = new ArrayList<Performance>();
+        List<PerformanceVO> performanceList = new ArrayList<PerformanceVO>();
         List<AppUriEffective> appUriEffectiveList = modulePerformanceService.getUriEffectiveByConditions(
                 DateFormatUtils.string2date(format, start),
                 DateFormatUtils.string2date(format, end),
@@ -90,7 +93,7 @@ public class ApplicationRestController {
 
         //页面VO转换
         for (AppUriEffective appUriEffective: appUriEffectiveList) {
-            performanceList.add(Performance.doTransform(appUriEffective));
+            performanceList.add(PerformanceVO.doTransform(appUriEffective));
         }
 
         return performanceList;

@@ -28,4 +28,6 @@ public interface AppUriEffectiveDailyMapper {
     int updateByPrimaryKeySelective(AppUriEffectiveDaily record);
 
     int updateByPrimaryKey(AppUriEffectiveDaily record);
+
+    List<AppUriEffectiveDaily> selectAverageRspByDate(@Param("day")Integer day);
 }

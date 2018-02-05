@@ -287,4 +287,10 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectAverageRspByDate" parameterType="java.lang.Integer"
+          resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily">
+    SELECT * FROM app_uri_effective_daily
+      WHERE day = #{day}
+      ORDER BY avg_rsp DESC limit 10;
+  </select>
 </mapper>

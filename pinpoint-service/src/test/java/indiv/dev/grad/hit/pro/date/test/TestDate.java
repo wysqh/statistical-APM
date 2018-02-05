@@ -1,4 +1,4 @@
-package indiv.dev.grad.hit.pro.test;
+package indiv.dev.grad.hit.pro.date.test;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;

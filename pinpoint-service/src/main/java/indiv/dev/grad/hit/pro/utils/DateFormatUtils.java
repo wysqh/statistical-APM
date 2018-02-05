@@ -63,4 +63,36 @@ public class DateFormatUtils {
     public static Long date2secs(Date date) {
         return date.getTime()/1000;
     }
+
+    public static String getCurrentTime(String format) {
+        if (StringUtils.isEmpty(format)) {
+            format = DateFormatUtils.format;
+        }
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+        String date = simpleDateFormat.format(new Date());
+
+        return date;
+    }
+
+    /*
+      @params: format 默认格式 yyyy-MM-dd
+      以今日为基础, +1 表示明天
+                    -1 表示昨天
+      以此类推
+ */
+    public static String getArbitraryByToday(String format, int period) {
+        String str = getCurrentTime(format);
+        Date date = string2date(format, str);
+        Calendar calendar = Calendar.getInstance();
+
+        calendar.setTime(date);
+        calendar.add(Calendar.DAY_OF_MONTH, period);
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+
+        return simpleDateFormat.format(calendar.getTime());
+    }
+
+    public static Integer string2int(String date) throws NumberFormatException {
+        return Integer.parseInt(date);
+    }
 }

@@ -24,6 +24,10 @@ import { MyTimepickerComponent } from './my-timepicker/my-timepicker.component';
 import { MyDatepickerComponent } from './my-datepicker/my-datepicker.component';
 import { MyDateFormComponent } from './my-date-form/my-date-form.component';
 import { QueryControlComponent } from './query-control/query-control.component';
+import { LastPerformanceStatisticsComponent } from './last-performance-statistics/last-performance-statistics.component';
+import { AvgResponseControlComponent } from './avg-response-control/avg-response-control.component';
+import { MaxResponseControlComponent } from './max-response-control/max-response-control.component';
+import { MaxRequestControlComponent } from './max-request-control/max-request-control.component';
 
 @NgModule({
   imports: [
@@ -50,6 +54,10 @@ import { QueryControlComponent } from './query-control/query-control.component';
     MyDatepickerComponent,
     MyDateFormComponent,
     QueryControlComponent,
+    LastPerformanceStatisticsComponent,
+    AvgResponseControlComponent,
+    MaxResponseControlComponent,
+    MaxRequestControlComponent,
   ],
   providers: [
     HeroService,

@@ -2,7 +2,7 @@ package indiv.dev.grad.hit.pro.vo;
 
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 
-public class Performance {
+public class PerformanceVO {
     String uri;
     Integer reqInPeriod;
     Float avgRspTime;
@@ -12,7 +12,7 @@ public class Performance {
     String slowTop10;
     String exceptionTop10;
 
-    public Performance(String uri, Integer reqInPeriod, Float avgRspTime, Float maxRspTime, Float minRspTime, Integer reqOver3s, String slowTop10, String exceptionTop10) {
+    public PerformanceVO(String uri, Integer reqInPeriod, Float avgRspTime, Float maxRspTime, Float minRspTime, Integer reqOver3s, String slowTop10, String exceptionTop10) {
         this.uri = uri;
         this.reqInPeriod = reqInPeriod;
         this.avgRspTime = avgRspTime;
@@ -87,8 +87,8 @@ public class Performance {
         this.exceptionTop10 = exceptionTop10;
     }
 
-    public static Performance doTransform(AppUriEffective appUriEffective) {
-        return new Performance(appUriEffective.getUri(), appUriEffective.getAmount(),
+    public static PerformanceVO doTransform(AppUriEffective appUriEffective) {
+        return new PerformanceVO(appUriEffective.getUri(), appUriEffective.getAmount(),
                 appUriEffective.getAvgRsp(), appUriEffective.getMaxRsp(), appUriEffective.getMinRsp(),
                 appUriEffective.getSlowCount(),
                 appUriEffective.getSlow(), appUriEffective.getException());

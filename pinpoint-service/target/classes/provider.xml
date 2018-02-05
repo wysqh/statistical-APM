@@ -10,10 +10,26 @@
              http://code.alibabatech.com/schema/dubbo http://code.alibabatech.com/schema/dubbo/dubbo.xsd
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
         default-lazy-init="false" >
-    <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
-    <bean id="modulePerformanceService" class="indiv.dev.grad.hit.pro.service.impl.ModulePerformanceServiceImpl"></bean>
+
+    <bean id="modulePerformanceService"
+          class="indiv.dev.grad.hit.pro.service.impl.ModulePerformanceServiceImpl">
+    </bean>
+    <bean id="moduleLastPerformanceService"
+            class="indiv.dev.grad.hit.pro.service.impl.ModuleLastPerformanceServiceImpl">
+    </bean>
     <dubbo:application name="dubbo_provider"></dubbo:application>
+    <!--?zk????-->
+    <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
     <dubbo:registry protocol="zookeeper"  address="127.0.0.1:2181"
-                    check="false" subscribe="false"></dubbo:registry>
-    <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModulePerformanceService" ref="modulePerformanceService"></dubbo:service>
+                    check="false" subscribe="false">
+    </dubbo:registry>
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"
+                    check="false" subscribe="false">
+    </dubbo:registry>
+    <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModulePerformanceService"
+                   ref="modulePerformanceService">
+    </dubbo:service>
+    <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModuleLastPerformanceService"
+                   ref="moduleLastPerformanceService">
+    </dubbo:service>
 </beans>
