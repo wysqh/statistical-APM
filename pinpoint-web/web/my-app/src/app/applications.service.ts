@@ -38,7 +38,7 @@ export class ApplicationsService {
     //
     let applicationMockUrl: string = this.mockUrl;
     //相似模块查询
-    return this.http.get<string[]>(requestUrl + "/" + term)
+    return this.http.get<string[]>(requestUrl + "/" + term) //requestUrl + "/" + term
       .pipe(
         tap(_ => this.log(`getApplicationsBySimilar`)),
         catchError(this.handleError<string[]>('searchTerm', [])),

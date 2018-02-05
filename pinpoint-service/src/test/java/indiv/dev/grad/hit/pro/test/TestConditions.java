@@ -37,5 +37,9 @@ public class TestConditions {
             System.out.println(appUriEffectiveList.size());
         }
 
+        for (AppUriEffective appUriEffective : appUriEffectiveList) {
+            System.out.println(appUriEffective.getUri());
+        }
+
     }
 }

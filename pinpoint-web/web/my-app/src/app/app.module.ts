@@ -23,6 +23,7 @@ import {BsDatepickerModule, BsLocaleService, TimepickerModule} from "ngx-bootstr
 import { MyTimepickerComponent } from './my-timepicker/my-timepicker.component';
 import { MyDatepickerComponent } from './my-datepicker/my-datepicker.component';
 import { MyDateFormComponent } from './my-date-form/my-date-form.component';
+import { QueryControlComponent } from './query-control/query-control.component';
 
 @NgModule({
   imports: [
@@ -48,6 +49,7 @@ import { MyDateFormComponent } from './my-date-form/my-date-form.component';
     MyTimepickerComponent,
     MyDatepickerComponent,
     MyDateFormComponent,
+    QueryControlComponent,
   ],
   providers: [
     HeroService,

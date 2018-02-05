@@ -1,5 +1,5 @@
-import {Component, OnChanges, OnInit} from '@angular/core';
-import {FormBuilder, FormControl, FormGroup} from "@angular/forms";
+import {Component, OnChanges, OnInit, Output} from '@angular/core';
+import {AbstractControl, FormBuilder, FormControl, FormGroup} from "@angular/forms";
 import {Http} from "@angular/http";
 import {EffectivesService} from "../effectives.service";
 import {Performance} from "../performance";

@@ -1,5 +1,5 @@
 [{
-    "interface": "NpcSearchAgent:searchSimReminderResult",
+    "uri": "NpcSearchAgent:searchSimReminderResult",
     "reqInPeriod": 15,
     "avgRspTime": 2.14,
     "maxRspTime": 19.0,

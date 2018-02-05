@@ -14,6 +14,7 @@ import org.springframework.expression.ParseException;
 import org.springframework.format.annotation.DateTimeFormat;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
+import sun.misc.Perf;
 
 import java.util.ArrayList;
 import java.util.Date;
@@ -68,23 +69,31 @@ public class ApplicationRestController {
 
     @RequestMapping(value = "/effectives/params")
     @ResponseBody
-    public List<AppUriEffective> getEffectiveByQuery(@RequestParam String query) {
+    public List<Performance> getEffectiveByQuery(@RequestParam String query) {
         EffectiveQuery effectiveQuery = new GsonBuilder().create().fromJson(
                 query, EffectiveQuery.class
         );
         String format = "yyyy-MM-dd HH:mm";
         String start = effectiveQuery.getStart();
         String end = effectiveQuery.getEnd();
+        List<Performance> performanceList = new ArrayList<Performance>();
         List<AppUriEffective> appUriEffectiveList = modulePerformanceService.getUriEffectiveByConditions(
                 DateFormatUtils.string2date(format, start),
                 DateFormatUtils.string2date(format, end),
-                effectiveQuery.getAppName());
+                effectiveQuery.getAppName()
+        );
 
         if (appUriEffectiveList == null || appUriEffectiveList.isEmpty()) {
             logger.info("List info:" + DateFormatUtils.string2date(format, start).getTime());
             logger.info("List info:" + DateFormatUtils.string2date(format, end).getTime());
         }
-        return  appUriEffectiveList;
+
+        //页面VO转换
+        for (AppUriEffective appUriEffective: appUriEffectiveList) {
+            performanceList.add(Performance.doTransform(appUriEffective));
+        }
+
+        return performanceList;
     }
 
 }

@@ -11,6 +11,9 @@ export class EffectivesService {
 
   private queryStr: string;
   private baseUrl: string;
+  //测试用mock数据地址
+  private mockUrl: string = "/mock-data/effectives.json";
+  private mockQueryUrl: string = "/mock-data/effectives-query.json";
 
   constructor(private http: HttpClient,
               private messageService: MessageService) { }
@@ -22,8 +25,11 @@ export class EffectivesService {
   //   });
   // }
 
+  /*
+      获取所有性能数据
+   */
   getEffectives(): Observable<Performance[]> {
-    return this.http.get<Performance[]>("/rest/effectives")
+    return this.http.get<Performance[]>("/rest/effectives") //"/rest/effectives"
       .pipe(
         tap(effectives => this.log(`fetches effectives`)),
         catchError(this.handleError(`getEffecives`, []))
@@ -41,7 +47,7 @@ export class EffectivesService {
           this.encodeQuery(app) +
       encodeURI("}");
     console.log(this.baseUrl + this.queryStr);
-    return this.http.get<Performance[]>(this.baseUrl+ this.queryStr)
+    return this.http.get<Performance[]>(this.baseUrl+ this.queryStr)//this.baseUrl+ this.queryStr
       .pipe(
         tap(effectives => this.log(`fetchs effectives`)),
         catchError(this.handleError(`getEffecitves`, []))
