@@ -9,9 +9,11 @@
       </label>
       <label>appName:
         <input #searchBox class="form-control"
+               (keydown)="activateVisibility()"
                (keyup)="search(searchBox.value)" formControlName="appName"/>
-        <ul class="search-box">
-          <li *ngFor="let sim of similarList | async">
+        <ul class="search-result">
+          <li *ngFor="let sim of similarList | async" (click)="patchAppName(sim)"
+              [hidden]="bVisible">
             {{sim}}
           </li>
         </ul>

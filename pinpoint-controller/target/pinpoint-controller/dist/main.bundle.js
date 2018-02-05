@@ -258,11 +258,31 @@ var ApplicationsService = /** @class */ (function () {
     function ApplicationsService(http, messageService) {
         this.http = http;
         this.messageService = messageService;
+        this.mockUrl = "/mock-data/applications.json"; //测试uri
     }
+    /*
+        获取所有模块名称
+     */
     ApplicationsService.prototype.getApplications = function () {
         var _this = this;
-        return this.http.get("/rest/applications")
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["b" /* tap */])(function (applications) { return _this.log("fetches applications"); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError("getApplications", [])));
+        var requestUrl = "/rest/applications"; //后端url
+        return this.http.get(requestUrl)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["e" /* tap */])(function (applications) { return _this.log("fetches applications"); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError("getApplications", [])));
+    };
+    /*
+         获取相似模块名称
+     */
+    ApplicationsService.prototype.getApplicationsBySimilar = function (term) {
+        var _this = this;
+        var requestUrl = "/rest/applications/name"; //后端url
+        if (!term.trim()) {
+            return Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_observable_of__["a" /* of */])([]);
+        }
+        //
+        var applicationMockUrl = this.mockUrl;
+        //相似模块查询
+        return this.http.get(requestUrl + "/" + term)
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["e" /* tap */])(function (_) { return _this.log("getApplicationsBySimilar"); }), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["a" /* catchError */])(this.handleError('searchTerm', [])), Object(__WEBPACK_IMPORTED_MODULE_2_rxjs_operators__["e" /* tap */])(function (_) { return _this.messageService.clear(); }));
     };
     ApplicationsService.prototype.log = function (message) {
         this.messageService.add("ApplicationService: " + message);
@@ -481,7 +501,7 @@ var EffectivesService = /** @class */ (function () {
     EffectivesService.prototype.getEffectives = function () {
         var _this = this;
         return this.http.get("/rest/effectives")
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetches effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (effectives) { return _this.log("fetches effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
     };
     EffectivesService.prototype.getEffectivesByConditions = function (start, end, app) {
         var _this = this;
@@ -496,7 +516,7 @@ var EffectivesService = /** @class */ (function () {
             encodeURI("}");
         console.log(this.baseUrl + this.queryStr);
         return this.http.get(this.baseUrl + this.queryStr)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (effectives) { return _this.log("fetchs effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecitves", [])));
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (effectives) { return _this.log("fetchs effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecitves", [])));
     };
     EffectivesService.prototype.log = function (message) {
         this.messageService.add("Effectives Service: " + message);
@@ -605,7 +625,7 @@ var HeroDetailComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_router__["a" /* ActivatedRoute */],
             __WEBPACK_IMPORTED_MODULE_4__hero_service__["a" /* HeroService */],
-            __WEBPACK_IMPORTED_MODULE_3__angular_common__["f" /* Location */]])
+            __WEBPACK_IMPORTED_MODULE_3__angular_common__["g" /* Location */]])
     ], HeroDetailComponent);
     return HeroDetailComponent;
 }());
@@ -650,12 +670,12 @@ var HeroService = /** @class */ (function () {
     HeroService.prototype.getHeroes = function () {
         var _this = this;
         return this.http.get(this.heroesUrl)
-            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (heroes) { return _this.log("fetched heroes"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('getHeroes', [])));
+            .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (heroes) { return _this.log("fetched heroes"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError('getHeroes', [])));
     };
     HeroService.prototype.getHero = function (id) {
         var _this = this;
         var url = this.heroesUrl + "/" + id;
-        return this.http.get(url).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["b" /* tap */])(function (_) { return _this.log("fetch hero id = " + id); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getHero id=" + id)));
+        return this.http.get(url).pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (_) { return _this.log("fetch hero id = " + id); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getHero id=" + id)));
     };
     HeroService.prototype.log = function (message) {
         this.messageService.add("HeroService: " + message);
@@ -877,7 +897,7 @@ exports = module.exports = __webpack_require__("../../../../css-loader/lib/css-b
 
 
 // module
-exports.push([module.i, "", ""]);
+exports.push([module.i, "/* HeroSearch private styles */\r\n.search-result li {\r\n  border-bottom: 1px solid gray;\r\n  border-left: 1px solid gray;\r\n  border-right: 1px solid gray;\r\n  width: inherit;\r\n  height: inherit;\r\n  padding: 5px;\r\n  background-color: white;\r\n  cursor: pointer;\r\n  list-style-type: none;\r\n}\r\n.search-result li:hover {\r\n  background-color: #607D8B;\r\n}\r\n.search-result li a {\r\n  color: #888;\r\n  display: block;\r\n  text-decoration: none;\r\n}\r\n.search-result li a:hover {\r\n  color: white;\r\n}\r\n.search-result li a:active {\r\n  color: white;\r\n}\r\n#search-box {\r\n  width: 200px;\r\n  height: 20px;\r\n}\r\nul.search-result {\r\n  margin-top: 0;\r\n  padding-left: 0;\r\n}\r\n", ""]);
 
 // exports
 
@@ -890,7 +910,7 @@ module.exports = module.exports.toString();
 /***/ "../../../../../src/app/my-date-form/my-date-form.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<form [formGroup]=\"dateForm\">\n  <div class=\"row\">\n    <div class=\"col-xs-12 col-12 col-md-4 form-group\">\n      <label>start:\n        <input class=\"form-control\" formControlName=\"startTime\"/>\n      </label>\n      <label>end:\n        <input class=\"form-control\" formControlName=\"endTime\" />\n      </label>\n      <label>appName:\n        <input class=\"form-control\" formControlName=\"appName\"/>\n      </label>\n    </div>\n    <div class=\"col-xs-12 col-12 col-md-8 form-group\">\n      <button class=\"btn btn-success\" (click)=\"queryByConditions()\">性能概述</button>\n    </div>\n  </div>\n</form>\n\n<pre>\n  <p>{{dateForm.value | json}}</p>\n  <p> {{dateForm.status | json}}</p>\n</pre>\n\n<pre>\n  <div *ngFor=\"let p of performances\">\n    {{p | json}}\n  </div>\n</pre>\n"
+module.exports = "<form [formGroup]=\"dateForm\">\n  <div class=\"row\">\n    <div class=\"col-xs-12 col-12 col-md-4 form-group\">\n      <label>start:\n        <input class=\"form-control\" formControlName=\"startTime\"/>\n      </label>\n      <label>end:\n        <input class=\"form-control\" formControlName=\"endTime\" />\n      </label>\n      <label>appName:\n        <input #searchBox class=\"form-control\"\n               (keydown)=\"activateVisibility()\"\n               (keyup)=\"search(searchBox.value)\" formControlName=\"appName\"/>\n        <ul class=\"search-result\">\n          <li *ngFor=\"let sim of similarList | async\" (click)=\"patchAppName(sim)\"\n              [hidden]=\"bVisible\">\n            {{sim}}\n          </li>\n        </ul>\n      </label>\n    </div>\n    <div class=\"col-xs-12 col-12 col-md-8 form-group\">\n      <button class=\"btn btn-success\" (click)=\"queryByConditions()\">性能概述</button>\n    </div>\n  </div>\n</form>\n\n<pre>\n  <p>{{dateForm.value | json}}</p>\n  <p> {{dateForm.status | json}}</p>\n</pre>\n\n<pre>\n  <div *ngFor=\"let p of performances\">\n    {{p | json}}\n  </div>\n</pre>\n"
 
 /***/ }),
 
@@ -903,6 +923,10 @@ module.exports = "<form [formGroup]=\"dateForm\">\n  <div class=\"row\">\n    <d
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__angular_http__ = __webpack_require__("../../../http/esm5/http.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__effectives_service__ = __webpack_require__("../../../../../src/app/effectives.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__angular_common__ = __webpack_require__("../../../common/esm5/common.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__applications_service__ = __webpack_require__("../../../../../src/app/applications.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_rxjs_operators__ = __webpack_require__("../../../../rxjs/_esm5/operators.js");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__ = __webpack_require__("../../../../rxjs/_esm5/Subject.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -916,15 +940,82 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
+
+
+
 var MyDateFormComponent = /** @class */ (function () {
-    function MyDateFormComponent(http, effectiveService) {
+    function MyDateFormComponent(http, effectiveService, applicationService, datePipe) {
         this.http = http;
         this.effectiveService = effectiveService;
+        this.applicationService = applicationService;
+        this.datePipe = datePipe;
         this.performances = [];
+        this.appsList = []; //模块名称集合
+        this.bVisible = false; //<li></li>不可见性
+        this.searchTerms = new __WEBPACK_IMPORTED_MODULE_7_rxjs_Subject__["a" /* Subject */]();
     }
     MyDateFormComponent.prototype.ngOnInit = function () {
-        this.initComponent();
+        //初始化工作
+        this.init();
+        //表单预填
+        this.patchValues();
+        //设置监听
+        this.initKeyboardListener();
     };
+    /*
+        全量初始化
+     */
+    MyDateFormComponent.prototype.init = function () {
+        //初始化表单组件
+        this.initComponent();
+        //初始化表单填值
+        this.initVariables();
+    };
+    /*
+        初始化变量
+     */
+    MyDateFormComponent.prototype.initVariables = function () {
+        var _this = this;
+        //表单时间变量填值
+        var src; //未超过当前时间的第5分钟开始区间
+        var dst; //未超过当前时间的第5分钟结束区间
+        var periodIn5 = 5 * 60; // 5分钟时间段的unix戳
+        var secs = new Date().getTime() / 1000;
+        var date = new Date();
+        var format = "yyyy-MM-dd HH:mm"; //转换格式
+        src = new Date((secs - periodIn5 - secs % 300) * 1000); //开始段时间设置
+        dst = new Date((secs - secs % 300) * 1000); //结束段时间设置
+        this.src = this.datePipe.transform(src, format);
+        this.dst = this.datePipe.transform(dst, format);
+        console.log("src after format: " + this.src);
+        console.log("dst after format: " + this.dst);
+        //列表名称变量填值
+        this.applicationService.getApplications()
+            .subscribe(function (apps) {
+            _this.appsList = apps;
+            //调试输出
+            console.log(apps);
+        });
+    };
+    /*
+        初始化键盘监听
+     */
+    MyDateFormComponent.prototype.initKeyboardListener = function () {
+        var _this = this;
+        this.similarList = this.searchTerms.pipe(
+        //每次键盘落下后等待300ms
+        Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators__["b" /* debounceTime */])(300), 
+        //取消检索无变化参数
+        Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators__["c" /* distinctUntilChanged */])(), 
+        //调用模糊匹配
+        Object(__WEBPACK_IMPORTED_MODULE_6_rxjs_operators__["d" /* switchMap */])(function (term) {
+            return _this.applicationService.getApplicationsBySimilar(term);
+        }));
+    };
+    /*
+        初始化表单组件
+     */
     MyDateFormComponent.prototype.initComponent = function () {
         this.dateForm = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["b" /* FormGroup */]({
             startTime: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */](),
@@ -932,6 +1023,26 @@ var MyDateFormComponent = /** @class */ (function () {
             appName: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["a" /* FormControl */]()
         });
     };
+    /*
+        初始填充值规则：
+     */
+    MyDateFormComponent.prototype.patchValues = function () {
+        if (this.dateForm) {
+            this.dateForm.patchValue({
+                startTime: this.src,
+                endTime: this.dst //结束段区间
+            });
+        }
+        /*
+            实时监听值变动并记录
+        */
+        this.dateForm.valueChanges.subscribe(function (data) {
+            console.log('Form Value Changed:', data);
+        });
+    };
+    /*
+        根据开始时间、结束时间以及模块名称查询性能AppUriEffective
+     */
     MyDateFormComponent.prototype.queryByConditions = function () {
         var _this = this;
         //调试信息
@@ -943,14 +1054,43 @@ var MyDateFormComponent = /** @class */ (function () {
             console.log(effectives);
         });
     };
+    /*
+        将检索值推入observable流
+     */
+    MyDateFormComponent.prototype.search = function (term) {
+        this.searchTerms.next(term);
+    };
+    /*
+        触发点击事件将值回填
+     */
+    MyDateFormComponent.prototype.patchAppName = function (app) {
+        this.dateForm.patchValue({
+            appName: app
+        });
+        //去除li的可见性
+        this.bVisible = true;
+        console.log(this.bVisible);
+    };
+    /*
+        重新获取li可见性
+     */
+    MyDateFormComponent.prototype.activateVisibility = function () {
+        //重新获取模块可见性
+        this.bVisible = false;
+    };
     MyDateFormComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["n" /* Component */])({
             selector: 'app-my-date-form',
             template: __webpack_require__("../../../../../src/app/my-date-form/my-date-form.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/my-date-form/my-date-form.component.css")]
+            styles: [__webpack_require__("../../../../../src/app/my-date-form/my-date-form.component.css")],
+            providers: [
+                __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* DatePipe */],
+            ]
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__angular_http__["a" /* Http */],
-            __WEBPACK_IMPORTED_MODULE_3__effectives_service__["a" /* EffectivesService */]])
+            __WEBPACK_IMPORTED_MODULE_3__effectives_service__["a" /* EffectivesService */],
+            __WEBPACK_IMPORTED_MODULE_5__applications_service__["a" /* ApplicationsService */],
+            __WEBPACK_IMPORTED_MODULE_4__angular_common__["d" /* DatePipe */]])
     ], MyDateFormComponent);
     return MyDateFormComponent;
 }());

@@ -28,6 +28,8 @@ export class MyDateFormComponent implements OnInit {
   src: string;  //未超过当前时间的第5分钟开始区间
   dst: string;  //未超过当前时间的第5分钟结束区间
 
+  bVisible: boolean = false; //<li></li>不可见性
+
   private searchTerms = new Subject<string>();
 
   constructor(private http: Http,
@@ -148,5 +150,25 @@ export class MyDateFormComponent implements OnInit {
    */
   search(term: string): void {
     this.searchTerms.next(term);
+  }
+
+  /*
+      触发点击事件将值回填
+   */
+  patchAppName(app: string): void {
+    this.dateForm.patchValue({
+      appName: app
+    })
+    //去除li的可见性
+    this.bVisible = true;
+    console.log(this.bVisible);
+  }
+
+  /*
+      重新获取li可见性
+   */
+  activateVisibility(): void {
+    //重新获取模块可见性
+    this.bVisible = false;
   }
 }

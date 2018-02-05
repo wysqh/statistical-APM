@@ -35,8 +35,10 @@ export class ApplicationsService {
     if (!term.trim()) {
       return of([]);
     }
-
-    return this.http.get<string[]>(this.mockUrl)
+    //
+    let applicationMockUrl: string = this.mockUrl;
+    //相似模块查询
+    return this.http.get<string[]>(requestUrl + "/" + term)
       .pipe(
         tap(_ => this.log(`getApplicationsBySimilar`)),
         catchError(this.handleError<string[]>('searchTerm', [])),
