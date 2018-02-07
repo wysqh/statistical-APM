@@ -1,3 +1,18 @@
-<p>
-  avg-response-control works!
-</p>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+  <tr>
+    <th>模块名称</th>
+    <th>接口</th>
+    <th>均响(ms)</th>
+    <th>详情传送门</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let element of baseResult.data">
+    <td> {{ element.appName }} </td>
+    <td> {{ element.uri }} </td>
+    <td> {{ element.avgRsp }} </td>
+    <td> {{ element.linkage }} </td>
+  </tr>
+  </tbody>
+</table>

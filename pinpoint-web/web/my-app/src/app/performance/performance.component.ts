@@ -16,7 +16,7 @@ export class PerformanceComponent implements OnInit {
 
   dtOptions: DataTables.Settings = {};
   performances: Performance[] = [];
-  dtTrigger: Subject<any> = new Subject();
+  dtTrigger: Subject<any> = new Subject<any>();
 
   constructor(private http: Http,
               private effectiveService: EffectivesService) { }

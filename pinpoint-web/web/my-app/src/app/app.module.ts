@@ -28,6 +28,12 @@ import { LastPerformanceStatisticsComponent } from './last-performance-statistic
 import { AvgResponseControlComponent } from './avg-response-control/avg-response-control.component';
 import { MaxResponseControlComponent } from './max-response-control/max-response-control.component';
 import { MaxRequestControlComponent } from './max-request-control/max-request-control.component';
+import {NbThemeModule} from "@nebular/theme";
+import { NebularSampleComponent } from './nebular-sample/nebular-sample.component';
+import { RouterModule } from "@angular/router";
+import { NbSidebarModule, NbLayoutModule, NbSidebarService } from "@nebular/theme";
+import {LastPerformanceService} from "./last-performance.service";
+
 
 @NgModule({
   imports: [
@@ -39,7 +45,11 @@ import { MaxRequestControlComponent } from './max-request-control/max-request-co
     DataTablesModule,
     ReactiveFormsModule,
     BsDatepickerModule.forRoot(),
-    TimepickerModule.forRoot()
+    TimepickerModule.forRoot(),
+    NbThemeModule.forRoot({name: 'default'}),
+    RouterModule, // RouterModule.forRoot(routes, { useHash: true }), if this is your app.module
+    NbLayoutModule,
+    NbSidebarModule,
   ],
   declarations: [
     AppComponent,
@@ -58,13 +68,16 @@ import { MaxRequestControlComponent } from './max-request-control/max-request-co
     AvgResponseControlComponent,
     MaxResponseControlComponent,
     MaxRequestControlComponent,
+    NebularSampleComponent,
   ],
   providers: [
     HeroService,
     MessageService,
     ApplicationsService,
     EffectivesService,
+    LastPerformanceService,
     BsLocaleService,
+    NbSidebarService,
   ],
   bootstrap: [ AppComponent ]
 })

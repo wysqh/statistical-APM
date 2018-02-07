@@ -9,6 +9,8 @@ import org.apache.ibatis.session.SqlSession;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
+import java.util.Collections;
+import java.util.Comparator;
 import java.util.Date;
 import java.util.List;
 
@@ -43,6 +45,12 @@ public class ModuleLastPerformanceServiceImpl implements ModuleLastPerformanceSe
             session.close();
         }
 
+        //按AvgResponseTime降序排列
+        Collections.sort(appUriEffectiveDailyList, new Comparator<AppUriEffectiveDaily>() {
+            public int compare(AppUriEffectiveDaily o1, AppUriEffectiveDaily o2) {
+                return o2.getAvgRsp().compareTo(o1.getAvgRsp());
+            }
+        });
         return appUriEffectiveDailyList;
     }
 
@@ -67,7 +75,12 @@ public class ModuleLastPerformanceServiceImpl implements ModuleLastPerformanceSe
         } finally {
             session.close();
         }
-
+        //按MaxResponseTime降序排列
+        Collections.sort(appUriEffectiveDailyList, new Comparator<AppUriEffectiveDaily>() {
+            public int compare(AppUriEffectiveDaily o1, AppUriEffectiveDaily o2) {
+                return o2.getMaxRsp().compareTo(o1.getMaxRsp());
+            }
+        });
         return appUriEffectiveDailyList;
     }
 
@@ -94,6 +107,12 @@ public class ModuleLastPerformanceServiceImpl implements ModuleLastPerformanceSe
             session.close();
         }
 
+        //按RequestCount降序排列
+        Collections.sort(appUriEffectiveDailyList, new Comparator<AppUriEffectiveDaily>() {
+            public int compare(AppUriEffectiveDaily o1, AppUriEffectiveDaily o2) {
+                return o2.getAmount().compareTo(o1.getAmount());
+            }
+        });
         return appUriEffectiveDailyList;
     }
 }
