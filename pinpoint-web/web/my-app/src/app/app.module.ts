@@ -33,6 +33,8 @@ import { NebularSampleComponent } from './nebular-sample/nebular-sample.componen
 import { RouterModule } from "@angular/router";
 import { NbSidebarModule, NbLayoutModule, NbSidebarService } from "@nebular/theme";
 import {LastPerformanceService} from "./last-performance.service";
+import { UriPerformanceCheckComponent } from './uri-performance-check/uri-performance-check.component';
+import { UriQueryControlComponent } from './uri-query-control/uri-query-control.component';
 
 
 @NgModule({
@@ -69,6 +71,8 @@ import {LastPerformanceService} from "./last-performance.service";
     MaxResponseControlComponent,
     MaxRequestControlComponent,
     NebularSampleComponent,
+    UriPerformanceCheckComponent,
+    UriQueryControlComponent,
   ],
   providers: [
     HeroService,

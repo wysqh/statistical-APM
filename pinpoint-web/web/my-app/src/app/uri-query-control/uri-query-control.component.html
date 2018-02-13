@@ -1,0 +1,30 @@
+<link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
+
+
+<form [formGroup]="searchForm">
+  <div class="row">
+    <div class="col-xs-12 col-12 col-md-12 form-group">
+      <label>模块名称:
+        <input class="form-control" formControlName="appName"/>
+      </label>
+
+      <label>接 口:
+        <input class="form-control" formControlName="appUri"/>
+      </label>
+
+      <label>日 期:
+        <input class="form-control"
+               [minDate]="minDate"
+               [maxDate]="maxDate"
+               #dp="bsDatepicker"
+               bsDatepicker [bsValue]="bsValue"
+               formControlName="date"
+               [bsConfig]="{dateInputFormat: 'YYYY-MM-DD'}"/>
+      </label>
+    </div>
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <button class="btn btn-success" (click)="queryUriByConditions">性能查询</button>
+    </div>
+  </div>
+</form>
+

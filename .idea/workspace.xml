@@ -7,46 +7,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf09d82-d95f-4c61-8138-e9762e2fddca" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/ApiQuery.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestAbitraryDate.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestQueryService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/EffectiveQuery.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/EffectiveQuery.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/EffectiveQuery.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/EffectiveQuery.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/EffectiveQuery.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/EffectiveQuery.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/inline.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/inline.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/applications.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/data.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/effectives-query.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/effectives.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/polyfills.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/polyfills.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/scripts.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/scripts.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/styles.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/styles.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/vendor.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/vendor.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/mapper/AppUriEffectiveHourlyMapper.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/mapper/AppUriEffectiveHourlyMapper.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/DateFormatUtils.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/DateFormatUtils.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/resources/mybatis-mapper/AppUriEffectiveHourlyMapper.xml" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/resources/mybatis-mapper/AppUriEffectiveHourlyMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/mapper/AppUriEffectiveHourlyMapper.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/mapper/AppUriEffectiveHourlyMapper.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/DateFormatUtils.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/DateFormatUtils.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/mybatis-mapper/AppUriEffectiveHourlyMapper.xml" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/mybatis-mapper/AppUriEffectiveHourlyMapper.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/provider.xml" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/provider.xml" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.module.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.module.ts" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -78,51 +42,34 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="UriPerformanceCheckRestController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java">
+          <file leaf-file-name="uri-query-control.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="637">
-                  <caret line="34" column="58" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
+                <state relative-caret-position="447">
+                  <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
                   <folding>
-                    <element signature="imports" expanded="true" />
+                    <element signature="e#0#50#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ModuleUriCheckServiceImpl.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java">
+          <file leaf-file-name="uri-query-control.component.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="301">
-                  <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                    <element signature="e#1670#1693#0" expanded="true" />
-                  </folding>
+                <state relative-caret-position="475">
+                  <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+                  <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="TestSelectUriPerformanceByQuery.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java">
+          <file leaf-file-name="app.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="532">
-                  <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="TestQueryService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestQueryService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="209">
-                  <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-                  <folding>
-                    <element signature="imports" expanded="true" />
-                  </folding>
+                <state relative-caret-position="285">
+                  <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -131,12 +78,34 @@
       </split-first>
       <split-second>
         <leaf>
-          <file leaf-file-name="AppUriEffectiveHourly.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/pojo/AppUriEffectiveHourly.java">
+          <file leaf-file-name="query-control.component.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/query-control/query-control.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="494">
-                  <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
+                  <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
                   <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="my-datepicker.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="228">
+                  <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="query-control.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/query-control/query-control.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="253">
+                  <caret line="74" column="47" lean-forward="false" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+                  <folding>
+                    <element signature="e#0#81#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
@@ -156,10 +125,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>Size</find>
-      <find>List Size</find>
-      <find>&lt;![CDATA[</find>
-      <find>/api</find>
       <find>/rest/eff</find>
       <find>/api/eff</find>
       <find>/rest/effec</find>
@@ -186,6 +151,10 @@
       <find>body.data</find>
       <find>Debug</find>
       <find>uri/params</find>
+      <find>bsDatepicker [bsValue]=&quot;bsValue&quot;</find>
+      <find>bsDatepicker</find>
+      <find>DatePipe</find>
+      <find>datePipe</find>
     </findStrings>
   </component>
   <component name="Git.Settings">
@@ -199,11 +168,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/AverageResponseVO.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/last/test/TestRvgRsp.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/last/test/TestMaxRsp.java" />
-        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/MaxResponseVO.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/main/resources/mybatis-mapper/AppUriEffectiveDailyMapper.xml" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/mapper/AppUriEffectiveDailyMapper.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/last/test/TestRequests.java" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/RequestVO.java" />
@@ -222,7 +186,6 @@
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/performance/performance.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/mock-data/last-avg-rsp.json" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/avg-rsp.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/max-rsp.ts" />
@@ -250,6 +213,12 @@
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestAbitraryDate.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestQueryService.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-performance-check/uri-performance-check.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.ts" />
       </list>
     </option>
   </component>
@@ -622,6 +591,36 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="my-datepicker" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
+              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="query-control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
+              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="app" type="462c0819:PsiDirectoryNode" />
+              <item name="uri-query-control" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
+              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
+              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
+              <item name="web" type="462c0819:PsiDirectoryNode" />
+              <item name="my-app" type="462c0819:PsiDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="mock-data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
@@ -984,12 +983,12 @@
       <workItem from="1517883624480" duration="172000" />
       <workItem from="1517889290584" duration="248000" />
       <workItem from="1517992980814" duration="11834000" />
-      <workItem from="1518501769006" duration="12130000" />
+      <workItem from="1518501769006" duration="16496000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="248513000" />
+    <option name="totallyTimeSpent" value="252879000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1051,134 +1050,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/charts/charts.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="453">
-          <caret line="41" column="11" lean-forward="false" selection-start-line="41" selection-start-column="11" selection-end-line="41" selection-end-column="11" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="14" column="0" lean-forward="true" selection-start-line="14" selection-start-column="0" selection-end-line="14" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/query-control/query-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1653">
-          <caret line="87" column="0" lean-forward="true" selection-start-line="87" selection-start-column="0" selection-end-line="87" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/performance/performance.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="8" lean-forward="true" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/performance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="0" lean-forward="true" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/mock-data/last-max-req.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="263">
-          <caret line="37" column="19" lean-forward="true" selection-start-line="37" selection-start-column="19" selection-end-line="37" selection-end-column="19" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules/angular-datatables/src/angular-datatables.directive.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="19" column="4" lean-forward="false" selection-start-line="19" selection-start-column="4" selection-end-line="19" selection-end-column="4" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/performance/performance.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="51" lean-forward="false" selection-start-line="1" selection-start-column="42" selection-end-line="1" selection-end-column="51" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/mock-data/last-avg-rsp.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="18" lean-forward="false" selection-start-line="6" selection-start-column="18" selection-end-line="6" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/applications.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/avg-rsp.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/max-rsp.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="4" column="18" lean-forward="false" selection-start-line="4" selection-start-column="18" selection-end-line="4" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules/rxjs/src/Subject.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="387">
-          <caret line="60" column="20" lean-forward="false" selection-start-line="60" selection-start-column="20" selection-end-line="60" selection-end-column="20" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/avg-response-control/avg-response-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="40" column="24" lean-forward="false" selection-start-line="40" selection-start-column="24" selection-end-line="40" selection-end-column="24" />
-          <folding>
-            <element signature="e#0#50#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/last-performance-statistics/last-performance-statistics.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="16" lean-forward="false" selection-start-line="2" selection-start-column="16" selection-end-line="2" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/max-response-control/max-response-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="43" column="8" lean-forward="false" selection-start-line="43" selection-start-column="8" selection-end-line="43" selection-end-column="8" />
-          <folding>
-            <element signature="e#0#59#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/avg-response-control/avg-response-control.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="44" lean-forward="false" selection-start-line="10" selection-start-column="44" selection-end-line="10" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/max-request-control/max-request-control.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
@@ -1236,8 +1107,8 @@
         <state relative-caret-position="152">
           <caret line="10" column="3" lean-forward="true" selection-start-line="10" selection-start-column="3" selection-end-line="10" selection-end-column="3" />
           <folding>
-            <element signature="e#424#425#0" expanded="true" />
-            <element signature="e#458#459#0" expanded="true" />
+            <element signature="e#424#425#0" expanded="false" />
+            <element signature="e#458#459#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1366,7 +1237,7 @@
         <state relative-caret-position="190">
           <caret line="10" column="17" lean-forward="false" selection-start-line="10" selection-start-column="17" selection-end-line="10" selection-end-column="17" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1427,18 +1298,18 @@
         <state relative-caret-position="361">
           <caret line="19" column="0" lean-forward="true" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
           <folding>
-            <element signature="e#258#259#0" expanded="true" />
-            <element signature="e#288#289#0" expanded="true" />
-            <element signature="e#334#335#0" expanded="true" />
-            <element signature="e#372#373#0" expanded="true" />
-            <element signature="e#402#403#0" expanded="true" />
-            <element signature="e#428#429#0" expanded="true" />
-            <element signature="e#466#467#0" expanded="true" />
-            <element signature="e#496#497#0" expanded="true" />
-            <element signature="e#526#527#0" expanded="true" />
-            <element signature="e#552#553#0" expanded="true" />
-            <element signature="e#590#591#0" expanded="true" />
-            <element signature="e#620#621#0" expanded="true" />
+            <element signature="e#258#259#0" expanded="false" />
+            <element signature="e#288#289#0" expanded="false" />
+            <element signature="e#334#335#0" expanded="false" />
+            <element signature="e#372#373#0" expanded="false" />
+            <element signature="e#402#403#0" expanded="false" />
+            <element signature="e#428#429#0" expanded="false" />
+            <element signature="e#466#467#0" expanded="false" />
+            <element signature="e#496#497#0" expanded="false" />
+            <element signature="e#526#527#0" expanded="false" />
+            <element signature="e#552#553#0" expanded="false" />
+            <element signature="e#590#591#0" expanded="false" />
+            <element signature="e#620#621#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1451,20 +1322,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/pojo/AppUriEffectiveHourly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="494">
-          <caret line="40" column="5" lean-forward="true" selection-start-line="40" selection-start-column="5" selection-end-line="40" selection-end-column="5" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="637">
           <caret line="34" column="58" lean-forward="true" selection-start-line="34" selection-start-column="58" selection-end-line="34" selection-end-column="58" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1474,7 +1337,7 @@
         <state relative-caret-position="285">
           <caret line="15" column="53" lean-forward="false" selection-start-line="15" selection-start-column="53" selection-end-line="15" selection-end-column="53" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1484,7 +1347,7 @@
         <state relative-caret-position="532">
           <caret line="28" column="9" lean-forward="true" selection-start-line="28" selection-start-column="9" selection-end-line="28" selection-end-column="9" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1494,7 +1357,7 @@
         <state relative-caret-position="209">
           <caret line="11" column="0" lean-forward="false" selection-start-line="11" selection-start-column="0" selection-end-line="11" selection-end-column="0" />
           <folding>
-            <element signature="imports" expanded="true" />
+            <element signature="imports" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1504,9 +1367,163 @@
         <state relative-caret-position="301">
           <caret line="45" column="34" lean-forward="true" selection-start-line="45" selection-start-column="34" selection-end-line="45" selection-end-column="34" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#1670#1693#0" expanded="true" />
+            <element signature="imports" expanded="false" />
+            <element signature="e#1670#1693#0" expanded="false" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/last-performance-statistics/last-performance-statistics.component.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/last-performance-statistics/last-performance-statistics.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#73#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/last-performance-statistics/last-performance-statistics.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/last-performance-statistics/last-performance-statistics.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="12" lean-forward="true" selection-start-line="0" selection-start-column="12" selection-end-line="0" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/max-response-control/max-response-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="35" column="12" lean-forward="false" selection-start-line="35" selection-start-column="12" selection-end-line="35" selection-end-column="12" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/pojo/AppUriEffectiveHourly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="14" column="23" lean-forward="true" selection-start-line="14" selection-start-column="23" selection-end-line="14" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.spec.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#73#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-performance-check/uri-performance-check.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="4" column="0" lean-forward="true" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-performance-check/uri-performance-check.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="6" column="2" lean-forward="true" selection-start-line="6" selection-start-column="2" selection-end-line="6" selection-end-column="2" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules/ngx-bootstrap/datepicker/bs-locale.service.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="2" column="21" lean-forward="false" selection-start-line="2" selection-start-column="21" selection-end-line="2" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="257">
+          <caret line="19" column="2" lean-forward="false" selection-start-line="19" selection-start-column="2" selection-end-line="19" selection-end-column="2" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/query-control/query-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="253">
+          <caret line="74" column="47" lean-forward="false" selection-start-line="74" selection-start-column="47" selection-end-line="74" selection-end-column="47" />
+          <folding>
+            <element signature="e#0#81#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="27" lean-forward="true" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="35" lean-forward="true" selection-start-line="12" selection-start-column="35" selection-end-line="12" selection-end-column="35" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/query-control/query-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="494">
+          <caret line="26" column="0" lean-forward="true" selection-start-line="26" selection-start-column="0" selection-end-line="26" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="447">
+          <caret line="64" column="0" lean-forward="false" selection-start-line="64" selection-start-column="0" selection-end-line="64" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/uri-query-control/uri-query-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="25" column="14" lean-forward="false" selection-start-line="25" selection-start-column="14" selection-end-line="25" selection-end-column="14" />
+          <folding />
         </state>
       </provider>
     </entry>

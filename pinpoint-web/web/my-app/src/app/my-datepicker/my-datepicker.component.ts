@@ -10,7 +10,7 @@ import {BsLocaleService, listLocales} from "ngx-bootstrap";
 export class MyDatepickerComponent implements OnInit {
   locale = 'en';
 
-  minDate: Date = new Date(2017, 1, 1);
+  minDate: Date = new Date(2000, 1, 1);
   maxDate: Date = new Date(2018, 12, 31);
 
   bsValue: Date = new Date();
