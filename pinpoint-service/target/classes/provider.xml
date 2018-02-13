@@ -17,19 +17,23 @@
     <bean id="moduleLastPerformanceService"
             class="indiv.dev.grad.hit.pro.service.impl.ModuleLastPerformanceServiceImpl">
     </bean>
+    <bean id="moduleUriCheckService"
+          class="indiv.dev.grad.hit.pro.service.impl.ModuleUriCheckServiceImpl">
+    </bean>
     <dubbo:application name="dubbo_provider"></dubbo:application>
     <!--?zk????-->
     <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
     <dubbo:registry protocol="zookeeper"  address="127.0.0.1:2181"
                     check="false" subscribe="false">
     </dubbo:registry>
-    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181"
-                    check="false" subscribe="false">
-    </dubbo:registry>
+
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModulePerformanceService"
                    ref="modulePerformanceService">
     </dubbo:service>
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModuleLastPerformanceService"
                    ref="moduleLastPerformanceService">
+    </dubbo:service>
+    <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModuleUriCheckService"
+                   ref="moduleUriCheckService">
     </dubbo:service>
 </beans>

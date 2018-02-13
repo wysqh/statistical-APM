@@ -350,4 +350,11 @@
       update_time = #{updateTime,jdbcType=TIMESTAMP}
     where id = #{id,jdbcType=INTEGER}
   </update>
+  <select id="selectUriPerformanceByQuery" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffectiveHourly">
+      SELECT * FROM
+      app_uri_effective_hourly
+      WHERE app_name = #{appName, jdbcType=VARCHAR} AND
+            day= #{day, jdbcType=INTEGER} AND
+            uri = #{uri, jdbcType=VARCHAR}
+  </select>
 </mapper>

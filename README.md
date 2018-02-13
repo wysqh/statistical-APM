@@ -1,5 +1,7 @@
 statistical-APM
 
+环境：java6+zookeeper(3.4.10)+dubbo(2.5.6)
+
 ------
 
 - mybatis 数据库字段带下划线，映射支持java类属性驼峰命名

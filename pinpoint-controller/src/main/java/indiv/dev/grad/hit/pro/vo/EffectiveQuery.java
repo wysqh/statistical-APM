@@ -7,6 +7,7 @@ import java.util.Date;
 /**
  * @Author: Created By Gu Tiankai
  * @Date: 2018-01-31 17:00
+ * 当日线上服务性能查询 restful映射类
  */
 public class EffectiveQuery {
     private String start;

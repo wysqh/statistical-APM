@@ -8,6 +8,7 @@ import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.TimeZone;
 
 public class DateFormatUtils {
     static Logger logger = LoggerFactory.getLogger(DateFormatUtils.class);
@@ -94,5 +95,25 @@ public class DateFormatUtils {
 
     public static Integer string2int(String date) throws NumberFormatException {
         return Integer.parseInt(date);
+    }
+
+    public static Date getStartTimeOfDay(long now, String timeZone) {
+        String tz = StringUtils.isEmpty(timeZone) ? "GMT+8" : timeZone;
+        TimeZone curTimeZone = TimeZone.getTimeZone(tz);
+        Calendar calendar = Calendar.getInstance(curTimeZone);
+        calendar.setTimeInMillis(now);
+        calendar.set(Calendar.HOUR_OF_DAY, 0);
+        calendar.set(Calendar.MINUTE, 0);
+        calendar.set(Calendar.SECOND, 0);
+        calendar.set(Calendar.MILLISECOND, 0);
+        return calendar.getTime();
+    }
+
+    public static String format(Date date, String format) {
+        if (StringUtils.isEmpty(format)) {
+            format = DateFormatUtils.fullFormat;
+        }
+        SimpleDateFormat sdf = new SimpleDateFormat(format);
+        return sdf.format(date);
     }
 }

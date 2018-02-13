@@ -44,4 +44,7 @@
     <dubbo:reference interface="indiv.dev.grad.hit.pro.service.ModuleLastPerformanceService"
                      id="moduleLastPerformanceService">
     </dubbo:reference>
+    <dubbo:reference interface="indiv.dev.grad.hit.pro.service.ModuleUriCheckService"
+                     id="moduleUriCheckService">
+    </dubbo:reference>
 </beans>

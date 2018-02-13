@@ -28,4 +28,7 @@ public interface AppUriEffectiveHourlyMapper {
     int updateByPrimaryKeySelective(AppUriEffectiveHourly record);
 
     int updateByPrimaryKey(AppUriEffectiveHourly record);
+
+    List<AppUriEffectiveHourly> selectUriPerformanceByQuery(@Param("appName")String appName, @Param("day")Integer day,
+                                                            @Param("uri")String uri);
 }
