@@ -1,7 +1,10 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, EventEmitter, OnInit, Output} from '@angular/core';
 import {FormControl, FormGroup} from "@angular/forms";
 import {BsLocaleService} from "ngx-bootstrap";
 import {DatePipe} from "@angular/common";
+import {UriCheckServiceService} from "../uri-check-service.service";
+import {UriPerformance} from "../UriPerformance";
+import {BaseResult} from "../base-result";
 
 @Component({
   selector: 'app-uri-query-control',
@@ -12,7 +15,10 @@ import {DatePipe} from "@angular/common";
   ]
 })
 export class UriQueryControlComponent implements OnInit {
-  locale = 'en';
+  locale = 'en'; //时区设置
+  baseResult: BaseResult<UriPerformance> = new BaseResult<UriPerformance>();  //后端返回的数据格式
+
+  @Output() uriPerformanceLists = new EventEmitter();   //子控件发射器
 
   minDate: Date = new Date(2000, 1, 1);   //限制最小日期
   maxDate: Date = new Date(2018, 12, 31); //限制最大日期
@@ -22,7 +28,8 @@ export class UriQueryControlComponent implements OnInit {
   searchForm: FormGroup; //表单数据
 
   constructor(private _localService: BsLocaleService,
-              private datePipe: DatePipe) { }
+              private datePipe: DatePipe,
+              private uriCheckServiceService: UriCheckServiceService) { }
 
   ngOnInit() {
     // this.applyLocale();
@@ -62,7 +69,22 @@ export class UriQueryControlComponent implements OnInit {
       监听查询事件
    */
   queryUriByConditions(): void {
-
+    //调试信息
+    console.log(this.searchForm.value.appName,
+      this.searchForm.value.appUri, this.searchForm.value.date)
+    this.uriCheckServiceService.getTodayUriPerformance(this.searchForm.value.appName,
+      this.searchForm.value.appUri, this.searchForm.value.date)
+      .subscribe(data => {
+        this.baseResult = data;
+        //测试回调参数
+        console.log(data);
+        //将参数发射至父控件
+        if (this.baseResult.status) {
+          this.uriPerformanceLists.emit(this.baseResult.data);
+        } else {
+          console.log(this.baseResult.message);
+        }
+      })
   }
 
   /*

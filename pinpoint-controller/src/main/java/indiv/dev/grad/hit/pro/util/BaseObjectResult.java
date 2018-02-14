@@ -46,4 +46,10 @@ public class BaseObjectResult<T> {
     public void setData(T data) {
         this.data = data;
     }
+
+    public void setContent(T data, String message) {
+        this.data = data;
+        this.message = message;
+        this.status = true;
+    }
 }

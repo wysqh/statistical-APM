@@ -4,7 +4,9 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveHourly;
 import indiv.dev.grad.hit.pro.service.ModuleUriCheckService;
+import indiv.dev.grad.hit.pro.util.BaseObjectResult;
 import indiv.dev.grad.hit.pro.vo.ApiQuery;
+import indiv.dev.grad.hit.pro.vo.UriPerformanceVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -29,8 +31,9 @@ public class UriPerformanceCheckRestController {
 
     @RequestMapping(value = "/uri/params")
     @ResponseBody
-    public List<AppUriEffectiveHourly> getUriPerformanceByQuery(@RequestParam(value = "query") String query) {
+    public BaseObjectResult<UriPerformanceVO> getUriPerformanceByQuery(@RequestParam(value = "query") String query) {
         ApiQuery apiQuery = null;
+        BaseObjectResult<UriPerformanceVO> baseObjectResult = new BaseObjectResult<UriPerformanceVO>();
         try {
             apiQuery = new GsonBuilder().create().fromJson(query, ApiQuery.class);
         } catch (JsonSyntaxException jse) {
@@ -40,6 +43,8 @@ public class UriPerformanceCheckRestController {
         List<AppUriEffectiveHourly> appUriEffectiveHourlies =
                 moduleUriCheckService.getUriPerformanceByQuery(apiQuery.getAppName(),
                         apiQuery.getDay(), apiQuery.getUri());
-        return appUriEffectiveHourlies;
+
+        baseObjectResult.setContent(UriPerformanceVO.doTransform(appUriEffectiveHourlies), "fetch data success");
+        return baseObjectResult;
     }
 }

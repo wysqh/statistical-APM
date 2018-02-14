@@ -1,0 +1,31 @@
+<app-uri-query-control (uriPerformanceLists)="revDataFromChild($event)"></app-uri-query-control>
+<div class="row">
+  <h1>模块： {{uriPerformanceLists.appName}}</h1>
+  <h1>接口： {{uriPerformanceLists.uri}}</h1>
+</div>
+<table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
+  <thead>
+  <tr>
+    <th>小时</th>
+    <th>机器id</th>
+    <th>请求数</th>
+    <th>平均响应时间</th>
+    <th>最大响应时间</th>
+    <th>最小响应时间</th>
+    <th>3s以上请求数</th>
+    <th>异常Top10请求</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let basis of uriPerformanceLists.lists">
+    <td> {{ basis.hour }}</td>
+    <td> {{ basis.id }}</td>
+    <td> {{ basis.amount }}</td>
+    <td> {{ basis.avgRsp }}</td>
+    <td> {{ basis.maxRsp }}</td>
+    <td> {{ basis.minRsp }}</td>
+    <td> {{ basis.slow }}</td>
+    <td> {{ basis.exception }}</td>
+  </tr>
+  </tbody>
+</table>
