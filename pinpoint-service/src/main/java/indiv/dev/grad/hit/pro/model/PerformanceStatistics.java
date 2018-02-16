@@ -1,7 +1,5 @@
 package indiv.dev.grad.hit.pro.model;
 
-import indiv.dev.grad.hit.pro.serializable.MetaTrace;
-
 import java.io.Serializable;
 import java.util.List;
 import java.util.Map;

@@ -1,8 +1,8 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
 import indiv.dev.grad.hit.pro.model.PerformanceStatistics;
-import indiv.dev.grad.hit.pro.serializable.ExceptionInfo;
-import indiv.dev.grad.hit.pro.serializable.SlowInfo;
+import indiv.dev.grad.hit.pro.model.ExceptionInfo;
+import indiv.dev.grad.hit.pro.model.SlowInfo;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;

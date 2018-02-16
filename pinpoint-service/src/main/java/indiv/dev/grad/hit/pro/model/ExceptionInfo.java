@@ -1,4 +1,4 @@
-package indiv.dev.grad.hit.pro.serializable;
+package indiv.dev.grad.hit.pro.model;
 
 import java.io.Serializable;
 import java.util.List;

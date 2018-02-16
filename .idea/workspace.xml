@@ -7,11 +7,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf09d82-d95f-4c61-8138-e9762e2fddca" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/UserController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/AuthResultVO.java" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.module.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/auth/providers/email-pass-auth.provider.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/auth/providers/email-pass-auth.provider.ts" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/ModulePerformanceApiController.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/ModulePerformanceApiController.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/PerformanceStatistics.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/PerformanceStatistics.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/serializable/ExceptionInfo.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/ExceptionInfo.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/serializable/MetaTrace.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/MetaTrace.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/serializable/SlowInfo.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/SlowInfo.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModulePerformanceService.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModulePerformanceService.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/test/TestToJson.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/test/TestToJson.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -80,7 +83,7 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserController.java" pinned="false" current-in-tab="true">
+          <file leaf-file-name="UserController.java" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/UserController.java">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="388">
@@ -92,6 +95,46 @@
                     <element signature="e#1835#1836#0" expanded="true" />
                     <element signature="e#1862#1863#0" expanded="true" />
                   </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="PerformanceStatistics.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/PerformanceStatistics.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ExceptionInfo.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/ExceptionInfo.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MetaTrace.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/MetaTrace.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="0">
+                  <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="SlowInfo.java" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/SlowInfo.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="76">
+                  <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+                  <folding />
                 </state>
               </provider>
             </entry>
@@ -258,7 +301,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestAbitraryDate.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestQueryService.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-datepicker/my-datepicker.component.ts" />
@@ -309,6 +351,7 @@
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/AuthResultVO.java" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/auth/providers/email-pass-auth.provider.ts" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/UserController.java" />
+        <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/SlowInfo.java" />
       </list>
     </option>
   </component>
@@ -412,102 +455,6 @@
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
               <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="controller" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="advice" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="util" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="vo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="WEB-INF" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
               <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -530,78 +477,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
@@ -660,77 +535,6 @@
               <item name="web" type="462c0819:PsiDirectoryNode" />
               <item name="my-app" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="components" type="462c0819:PsiDirectoryNode" />
-              <item name="login" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="my-app" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mock-data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -1100,12 +904,12 @@
       <workItem from="1518598745272" duration="10819000" />
       <workItem from="1518750637405" duration="612000" />
       <workItem from="1518783563110" duration="2159000" />
-      <workItem from="1518799049519" duration="11958000" />
+      <workItem from="1518799049519" duration="12148000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="278585000" />
+    <option name="totallyTimeSpent" value="278775000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1138,10 +942,10 @@
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27597404" sideWeight="0.54744136" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27597404" sideWeight="0.54744136" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27597404" sideWeight="0.45255864" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24147122" sideWeight="0.49380806" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.24147122" sideWeight="0.49380806" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1166,40 +970,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/theme/styles/_themes.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="16" lean-forward="true" selection-start-line="7" selection-start-column="16" selection-end-line="7" selection-end-column="16" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/auth/styles/_themes.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="9" column="2" lean-forward="false" selection-start-line="9" selection-start-column="2" selection-end-line="9" selection-end-column="2" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules/@nebular/auth/services/auth.service.d.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-1691">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/auth/components/auth.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules/@nebular/theme/components/layout/layout.component.metadata.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1690,6 +1460,38 @@
             <element signature="e#1835#1836#0" expanded="true" />
             <element signature="e#1862#1863#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/PerformanceStatistics.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/ExceptionInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/MetaTrace.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/SlowInfo.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
+          <folding />
         </state>
       </provider>
     </entry>

@@ -5,7 +5,7 @@ import com.google.gson.GsonBuilder;
 import com.google.gson.reflect.TypeToken;
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
-import indiv.dev.grad.hit.pro.serializable.MetaTrace;
+import indiv.dev.grad.hit.pro.model.MetaTrace;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
 import org.apache.ibatis.session.SqlSession;
 

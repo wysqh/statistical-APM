@@ -1,4 +1,4 @@
-package indiv.dev.grad.hit.pro.serializable;
+package indiv.dev.grad.hit.pro.model;
 
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 
