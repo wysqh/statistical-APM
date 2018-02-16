@@ -57,6 +57,7 @@
 
         <!-- 指定数据库表 -->
         <!-- 要对那些数据表进行生成操作，必须要有一个. -->
+        <table schema="" tableName="users"></table>
         <table schema="" tableName="task_pool"></table>
         <table schema="" tableName="app_uri_effective"></table>
         <table schema="" tableName="app_uri_effective_hourly"></table>
