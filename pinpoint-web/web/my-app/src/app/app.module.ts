@@ -32,8 +32,9 @@ import { UriQueryControlComponent } from './uri-query-control/uri-query-control.
 import {UriCheckServiceService} from "./uri-check-service.service";
 import { UriPerformanceQueryComponent } from './uri-performance-query/uri-performance-query.component';
 import { UserLoginNebularTestComponent } from './user-login-nebular-test/user-login-nebular-test.component';
-import {NbAuthModule, NbEmailPassAuthProvider} from "../framework/auth";
+import {NB_AUTH_TOKEN_WRAPPER_TOKEN, NbAuthModule, NbEmailPassAuthProvider} from "../framework/auth";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
+import {NbAuthJWTToken} from "../framework/auth/services";
 
 @NgModule({
   imports: [
@@ -54,7 +55,9 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
         email: {
           service: NbEmailPassAuthProvider,
           config: {
-
+            token: {
+              key: 'token',// this parameter tells Nebular where to look for the token
+            }
           }
         }
       },
@@ -91,6 +94,7 @@ import { PageNotFoundComponent } from './page-not-found/page-not-found.component
     BsLocaleService,
     NbSidebarService,
     NbEmailPassAuthProvider,
+    { provide: NB_AUTH_TOKEN_WRAPPER_TOKEN, useClass: NbAuthJWTToken },//tell Nebular that we are waiting for JWT token
   ],
   bootstrap: [ AppComponent ]
 })

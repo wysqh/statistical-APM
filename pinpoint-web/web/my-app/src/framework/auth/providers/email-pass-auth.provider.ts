@@ -237,6 +237,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
   }
 
   register(data?: any): Observable<NbAuthResult> {
+    console.log(data); //测试数据
     const method = this.getConfigValue('register.method');
     const url = this.getActionEndpoint('register');
     return this.http.request(method, url, {body: data, observe: 'response'})
@@ -278,6 +279,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
   }
 
   requestPassword(data?: any): Observable<NbAuthResult> {
+    console.log(data); //测试数据
     const method = this.getConfigValue('requestPass.method');
     const url = this.getActionEndpoint('requestPass');
     return this.http.request(method, url, {body: data, observe: 'response'})
@@ -317,6 +319,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
   }
 
   resetPassword(data: any = {}): Observable<NbAuthResult> {
+    console.log(data);  //测试数据
     const tokenKey = this.getConfigValue('resetPass.resetPasswordTokenKey');
     data[tokenKey] = this.route.snapshot.queryParams[tokenKey];
 
