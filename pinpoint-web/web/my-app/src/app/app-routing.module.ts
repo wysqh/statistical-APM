@@ -1,18 +1,69 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from "@angular/router";
-import { HeroesComponent } from "./hero/heroes.component";
-import { DashboardComponent } from "./dashboard/dashboard.component";
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
-import {TestComponent} from "./test/test.component";
-import {MyTimepickerComponent} from "./my-timepicker/my-timepicker.component";
+import {LastPerformanceStatisticsComponent} from "./last-performance-statistics/last-performance-statistics.component";
+import {PerformanceComponent} from "./performance/performance.component";
+import {UriPerformanceQueryComponent} from "./uri-performance-query/uri-performance-query.component";
+import {PageNotFoundComponent} from "./page-not-found/page-not-found.component";
+import {
+  NbAuthComponent,
+  NbLoginComponent,
+  NbRegisterComponent,
+  NbLogoutComponent,
+  NbRequestPasswordComponent,
+  NbResetPasswordComponent,
+} from '../framework/auth';
 
 const routes: Routes = [
-  //{ path: '', redirectTo: '/timepicker', pathMatch: 'full'},  //思考一下如何解决index.html问题 index.html -> test
-  { path: 'heroes', component: HeroesComponent },
-  { path: 'dashboard', component: DashboardComponent },
-  { path: 'detail/:id', component: HeroDetailComponent },
-  { path: 'test', component: TestComponent },
-  { path: 'timepicker', component: MyTimepickerComponent}
+  {
+    path: '',
+    redirectTo: 'auth',
+    pathMatch: 'full',
+  },{
+    path: 'auth',
+    component: NbAuthComponent,
+    children: [
+      {
+        path: '',
+        redirectTo: 'login',
+        pathMatch: 'full',
+      },
+      {
+        path: 'login',
+        component: NbLoginComponent,
+      },
+      {
+        path: 'register',
+        component: NbRegisterComponent,
+      },
+      {
+        path: 'logout',
+        component: NbLogoutComponent,
+      },
+      {
+        path: 'request-password',
+        component: NbRequestPasswordComponent,
+      },
+      {
+        path: 'reset-password',
+        component: NbResetPasswordComponent,
+      },
+    ],
+  }, {
+    path: 'last',
+    component: LastPerformanceStatisticsComponent
+  }, {
+    path: 'performance',
+    component: PerformanceComponent
+  }, {
+    path: 'uricheck',
+    component: UriPerformanceQueryComponent
+  }, {
+    path: 'last',
+    component: LastPerformanceStatisticsComponent
+  }, {
+    path: '**',
+    component: PageNotFoundComponent
+  }
 ]
 
 @NgModule({

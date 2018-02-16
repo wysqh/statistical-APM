@@ -1,15 +1,11 @@
 import { NgModule }       from '@angular/core';
 import { BrowserModule }  from '@angular/platform-browser';
 import {FormsModule, ReactiveFormsModule} from '@angular/forms';
-
 import { AppComponent }         from './app.component';
 import { DashboardComponent }   from './dashboard/dashboard.component';
-import { HeroDetailComponent }  from './hero-detail/hero-detail.component';
-import { HeroesComponent }      from './hero/heroes.component';
 import { HeroService }          from './hero.service';
 import { MessageService }       from './message.service';
 import { MessagesComponent }    from './messages/messages.component';
-
 import { AppRoutingModule }     from './app-routing.module';
 import { HttpClientModule } from "@angular/common/http";
 import { TestComponent } from './test/test.component';
@@ -29,14 +25,15 @@ import { AvgResponseControlComponent } from './avg-response-control/avg-response
 import { MaxResponseControlComponent } from './max-response-control/max-response-control.component';
 import { MaxRequestControlComponent } from './max-request-control/max-request-control.component';
 import {NbThemeModule} from "@nebular/theme";
-import { NebularSampleComponent } from './nebular-sample/nebular-sample.component';
-import { RouterModule } from "@angular/router";
+import {RouterModule, Routes} from "@angular/router";
 import { NbSidebarModule, NbLayoutModule, NbSidebarService } from "@nebular/theme";
 import {LastPerformanceService} from "./last-performance.service";
 import { UriQueryControlComponent } from './uri-query-control/uri-query-control.component';
 import {UriCheckServiceService} from "./uri-check-service.service";
 import { UriPerformanceQueryComponent } from './uri-performance-query/uri-performance-query.component';
-
+import { UserLoginNebularTestComponent } from './user-login-nebular-test/user-login-nebular-test.component';
+import {NbAuthModule, NbEmailPassAuthProvider} from "../framework/auth";
+import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 
 @NgModule({
   imports: [
@@ -50,15 +47,23 @@ import { UriPerformanceQueryComponent } from './uri-performance-query/uri-perfor
     BsDatepickerModule.forRoot(),
     TimepickerModule.forRoot(),
     NbThemeModule.forRoot({name: 'default'}),
-    RouterModule, // RouterModule.forRoot(routes, { useHash: true }), if this is your app.module
     NbLayoutModule,
     NbSidebarModule,
+    NbAuthModule.forRoot({
+      providers: {
+        email: {
+          service: NbEmailPassAuthProvider,
+          config: {
+
+          }
+        }
+      },
+      forms: { },
+    })
   ],
   declarations: [
     AppComponent,
     DashboardComponent,
-    HeroesComponent,
-    HeroDetailComponent,
     MessagesComponent,
     TestComponent,
     ChartsComponent,
@@ -71,9 +76,10 @@ import { UriPerformanceQueryComponent } from './uri-performance-query/uri-perfor
     AvgResponseControlComponent,
     MaxResponseControlComponent,
     MaxRequestControlComponent,
-    NebularSampleComponent,
     UriPerformanceQueryComponent,
     UriQueryControlComponent,
+    UserLoginNebularTestComponent,
+    PageNotFoundComponent,
   ],
   providers: [
     HeroService,
@@ -84,6 +90,7 @@ import { UriPerformanceQueryComponent } from './uri-performance-query/uri-perfor
     UriCheckServiceService,
     BsLocaleService,
     NbSidebarService,
+    NbEmailPassAuthProvider,
   ],
   bootstrap: [ AppComponent ]
 })
