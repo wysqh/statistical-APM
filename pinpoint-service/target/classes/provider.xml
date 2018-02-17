@@ -11,6 +11,7 @@
         http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-3.1.xsd"
         default-lazy-init="false" >
 
+    <!-- ??bean ?? -->
     <bean id="modulePerformanceService"
           class="indiv.dev.grad.hit.pro.service.impl.ModulePerformanceServiceImpl">
     </bean>
@@ -20,6 +21,10 @@
     <bean id="moduleUriCheckService"
           class="indiv.dev.grad.hit.pro.service.impl.ModuleUriCheckServiceImpl">
     </bean>
+    <bean id="userService"
+          class="indiv.dev.grad.hit.pro.service.impl.UserServiceImpl">
+    </bean>
+
     <dubbo:application name="dubbo_provider"></dubbo:application>
     <!--?zk????-->
     <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
@@ -35,5 +40,8 @@
     </dubbo:service>
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModuleUriCheckService"
                    ref="moduleUriCheckService">
+    </dubbo:service>
+    <dubbo:service interface="indiv.dev.grad.hit.pro.service.UserService"
+                    ref="userService">
     </dubbo:service>
 </beans>

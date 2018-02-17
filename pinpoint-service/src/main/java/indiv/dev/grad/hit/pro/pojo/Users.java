@@ -17,6 +17,8 @@ public class Users {
 
     private String userDesc;
 
+    private String token;
+
     public Integer getId() {
         return id;
     }
@@ -79,5 +81,13 @@ public class Users {
 
     public void setUserDesc(String userDesc) {
         this.userDesc = userDesc == null ? null : userDesc.trim();
+    }
+
+    public String getToken() {
+        return token;
+    }
+
+    public void setToken(String token) {
+        this.token = token == null ? null : token.trim();
     }
 }

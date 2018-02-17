@@ -11,6 +11,6 @@ public class TestMD5 {
         // 测试方法
         String pwd = "123456";
         System.out.println("加密前： " + pwd);
-        System.err.println("加密后： " + MD5Encrypt.getMD5(pwd));
+        System.err.println("加密后： " + new MD5Encrypt().doEncrypt(pwd));
     }
 }
