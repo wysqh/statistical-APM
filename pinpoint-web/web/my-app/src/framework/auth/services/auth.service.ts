@@ -82,6 +82,7 @@ export class NbAuthService {
           // TODO move this duplicate code in the separate method (see register)
           // TODO is it necessary to chech for token here
           if (result.isSuccess() && result.getTokenValue()) {
+            console.log(result); //测试数据
             return this.tokenService.set(result.getTokenValue())
               .pipe(
                 switchMap(() => this.tokenService.get()),

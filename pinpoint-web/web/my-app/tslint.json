@@ -44,18 +44,19 @@
         ]
       }
     ],
-    "no-arg": true,
-    "no-bitwise": true,
+    "no-arg": false,//    开发环境下开启console调试输出
+    "no-bitwise": false,//    开发环境下开启console调试输出
+//    开发环境下开启console调试输出
     "no-console": [
-      true,
-      "debug",
-      "info",
-      "time",
-      "timeEnd",
-      "trace"
+      false
+//      "debug",
+//      "info",
+//      "time",
+//      "timeEnd",
+//      "trace"
     ],
     "no-construct": true,
-    "no-debugger": true,
+    "no-debugger": false,//    开发环境下开启console调试输出
     "no-duplicate-super": true,
     "no-empty": false,
     "no-empty-interface": true,

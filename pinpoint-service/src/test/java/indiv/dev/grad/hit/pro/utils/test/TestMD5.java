@@ -1,6 +1,6 @@
 package indiv.dev.grad.hit.pro.utils.test;
 
-import indiv.dev.grad.hit.pro.utils.MD5Utils;
+import indiv.dev.grad.hit.pro.encrypt.MD5Encrypt;
 
 /**
  * @Author: Created By Gu Tiankai
@@ -11,6 +11,6 @@ public class TestMD5 {
         // 测试方法
         String pwd = "123456";
         System.out.println("加密前： " + pwd);
-        System.err.println("加密后： " + MD5Utils.getMD5(pwd));
+        System.err.println("加密后： " + MD5Encrypt.getMD5(pwd));
     }
 }

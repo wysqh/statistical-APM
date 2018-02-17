@@ -24,7 +24,7 @@ import { LastPerformanceStatisticsComponent } from './last-performance-statistic
 import { AvgResponseControlComponent } from './avg-response-control/avg-response-control.component';
 import { MaxResponseControlComponent } from './max-response-control/max-response-control.component';
 import { MaxRequestControlComponent } from './max-request-control/max-request-control.component';
-import {NbThemeModule} from "@nebular/theme";
+import {NbBadgeComponent, NbMenuService, NbSearchService, NbThemeModule} from "@nebular/theme";
 import {RouterModule, Routes} from "@angular/router";
 import { NbSidebarModule, NbLayoutModule, NbSidebarService } from "@nebular/theme";
 import {LastPerformanceService} from "./last-performance.service";
@@ -35,6 +35,9 @@ import { UserLoginNebularTestComponent } from './user-login-nebular-test/user-lo
 import {NB_AUTH_TOKEN_WRAPPER_TOKEN, NbAuthModule, NbEmailPassAuthProvider} from "../framework/auth";
 import { PageNotFoundComponent } from './page-not-found/page-not-found.component';
 import {NbAuthJWTToken} from "../framework/auth/services";
+import {NbSearchComponent} from "@nebular/theme/components/search/search.component";
+import {NbActionComponent, NbActionsComponent} from "@nebular/theme/components/actions/actions.component";
+import {NbUserComponent} from "@nebular/theme/components/user/user.component";
 
 @NgModule({
   imports: [
@@ -83,6 +86,11 @@ import {NbAuthJWTToken} from "../framework/auth/services";
     UriQueryControlComponent,
     UserLoginNebularTestComponent,
     PageNotFoundComponent,
+    NbActionComponent,
+    NbUserComponent,
+    NbSearchComponent,
+    NbActionsComponent,
+    NbBadgeComponent,
   ],
   providers: [
     HeroService,
@@ -94,6 +102,8 @@ import {NbAuthJWTToken} from "../framework/auth/services";
     BsLocaleService,
     NbSidebarService,
     NbEmailPassAuthProvider,
+    NbMenuService,
+    NbSearchService,
     { provide: NB_AUTH_TOKEN_WRAPPER_TOKEN, useClass: NbAuthJWTToken },//tell Nebular that we are waiting for JWT token
   ],
   bootstrap: [ AppComponent ]

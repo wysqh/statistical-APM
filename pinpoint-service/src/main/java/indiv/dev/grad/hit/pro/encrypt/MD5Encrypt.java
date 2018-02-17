@@ -1,4 +1,4 @@
-package indiv.dev.grad.hit.pro.utils;
+package indiv.dev.grad.hit.pro.encrypt;
 
 /**
  * @Author: Created By Gu Tiankai
@@ -13,14 +13,14 @@ import java.security.MessageDigest;
  *
  * 128/4 = 32 换成 16进制 表示后，为32位了。
  */
-public class MD5Utils {
+public class MD5Encrypt extends BaseEncrypt {
     /**
      * 生成md5
      *
      * @param message
      * @return
      */
-    public static String getMD5(String message) {
+    public String doEncrypt(String message) {
         String md5str = "";
         try {
             // 1 创建一个提供信息摘要算法的对象，初始化为md5算法对象
@@ -47,7 +47,7 @@ public class MD5Utils {
      * @param bytes
      * @return
      */
-    public static String bytesToHex(byte[] bytes) {
+    private String bytesToHex(byte[] bytes) {
         StringBuffer md5str = new StringBuffer();
         // 把数组每一字节换成16进制连成md5字符串
         int digital;
