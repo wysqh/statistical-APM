@@ -18,6 +18,12 @@ import java.util.List;
  * @Author: Created By Gu Tiankai
  * @Date: 2018-02-17 4:08
  */
+
+/*
+  @Todo:
+    1: 用户登入时考虑对密码进行不对称加密
+    2: 用户ACL控制
+ */
 @Controller
 @RequestMapping("/api")
 public class UserController {
