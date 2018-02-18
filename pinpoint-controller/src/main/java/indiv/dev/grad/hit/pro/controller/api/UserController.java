@@ -4,6 +4,8 @@ import indiv.dev.grad.hit.pro.model.BaseResult;
 import indiv.dev.grad.hit.pro.service.UserService;
 import indiv.dev.grad.hit.pro.vo.AuthResultVO;
 import indiv.dev.grad.hit.pro.vo.UsersVO;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.*;
@@ -18,15 +20,17 @@ import java.util.List;
 @Controller
 @RequestMapping("/api")
 public class UserController {
+    private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+
     @Autowired
     private UserService userService;
 
     /*
-        @Func: 测试返回数据
+        @Func: 测试用户数据返回json数据
      */
     @RequestMapping(value = "/test/login", method = RequestMethod.GET)
     @ResponseBody
-    AuthResultVO userLogin(@RequestParam("email")String email,
+    AuthResultVO userLoginTest(@RequestParam("email")String email,
                            @RequestParam("password")String password,
                            @RequestParam(value = "rememberMe", required = false)Boolean rememberMe){
         BaseResult<String> baseResult = userService.login(email, password, rememberMe);
@@ -42,7 +46,8 @@ public class UserController {
 
     @RequestMapping(value = "/auth/login", method = RequestMethod.POST)
     @ResponseBody
-    AuthResultVO userLogin(@ModelAttribute("user")UsersVO usersVO){
+    AuthResultVO userLogin(@RequestBody UsersVO usersVO){
+        logger.info("UserControllerInfo: " + usersVO.getEmail() + "," + usersVO.getPassword() + "," + usersVO.getRememberMe());
         BaseResult<String> baseResult = userService.login(usersVO.getEmail(),usersVO.getPassword(), usersVO.getRememberMe());
         if (baseResult.isStatus()) {
             return new AuthResultVO(true, baseResult.getData());

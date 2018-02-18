@@ -14,7 +14,7 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-import {NB_AUTH_TOKEN_WRAPPER_TOKEN, NbAuthJWTToken, NbAuthModule, NbEmailPassAuthProvider} from '@nebular/auth';
+import {NB_AUTH_TOKEN_WRAPPER_TOKEN, NbAuthJWTToken, NbAuthModule, NbEmailPassAuthProvider} from '../framework/auth';
 import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
 import {getDeepFromObject} from '@nebular/auth/helpers';
 import {AuthGuard} from './auth-guard.service';
@@ -39,11 +39,11 @@ import {AuthGuard} from './auth-guard.service';
             login: {
               alwaysFail: false,
               rememberMe: true,
-              endpoint: '/mock-data/login-in.json', // 测试Url地址 //'/api/auth/login',
-              method: 'get',
+              endpoint: '/api/auth/login',   // 测试Url地址 // '/mock-data/login-in.json',
+              method: 'post',   // 部署只能使用post方式
               redirect: {
                 success: '/test',
-                failure: null,
+                failure: '/auth/login',
               },
               defaultErrors: ['Login/Email combination is not correct, please try again.'],
               defaultMessages: ['You have been successfully logged in.'],
@@ -94,6 +94,12 @@ import {AuthGuard} from './auth-guard.service';
             },
             token: {
               key: 'token',
+            },
+            errors: {
+              key: 'errors',
+            },
+            messages: {
+              key: 'messages',
             },
           },
         },

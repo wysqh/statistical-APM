@@ -9,8 +9,6 @@ import java.util.List;
  */
 public class AuthResultVO {
     private boolean success;
-    private String response;
-    private String redirect;
     private List<String> errors;
     private List<String> messages;
     private String token;
@@ -34,22 +32,6 @@ public class AuthResultVO {
 
     public void setSuccess(boolean success) {
         this.success = success;
-    }
-
-    public String getResponse() {
-        return response;
-    }
-
-    public void setResponse(String response) {
-        this.response = response;
-    }
-
-    public String getRedirect() {
-        return redirect;
-    }
-
-    public void setRedirect(String redirect) {
-        this.redirect = redirect;
     }
 
     public List<String> getErrors() {
