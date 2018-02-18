@@ -4,6 +4,7 @@ import { NbMenuService, NbSidebarService } from '@nebular/theme';
 import { UserService } from '../../../@core/data/users.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 import { NbAuthJWTToken, NbAuthService } from '../../../../framework/auth';
+import {equal} from 'assert';
 
 @Component({
   selector: 'ngx-header',
@@ -29,6 +30,12 @@ export class HeaderComponent implements OnInit {
               private userService: UserService,
               private analyticsService: AnalyticsService,
               private authService: NbAuthService) {
+  }
+
+  ngOnInit() {
+    // 测试mock 数据
+    // this.userService.getUsers()
+    //   .subscribe((users: any) => this.user = users.nick);
     this.authService.onTokenChange()
       .subscribe((token: NbAuthJWTToken) => {
         // 测试返回数据
@@ -40,9 +47,20 @@ export class HeaderComponent implements OnInit {
       })
   }
 
-  ngOnInit() {
-    this.userService.getUsers()
-      .subscribe((users: any) => this.user = users.nick);
+  menuClick(event): void {
+    const name = event['item'];
+    if (equal(name, this.userMenu[0])) {
+      console.log('UnImplemented Method');
+    } else {
+      this.logout()
+    }
+  }
+
+  /*
+      用户从站点注销
+   */
+  logout(): void {
+    console.log('log out executed');
   }
 
   toggleSidebar(): boolean {

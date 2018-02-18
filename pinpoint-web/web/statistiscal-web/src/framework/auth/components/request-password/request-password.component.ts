@@ -12,7 +12,7 @@ import { NbAuthService } from '../../services/auth.service';
 import { NbAuthResult } from '../../services/auth-result';
 
 @Component({
-  selector: 'nb-request-password-page',
+  selector: 'ngx-nb-request-password-page',
   styleUrls: ['./request-password.component.scss'],
   template: `
     <nb-auth-block>

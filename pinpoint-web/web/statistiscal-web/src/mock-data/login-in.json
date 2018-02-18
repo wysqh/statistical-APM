@@ -1,8 +1,6 @@
 {
-  "success": false,
-  "response": null,
-  "redirect": null,
-  "errors": ["Provided Email Not exist"],
+  "success": true,
+  "errors": null,
   "messages": null,
-  "token": "eyJhbGciOiJTSEEtNTEyIiwidHlwIjoiSldUIn0=.eyJuYW1lIjoiZ3V0aWFua2FpIiwicGljdHVyZSI6IiJ9.45f4b178c2ef36f0b918f779ac3b6a462ed77d3fe484381de9e405ccd94fcbb7ec581f6489f39fe04adcc1b09766c302169f70e0b75cc2fddd784099aeb8d235"
+  "token": "eyJhbGciOiJTSEEtNTEyIiwidHlwIjoiSldUIn0=.eyJuYW1lIjoiZ3V0aWFua2FpIiwicGljdHVyZSI6Ii9hc3NldHMvaW1hZ2VzL2FsYW4ucG5nIn0=.a0000b3e268aa960fa17431c1d5e74d89205b6dd1df32bea0964747ac6fb3e429de34fbfc6c6ce52285bd160dcd56126bd8033887c82a75c0cce1b08195fa4aa"
 }

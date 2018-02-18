@@ -47,7 +47,7 @@ public class UserController {
     @RequestMapping(value = "/auth/login", method = RequestMethod.POST)
     @ResponseBody
     AuthResultVO userLogin(@RequestBody UsersVO usersVO){
-        logger.info("UserControllerInfo: " + usersVO.getEmail() + "," + usersVO.getPassword() + "," + usersVO.getRememberMe());
+        logger.info("UserControllerInfo: " + usersVO.getEmail() + "," + usersVO.getPassword() + "," + usersVO.getRememberMe()); // http.body 测试
         BaseResult<String> baseResult = userService.login(usersVO.getEmail(),usersVO.getPassword(), usersVO.getRememberMe());
         if (baseResult.isStatus()) {
             return new AuthResultVO(true, baseResult.getData());

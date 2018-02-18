@@ -39,10 +39,10 @@ import {AuthGuard} from './auth-guard.service';
             login: {
               alwaysFail: false,
               rememberMe: true,
-              endpoint: '/api/auth/login',   // 测试Url地址 // '/mock-data/login-in.json',
-              method: 'post',   // 部署只能使用post方式
+              endpoint: '/mock-data/login-in.json',   // 测试Url地址 // '/api/auth/login',
+              method: 'get',   // 部署只能使用post方式
               redirect: {
-                success: '/test',
+                success: '/dashboard',
                 failure: '/auth/login',
               },
               defaultErrors: ['Login/Email combination is not correct, please try again.'],

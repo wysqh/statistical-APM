@@ -8,7 +8,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     home: true,
   },
   {
-    title: 'FEATURES',
+    title: 'Kong Ming Data Analysis Platform',
     group: true,
   },
   {
@@ -43,6 +43,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Tabs',
         link: '/pages/ui-features/tabs',
+      },
+    ],
+  },
+  {
+    title: 'Performance Analysis',
+    icon: 'nb-paper-plane',
+    children: [
+      {
+        title: 'Application Analysis (Min)',
+        link: '/auth/login',
+      },
+      {
+        title: 'Application Statistics',
+        link: '/auth/register',
+      },
+      {
+        title: 'Interface Analysis',
+        link: '/auth/request-password',
       },
     ],
   },
