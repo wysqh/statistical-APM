@@ -2,5 +2,5 @@
   "success": true,
   "errors": null,
   "messages": null,
-  "token": "eyJhbGciOiJTSEEtNTEyIiwidHlwIjoiSldUIn0=.eyJuYW1lIjoiZ3V0aWFua2FpIiwicGljdHVyZSI6Ii9hc3NldHMvaW1hZ2VzL2FsYW4ucG5nIn0=.a0000b3e268aa960fa17431c1d5e74d89205b6dd1df32bea0964747ac6fb3e429de34fbfc6c6ce52285bd160dcd56126bd8033887c82a75c0cce1b08195fa4aa"
+  "token": "eyJhbGciOiJTSEEtNTEyIiwidHlwIjoiSldUIn0=.eyJuYW1lIjoiZ3V0aWFua2FpIiwicGljdHVyZSI6Ii9hc3NldHMvaW1hZ2VzL2FsYW4ucG5nIiwiZW1haWwiOiJndXRpYW5rYWlAYmFpZHUuY29tIn0=.610a37e094663c9492bbf155d48be78a322e12b3355651fd5365beccdb0bcfb967d9f09fdcf7d8e65236520ed51e051d080d00bd7f408697423a8f33896c100f"
 }

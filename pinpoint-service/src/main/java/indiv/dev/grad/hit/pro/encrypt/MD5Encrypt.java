@@ -4,6 +4,9 @@ package indiv.dev.grad.hit.pro.encrypt;
  * @Author: Created By Gu Tiankai
  * @Date: 2018-02-17 3:46
  */
+import indiv.dev.grad.hit.pro.exceptions.UnImplementedException;
+import org.apache.zookeeper.KeeperException;
+
 import java.security.MessageDigest;
 
 /**
@@ -63,5 +66,9 @@ public class MD5Encrypt extends BaseEncrypt {
             md5str.append(Integer.toHexString(digital));
         }
         return md5str.toString().toUpperCase();
+    }
+
+    public String doDecode(String code) throws UnImplementedException {
+        throw new UnImplementedException("MD5 Decode UnImplemented.");
     }
 }

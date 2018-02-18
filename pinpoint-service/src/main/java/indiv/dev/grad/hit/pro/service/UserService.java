@@ -12,4 +12,5 @@ public interface UserService {
     String generateToken(String encryptType, UserModel userModel, String email);
     boolean register(String email, String password, String fullName);
     BaseResult<String> login(String email, String password, Boolean rememberMe);
+    BaseResult<String> logout(String token);
 }

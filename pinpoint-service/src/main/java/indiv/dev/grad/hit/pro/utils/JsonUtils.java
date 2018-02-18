@@ -7,7 +7,10 @@ import com.google.gson.GsonBuilder;
  * @Author: Created By Gu Tiankai
  * @Date: 2018-02-18 5:07
  */
-public class JsonUtils {
+public class JsonUtils<T> {
+    /*
+        @Func: 实体类转化为Json串
+     */
     public static String object2json(Object o) {
         Gson gson = new GsonBuilder().create();
         return gson.toJson(o);

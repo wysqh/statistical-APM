@@ -2,6 +2,7 @@ package indiv.dev.grad.hit.pro.encrypt;
 
 import indiv.dev.grad.hit.pro.constant.EncryptConstant;
 import indiv.dev.grad.hit.pro.exceptions.NoSpecifiedEncryptTypeException;
+import indiv.dev.grad.hit.pro.exceptions.UnImplementedException;
 import indiv.dev.grad.hit.pro.utils.StringUtils;
 
 /**
@@ -9,7 +10,7 @@ import indiv.dev.grad.hit.pro.utils.StringUtils;
  * @Date: 2018-02-18 3:45
  */
 public abstract class BaseEncrypt {
-    public String encryptByType(String type, String code) throws NoSpecifiedEncryptTypeException {
+    public static String encryptByType(String type, String code) throws NoSpecifiedEncryptTypeException {
         if (StringUtils.isEmpty(type)) {
             throw new NoSpecifiedEncryptTypeException();
         }
@@ -29,4 +30,6 @@ public abstract class BaseEncrypt {
     }
 
     public abstract String doEncrypt(String code);
+
+    public abstract String doDecode(String code) throws UnImplementedException;
 }

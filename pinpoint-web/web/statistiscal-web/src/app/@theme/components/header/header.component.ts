@@ -48,8 +48,8 @@ export class HeaderComponent implements OnInit {
   }
 
   menuClick(event): void {
-    const name = event['item'];
-    if (equal(name, this.userMenu[0])) {
+    const name = event['title'];
+    if (name === this.userMenu[0]['title']) {
       console.log('UnImplemented Method');
     } else {
       this.logout()

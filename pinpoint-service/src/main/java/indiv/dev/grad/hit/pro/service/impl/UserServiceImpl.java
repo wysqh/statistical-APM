@@ -2,12 +2,15 @@ package indiv.dev.grad.hit.pro.service.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import indiv.dev.grad.hit.pro.constant.EncryptConstant;
 import indiv.dev.grad.hit.pro.encrypt.Base64Encrypt;
 import indiv.dev.grad.hit.pro.encrypt.BaseEncrypt;
 import indiv.dev.grad.hit.pro.encrypt.MD5Encrypt;
 import indiv.dev.grad.hit.pro.exceptions.NoPassException;
 import indiv.dev.grad.hit.pro.exceptions.NoSpecifiedEncryptTypeException;
+import indiv.dev.grad.hit.pro.exceptions.ReLogoutException;
+import indiv.dev.grad.hit.pro.exceptions.UnImplementedException;
 import indiv.dev.grad.hit.pro.mapper.UsersMapper;
 import indiv.dev.grad.hit.pro.model.BaseResult;
 import indiv.dev.grad.hit.pro.model.JWT;
@@ -63,7 +66,7 @@ public class UserServiceImpl implements UserService {
             Integer secret = new Random().nextInt(10);
             setTokenByEmail("" + secret, email);    //服务端储存token 密钥部分
             String combineStr = firstFormat + secondFormat + secret;
-            thirdFormat = baseEncrypt.encryptByType(jwt.getAlg(), combineStr);
+            thirdFormat = BaseEncrypt.encryptByType(jwt.getAlg(), combineStr);
         } catch (NoSpecifiedEncryptTypeException nsete) {
             nsete.printStackTrace();
         }
@@ -89,7 +92,7 @@ public class UserServiceImpl implements UserService {
         try {
             Integer secret = Integer.parseInt(getUserTokenByEmail(email));
             String combineStr = firstFormat + secondFormat + secret;
-            thirdFormat = baseEncrypt.encryptByType(jwt.getAlg(), combineStr);
+            thirdFormat = BaseEncrypt.encryptByType(jwt.getAlg(), combineStr);
         } catch (NoSpecifiedEncryptTypeException nsete) {
             nsete.printStackTrace();
         }
@@ -123,11 +126,12 @@ public class UserServiceImpl implements UserService {
             UserModel userModel = new UserModel();  // 用户模型
             userModel.setPicture(user.getUserDesc());
             userModel.setName(user.getFullName());
+            userModel.setEmail(user.getEmailAddress());
 
             token = generateToken(EncryptConstant.SHA512, userModel, email);   //生成返回前端token串
         } else {
             Users user = usersMapper.selectUsersByEmail(email);
-            UserModel extra = new UserModel(user.getFullName(),user.getUserDesc());
+            UserModel extra = new UserModel(user.getFullName(),user.getUserDesc(), email);
             token = getUserToken(EncryptConstant.SHA512,extra , email); //测试token串
         }
         //登陆验证
@@ -161,5 +165,97 @@ public class UserServiceImpl implements UserService {
         }
 
         return rows;
+    }
+
+    /*
+        @Func: 根据用户传递token凭证判断信息是否篡改, 并实行注销
+     */
+    public BaseResult<String> logout(String token) {
+        BaseResult<String> baseResult = new BaseResult<String>();
+        BaseEncrypt baseEncrypt = new Base64Encrypt();
+        // 解密token获取信息
+        String[] tokens = splitTokens(token);
+        String decryptToken = null;
+        if (tokens.length != 3) {
+            baseResult.setFailMessage(token, "Token is not in JWT Format");
+            return baseResult;
+        }
+        try {
+            decryptToken = baseEncrypt.doDecode(tokens[1]);
+        } catch (UnImplementedException e) {
+            e.printStackTrace();
+        }
+
+        Gson gson = new GsonBuilder().create();
+        UserModel userModel = gson.fromJson(decryptToken, UserModel.class);
+        // 校对信息
+        try {
+            if (isFalsified(tokens, userModel)) {
+                baseResult.setFailMessage(token, "Information is not Accord with that in Server Side ");
+                return baseResult;
+            }
+        } catch (ReLogoutException re) {
+            re.printStackTrace();
+            baseResult.setFailMessage(null, "Current User has already logged out.");
+            return baseResult;
+        }
+
+        Integer row = setTokenByEmail("", userModel.getEmail());  // 清空密钥信息
+        if (!row.equals(1)) {
+            baseResult.setFailMessage("" + row, "Update DB error");
+            return baseResult;
+        }
+        baseResult.setContent(null, "logout success");
+        return baseResult;
+    }
+
+    /*
+        @Func: 分隔token
+     */
+    public String[] splitTokens(String token) {
+        if (StringUtils.isEmpty(token)) {
+            return null;
+        }
+        return token.split("[.]");
+    }
+
+    /*
+        @Func: 判断是否被篡改信息
+     */
+    public boolean isFalsified(String[] tokens, UserModel userModel) throws ReLogoutException {
+        JWT jwt = getJWTByToken(tokens[0]);
+        String encryptAlg = jwt.getAlg();
+        String secret = null;
+
+        SqlSession session = DbConnUtils.getSession().openSession();
+        UsersMapper usersMapper = session.getMapper(UsersMapper.class);
+        secret = usersMapper.selectTokenByEmail(userModel.getEmail());
+        if (StringUtils.isEmpty(secret)) {
+            throw new ReLogoutException();
+        }
+
+        String cmpToken = tokens[0] + tokens[1] + secret;
+        if (!tokens[2].equals(BaseEncrypt.encryptByType(encryptAlg, cmpToken))) {
+            return true;
+        }
+
+        session.close();
+        return false;
+    }
+
+    /*
+        @Func: 获取JWT信息
+     */
+    public JWT getJWTByToken(String token) {
+        BaseEncrypt baseEncrypt = new Base64Encrypt();
+        Gson gson = new GsonBuilder().create();
+        JWT jwt = null;
+        try {
+            jwt = gson.fromJson(baseEncrypt.doDecode(token), JWT.class);
+        } catch (JsonSyntaxException jse) {
+            jse.printStackTrace();
+        }
+
+        return jwt;
     }
 }

@@ -10,7 +10,10 @@ public class Base64Encrypt extends BaseEncrypt {
     private static final String CODES = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789+/=";
 
     // base64解密
-    public byte[] base64Decode(String input) {
+    public String doDecode(String input) {
+        if (StringUtils.isEmpty(input)) {
+            return null;
+        }
         if (input.length() % 4 != 0) {
             throw new IllegalArgumentException("Invalid base64 input");
         }
@@ -34,7 +37,7 @@ public class Base64Encrypt extends BaseEncrypt {
                 }
             }
         }
-        return decoded;
+        return new String(decoded);
     }
 
     // base64加密

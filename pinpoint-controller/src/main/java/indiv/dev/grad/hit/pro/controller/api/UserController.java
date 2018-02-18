@@ -1,5 +1,6 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
+import com.fasterxml.jackson.databind.ser.Serializers;
 import indiv.dev.grad.hit.pro.model.BaseResult;
 import indiv.dev.grad.hit.pro.service.UserService;
 import indiv.dev.grad.hit.pro.vo.AuthResultVO;
@@ -26,7 +27,7 @@ public class UserController {
     private UserService userService;
 
     /*
-        @Func: 测试用户数据返回json数据
+        @Func: 测试用户注册返回json数据
      */
     @RequestMapping(value = "/test/login", method = RequestMethod.GET)
     @ResponseBody
@@ -82,9 +83,22 @@ public class UserController {
         return null;
     }
 
-    @RequestMapping("/auth/logout")
+    /*
+        @Func: 测试用户注销返回Json数据
+        @Notice: Get方式一般会出现Token过长被截断的可能性
+     */
+    @RequestMapping(value = "/test/logout", method = RequestMethod.GET)
     @ResponseBody
-    AuthResultVO userLogout() {
-        return null;
+    AuthResultVO userLogout(@RequestParam("token")String token) {
+        logger.info("LogoutInfo: " + token);
+        BaseResult<String> baseResult = userService.logout(token);
+        if (baseResult.isStatus()) {
+            return new AuthResultVO(true, baseResult.getData());
+        }
+
+        AuthResultVO failVO = new AuthResultVO();
+        failVO.setSuccess(false);
+        failVO.addErrors(baseResult.getMessage());
+        return failVO;
     }
 }

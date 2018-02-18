@@ -1,4 +1,6 @@
 package indiv.dev.grad.hit.pro.encrypt;
+import indiv.dev.grad.hit.pro.exceptions.UnImplementedException;
+
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 /**
@@ -27,7 +29,7 @@ public class SHA256Encrypt extends BaseEncrypt{
     /**
      * 字符串 SHA 加密
      *
-     * @param strSourceText
+     * @param strText,strType
      * @return
      */
     private String SHA(final String strText, final String strType)
@@ -70,5 +72,9 @@ public class SHA256Encrypt extends BaseEncrypt{
         }
 
         return strResult;
+    }
+
+    public String doDecode(String code) throws UnImplementedException {
+        throw new UnImplementedException("SHA-256 Decode UnImplemented.");
     }
 }
