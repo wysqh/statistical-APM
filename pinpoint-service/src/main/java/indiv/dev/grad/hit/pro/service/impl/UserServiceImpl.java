@@ -63,7 +63,7 @@ public class UserServiceImpl implements UserService {
 
         String thirdFormat = null;
         try {
-            Integer secret = new Random().nextInt(10);
+            Integer secret = new Random().nextInt(EncryptConstant.slat);
             setTokenByEmail("" + secret, email);    //服务端储存token 密钥部分
             String combineStr = firstFormat + secondFormat + secret;
             thirdFormat = BaseEncrypt.encryptByType(jwt.getAlg(), combineStr);
