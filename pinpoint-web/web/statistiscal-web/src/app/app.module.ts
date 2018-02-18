@@ -39,7 +39,7 @@ import {AuthGuard} from './auth-guard.service';
             login: {
               alwaysFail: false,
               rememberMe: true,
-              endpoint: '/mock-data/login-in.json',
+              endpoint: '/mock-data/login-in.json', // 测试Url地址 //'/api/auth/login',
               method: 'get',
               redirect: {
                 success: '/test',

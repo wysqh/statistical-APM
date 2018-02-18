@@ -1,5 +1,6 @@
 package indiv.dev.grad.hit.pro.vo;
 
+import java.util.ArrayList;
 import java.util.List;
 
 /**
@@ -73,5 +74,12 @@ public class AuthResultVO {
 
     public void setToken(String token) {
         this.token = token;
+    }
+
+    public void addErrors(String error) {
+        if (errors == null) {
+            errors = new ArrayList<String>();
+        }
+        errors.add(error);
     }
 }

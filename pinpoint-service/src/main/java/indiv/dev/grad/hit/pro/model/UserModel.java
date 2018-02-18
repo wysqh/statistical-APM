@@ -8,6 +8,14 @@ public class UserModel {
     private String name;
     private String picture;
 
+    public UserModel() {
+    }
+
+    public UserModel(String name, String picture) {
+        this.name = name;
+        this.picture = picture;
+    }
+
     public String getName() {
         return name;
     }

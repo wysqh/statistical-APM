@@ -47,4 +47,7 @@
     <dubbo:reference interface="indiv.dev.grad.hit.pro.service.ModuleUriCheckService"
                      id="moduleUriCheckService">
     </dubbo:reference>
+    <dubbo:reference interface="indiv.dev.grad.hit.pro.service.UserService"
+                     id="userService">
+    </dubbo:reference>
 </beans>

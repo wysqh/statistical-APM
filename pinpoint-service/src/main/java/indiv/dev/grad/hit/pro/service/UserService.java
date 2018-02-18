@@ -1,5 +1,6 @@
 package indiv.dev.grad.hit.pro.service;
 
+import indiv.dev.grad.hit.pro.model.BaseResult;
 import indiv.dev.grad.hit.pro.model.UserModel;
 
 /**
@@ -8,6 +9,7 @@ import indiv.dev.grad.hit.pro.model.UserModel;
  */
 public interface UserService {
     String getUserTokenByEmail(String email);
-    String generateToken(String encryptType, UserModel userModel);
+    String generateToken(String encryptType, UserModel userModel, String email);
     boolean register(String email, String password, String fullName);
+    BaseResult<String> login(String email, String password, Boolean rememberMe);
 }

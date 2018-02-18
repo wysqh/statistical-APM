@@ -35,4 +35,10 @@ public interface UsersMapper {
     int updateByPrimaryKey(Users record);
 
     String selectTokenByEmail(@Param("email")String email);
+
+    String selectPassMd5ByEmail(@Param("email")String email);
+
+    Integer updateTokenByEmail(@Param("token")String token, @Param("email")String email);
+
+    Users selectUsersByEmail(@Param("email")String email);
 }

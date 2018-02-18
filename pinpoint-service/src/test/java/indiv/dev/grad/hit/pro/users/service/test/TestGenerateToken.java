@@ -10,13 +10,14 @@ import indiv.dev.grad.hit.pro.service.impl.UserServiceImpl;
  */
 public class TestGenerateToken {
     public static void main(String[] args) {
+        String email = "gutiankai@baidu.com";
+
         UserModel userModel = new UserModel();
         userModel.setName("gu");
         userModel.setPicture("http://www.baidu.com");
 
         UserServiceImpl userService = new UserServiceImpl();
-        String token = userService.generateToken(EncryptConstant.MD5, userModel);
+        String token = userService.generateToken(EncryptConstant.MD5, userModel, email);
         System.out.println(token);
     }
-
 }

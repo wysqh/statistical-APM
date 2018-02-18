@@ -325,4 +325,18 @@
     SELECT token FROM users
     WHERE email_address = #{email, jdbcType = VARCHAR}
   </select>
+  <select id="selectPassMd5ByEmail" parameterType="java.lang.String" resultType="java.lang.String">
+    SELECT password_md5 FROM users
+    WHERE email_address = #{email, jdbcType = VARCHAR}
+  </select>
+  <update id="updateTokenByEmail" parameterType="java.lang.String">
+      UPDATE users
+      SET token = #{token, jdbcType = LONGVARCHAR}
+      WHERE email_address = #{email, jdbcType = VARCHAR}
+  </update>
+   <select id="selectUsersByEmail" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.Users">
+       SELECT * FROM
+       users
+       WHERE email_address = #{email, jdbcType = VARCHAR }
+   </select>
 </mapper>
