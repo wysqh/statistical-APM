@@ -1,0 +1,32 @@
+<form [formGroup]="dateForm">
+  <div class="row show-grid form-group">
+    <div class=".col-6 .col-md-4">
+      <label>start:
+        <input class="form-control" formControlName="startTime"/>
+      </label>
+    </div>
+    <div class=".col-6 .col-md-4">
+      <label>end:
+        <input class="form-control" formControlName="endTime" />
+      </label>
+    </div>
+    <div class=".col-6 .col-md-4">
+      <label>appName:
+        <input #searchBox class="form-control"
+               (keydown)="activateVisibility()"
+               (keyup)="search(searchBox.value)" formControlName="appName"/>
+        <ul class="search-result">
+          <li *ngFor="let sim of similarList | async" (click)="patchAppName(sim)"
+              [hidden]="bVisible">
+            {{sim}}
+          </li>
+        </ul>
+      </label>
+    </div>
+  </div>
+  <div class="row show-grid form-group">
+    <div class="col-xs-12 col-12 col-md-4 form-group">
+      <button class="btn btn-success" (click)="queryByConditions()">性能概述</button>
+    </div>
+  </div>
+</form>

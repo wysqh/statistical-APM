@@ -52,15 +52,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Application Analysis (Min)',
-        link: '/auth/login',
+        link: '/pages/perform-ays/appays',
       },
       {
         title: 'Application Statistics',
-        link: '/auth/register',
+        link: '/pages/perform-ays/appserv',
       },
       {
         title: 'Interface Analysis',
-        link: '/auth/request-password',
+        link: '/pages/perform-ays/seriays',
       },
     ],
   },

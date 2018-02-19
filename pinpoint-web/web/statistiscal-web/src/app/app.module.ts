@@ -18,6 +18,7 @@ import {NB_AUTH_TOKEN_WRAPPER_TOKEN, NbAuthJWTToken, NbAuthModule, NbEmailPassAu
 import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
 import {getDeepFromObject} from '@nebular/auth/helpers';
 import {AuthGuard} from './auth-guard.service';
+import {DataTablesModule} from 'angular-datatables';
 
 @NgModule({
   declarations: [AppComponent],
@@ -26,7 +27,7 @@ import {AuthGuard} from './auth-guard.service';
     BrowserAnimationsModule,
     HttpModule,
     AppRoutingModule,
-
+    DataTablesModule,
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
     CoreModule.forRoot(),
