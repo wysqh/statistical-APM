@@ -4,8 +4,10 @@ import { Component } from '@angular/core';
   selector: 'ngx-footer',
   styleUrls: ['./footer.component.scss'],
   template: `
-    <span class="created-by">Created with ♥ by <b>
-      <a href="https://github.com/wysqh" target="_blank">Gu Tiankai</a></b> 2018</span>
+    <span class="created-by">Created with ♥ by
+      <b><a href="https://github.com/wysqh" target="_blank">Kai</a></b> 2018 |
+      Framework Nebular By <b><a href="https://akveo.com/" target="_blank">Akveo</a></b>
+    </span>
     <div class="socials">
       <a href="#" target="_blank" class="ion ion-social-github"></a>
       <a href="#" target="_blank" class="ion ion-social-facebook"></a>
