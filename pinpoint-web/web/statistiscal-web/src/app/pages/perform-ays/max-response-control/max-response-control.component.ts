@@ -10,7 +10,7 @@ import {LastPerformanceService} from '../../../@core/data/last-performance.servi
   styleUrls: ['./max-response-control.component.scss'],
 })
 export class MaxResponseControlComponent implements OnInit {
-  baseResult: BaseResult<MaxResponse> = new BaseResult<MaxResponse>(); // 后端返回的数据格式
+  baseResult: BaseResult<MaxResponse[]> = new BaseResult<MaxResponse[]>(); // 后端返回的数据格式
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();

@@ -1,8 +1,0 @@
-{
-  "success": false,
-  "response": null,
-  "redirect": null,
-  "errors": ["Provided Email Not exist"],
-  "messages": null,
-  "token": "eyJhbGciOiJTSEEtNTEyIiwidHlwIjoiSldUIn0=.eyJuYW1lIjoiZ3V0aWFua2FpIiwicGljdHVyZSI6IiJ9.45f4b178c2ef36f0b918f779ac3b6a462ed77d3fe484381de9e405ccd94fcbb7ec581f6489f39fe04adcc1b09766c302169f70e0b75cc2fddd784099aeb8d235"
-}

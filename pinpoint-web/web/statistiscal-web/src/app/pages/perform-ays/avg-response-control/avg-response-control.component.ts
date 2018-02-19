@@ -11,7 +11,7 @@ import {LastPerformanceService} from '../../../@core/data/last-performance.servi
   styleUrls: ['./avg-response-control.component.scss'],
 })
 export class AvgResponseControlComponent implements OnInit {
-  baseResult: BaseResult<AvgResponse> = new BaseResult<AvgResponse>(); // 后端返回的数据格式
+  baseResult: BaseResult<AvgResponse[]> = new BaseResult<AvgResponse[]>(); // 后端返回的数据格式
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();

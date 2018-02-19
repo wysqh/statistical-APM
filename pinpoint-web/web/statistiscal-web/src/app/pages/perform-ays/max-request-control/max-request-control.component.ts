@@ -11,7 +11,7 @@ import {LastPerformanceService} from '../../../@core/data/last-performance.servi
   styleUrls: ['./max-request-control.component.scss'],
 })
 export class MaxRequestControlComponent implements OnInit {
-  baseResult: BaseResult<MaxRequest> = new BaseResult<MaxRequest>(); // 后端返回的数据格式
+  baseResult: BaseResult<MaxRequest[]> = new BaseResult<MaxRequest[]>(); // 后端返回的数据格式
 
   dtOptions: DataTables.Settings = {};
   dtTrigger: Subject<any> = new Subject<any>();

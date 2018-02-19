@@ -7,7 +7,7 @@ import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import indiv.dev.grad.hit.pro.util.DateFormatUtils;
 import indiv.dev.grad.hit.pro.vo.EffectiveQuery;
-import indiv.dev.grad.hit.pro.vo.PerformanceVO;
+import indiv.dev.grad.hit.pro.vo.performance.PerformanceVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

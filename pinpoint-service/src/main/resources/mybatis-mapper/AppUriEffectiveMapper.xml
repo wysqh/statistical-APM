@@ -16,6 +16,10 @@
     <result column="exception" property="exception" jdbcType="VARCHAR" />
     <result column="update_time" property="updateTime" jdbcType="TIMESTAMP" />
   </resultMap>
+  <resultMap id="PieMap" type="indiv.dev.grad.hit.pro.model.chart.VN">
+      <result column="counts" property="value" jdbcType="INTEGER" />
+      <result column="app_name" property="name" jdbcType="VARCHAR" />
+  </resultMap>
   <sql id="Example_Where_Clause" >
     <where >
       <foreach collection="oredCriteria" item="criteria" separator="or" >
@@ -368,5 +372,12 @@
     WHERE app_name = #{appName}
      AND start &gt;= #{start}
      AND start &lt;= #{end}
+  </select>
+  <select id="selectEPieDataByCondition" parameterType="java.lang.Long" resultMap="PieMap">
+    SELECT COUNT(*) AS counts, app_name
+    FROM app_uri_effective
+    WHERE start &gt;= #{start}
+     AND start &lt;= #{end}
+     GROUP BY app_name
   </select>
 </mapper>

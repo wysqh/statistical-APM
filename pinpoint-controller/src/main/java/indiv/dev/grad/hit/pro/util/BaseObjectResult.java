@@ -52,4 +52,10 @@ public class BaseObjectResult<T> {
         this.message = message;
         this.status = true;
     }
+
+    public void setFailReason(T data, String message) {
+        this.data = data;
+        this.message = message;
+        this.status = false;
+    }
 }

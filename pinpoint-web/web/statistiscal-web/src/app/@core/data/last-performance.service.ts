@@ -24,22 +24,22 @@ export class LastPerformanceService {
   /*
      测试获取mockUrl数据: Max Response Time
    */
-  getMockMaxRsp(): Observable<BaseResult<MaxResponse>> {
-    return this.http.get<BaseResult<MaxResponse>>(this.mockMaxUrl);
+  getMockMaxRsp(): Observable<BaseResult<MaxResponse[]>> {
+    return this.http.get<BaseResult<MaxResponse[]>>(this.mockMaxUrl);
   }
 
   /*
      测试获取mockUrl数据: Average Response Time
    */
-  getMockAvgRsp(): Observable<BaseResult<AvgResponse>> {
-    return this.http.get<BaseResult<AvgResponse>>(this.mockAvgUrl);
+  getMockAvgRsp(): Observable<BaseResult<AvgResponse[]>> {
+    return this.http.get<BaseResult<AvgResponse[]>>(this.mockAvgUrl);
   }
 
   /*
      测试获取mockUrl数据: Max Request Time
    */
-  getMockMaxReq(): Observable<BaseResult<MaxRequest>> {
-    return this.http.get<BaseResult<MaxRequest>>(this.mockMaxReqUrl);
+  getMockMaxReq(): Observable<BaseResult<MaxRequest[]>> {
+    return this.http.get<BaseResult<MaxRequest[]>>(this.mockMaxReqUrl);
   }
 
   private log(message: string) {

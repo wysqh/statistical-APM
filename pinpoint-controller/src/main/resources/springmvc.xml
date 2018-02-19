@@ -50,4 +50,7 @@
     <dubbo:reference interface="indiv.dev.grad.hit.pro.service.UserService"
                      id="userService">
     </dubbo:reference>
+    <dubbo:reference interface="indiv.dev.grad.hit.pro.service.ChartService"
+                     id="chartService">
+    </dubbo:reference>
 </beans>

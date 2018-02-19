@@ -1,6 +1,8 @@
 package indiv.dev.grad.hit.pro.mapper;
 
 import indiv.dev.grad.hit.pro.example.AppUriEffectiveExample;
+import indiv.dev.grad.hit.pro.model.chart.PieEChartsModel;
+import indiv.dev.grad.hit.pro.model.chart.VN;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import org.apache.ibatis.annotations.Param;
 import org.apache.ibatis.annotations.Select;
@@ -33,6 +35,8 @@ public interface AppUriEffectiveMapper {
     List<AppUriEffective> selectAppEffectivesWithLimit(@Param("limits")Integer limits);
 
     List<AppUriEffective> selectAppUriEffectiveByConditions(@Param("appName")String appName, @Param("start")Long start, @Param("end")Long end);
+
+    List<VN<Integer, String>> selectEPieDataByCondition(@Param("start")Long start, @Param("end")Long end);
 
     int selectTotalCount();
 

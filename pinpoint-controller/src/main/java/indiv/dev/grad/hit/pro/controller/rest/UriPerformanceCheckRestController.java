@@ -6,7 +6,7 @@ import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveHourly;
 import indiv.dev.grad.hit.pro.service.ModuleUriCheckService;
 import indiv.dev.grad.hit.pro.util.BaseObjectResult;
 import indiv.dev.grad.hit.pro.vo.ApiQuery;
-import indiv.dev.grad.hit.pro.vo.UriPerformanceVO;
+import indiv.dev.grad.hit.pro.vo.performance.UriPerformanceVO;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
