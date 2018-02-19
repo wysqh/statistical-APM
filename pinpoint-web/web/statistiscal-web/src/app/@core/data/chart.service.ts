@@ -9,12 +9,19 @@ export class ChartService {
 
   constructor(private http: HttpClient) { }
 
-  private mockUrl: string = '/mock-data/echarts.json';
-
   /*
-      获取Echart饼状图 测试数据源
+      获取Echart 饼状图 测试数据源
    */
   getPieDataSource(start: string, end: string): Observable<BaseResult<PieEchart>> {
-    return this.http.get<BaseResult<PieEchart>>(this.mockUrl);
+    const mockUrl: string = '/mock-data/echarts.json';
+    return this.http.get<BaseResult<PieEchart>>(mockUrl);
+  }
+
+  /*
+      获取Advanced 折线图数据 测试数据源
+   */
+  getAdvancedBarDataSource(): Observable<string[]> {
+    const mockUrl: string = 'mock-data/bar-advanced.json';
+    return this.http.get<string[]>(mockUrl);
   }
 }

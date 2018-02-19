@@ -1,5 +1,6 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
+import indiv.dev.grad.hit.pro.model.chart.BarEChartsModel;
 import indiv.dev.grad.hit.pro.model.chart.PieEChartsModel;
 import indiv.dev.grad.hit.pro.service.ChartService;
 import indiv.dev.grad.hit.pro.util.BaseObjectResult;
@@ -49,7 +50,10 @@ public class ChartsController {
 
     @RequestMapping(value = "/echart/bar", method = RequestMethod.GET)
     @ResponseBody
-    public String getBarEchartsLatest() {
-        return null;
+    public BaseObjectResult<BarEChartsModel> getBarEchartsLatest() {
+        BaseObjectResult<BarEChartsModel> baseObjectResult = new BaseObjectResult<BarEChartsModel>();
+        BarEChartsModel barEChartsModel = chartService.getEBarDataInHafHour();
+        baseObjectResult.setContent(barEChartsModel, "success");
+        return baseObjectResult;
     }
 }

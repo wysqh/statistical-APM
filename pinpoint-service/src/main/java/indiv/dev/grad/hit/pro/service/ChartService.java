@@ -1,5 +1,6 @@
 package indiv.dev.grad.hit.pro.service;
 
+import indiv.dev.grad.hit.pro.model.chart.BarEChartsModel;
 import indiv.dev.grad.hit.pro.model.chart.PieEChartsModel;
 
 import java.util.Date;
@@ -10,4 +11,5 @@ import java.util.Date;
  */
 public interface ChartService {
     public PieEChartsModel getEPieDataByCondition(Date start, Date end);
+    public BarEChartsModel getEBarDataInHafHour();
 }

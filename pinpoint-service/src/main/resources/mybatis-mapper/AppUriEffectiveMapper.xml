@@ -380,4 +380,10 @@
      AND start &lt;= #{end}
      GROUP BY app_name
   </select>
+   <select id="selectRequestByLong" parameterType="java.lang.Long" resultType="java.lang.Integer">
+      SELECT COUNT(*) AS counts
+      FROM app_uri_effective
+      WHERE start &gt;= #{start}
+      AND start &lt;= #{end}
+  </select>
 </mapper>

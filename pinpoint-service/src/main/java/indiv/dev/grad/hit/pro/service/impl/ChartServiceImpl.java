@@ -1,10 +1,7 @@
 package indiv.dev.grad.hit.pro.service.impl;
 
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
-import indiv.dev.grad.hit.pro.model.chart.Legend;
-import indiv.dev.grad.hit.pro.model.chart.PieEChartsModel;
-import indiv.dev.grad.hit.pro.model.chart.Series;
-import indiv.dev.grad.hit.pro.model.chart.VN;
+import indiv.dev.grad.hit.pro.model.chart.*;
 import indiv.dev.grad.hit.pro.service.ChartService;
 import indiv.dev.grad.hit.pro.utils.DateFormatUtils;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
@@ -56,5 +53,70 @@ public class ChartServiceImpl implements ChartService {
         ));
 
         return pieEChartsModel;
+    }
+
+    public BarEChartsModel getEBarDataInHafHour() {
+        BarEChartsModel barEChartsModel = new BarEChartsModel();
+        SqlSession session = DbConnUtils.getSession().openSession();
+
+        Integer section = 7;
+        List<Integer> requests = new ArrayList<Integer>();
+        Long nearest = DateFormatUtils.getNearestIn5MinByLong();
+        List<String> period = getNperiod(section);
+        List<String> intervals = periodCombine(period);
+
+        try {
+            AppUriEffectiveMapper appUriEffectiveMapper = session.getMapper(AppUriEffectiveMapper.class);
+            for (int i = 0; i < section - 1; ++i) {
+                requests.add(appUriEffectiveMapper.selectRequestByLong(
+                        nearest - DateFormatUtils.secondsIn5,
+                        nearest));
+                nearest -= DateFormatUtils.secondsIn5;
+            }
+
+            Collections.reverse(requests);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        barEChartsModel.setKeys(intervals);
+        barEChartsModel.setValues(requests);
+
+        return barEChartsModel;
+    }
+
+    /*
+        @Func: 获取最近连续N个5分钟间隔
+     */
+    public List<String> getNperiod(Integer n) {
+        if (n == null) {
+            return null;
+        }
+
+        String format = "HH:mm";
+        List<String> period = new ArrayList<String>();
+        String nearest = DateFormatUtils.getNearestIn5Min();
+        Long nearestByLong = DateFormatUtils.getNearestIn5MinByLong();
+        for (int i = 0; i < n; i++) {
+            period.add(nearest);
+            nearestByLong -= DateFormatUtils.secondsIn5;
+            nearest = DateFormatUtils.long2string(nearestByLong, format);
+        }
+
+        return period;
+    }
+
+    /*
+        @Func: N个5分钟间隔组合
+     */
+    public List<String> periodCombine(List<String> list) {
+        List<String> intervals = new ArrayList<String>();
+        for (int i = list.size() - 1; i >= 1; i--) {
+            intervals.add(list.get(i) + "-" + list.get(i-1));
+        }
+
+        return intervals;
     }
 }

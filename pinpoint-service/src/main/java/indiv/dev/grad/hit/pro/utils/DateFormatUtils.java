@@ -13,6 +13,9 @@ import java.util.TimeZone;
 public class DateFormatUtils {
     static Logger logger = LoggerFactory.getLogger(DateFormatUtils.class);
 
+    // 5分钟的对应的秒
+    public static final Long secondsIn5 = 5 * 60L;
+
     // 日期格式
     public static String format = "yyyy-MM-dd";
 
@@ -109,11 +112,48 @@ public class DateFormatUtils {
         return calendar.getTime();
     }
 
+    /*
+        @Func: 将Date数据类型按format格式转化为String数据类型
+     */
     public static String format(Date date, String format) {
         if (StringUtils.isEmpty(format)) {
             format = DateFormatUtils.fullFormat;
         }
         SimpleDateFormat sdf = new SimpleDateFormat(format);
         return sdf.format(date);
+    }
+
+    /*
+        @Func: 获取未超过当前时间的5分钟时间点,以整点计(xx:x0 和 xx:x5)
+     */
+    public static String getNearestIn5Min() {
+        final Long secondsIn5Min = 5 * 60L;   //  5分钟为300秒
+        Long sec = new Date().getTime() / 1000L;
+
+        String format = "HH:mm";
+        return DateFormatUtils.format(new Date((sec - sec % secondsIn5Min )* 1000L),
+                format);
+    }
+
+    /*
+        @Func: 获取未超过当前时间的5分钟时间点(Long),以整点计(xx:x0 和 xx:x5)
+     */
+    public static Long getNearestIn5MinByLong() {
+        final Long secondsIn5Min = 5 * 60L;   //  5分钟为300秒
+        Long sec = new Date().getTime() / 1000L;
+
+       return sec - sec % secondsIn5Min;
+    }
+
+    /*
+        @Func: Long(秒)转化为String
+     */
+    public static String long2string(Long second, String format) {
+        if (StringUtils.isEmpty(format)) {
+            format = DateFormatUtils.fullFormat;
+        }
+
+        return DateFormatUtils.format(new Date(second * 1000L),
+                format);
     }
 }

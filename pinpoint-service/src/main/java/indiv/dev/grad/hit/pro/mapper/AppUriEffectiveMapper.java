@@ -38,6 +38,8 @@ public interface AppUriEffectiveMapper {
 
     List<VN<Integer, String>> selectEPieDataByCondition(@Param("start")Long start, @Param("end")Long end);
 
+    Integer selectRequestByLong(@Param("start")Long start, @Param("end")Long end);
+
     int selectTotalCount();
 
     AppUriEffective selectByPrimaryKey(Integer id);
