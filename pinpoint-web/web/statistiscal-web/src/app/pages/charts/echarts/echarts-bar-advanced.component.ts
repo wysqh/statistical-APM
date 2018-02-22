@@ -17,7 +17,7 @@ export class EchartsBarAdvancedComponent implements AfterViewInit, OnDestroy {
   ngAfterViewInit() {
     this.charService.getAdvancedBarDataSource()
       .subscribe(data => {
-        console.log(data);
+        // console.log(data);
         this.options = {
           title: {
             text: 'Annual Requests Statistics',
@@ -27,7 +27,7 @@ export class EchartsBarAdvancedComponent implements AfterViewInit, OnDestroy {
           },
           xAxis: {
             data: data.map(function (item) {
-              console.log(item[0])
+              // console.log(item[0])
               return item[0];
             }),
           },

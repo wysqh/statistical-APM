@@ -1,5 +1,7 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
+import {BarEchart} from '../../../@core/data/BarEchart';
+import {ChartService} from '../../../@core/data/chart.service';
 
 @Component({
   selector: 'ngx-echarts-bar',
@@ -10,8 +12,11 @@ import { NbThemeService } from '@nebular/theme';
 export class EchartsBarComponent implements AfterViewInit, OnDestroy {
   options: any = {};
   themeSubscription: any;
+  // EChart Bar数据源
+  dataSource: BarEchart;
 
-  constructor(private theme: NbThemeService) {
+  constructor(private theme: NbThemeService,
+              private chartService: ChartService) {
   }
 
   ngAfterViewInit() {
@@ -20,70 +25,73 @@ export class EchartsBarComponent implements AfterViewInit, OnDestroy {
       const colors: any = config.variables;
       const echarts: any = config.variables.echarts;
 
-      this.options = {
-        backgroundColor: echarts.bg,
-        color: [colors.primaryLight],
-        tooltip: {
-          trigger: 'axis',
-          axisPointer: {
-            type: 'shadow',
-          },
-        },
-        grid: {
-          left: '3%',
-          right: '4%',
-          bottom: '3%',
-          containLabel: true,
-        },
-        xAxis: [
-          {
-            type: 'category',
-            data: ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'],
-            axisTick: {
-              alignWithLabel: true,
-            },
-            axisLine: {
-              lineStyle: {
-                color: echarts.axisLineColor,
+      this.chartService.getBarDataSource()
+        .subscribe(baseResult => {
+          this.options = {
+            backgroundColor: echarts.bg,
+            color: [colors.primaryLight],
+            tooltip: {
+              trigger: 'axis',
+              axisPointer: {
+                type: 'shadow',
               },
             },
-            axisLabel: {
-              textStyle: {
-                color: echarts.textColor,
-              },
+            grid: {
+              left: '3%',
+              right: '4%',
+              bottom: '3%',
+              containLabel: true,
             },
-          },
-        ],
-        yAxis: [
-          {
-            type: 'value',
-            axisLine: {
-              lineStyle: {
-                color: echarts.axisLineColor,
+            xAxis: [
+              {
+                type: 'category',
+                data: baseResult.data.keys,
+                axisTick: {
+                  alignWithLabel: true,
+                },
+                axisLine: {
+                  lineStyle: {
+                    color: echarts.axisLineColor,
+                  },
+                },
+                axisLabel: {
+                  textStyle: {
+                    color: echarts.textColor,
+                  },
+                },
               },
-            },
-            splitLine: {
-              lineStyle: {
-                color: echarts.splitLineColor,
+            ],
+            yAxis: [
+              {
+                type: 'value',
+                axisLine: {
+                  lineStyle: {
+                    color: echarts.axisLineColor,
+                  },
+                },
+                splitLine: {
+                  lineStyle: {
+                    color: echarts.splitLineColor,
+                  },
+                },
+                axisLabel: {
+                  textStyle: {
+                    color: echarts.textColor,
+                  },
+                },
               },
-            },
-            axisLabel: {
-              textStyle: {
-                color: echarts.textColor,
+            ],
+            series: [
+              {
+                name: 'Score',
+                type: 'bar',
+                barWidth: '60%',
+                data: baseResult.data.values,
               },
-            },
-          },
-        ],
-        series: [
-          {
-            name: 'Score',
-            type: 'bar',
-            barWidth: '60%',
-            data: [10, 52, 200, 334, 390, 330, 220],
-          },
-        ],
-      };
-    });
+            ],
+          };
+        });
+      })
   }
 
   ngOnDestroy(): void {

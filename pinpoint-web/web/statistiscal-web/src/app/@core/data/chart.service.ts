@@ -3,6 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {BaseResult} from './base-result';
 import {PieEchart} from './pie-echart';
+import {BarEchart} from './BarEchart';
 
 @Injectable()
 export class ChartService {
@@ -23,5 +24,13 @@ export class ChartService {
   getAdvancedBarDataSource(): Observable<string[]> {
     const mockUrl: string = 'mock-data/bar-advanced.json';
     return this.http.get<string[]>(mockUrl);
+  }
+
+  /*
+      获取Echart Bar图 测试数据源
+   */
+  getBarDataSource(): Observable<BaseResult<BarEchart>> {
+    const mockUrl: string = '/mock-data/bar.json';
+    return this.http.get<BaseResult<BarEchart>>(mockUrl);
   }
 }
