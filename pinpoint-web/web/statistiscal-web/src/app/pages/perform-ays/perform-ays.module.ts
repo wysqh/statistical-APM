@@ -14,6 +14,7 @@ import { MaxRequestControlComponent } from './max-request-control/max-request-co
 import { MaxResponseControlComponent } from './max-response-control/max-response-control.component';
 import { AvgResponseControlComponent } from './avg-response-control/avg-response-control.component';
 import { SerivAysQueryComponent } from './seriv-ays-query/seriv-ays-query.component';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @NgModule({
   imports: [

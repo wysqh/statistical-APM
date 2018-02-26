@@ -16,16 +16,17 @@ public class TestToJson {
         SqlSession session = DbConnUtils.getSession().openSession();
 
         AppUriEffectiveMapper appUriEffectiveMapper = session.getMapper(AppUriEffectiveMapper.class);
-        List<AppUriEffective> appUriEffectiveList = appUriEffectiveMapper.selectPerformanceByAppName("tuan-lbc-api");
+        List<AppUriEffective> appUriEffectiveList = appUriEffectiveMapper.selectPerformanceByAppName("sc-api");
         List<MetaTrace> metaTraceList = null;
+        System.out.println("SIZE: " + appUriEffectiveList.size());
         for (AppUriEffective appUriEffective: appUriEffectiveList) {
             if (appUriEffective.getSlow().equals("[]"))
                 continue;
-            //System.out.println(appUriEffective.getSlow());
+            System.out.println("test:" + appUriEffective.getSlow());
             Gson gson = new GsonBuilder().create();
             metaTraceList = gson.fromJson(appUriEffective.getSlow(), new TypeToken<List<MetaTrace>>(){
             }.getType());
-            System.out.println(appUriEffective.getSlow());
+            System.out.println("size" + metaTraceList.size());
             for (MetaTrace metaTrace : metaTraceList) {
                 System.out.println(metaTrace.getAgentId() + ","
                         + metaTrace.getApplication() + ","

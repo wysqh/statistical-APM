@@ -4,6 +4,7 @@ import {Subject} from 'rxjs/Subject';
 import {Http} from '@angular/http';
 import {EffectivesService} from '../../../@core/data/effectives.service';
 import {Performance} from '../../../@core/data/performance';
+import {DomSanitizer} from '@angular/platform-browser';
 
 @Component({
   selector: 'ngx-app-ays',
@@ -17,9 +18,13 @@ export class AppAysComponent implements OnInit {
   dtOptions: DataTables.Settings = {};
   performances: Performance[] = [];
   dtTrigger: Subject<any> = new Subject<any>();
+  sanitizer: DomSanitizer;  // 引入DomSanitizer信任动态加载Url链接
 
   constructor(private http: Http,
-              private effectiveService: EffectivesService) { }
+              private effectiveService: EffectivesService,
+              private domSanitizer: DomSanitizer) {
+    this.sanitizer = domSanitizer;
+  }
 
   ngOnInit() {
     this.dtOptions = {
@@ -32,7 +37,6 @@ export class AppAysComponent implements OnInit {
         this.performances = effectives
         this.dtTrigger.next();
       })
-
     /*
         Test Mock Data
      */

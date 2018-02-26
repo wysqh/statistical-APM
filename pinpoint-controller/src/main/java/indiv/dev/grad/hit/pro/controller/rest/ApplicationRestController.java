@@ -3,6 +3,7 @@ package indiv.dev.grad.hit.pro.controller.rest;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import indiv.dev.grad.hit.pro.exceptions.NoContentException;
+import indiv.dev.grad.hit.pro.model.BaseData;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import indiv.dev.grad.hit.pro.util.DateFormatUtils;
@@ -80,7 +81,7 @@ public class ApplicationRestController {
         String start = effectiveQuery.getStart();
         String end = effectiveQuery.getEnd();
         List<PerformanceVO> performanceList = new ArrayList<PerformanceVO>();
-        List<AppUriEffective> appUriEffectiveList = modulePerformanceService.getUriEffectiveByConditions(
+        List<BaseData> appUriEffectiveList = modulePerformanceService.getUriEffectiveByConditions(
                 DateFormatUtils.string2date(format, start),
                 DateFormatUtils.string2date(format, end),
                 effectiveQuery.getAppName()
@@ -92,8 +93,8 @@ public class ApplicationRestController {
         }
 
         //页面VO转换
-        for (AppUriEffective appUriEffective: appUriEffectiveList) {
-            performanceList.add(PerformanceVO.doTransform(appUriEffective));
+        for (BaseData baseData: appUriEffectiveList) {
+            performanceList.add(PerformanceVO.doTransform(baseData));
         }
 
         return performanceList;

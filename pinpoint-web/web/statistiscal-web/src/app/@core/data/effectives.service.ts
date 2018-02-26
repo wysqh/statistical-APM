@@ -37,6 +37,7 @@ export class EffectivesService {
   }
 
   getEffectivesByConditions(start: string, end: string, app: string): Observable<Performance[]> {
+    // return this.http.get<Performance[]>('/mock-data/baseUrl.json');  // 测试mock地址
     this.baseUrl = '/rest/effectives/params?query=';
     this.queryStr = encodeURI('{') +
       this.encodeQuery('start') + ':' +

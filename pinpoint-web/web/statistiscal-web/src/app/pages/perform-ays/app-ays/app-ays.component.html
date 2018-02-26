@@ -20,8 +20,16 @@
     <td> {{ performance.maxRspTime }}</td>
     <td> {{ performance.minRspTime }}</td>
     <td> {{ performance.reqOver3s }}</td>
-    <td> {{ performance.slowTop10 }}</td>
-    <td> {{ performance.exceptionTop10 }}</td>
+    <td>
+      <div *ngFor="let kv of performance.slowTop10">
+        <a target="_blank" href="{{kv.value}}">{{kv.name}}</a>
+      </div>
+    </td>
+    <td>
+      <div *ngFor="let kv of performance.exceptionTop10">
+        <a target="_blank" href={{kv.value}}>{{kv.name}}</a>
+      </div>
+    </td>
   </tr>
   </tbody>
 </table>

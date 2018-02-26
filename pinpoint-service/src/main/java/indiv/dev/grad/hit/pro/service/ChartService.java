@@ -12,4 +12,5 @@ import java.util.Date;
 public interface ChartService {
     public PieEChartsModel getEPieDataByCondition(Date start, Date end);
     public BarEChartsModel getEBarDataInHafHour();
+
 }

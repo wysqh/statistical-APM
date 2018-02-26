@@ -345,6 +345,7 @@
   <select id="selectPerformanceByAppName" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
       SELECT *
        FROM app_uri_effective WHERE app_name = #{appName, jdbcType=VARCHAR}
+       limit 10000
   </select>
   <select id="selectExceptionsByAppName" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppUriEffective">
     SELECT *

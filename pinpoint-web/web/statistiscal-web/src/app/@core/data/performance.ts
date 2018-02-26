@@ -1,3 +1,6 @@
+import {VN} from './KN';
+import {SafeHtml} from '@angular/platform-browser';
+
 export class Performance {
   uri: string;
   reqInPeriod: number;
@@ -5,6 +8,6 @@ export class Performance {
   maxRspTime: number;
   minRspTime: number;
   reqOver3s: number;
-  slowTop10: string;
-  exceptionTop10: string;
+  slowTop10: VN<string, string>[];
+  exceptionTop10: VN<string, string>[];
 }

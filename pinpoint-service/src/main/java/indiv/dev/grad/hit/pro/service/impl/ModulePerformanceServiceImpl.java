@@ -2,17 +2,16 @@ package indiv.dev.grad.hit.pro.service.impl;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonSyntaxException;
 import com.google.gson.reflect.TypeToken;
-import indiv.dev.grad.hit.pro.model.PerformanceStatistics;
+import indiv.dev.grad.hit.pro.model.*;
 import indiv.dev.grad.hit.pro.mapper.AppAdministratorMapper;
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
-import indiv.dev.grad.hit.pro.model.ExceptionInfo;
-import indiv.dev.grad.hit.pro.model.MetaTrace;
-import indiv.dev.grad.hit.pro.model.SlowInfo;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import indiv.dev.grad.hit.pro.utils.DateFormatUtils;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
+import indiv.dev.grad.hit.pro.utils.StringUtils;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.*;
@@ -208,8 +207,10 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         return appUriEffectiveList;
     }
 
-    public List<AppUriEffective> getUriEffectiveByConditions(Date start, Date end, String appName) {
+    public List<BaseData> getUriEffectiveByConditions(Date start, Date end, String appName) {
         SqlSession sqlSession = DbConnUtils.getSession().openSession();
+        Map<String, BaseData> appMaps = new HashMap<String, BaseData>();
+        List<BaseData> rtVals = new ArrayList<BaseData>();
         List<AppUriEffective> appUriEffectiveList = null;
 
         try {
@@ -224,7 +225,41 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
             sqlSession.close();
         }
 
-        return appUriEffectiveList;
+
+        // 相同模块合并
+        for (AppUriEffective appUriEffective: appUriEffectiveList) {
+            if (appMaps.get(appUriEffective.getUri()) == null) {
+                appUriEffective.setAvgRsp(appUriEffective.getAvgRsp() * appUriEffective.getAmount());   // 平均部分预处理
+
+                BaseData baseData = new BaseData(appUriEffective);
+                baseData.setSlows(doMetaTransform(appUriEffective.getSlow()));  // 慢数据类型转换
+                baseData.setExceptions(doMetaTransform(appUriEffective.getException()));    // 异常数据类型转换
+                appMaps.put(appUriEffective.getUri(), baseData);
+            } else {
+                BaseData tmp = appMaps.get(appUriEffective.getUri());
+
+                tmp.setUri(appUriEffective.getUri());
+                tmp.setRequests(tmp.getRequests() + appUriEffective.getAmount());
+                tmp.setAvgResTime(tmp.getAvgResTime() + appUriEffective.getAvgRsp() * appUriEffective.getAmount());   // 平均部分预处理
+                tmp.setMaxResTime(tmp.getMaxResTime() > appUriEffective.getMaxRsp() ? tmp.getMaxResTime() : appUriEffective.getMaxRsp());
+                tmp.setMinResTime(tmp.getMinResTime() < appUriEffective.getMinRsp() ? tmp.getMinResTime() : appUriEffective.getMinRsp());
+                tmp.setSlowReq(tmp.getSlowReq() + appUriEffective.getSlowCount());
+                tmp.setSlows(combineSlow(tmp, appUriEffective));
+                tmp.setExceptions(combineException(tmp, appUriEffective));
+
+                appMaps.put(tmp.getUri(), tmp);
+            }
+        }
+
+        for (Map.Entry<String, BaseData> entry: appMaps.entrySet()) {
+            BaseData tmp = entry.getValue();
+            tmp.setAvgResTime(tmp.getAvgResTime() / tmp.getRequests());
+            entry.setValue(tmp);
+
+            rtVals.add(tmp);
+        }
+
+        return rtVals;
     }
 
     public List<String> getAppsNameBySimilar(String name) {
@@ -241,5 +276,88 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         }
 
         return list;
+    }
+
+    public List<MetaTrace> combineSlow(BaseData baseData, AppUriEffective appUriEffective) {
+        if ("[]".equals(appUriEffective.getSlow())) {
+            return baseData.getSlows();
+        }
+
+        List<MetaTrace> lists = doMetaTransform(appUriEffective.getSlow());
+        if (baseData.getSlows() != null) {
+            for (MetaTrace metaTrace: lists) {
+                baseData.getSlows().add(metaTrace);
+            }
+
+            return baseData.getSlows();
+        }
+
+        return lists;
+    }
+
+    public List<MetaTrace> combineException(BaseData baseData, AppUriEffective appUriEffective) {
+        if ("[]".equals(appUriEffective.getException())) {
+            return baseData.getExceptions();
+        }
+
+        List<MetaTrace> lists = doMetaTransform(appUriEffective.getException());
+        if (baseData.getExceptions() != null) {
+            for (MetaTrace metaTrace : lists) {
+                baseData.getExceptions().add(metaTrace);
+            }
+
+            return baseData.getExceptions();
+        }
+
+        return lists;
+    }
+
+    public MetaTrace toMetaTrace(String info) {
+        Gson gson = new GsonBuilder().create();
+        MetaTrace metaTrace = null;
+        try {
+            metaTrace = gson.fromJson(info, MetaTrace.class);
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
+        }
+
+        return metaTrace;
+    }
+
+    public List<MetaTrace> toMetaTraceList(String info) {
+        Gson gson = new GsonBuilder().create();
+        List<MetaTrace> lists = null;
+        try {
+            lists = gson.fromJson(info, new TypeToken<List<MetaTrace>>(){
+            }.getType());
+        } catch (JsonSyntaxException e) {
+            e.printStackTrace();
+        }
+
+        return lists;
+    }
+
+    public Integer matchByKeyWord(String str, String key) {
+        if (StringUtils.isEmpty(str)) {
+            return  null;
+        }
+
+        String[] matches = str.split(key);
+        return matches.length - 1;
+    }
+
+    public List<MetaTrace> doMetaTransform(String str) {
+//        if (StringUtils.isEmpty(str) || "[]".equals(str)) {
+//            return null;
+//        }
+//
+//        if (matchByKeyWord(str, "traceId") == 1) {
+//            List<MetaTrace> metaTraces = new ArrayList<MetaTrace>();
+//            metaTraces.add(toMetaTrace(str));
+//            return metaTraces;
+//        }
+//
+//        return toMetaTraceList(str);
+        return toMetaTraceList(str);
     }
 }
