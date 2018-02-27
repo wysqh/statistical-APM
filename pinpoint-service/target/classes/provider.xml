@@ -27,6 +27,10 @@
     <bean id="chartService"
           class="indiv.dev.grad.hit.pro.service.impl.ChartServiceImpl">
     </bean>
+    <bean id="zkService"
+          class="indiv.dev.grad.hit.pro.service.impl.ZkServiceImpl">
+    </bean>
+
     <dubbo:application name="dubbo_provider"></dubbo:application>
     <!-- zk register address -->
     <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
@@ -35,18 +39,21 @@
     </dubbo:registry>
 
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModulePerformanceService"
-                   ref="modulePerformanceService">
+                   ref="modulePerformanceService" timeout="1200000">
     </dubbo:service>
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModuleLastPerformanceService"
-                   ref="moduleLastPerformanceService">
+                   ref="moduleLastPerformanceService" timeout="1200000">
     </dubbo:service>
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ModuleUriCheckService"
-                   ref="moduleUriCheckService">
+                   ref="moduleUriCheckService" timeout="1200000">
     </dubbo:service>
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.UserService"
                     ref="userService">
     </dubbo:service>
     <dubbo:service interface="indiv.dev.grad.hit.pro.service.ChartService"
-                   ref="chartService">
+                   ref="chartService" timeout="1200000">
+    </dubbo:service>
+    <dubbo:service interface="indiv.dev.grad.hit.pro.service.ZkService"
+                   ref="zkService">
     </dubbo:service>
 </beans>

@@ -24,8 +24,11 @@ export class MaxResponseControlComponent implements OnInit {
       pageLength: 10,
     }
 
-    // 测试mock json
-    this.getMockMaxRspData();
+    // // 测试mock json
+    // this.getMockMaxRspData();
+    //
+    // 后端请求
+    this.getMaxRspDataFromServer();
   }
 
   /*
@@ -33,6 +36,20 @@ export class MaxResponseControlComponent implements OnInit {
    */
   getMockMaxRspData(): void {
     this.lastPerformanceService.getMockMaxRsp()
+      .subscribe(base => {
+        this.baseResult = base;
+        // 测试回调参数
+        console.log(base);
+        // 设置dtTables
+        this.dtTrigger.next();
+      })
+  }
+
+  /*
+    获取后端返回数据
+   */
+  getMaxRspDataFromServer(): void {
+    this.lastPerformanceService.getMaxRspFromServer()
       .subscribe(base => {
         this.baseResult = base;
         // 测试回调参数

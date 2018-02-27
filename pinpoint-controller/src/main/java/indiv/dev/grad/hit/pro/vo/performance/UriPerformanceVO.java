@@ -1,5 +1,9 @@
 package indiv.dev.grad.hit.pro.vo.performance;
 
+import indiv.dev.grad.hit.pro.model.BaseAppData;
+import indiv.dev.grad.hit.pro.model.BaseInterfaceData;
+import indiv.dev.grad.hit.pro.model.MetaTrace;
+import indiv.dev.grad.hit.pro.model.chart.VN;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveHourly;
 
 import java.util.ArrayList;
@@ -12,15 +16,17 @@ import java.util.List;
 public class UriPerformanceVO {
     private String appName;
     private String uri;
-    private List<AppUriEffectiveHourly> lists;
+    private List<BaseInterfaceData> lists;
+
+    private static final String URL = "http://km.int.nuomi.com/index.html#/transactionDetail/";
 
     public UriPerformanceVO() {
-        lists = new ArrayList<AppUriEffectiveHourly>();
+        lists = new ArrayList<BaseInterfaceData>();
         appName = null;
         uri = null;
     }
 
-    public UriPerformanceVO(String appName, String uri, List<AppUriEffectiveHourly> lists) {
+    public UriPerformanceVO(String appName, String uri, List<BaseInterfaceData> lists) {
         this.appName = appName;
         this.uri = uri;
         this.lists = lists;
@@ -42,26 +48,56 @@ public class UriPerformanceVO {
         this.uri = uri;
     }
 
-    public List<AppUriEffectiveHourly> getLists() {
+    public List<BaseInterfaceData> getLists() {
         return lists;
     }
 
-    public void setLists(List<AppUriEffectiveHourly> lists) {
+    public void setLists(List<BaseInterfaceData> lists) {
         this.lists = lists;
     }
 
-    public static UriPerformanceVO doTransform(List<AppUriEffectiveHourly> appUriEffectiveHourlies) {
+    public static UriPerformanceVO doTransform(List<BaseInterfaceData> baseInterfaceDataList) {
         UriPerformanceVO uriPerformanceVO = new UriPerformanceVO();
         boolean bFirstAssign = false;
-        for (AppUriEffectiveHourly appUriEffectiveHourly : appUriEffectiveHourlies) {
+        for (BaseInterfaceData baseInterfaceData : baseInterfaceDataList) {
             if (!bFirstAssign) {
                 bFirstAssign = true;
-                uriPerformanceVO.appName = appUriEffectiveHourly.getAppName();
-                uriPerformanceVO.uri = appUriEffectiveHourly.getUri();
+                uriPerformanceVO.appName = baseInterfaceData.getAppName();
+                uriPerformanceVO.uri = baseInterfaceData.getUri();
             }
-            uriPerformanceVO.lists.add(appUriEffectiveHourly);
+            baseInterfaceData.setSlowTop10(slowTransfer(baseInterfaceData));
+            baseInterfaceData.setExceptionTop10(exceptionsTransfer(baseInterfaceData));
+            uriPerformanceVO.lists.add(baseInterfaceData);
         }
 
         return  uriPerformanceVO;
+    }
+
+    private static List<VN<String, String>> slowTransfer(BaseInterfaceData baseData) {
+        List<VN<String, String>> kvs = new ArrayList<VN<String, String>>();
+        if (baseData.getSlows() == null) {
+            return null;
+        }
+
+        List<MetaTrace> slows = baseData.getSlows();
+        for (int i = 0; i< slows.size(); ++i) {
+            kvs.add(new VN<String, String>(URL + slows.get(i).getTraceId() + "/" + slows.get(i).getCollectorAcceptTime(),
+                    "" + i + "、"  + slows.get(i).getElapsed()));
+        }
+        return kvs;
+    }
+
+    private static List<VN<String, String>> exceptionsTransfer(BaseInterfaceData baseData) {
+        List<VN<String, String>> kvs = new ArrayList<VN<String, String>>();
+        if (baseData.getExceptions() == null) {
+            return null;
+        }
+
+        List<MetaTrace> exceptions = baseData.getExceptions();
+        for (int i = 0; i< exceptions.size(); ++i) {
+            kvs.add(new VN<String, String>(URL + exceptions.get(i).getTraceId() + "/" + exceptions.get(i).getCollectorAcceptTime(),
+                    "" + i + "、"  + exceptions.get(i).getElapsed()));
+        }
+        return kvs;
     }
 }

@@ -207,10 +207,10 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         return appUriEffectiveList;
     }
 
-    public List<BaseData> getUriEffectiveByConditions(Date start, Date end, String appName) {
+    public List<BaseAppData> getUriEffectiveByConditions(Date start, Date end, String appName) {
         SqlSession sqlSession = DbConnUtils.getSession().openSession();
-        Map<String, BaseData> appMaps = new HashMap<String, BaseData>();
-        List<BaseData> rtVals = new ArrayList<BaseData>();
+        Map<String, BaseAppData> appMaps = new HashMap<String, BaseAppData>();
+        List<BaseAppData> rtVals = new ArrayList<BaseAppData>();
         List<AppUriEffective> appUriEffectiveList = null;
 
         try {
@@ -231,12 +231,12 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
             if (appMaps.get(appUriEffective.getUri()) == null) {
                 appUriEffective.setAvgRsp(appUriEffective.getAvgRsp() * appUriEffective.getAmount());   // 平均部分预处理
 
-                BaseData baseData = new BaseData(appUriEffective);
+                BaseAppData baseData = new BaseAppData(appUriEffective);
                 baseData.setSlows(doMetaTransform(appUriEffective.getSlow()));  // 慢数据类型转换
                 baseData.setExceptions(doMetaTransform(appUriEffective.getException()));    // 异常数据类型转换
                 appMaps.put(appUriEffective.getUri(), baseData);
             } else {
-                BaseData tmp = appMaps.get(appUriEffective.getUri());
+                BaseAppData tmp = appMaps.get(appUriEffective.getUri());
 
                 tmp.setUri(appUriEffective.getUri());
                 tmp.setRequests(tmp.getRequests() + appUriEffective.getAmount());
@@ -251,8 +251,8 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
             }
         }
 
-        for (Map.Entry<String, BaseData> entry: appMaps.entrySet()) {
-            BaseData tmp = entry.getValue();
+        for (Map.Entry<String, BaseAppData> entry: appMaps.entrySet()) {
+            BaseAppData tmp = entry.getValue();
             tmp.setAvgResTime(tmp.getAvgResTime() / tmp.getRequests());
             entry.setValue(tmp);
 
@@ -278,7 +278,7 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         return list;
     }
 
-    public List<MetaTrace> combineSlow(BaseData baseData, AppUriEffective appUriEffective) {
+    public List<MetaTrace> combineSlow(BaseAppData baseData, AppUriEffective appUriEffective) {
         if ("[]".equals(appUriEffective.getSlow())) {
             return baseData.getSlows();
         }
@@ -295,7 +295,7 @@ public class ModulePerformanceServiceImpl implements ModulePerformanceService {
         return lists;
     }
 
-    public List<MetaTrace> combineException(BaseData baseData, AppUriEffective appUriEffective) {
+    public List<MetaTrace> combineException(BaseAppData baseData, AppUriEffective appUriEffective) {
         if ("[]".equals(appUriEffective.getException())) {
             return baseData.getExceptions();
         }

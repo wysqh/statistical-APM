@@ -2,9 +2,11 @@ package indiv.dev.grad.hit.pro.controller.rest;
 
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
+import indiv.dev.grad.hit.pro.model.BaseInterfaceData;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveHourly;
 import indiv.dev.grad.hit.pro.service.ModuleUriCheckService;
 import indiv.dev.grad.hit.pro.util.BaseObjectResult;
+import indiv.dev.grad.hit.pro.util.StringUtils;
 import indiv.dev.grad.hit.pro.vo.ApiQuery;
 import indiv.dev.grad.hit.pro.vo.performance.UriPerformanceVO;
 import org.slf4j.Logger;
@@ -39,12 +41,23 @@ public class UriPerformanceCheckRestController {
         } catch (JsonSyntaxException jse) {
             jse.printStackTrace();
         }
+        if (apiQuery == null) {
+            baseObjectResult.setFailReason(null, "JSON Transfer failed.");
+            return baseObjectResult;
+        }
+        if (StringUtils.isEmpty(apiQuery.getAppName()) ||
+                StringUtils.isEmpty(apiQuery.getUri()) ||
+                StringUtils.isEmpty(apiQuery.getDay())) {
+            baseObjectResult.setFailReason(null, "query param should not be null.");
+            return baseObjectResult;
+        }
         logger.debug("/uri/params:" + apiQuery.getAppName() + apiQuery.getDay() + apiQuery.getUri());
-        List<AppUriEffectiveHourly> appUriEffectiveHourlies =
+        List<BaseInterfaceData> baseInterfaceDataList =
                 moduleUriCheckService.getUriPerformanceByQuery(apiQuery.getAppName(),
                         apiQuery.getDay(), apiQuery.getUri());
 
-        baseObjectResult.setContent(UriPerformanceVO.doTransform(appUriEffectiveHourlies), "fetch data success");
+//        baseObjectResult.setContent(appUriEffectiveHourlies, "success");
+        baseObjectResult.setContent(UriPerformanceVO.doTransform(baseInterfaceDataList), "success");
         return baseObjectResult;
     }
 }

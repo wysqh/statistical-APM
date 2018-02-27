@@ -31,8 +31,8 @@ export class AppAysComponent implements OnInit {
       pagingType: 'full_numbers',
       pageLength: 10,
     };
-
-    this.effectiveService.getEffectives()
+    // 第一次请求获取一次空数据
+    this.effectiveService.getEmptyEffectives()
       .subscribe(effectives => {
         this.performances = effectives
         this.dtTrigger.next();

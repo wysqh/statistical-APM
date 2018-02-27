@@ -25,8 +25,11 @@ export class AvgResponseControlComponent implements OnInit {
       pageLength: 10,
     }
 
-    // 测试mock json
-    this.getMockAvgRspData();
+    // // 测试mock json
+    // this.getMockAvgRspData();
+    //
+    // 后端请求
+    this.getAvgRspDataFromServer();
   }
 
   /*
@@ -41,6 +44,20 @@ export class AvgResponseControlComponent implements OnInit {
         // 设置dtTables
         this.dtTrigger.next();
       });
+  }
+
+  /*
+      获取后端返回数据
+   */
+  getAvgRspDataFromServer(): void {
+    this.lastPerformanceService.getAvgRspFromServer()
+      .subscribe(base => {
+        this.baseResult = base;
+        // 测试回调参数
+        console.log(base);
+        // 设置dtTables
+        this.dtTrigger.next();
+      })
   }
 
 }

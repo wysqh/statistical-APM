@@ -40,8 +40,8 @@ import {DataTablesModule} from 'angular-datatables';
             login: {
               alwaysFail: false,
               rememberMe: true,
-              endpoint: '/mock-data/login-in.json',   // 测试Url地址 // '/api/auth/login',
-              method: 'get',   // 部署只能使用post方式
+              endpoint: '/api/auth/login',    // 测试Url地址 // '/mock-data/login-in.json',
+              method: 'post',   // 部署只能使用post方式, 测试用get
               redirect: {
                 success: '/dashboard',
                 failure: '/auth/login',

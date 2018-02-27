@@ -17,6 +17,9 @@ export class LastPerformanceService {
   private mockAvgUrl: string = '/mock-data/last-avg-rsp.json';
   private mockMaxReqUrl: string = '/mock-data/last-max-req.json';
 
+  // 后端接口基地址
+  private baseUrl: string = '/rest/statistics';
+
   constructor(private http: HttpClient,
               private messageService: MessageService) { }
 
@@ -29,10 +32,30 @@ export class LastPerformanceService {
   }
 
   /*
+     获取昨日最大响应时间耗时 Top10
+   */
+  getMaxRspFromServer(): Observable<BaseResult<MaxResponse[]>> {
+    const queryTime: number = -1; // 当日为0，昨日为-1，明天为1，以此类推
+    const uri: string = '/maxRsp/' + queryTime;
+    console.log(this.baseUrl + uri);  // 测试接口地址是否正确
+    return this.http.get<BaseResult<MaxResponse[]>>(this.baseUrl + uri);
+  }
+
+  /*
      测试获取mockUrl数据: Average Response Time
    */
   getMockAvgRsp(): Observable<BaseResult<AvgResponse[]>> {
     return this.http.get<BaseResult<AvgResponse[]>>(this.mockAvgUrl);
+  }
+
+  /*
+    获取昨日平均响应时间耗时Top10
+   */
+  getAvgRspFromServer(): Observable<BaseResult<AvgResponse[]>> {
+    const queryTime: number = -1;  // 当日为0，昨日为-1，明天为1，以此类推
+    const uri: string = '/avgRsp/' + queryTime;
+    console.log(this.baseUrl + uri); // 测试接口地址是否正确
+    return this.http.get<BaseResult<AvgResponse[]>>(this.baseUrl + uri);
   }
 
   /*
@@ -41,6 +64,17 @@ export class LastPerformanceService {
   getMockMaxReq(): Observable<BaseResult<MaxRequest[]>> {
     return this.http.get<BaseResult<MaxRequest[]>>(this.mockMaxReqUrl);
   }
+
+  /*
+     获取最日最大请求次数Top10
+   */
+  getMaxReqFromServer(): Observable<BaseResult<MaxRequest[]>> {
+    const queryTime: number = -1; // 当日为0， 昨日为-1， 明天为1， 以此类推
+    const uri: string = '/request/' + queryTime;
+    console.log(this.baseUrl + uri);
+    return this.http.get<BaseResult<MaxRequest[]>>(this.baseUrl + uri);
+  }
+
 
   private log(message: string) {
     this.messageService.add('last-performance max response:' + message);

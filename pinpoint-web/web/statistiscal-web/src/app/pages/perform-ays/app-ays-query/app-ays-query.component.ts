@@ -136,6 +136,14 @@ export class AppAysQueryComponent implements OnInit {
     // 调试信息
     console.log(this.dateForm.value.startTime,
       this.dateForm.value.endTime, this.dateForm.value.appName);
+    // 检查参数完整性
+    if (this.dateForm.value.startTime === null ||
+        this.dateForm.value.end === null ||
+        this.dateForm.value.appName === null) {
+      // 现阶段采用Console.log弹出提示,后续采用Modal或者Toast形式
+          console.log('query param should not be null');
+          return;
+    }
     this.effectiveService.getEffectivesByConditions(this.dateForm.value.startTime,
       this.dateForm.value.endTime, this.dateForm.value.appName)
       .subscribe(effectives => {

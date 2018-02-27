@@ -4,6 +4,8 @@ import org.apache.zookeeper.KeeperException;
 import org.apache.zookeeper.WatchedEvent;
 import org.apache.zookeeper.Watcher;
 import org.apache.zookeeper.ZooKeeper;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.io.IOException;
 import java.util.List;
@@ -20,22 +22,31 @@ public abstract class Executor implements Watcher{
     protected ZooKeeper zooKeeper;
     protected CountDownLatch countDownLatch = new CountDownLatch(1);
 
+    private static final Logger logger = LoggerFactory.getLogger(Executor.class);
+
     public Executor() {
 
     }
 
     public Executor(String host) {
         this.host = host;
+        // 尝试连接Zk
+        try {
+            connect();
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     public void connect() throws IOException, InterruptedException {
         zooKeeper = new ZooKeeper(host, SESSION_TIME, this);
-        countDownLatch.await(); // 挂起当前服务
+//        countDownLatch.await(); // 挂起当前服务
     }
 
     public void process(WatchedEvent watchedEvent) {
         if (watchedEvent.getState() == Event.KeeperState.SyncConnected) {
-            countDownLatch.countDown();
+//            countDownLatch.countDown();
+            logger.info("In Executor: Connection Established.");
         }
     }
 

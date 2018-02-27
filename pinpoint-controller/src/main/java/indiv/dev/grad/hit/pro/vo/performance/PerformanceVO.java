@@ -1,11 +1,10 @@
 package indiv.dev.grad.hit.pro.vo.performance;
 
-import indiv.dev.grad.hit.pro.model.BaseData;
+import indiv.dev.grad.hit.pro.model.BaseAppData;
 import indiv.dev.grad.hit.pro.model.MetaTrace;
 import indiv.dev.grad.hit.pro.model.chart.VN;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 
-import java.net.URLEncoder;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -100,13 +99,15 @@ public class PerformanceVO {
         this.exceptionTop10 = exceptionTop10;
     }
 
-    // @Warns: Aborted
+    /*
+        @Warns: Aborted
+      */
     public static PerformanceVO doTransform(AppUriEffective appUriEffective) {
         return new PerformanceVO();
     }
 
     // @todo: 补充VO
-    public static PerformanceVO doTransform(BaseData baseData) {
+    public static PerformanceVO doTransform(BaseAppData baseData) {
         PerformanceVO performanceVO = new PerformanceVO();
         performanceVO.setUri(baseData.getUri());
         performanceVO.setReqInPeriod(baseData.getRequests());
@@ -124,7 +125,7 @@ public class PerformanceVO {
         return "<div><a" + " href=" + "\"" + URL + traceId + collectorTime + "\"" + " >" + index + "、" + str + "</a></div>";
     }
 
-    private static List<VN<String, String>> slowTransfer(BaseData baseData) {
+    private static List<VN<String, String>> slowTransfer(BaseAppData baseData) {
         List<VN<String, String>> kvs = new ArrayList<VN<String, String>>();
         if (baseData.getSlows() == null) {
             return null;
@@ -138,7 +139,7 @@ public class PerformanceVO {
         return kvs;
     }
 
-    private static List<VN<String, String>> exceptionsTransfer(BaseData baseData) {
+    private static List<VN<String, String>> exceptionsTransfer(BaseAppData baseData) {
         List<VN<String, String>> kvs = new ArrayList<VN<String, String>>();
         if (baseData.getExceptions() == null) {
             return null;

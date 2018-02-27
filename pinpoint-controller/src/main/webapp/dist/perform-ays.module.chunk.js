@@ -148,6 +148,12 @@ var EffectivesService = /** @class */ (function () {
         return this.http.get('/rest/effectives') // "/rest/effectives"
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (effectives) { return _this.log("fetches effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
     };
+    /*
+        获取空数据
+     */
+    EffectivesService.prototype.getEmptyEffectives = function () {
+        return this.http.get('/rest/empty');
+    };
     EffectivesService.prototype.getEffectivesByConditions = function (start, end, app) {
         var _this = this;
         // return this.http.get<Performance[]>('/mock-data/baseUrl.json');  // 测试mock地址
@@ -222,6 +228,8 @@ var LastPerformanceService = /** @class */ (function () {
         this.mockMaxUrl = '/mock-data/last-max-rsp.json';
         this.mockAvgUrl = '/mock-data/last-avg-rsp.json';
         this.mockMaxReqUrl = '/mock-data/last-max-req.json';
+        // 后端接口基地址
+        this.baseUrl = '/rest/statistics';
     }
     /*
        测试获取mockUrl数据: Max Response Time
@@ -230,16 +238,43 @@ var LastPerformanceService = /** @class */ (function () {
         return this.http.get(this.mockMaxUrl);
     };
     /*
+       获取昨日最大响应时间耗时 Top10
+     */
+    LastPerformanceService.prototype.getMaxRspFromServer = function () {
+        var queryTime = -1; // 当日为0，昨日为-1，明天为1，以此类推
+        var uri = '/maxRsp/' + queryTime;
+        console.log(this.baseUrl + uri); // 测试接口地址是否正确
+        return this.http.get(this.baseUrl + uri);
+    };
+    /*
        测试获取mockUrl数据: Average Response Time
      */
     LastPerformanceService.prototype.getMockAvgRsp = function () {
         return this.http.get(this.mockAvgUrl);
     };
     /*
+      获取昨日平均响应时间耗时Top10
+     */
+    LastPerformanceService.prototype.getAvgRspFromServer = function () {
+        var queryTime = -1; // 当日为0，昨日为-1，明天为1，以此类推
+        var uri = '/avgRsp/' + queryTime;
+        console.log(this.baseUrl + uri); // 测试接口地址是否正确
+        return this.http.get(this.baseUrl + uri);
+    };
+    /*
        测试获取mockUrl数据: Max Request Time
      */
     LastPerformanceService.prototype.getMockMaxReq = function () {
         return this.http.get(this.mockMaxReqUrl);
+    };
+    /*
+       获取最日最大请求次数Top10
+     */
+    LastPerformanceService.prototype.getMaxReqFromServer = function () {
+        var queryTime = -1; // 当日为0， 昨日为-1， 明天为1， 以此类推
+        var uri = '/request/' + queryTime;
+        console.log(this.baseUrl + uri);
+        return this.http.get(this.baseUrl + uri);
     };
     LastPerformanceService.prototype.log = function (message) {
         this.messageService.add('last-performance max response:' + message);
@@ -311,12 +346,33 @@ var UriCheckService = /** @class */ (function () {
     function UriCheckService(http) {
         this.http = http;
         this.mockUrl = '/mock-data/uri-performance-check.json'; // 测试uri
+        this.baseUrl = '/rest/uri/params?query='; // 后端URL
     }
     /*
-        获取当日性能数据
+        获取当日性能数据 (mock)
      */
     UriCheckService.prototype.getTodayUriPerformance = function (appName, uri, date) {
         return this.http.get(this.mockUrl);
+    };
+    /*
+        获取当日性能数据
+     */
+    UriCheckService.prototype.getTodayUriPerformanceFromServer = function (appName, uri, day) {
+        var queryStr = encodeURI('{') +
+            this.encodeQuery('appName') + ':' +
+            (appName === null ? appName : this.encodeQuery(appName)) + ',' +
+            this.encodeQuery('uri') + ':' +
+            (uri === null ? uri : this.encodeQuery(uri)) + ',' +
+            this.encodeQuery('day') + ':' +
+            this.encodeQuery(day) +
+            encodeURI('}');
+        // 测试构造RESTful 接口是否正确
+        console.log(this.baseUrl + queryStr);
+        return this.http.get(this.baseUrl + queryStr);
+    };
+    UriCheckService.prototype.encodeQuery = function (param) {
+        var slash = '\"';
+        return encodeURI(slash) + encodeURI(param) + encodeURI(slash);
     };
     UriCheckService = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Injectable"])(),
@@ -503,6 +559,14 @@ var AppAysQueryComponent = /** @class */ (function () {
         var _this = this;
         // 调试信息
         console.log(this.dateForm.value.startTime, this.dateForm.value.endTime, this.dateForm.value.appName);
+        // 检查参数完整性
+        if (this.dateForm.value.startTime === null ||
+            this.dateForm.value.end === null ||
+            this.dateForm.value.appName === null) {
+            // 现阶段采用Console.log弹出提示,后续采用Modal或者Toast形式
+            console.log('query param should not be null');
+            return;
+        }
         this.effectiveService.getEffectivesByConditions(this.dateForm.value.startTime, this.dateForm.value.endTime, this.dateForm.value.appName)
             .subscribe(function (effectives) {
             _this.performances = effectives;
@@ -628,6 +692,7 @@ var AppAysComponent = /** @class */ (function () {
             pagingType: 'full_numbers',
             pageLength: 10,
         };
+        // 第一次请求获取一次空数据
         this.effectiveService.getEffectives()
             .subscribe(function (effectives) {
             _this.performances = effectives;
@@ -746,7 +811,7 @@ var AppServComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>均响(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.avgRsp }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h1>昨日均响耗时TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>均响(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.avgRsp }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -803,8 +868,11 @@ var AvgResponseControlComponent = /** @class */ (function () {
             pagingType: 'simple',
             pageLength: 10,
         };
-        // 测试mock json
-        this.getMockAvgRspData();
+        // // 测试mock json
+        // this.getMockAvgRspData();
+        //
+        // 后端请求
+        this.getAvgRspDataFromServer();
     };
     /*
         获取mock数据
@@ -812,6 +880,20 @@ var AvgResponseControlComponent = /** @class */ (function () {
     AvgResponseControlComponent.prototype.getMockAvgRspData = function () {
         var _this = this;
         this.lastPerformanceService.getMockAvgRsp()
+            .subscribe(function (base) {
+            _this.baseResult = base;
+            // 测试回调参数
+            console.log(base);
+            // 设置dtTables
+            _this.dtTrigger.next();
+        });
+    };
+    /*
+        获取后端返回数据
+     */
+    AvgResponseControlComponent.prototype.getAvgRspDataFromServer = function () {
+        var _this = this;
+        this.lastPerformanceService.getAvgRspFromServer()
             .subscribe(function (base) {
             _this.baseResult = base;
             // 测试回调参数
@@ -838,7 +920,7 @@ var AvgResponseControlComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/max-request-control/max-request-control.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>请求数</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.requests }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h1>昨日请求数TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>请求数</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.requests }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -895,8 +977,11 @@ var MaxRequestControlComponent = /** @class */ (function () {
             pagingType: 'simple',
             pageLength: 10,
         };
-        // 测试mock json
-        this.getMockMaxReqData();
+        // // 测试mock json
+        // this.getMockMaxReqData();
+        //
+        // 后端请求
+        this.getMaxReqDataFromServer();
     };
     /*
         获取mock数据
@@ -904,6 +989,20 @@ var MaxRequestControlComponent = /** @class */ (function () {
     MaxRequestControlComponent.prototype.getMockMaxReqData = function () {
         var _this = this;
         this.lastPerformanceService.getMockMaxReq()
+            .subscribe(function (base) {
+            _this.baseResult = base;
+            // 测试回调参数
+            console.log(base);
+            // 设置dtTables
+            _this.dtTrigger.next();
+        });
+    };
+    /*
+        获取后端返回数据
+     */
+    MaxRequestControlComponent.prototype.getMaxReqDataFromServer = function () {
+        var _this = this;
+        this.lastPerformanceService.getMaxReqFromServer()
             .subscribe(function (base) {
             _this.baseResult = base;
             // 测试回调参数
@@ -930,7 +1029,7 @@ var MaxRequestControlComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/max-response-control/max-response-control.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>最大响应时间(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.maxRsp }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h1>昨日最大耗时TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>最大响应时间(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.maxRsp }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -987,8 +1086,11 @@ var MaxResponseControlComponent = /** @class */ (function () {
             pagingType: 'simple',
             pageLength: 10,
         };
-        // 测试mock json
-        this.getMockMaxRspData();
+        // // 测试mock json
+        // this.getMockMaxRspData();
+        //
+        // 后端请求
+        this.getMaxRspDataFromServer();
     };
     /*
        获取mock数据
@@ -996,6 +1098,20 @@ var MaxResponseControlComponent = /** @class */ (function () {
     MaxResponseControlComponent.prototype.getMockMaxRspData = function () {
         var _this = this;
         this.lastPerformanceService.getMockMaxRsp()
+            .subscribe(function (base) {
+            _this.baseResult = base;
+            // 测试回调参数
+            console.log(base);
+            // 设置dtTables
+            _this.dtTrigger.next();
+        });
+    };
+    /*
+      获取后端返回数据
+     */
+    MaxResponseControlComponent.prototype.getMaxRspDataFromServer = function () {
+        var _this = this;
+        this.lastPerformanceService.getMaxRspFromServer()
             .subscribe(function (base) {
             _this.baseResult = base;
             // 测试回调参数
@@ -1289,9 +1405,16 @@ var SerivAysQueryComponent = /** @class */ (function () {
      */
     SerivAysQueryComponent.prototype.queryUriByConditions = function () {
         var _this = this;
+        // 后续日期格式转换以适应后端接口要求
+        var format = 'yyyyMMdd';
         // 调试信息
         console.log(this.searchForm.value.appName, this.searchForm.value.appUri, this.searchForm.value.date);
-        this.uriCheckService.getTodayUriPerformance(this.searchForm.value.appName, this.searchForm.value.appUri, this.searchForm.value.date)
+        // 测试用Mock地址
+        // this.uriCheckService.getTodayUriPerformance(this.searchForm.value.appName,
+        //   this.searchForm.value.appUri, this.searchForm.value.date)
+        console.log(this.datePipe.transform(this.searchForm.value.date, format)); // 测试格式转换是否正确
+        // 后端接口地址
+        this.uriCheckService.getTodayUriPerformanceFromServer(this.searchForm.value.appName, this.searchForm.value.appUri, this.datePipe.transform(this.searchForm.value.date, format))
             .subscribe(function (data) {
             _this.baseResult = data;
             // 测试回调参数
@@ -1338,7 +1461,7 @@ var SerivAysQueryComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/seriv-ays/seriv-ays.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<ngx-seriv-ays-query (uriPerformanceLists)=\"revDataFromChild($event)\"></ngx-seriv-ays-query>\n<div class=\"row\">\n  <h1>模块： {{uriPerformanceLists.appName}}</h1>\n  <h1>&nbsp;&nbsp;&nbsp;</h1>\n  <h1>接口： {{uriPerformanceLists.uri}}</h1>\n</div>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>小时</th>\n    <th>机器id</th>\n    <th>请求数</th>\n    <th>平均响应时间</th>\n    <th>最大响应时间</th>\n    <th>最小响应时间</th>\n    <th>3s以上请求数</th>\n    <th>异常Top10请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let basis of uriPerformanceLists.lists\">\n    <td> {{ basis.hour }}</td>\n    <td> {{ basis.id }}</td>\n    <td> {{ basis.amount }}</td>\n    <td> {{ basis.avgRsp }}</td>\n    <td> {{ basis.maxRsp }}</td>\n    <td> {{ basis.minRsp }}</td>\n    <td> {{ basis.slow }}</td>\n    <td> {{ basis.exception }}</td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<ngx-seriv-ays-query (uriPerformanceLists)=\"revDataFromChild($event)\"></ngx-seriv-ays-query>\n<div class=\"row\">\n  <h1>模块： {{uriPerformanceLists.appName}}</h1>\n  <h1>&nbsp;&nbsp;&nbsp;</h1>\n  <h1>接口： {{uriPerformanceLists.uri}}</h1>\n</div>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>小时</th>\n    <th>机器id</th>\n    <th>请求数</th>\n    <th>平均响应时间</th>\n    <th>最大响应时间</th>\n    <th>最小响应时间</th>\n    <th>3s以上请求数</th>\n    <th>慢响应TOP10请求</th>\n    <th>异常Top10请求</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let basis of uriPerformanceLists.lists\">\n    <td> {{ basis.hour }}</td>\n    <td> {{ basis.agent }}</td>\n    <td> {{ basis.request }}</td>\n    <td> {{ basis.avgRsp }}</td>\n    <td> {{ basis.maxRsp }}</td>\n    <td> {{ basis.minRsp }}</td>\n    <td> {{ basis.slowCount}}</td>\n    <td>\n      <div *ngFor=\"let hyper of basis.slowTop10\">\n        <a target=\"_blank\" href=\"{{hyper.value}}\">{{hyper.name}}</a>\n      </div>\n    </td>\n    <td>\n      <div *ngFor=\"let hyper of basis.exceptionTop10\">\n        <a target=\"_blank\" href=\"{{hyper.value}}\">{{hyper.name}}</a>\n      </div>\n    </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 

@@ -17,10 +17,10 @@
             <dataSource type="POOLED">
                 <property name="driver" value="com.mysql.jdbc.Driver" />
                 <!--jdbc:mysql://192.168.174.138:3306/pinpoint_dataminer-->
-                <property name="url" value="jdbc:mysql://192.168.174.138:3306/pinpoint_dataminer" />
+                <property name="url" value="jdbc:mysql://10.94.33.17:8612/pinpoint_dataminer" />
                 <!--root 1234-->
-                <property name="username" value="root" />
-                <property name="password" value="1234" />
+                <property name="username" value="crmqa" />
+                <property name="password" value="123456" />
             </dataSource>
         </environment>
     </environments>

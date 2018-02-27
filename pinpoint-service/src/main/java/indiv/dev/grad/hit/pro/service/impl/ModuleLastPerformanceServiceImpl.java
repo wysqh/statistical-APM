@@ -69,7 +69,7 @@ public class ModuleLastPerformanceServiceImpl implements ModuleLastPerformanceSe
         AppUriEffectiveDailyMapper appUriEffectiveDailyMapper =
                 session.getMapper(AppUriEffectiveDailyMapper.class);
         try {
-            appUriEffectiveDailyList = appUriEffectiveDailyMapper.selectAverageRspByDate(iDate);
+            appUriEffectiveDailyList = appUriEffectiveDailyMapper.selectMaxRspByDate(iDate);
         } catch (Exception e) {
             e.printStackTrace();
         } finally {

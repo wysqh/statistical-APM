@@ -1,16 +1,17 @@
+import {VN} from './KN';
+
 export class UriPerformanceBase {
-  id: number;
-  day: number;
-  hour: number;
-  appName: string;
-  uri: string;
-  agent: string;
-  amount: string;
-  avgRsp: string;
-  maxRsp: string;
-  minRsp: string;
-  slow: string;
-  slowCount: number;
-  exception: string;
-  updateTime: string;
+ appName: string;
+ uri: string;
+ hour: string;
+ agent: string;
+ request: string;
+ avgRsp: string;
+ maxRsp: string;
+ minRsp: string;
+ slowCount: number;
+ slows: string;
+ exceptions: string;
+ slowTop10: VN<string, string>[];
+ exceptionTop10: VN<string, string>[];
 };

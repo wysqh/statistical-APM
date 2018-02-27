@@ -28,13 +28,18 @@ import java.util.List;
 @RequestMapping("/api")
 public class UserController {
     private static final Logger logger = LoggerFactory.getLogger(UserController.class);
+    private final static String DYNAMIC_TOKEN = "eyJhbGciOiJTSEEtNTEyIiwidHlwIjoiSldUIn0=." +
+            "eyJuYW1lIjoiZ3V0aWFua2FpIiwicGljdHVyZSI6Ii9hc3NldHMvaW1hZ2VzL2FsYW4uc" +
+            "G5nIiwiZW1haWwiOiJndXRpYW5rYWlAYmFpZHUuY29tIn0=.610a37e094663c9492" +
+            "bbf155d48be78a322e12b3355651fd5365beccdb0bcfb967d9f09fdcf7d8e652365" +
+            "20ed51e051d080d00bd7f408697423a8f33896c100f";
 
     @Autowired
     private UserService userService;
 
     /*
-        @Func: 测试用户注册返回json数据
-     */
+       @Func: 测试用户注册返回json数据
+    */
     @RequestMapping(value = "/test/login", method = RequestMethod.GET)
     @ResponseBody
     AuthResultVO userLoginTest(@RequestParam("email")String email,
@@ -55,7 +60,18 @@ public class UserController {
     @ResponseBody
     AuthResultVO userLogin(@RequestBody UsersVO usersVO){
         logger.info("UserControllerInfo: " + usersVO.getEmail() + "," + usersVO.getPassword() + "," + usersVO.getRememberMe()); // http.body 测试
-        BaseResult<String> baseResult = userService.login(usersVO.getEmail(),usersVO.getPassword(), usersVO.getRememberMe());
+        /*
+            @Notice: 此处通过特定账户跳过JWT验证体系
+            注意: 此处TOken根据数据库中密钥动态生成的, 获取token的方法可以
+            使用/api/test/auth 接口.
+         */
+        if ("root@baidu.com".equals(usersVO.getEmail()) && "123456".equals(usersVO.getPassword())) {
+            return new AuthResultVO(true, DYNAMIC_TOKEN);
+        }
+
+        BaseResult<String> baseResult = userService.login(usersVO.getEmail(),
+                usersVO.getPassword(),
+                usersVO.getRememberMe());
         if (baseResult.isStatus()) {
             return new AuthResultVO(true, baseResult.getData());
         }

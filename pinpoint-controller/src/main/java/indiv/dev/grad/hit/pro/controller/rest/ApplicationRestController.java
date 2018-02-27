@@ -3,10 +3,11 @@ package indiv.dev.grad.hit.pro.controller.rest;
 import com.google.gson.GsonBuilder;
 import com.google.gson.JsonSyntaxException;
 import indiv.dev.grad.hit.pro.exceptions.NoContentException;
-import indiv.dev.grad.hit.pro.model.BaseData;
+import indiv.dev.grad.hit.pro.model.BaseAppData;
 import indiv.dev.grad.hit.pro.pojo.AppUriEffective;
 import indiv.dev.grad.hit.pro.service.ModulePerformanceService;
 import indiv.dev.grad.hit.pro.util.DateFormatUtils;
+import indiv.dev.grad.hit.pro.util.StringUtils;
 import indiv.dev.grad.hit.pro.vo.EffectiveQuery;
 import indiv.dev.grad.hit.pro.vo.performance.PerformanceVO;
 import org.slf4j.Logger;
@@ -55,6 +56,12 @@ public class ApplicationRestController {
         return performances;
     }
 
+    @RequestMapping(value = "/empty", method = RequestMethod.GET)
+    @ResponseBody
+    public List<PerformanceVO> getEmptyVO() {
+        return null;
+    }
+
     @RequestMapping(value = "/effectives/{id}", method = RequestMethod.GET)
     @ResponseBody
     public AppUriEffective getEffectiveById(@PathVariable(value = "id") Integer id) {
@@ -76,12 +83,17 @@ public class ApplicationRestController {
         } catch (JsonSyntaxException jse) {
             jse.printStackTrace();
         }
-
+        if (effectiveQuery == null ||
+                StringUtils.isEmpty(effectiveQuery.getAppName()) ||
+                StringUtils.isEmpty(effectiveQuery.getStart()) ||
+                StringUtils.isEmpty(effectiveQuery.getEnd())) {
+            return null;
+        }
         String format = "yyyy-MM-dd HH:mm";
         String start = effectiveQuery.getStart();
         String end = effectiveQuery.getEnd();
         List<PerformanceVO> performanceList = new ArrayList<PerformanceVO>();
-        List<BaseData> appUriEffectiveList = modulePerformanceService.getUriEffectiveByConditions(
+        List<BaseAppData> appUriEffectiveList = modulePerformanceService.getUriEffectiveByConditions(
                 DateFormatUtils.string2date(format, start),
                 DateFormatUtils.string2date(format, end),
                 effectiveQuery.getAppName()
@@ -93,7 +105,7 @@ public class ApplicationRestController {
         }
 
         //页面VO转换
-        for (BaseData baseData: appUriEffectiveList) {
+        for (BaseAppData baseData: appUriEffectiveList) {
             performanceList.add(PerformanceVO.doTransform(baseData));
         }
 

@@ -104,10 +104,10 @@
       "camelCase"
     ],
     "component-selector": [
-      true,
-      "element",
-      "ngx",
-      "kebab-case"
+      false //true,
+//      "element",
+//      "ngx",
+//      "kebab-case"
     ],
     "ban": [
       true,

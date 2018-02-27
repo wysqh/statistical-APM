@@ -118,7 +118,7 @@ export class NbEmailPassAuthProvider extends NbAbstractAuthProvider {
     login: {
       alwaysFail: false,
       rememberMe: true,
-      endpoint: '/mock-data/login-in.json', // '/api/auth/login',
+      endpoint: '/api/auth/login', // '/mock-data/login-in.json',
       method: 'get',
       redirect: {
         success: '/',

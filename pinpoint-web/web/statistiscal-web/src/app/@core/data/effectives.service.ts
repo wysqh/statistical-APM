@@ -36,6 +36,13 @@ export class EffectivesService {
       )
   }
 
+  /*
+      获取空数据
+   */
+  getEmptyEffectives(): Observable<Performance[]> {
+    return this.http.get<Performance[]>('/rest/empty');
+  }
+
   getEffectivesByConditions(start: string, end: string, app: string): Observable<Performance[]> {
     // return this.http.get<Performance[]>('/mock-data/baseUrl.json');  // 测试mock地址
     this.baseUrl = '/rest/effectives/params?query=';
@@ -48,7 +55,7 @@ export class EffectivesService {
       this.encodeQuery(app) +
       encodeURI('}');
     console.log(this.baseUrl + this.queryStr);
-    return this.http.get<Performance[]>(this.baseUrl + this.queryStr)// this.baseUrl+ this.queryStr
+    return this.http.get<Performance[]>(this.baseUrl + this.queryStr) // this.baseUrl+ this.queryStr
       .pipe(
         tap(effectives => this.log(`fetchs effectives`)),
         catchError(this.handleError(`getEffecitves`, [])),

@@ -10,7 +10,7 @@ import java.util.Map;
  * @Author: Created By Gu Tiankai
  * @Date: 2018-02-26 11:40
  */
-public class BaseData implements Serializable {
+public class BaseAppData implements Serializable {
     String uri;
     Integer requests;
     Float avgResTime;
@@ -20,11 +20,11 @@ public class BaseData implements Serializable {
     List<MetaTrace> slows;
     List<MetaTrace> exceptions;
 
-    public BaseData() {
+    public BaseAppData() {
 
     }
 
-    public BaseData(AppUriEffective appUriEffective) {
+    public BaseAppData(AppUriEffective appUriEffective) {
         this.uri = appUriEffective.getUri();
         this.requests = appUriEffective.getAmount();
         this.avgResTime = appUriEffective.getAvgRsp();
@@ -35,7 +35,7 @@ public class BaseData implements Serializable {
         this.exceptions = null;
     }
 
-    public BaseData(AppUriEffective appUriEffective, List<MetaTrace> slows, List<MetaTrace> exceptions) {
+    public BaseAppData(AppUriEffective appUriEffective, List<MetaTrace> slows, List<MetaTrace> exceptions) {
         this.uri = appUriEffective.getUri();
         this.requests = appUriEffective.getAmount();
         this.avgResTime = appUriEffective.getAvgRsp();

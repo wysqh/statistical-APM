@@ -14,6 +14,7 @@ public class Provider {
             e.printStackTrace();
         }
         System.out.println("服务方开始服务");
+        ExecutorBuilder.getInstance();
         try {
             System.in.read();
         } catch (IOException e) {

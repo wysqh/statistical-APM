@@ -69,11 +69,18 @@ export class SerivAysQueryComponent implements OnInit {
       监听查询事件
    */
   queryUriByConditions(): void {
+    // 后续日期格式转换以适应后端接口要求
+    const format: string = 'yyyyMMdd';
     // 调试信息
     console.log(this.searchForm.value.appName,
       this.searchForm.value.appUri, this.searchForm.value.date)
-    this.uriCheckService.getTodayUriPerformance(this.searchForm.value.appName,
-      this.searchForm.value.appUri, this.searchForm.value.date)
+    // 测试用Mock地址
+    // this.uriCheckService.getTodayUriPerformance(this.searchForm.value.appName,
+    //   this.searchForm.value.appUri, this.searchForm.value.date)
+    console.log(this.datePipe.transform(this.searchForm.value.date, format)); // 测试格式转换是否正确
+    // 后端接口地址
+      this.uriCheckService.getTodayUriPerformanceFromServer(this.searchForm.value.appName,
+        this.searchForm.value.appUri, this.datePipe.transform(this.searchForm.value.date, format))
       .subscribe(data => {
         this.baseResult = data;
         // 测试回调参数

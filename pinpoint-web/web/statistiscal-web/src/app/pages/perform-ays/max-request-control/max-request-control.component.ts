@@ -25,8 +25,11 @@ export class MaxRequestControlComponent implements OnInit {
       pageLength: 10,
     }
 
-    // 测试mock json
-    this.getMockMaxReqData();
+    // // 测试mock json
+    // this.getMockMaxReqData();
+    //
+    // 后端请求
+    this.getMaxReqDataFromServer();
   }
 
   /*
@@ -34,6 +37,20 @@ export class MaxRequestControlComponent implements OnInit {
    */
   getMockMaxReqData(): void {
     this.lastPerformanceService.getMockMaxReq()
+      .subscribe(base => {
+        this.baseResult = base;
+        // 测试回调参数
+        console.log(base);
+        // 设置dtTables
+        this.dtTrigger.next();
+      })
+  }
+
+  /*
+      获取后端返回数据
+   */
+  getMaxReqDataFromServer(): void {
+    this.lastPerformanceService.getMaxReqFromServer()
       .subscribe(base => {
         this.baseResult = base;
         // 测试回调参数

@@ -14,19 +14,29 @@
     <th>最大响应时间</th>
     <th>最小响应时间</th>
     <th>3s以上请求数</th>
+    <th>慢响应TOP10请求</th>
     <th>异常Top10请求</th>
   </tr>
   </thead>
   <tbody>
   <tr *ngFor="let basis of uriPerformanceLists.lists">
     <td> {{ basis.hour }}</td>
-    <td> {{ basis.id }}</td>
-    <td> {{ basis.amount }}</td>
+    <td> {{ basis.agent }}</td>
+    <td> {{ basis.request }}</td>
     <td> {{ basis.avgRsp }}</td>
     <td> {{ basis.maxRsp }}</td>
     <td> {{ basis.minRsp }}</td>
-    <td> {{ basis.slow }}</td>
-    <td> {{ basis.exception }}</td>
+    <td> {{ basis.slowCount}}</td>
+    <td>
+      <div *ngFor="let hyper of basis.slowTop10">
+        <a target="_blank" href="{{hyper.value}}">{{hyper.name}}</a>
+      </div>
+    </td>
+    <td>
+      <div *ngFor="let hyper of basis.exceptionTop10">
+        <a target="_blank" href="{{hyper.value}}">{{hyper.name}}</a>
+      </div>
+    </td>
   </tr>
   </tbody>
 </table>

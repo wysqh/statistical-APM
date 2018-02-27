@@ -2418,8 +2418,8 @@ var AppModule = /** @class */ (function () {
                                 login: {
                                     alwaysFail: false,
                                     rememberMe: true,
-                                    endpoint: '/mock-data/login-in.json',
-                                    method: 'get',
+                                    endpoint: '/api/auth/login',
+                                    method: 'post',
                                     redirect: {
                                         success: '/dashboard',
                                         failure: '/auth/login',
@@ -3952,7 +3952,7 @@ var NbEmailPassAuthProvider = /** @class */ (function (_super) {
             login: {
                 alwaysFail: false,
                 rememberMe: true,
-                endpoint: '/mock-data/login-in.json',
+                endpoint: '/api/auth/login',
                 method: 'get',
                 redirect: {
                     success: '/',
