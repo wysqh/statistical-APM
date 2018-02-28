@@ -27,7 +27,7 @@ export class MaxRequestControlComponent implements OnInit {
 
     // // 测试mock json
     // this.getMockMaxReqData();
-    //
+
     // 后端请求
     this.getMaxReqDataFromServer();
   }

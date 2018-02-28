@@ -2233,7 +2233,6 @@ var ThemeModule = /** @class */ (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__("../../../core/esm5/core.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__framework_auth__ = __webpack_require__("../../../../../src/framework/auth/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__theme_components__ = __webpack_require__("../../../../../src/app/@theme/components/index.ts");
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__auth_guard_service__ = __webpack_require__("../../../../../src/app/auth-guard.service.ts");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -2244,11 +2243,10 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-
 var routes = [
     {
         path: 'pages',
-        canActivate: [__WEBPACK_IMPORTED_MODULE_4__auth_guard_service__["a" /* AuthGuard */]],
+        // canActivate: [AuthGuard], // here we tell Angular to check the access with our AuthGuard
         loadChildren: 'app/pages/pages.module#PagesModule',
     },
     {

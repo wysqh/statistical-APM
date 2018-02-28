@@ -52,7 +52,9 @@ public class ModuleUriCheckServiceImpl implements ModuleUriCheckService{
         String format = "yyyyMMddHH";
         List<AppUriEffectiveHourly> appUriEffectiveHourlyList = new ArrayList<AppUriEffectiveHourly>();
         //日期转换
-        Date date = DateFormatUtils.getStartTimeOfDay(new Date().getTime(), "");
+        Date date = DateFormatUtils.getStartTimeOfDay(
+                new Date().getTime() - 24 * 3600 * 1000,
+                "");
         String startOfDay = DateFormatUtils.format(date, format);
         Integer iStartOfDay = null;
         try {

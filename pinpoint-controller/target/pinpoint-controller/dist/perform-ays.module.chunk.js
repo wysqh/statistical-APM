@@ -145,6 +145,7 @@ var EffectivesService = /** @class */ (function () {
      */
     EffectivesService.prototype.getEffectives = function () {
         var _this = this;
+        console.log('calling overall.');
         return this.http.get('/rest/effectives') // "/rest/effectives"
             .pipe(Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["e" /* tap */])(function (effectives) { return _this.log("fetches effectives"); }), Object(__WEBPACK_IMPORTED_MODULE_4_rxjs_operators__["a" /* catchError */])(this.handleError("getEffecives", [])));
     };
@@ -152,6 +153,7 @@ var EffectivesService = /** @class */ (function () {
         获取空数据
      */
     EffectivesService.prototype.getEmptyEffectives = function () {
+        console.log('calling empty');
         return this.http.get('/rest/empty');
     };
     EffectivesService.prototype.getEffectivesByConditions = function (start, end, app) {
@@ -692,8 +694,9 @@ var AppAysComponent = /** @class */ (function () {
             pagingType: 'full_numbers',
             pageLength: 10,
         };
+        console.log('Entering OnInit');
         // 第一次请求获取一次空数据
-        this.effectiveService.getEffectives()
+        this.effectiveService.getEmptyEffectives()
             .subscribe(function (effectives) {
             _this.performances = effectives;
             _this.dtTrigger.next();
@@ -811,7 +814,7 @@ var AppServComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>昨日均响耗时TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>均响(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.avgRsp }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h1>昨日均响耗时TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>均响(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.avgRsp }} </td>\n    <td>\n      <a routerLink={{element.linkage}} [queryParams]=\"{'appName':element.appName,\n                                                      'uri': element.uri}\">传送门</a>\n    </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -920,7 +923,7 @@ var AvgResponseControlComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/max-request-control/max-request-control.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>昨日请求数TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>请求数</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.requests }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h1>昨日请求数TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>请求数</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.requests }} </td>\n    <td>\n      <a routerLink={{element.linkage}} [queryParams]=\"{'appName':element.appName,\n                                                      'uri': element.uri}\">传送门</a>\n    </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -979,7 +982,6 @@ var MaxRequestControlComponent = /** @class */ (function () {
         };
         // // 测试mock json
         // this.getMockMaxReqData();
-        //
         // 后端请求
         this.getMaxReqDataFromServer();
     };
@@ -1029,7 +1031,7 @@ var MaxRequestControlComponent = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/perform-ays/max-response-control/max-response-control.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<h1>昨日最大耗时TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>最大响应时间(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.maxRsp }} </td>\n    <td> {{ element.linkage }} </td>\n  </tr>\n  </tbody>\n</table>\n"
+module.exports = "<h1>昨日最大耗时TOP10</h1>\n<table datatable [dtOptions]=\"dtOptions\" [dtTrigger]=\"dtTrigger\" class=\"row-border hover\">\n  <thead>\n  <tr>\n    <th>模块名称</th>\n    <th>接口</th>\n    <th>最大响应时间(ms)</th>\n    <th>详情传送门</th>\n  </tr>\n  </thead>\n  <tbody>\n  <tr *ngFor=\"let element of baseResult.data\">\n    <td> {{ element.appName }} </td>\n    <td> {{ element.uri }} </td>\n    <td> {{ element.maxRsp }} </td>\n    <td>\n      <a routerLink={{element.linkage}} [queryParams]=\"{'appName':element.appName,\n                                                      'uri': element.uri}\">传送门</a>\n    </td>\n  </tr>\n  </tbody>\n</table>\n"
 
 /***/ }),
 
@@ -1344,6 +1346,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__angular_forms__ = __webpack_require__("../../../forms/esm5/forms.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__ = __webpack_require__("../../../../ngx-bootstrap/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__core_data_uri_check_service__ = __webpack_require__("../../../../../src/app/@core/data/uri-check.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__angular_router__ = __webpack_require__("../../../router/esm5/router.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -1359,11 +1362,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var SerivAysQueryComponent = /** @class */ (function () {
-    function SerivAysQueryComponent(_localService, datePipe, uriCheckService) {
+    function SerivAysQueryComponent(_localService, datePipe, uriCheckService, route) {
         this._localService = _localService;
         this.datePipe = datePipe;
         this.uriCheckService = uriCheckService;
+        this.route = route;
         this.locale = 'en'; // 时区设置
         this.baseResult = new __WEBPACK_IMPORTED_MODULE_2__core_data_base_result__["a" /* BaseResult */](); // 后端返回的数据格式
         this.uriPerformanceLists = new __WEBPACK_IMPORTED_MODULE_0__angular_core__["EventEmitter"](); // 子控件发射器
@@ -1398,6 +1403,20 @@ var SerivAysQueryComponent = /** @class */ (function () {
             this.searchForm.patchValue({
                 date: this.datePipe.transform(this.bsValue, format),
             });
+        }
+        // 检测是否有其他页面通过快照传值
+        if (this.route.snapshot.queryParamMap.keys.length !== 0) {
+            console.log('Value Passes From Other Pages.');
+            var _appName = this.route.snapshot.queryParamMap.get('appName');
+            var _uri = this.route.snapshot.queryParamMap.get('uri');
+            // 值填充
+            this.searchForm.patchValue({
+                appName: _appName,
+                appUri: _uri,
+                date: this.datePipe.transform(new Date(this.bsValue.getTime() - 24 * 60 * 60 * 1000), format),
+            });
+            // 调用查询访问接口
+            this.queryUriByConditions();
         }
     };
     /*
@@ -1449,7 +1468,8 @@ var SerivAysQueryComponent = /** @class */ (function () {
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_4_ngx_bootstrap__["b" /* BsLocaleService */],
             __WEBPACK_IMPORTED_MODULE_1__angular_common__["DatePipe"],
-            __WEBPACK_IMPORTED_MODULE_5__core_data_uri_check_service__["a" /* UriCheckService */]])
+            __WEBPACK_IMPORTED_MODULE_5__core_data_uri_check_service__["a" /* UriCheckService */],
+            __WEBPACK_IMPORTED_MODULE_6__angular_router__["a" /* ActivatedRoute */]])
     ], SerivAysQueryComponent);
     return SerivAysQueryComponent;
 }());

@@ -7,10 +7,12 @@ import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily;
  * @Date: 2018-02-05 15:54
  */
 public class AverageResponseVO {
-    public String appName;
-    public String uri;
-    public Float avgRsp;
-    public String linkage;
+    private String appName;
+    private String uri;
+    private Float avgRsp;
+    private String linkage;
+
+    private static final String ROUTER = "../seriays";
 
     public AverageResponseVO() {
 
@@ -65,6 +67,7 @@ public class AverageResponseVO {
     public static AverageResponseVO doTransform(AppUriEffectiveDaily appUriEffectiveDaily) {
         return new AverageResponseVO(appUriEffectiveDaily.getAppName(),
                 appUriEffectiveDaily.getUri(),
-                appUriEffectiveDaily.getAvgRsp());
+                appUriEffectiveDaily.getAvgRsp(),
+                ROUTER);
     }
 }

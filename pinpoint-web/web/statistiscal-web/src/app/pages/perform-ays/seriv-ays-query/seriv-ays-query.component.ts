@@ -5,6 +5,8 @@ import {UriPerformance} from '../../../@core/data/uri-performance';
 import {FormControl, FormGroup} from '@angular/forms';
 import {BsLocaleService} from 'ngx-bootstrap';
 import {UriCheckService} from '../../../@core/data/uri-check.service';
+import {ActivatedRoute} from '@angular/router';
+import {isEmpty} from 'rxjs/operators';
 
 @Component({
   selector: 'ngx-seriv-ays-query',
@@ -29,7 +31,8 @@ export class SerivAysQueryComponent implements OnInit {
 
   constructor(private _localService: BsLocaleService,
               private datePipe: DatePipe,
-              private uriCheckService: UriCheckService) { }
+              private uriCheckService: UriCheckService,
+              private route: ActivatedRoute) { }
 
   ngOnInit() {
     // this.applyLocale();
@@ -62,6 +65,22 @@ export class SerivAysQueryComponent implements OnInit {
       this.searchForm.patchValue({
         date: this.datePipe.transform(this.bsValue, format), // 格式转换
       })
+    }
+    // 检测是否有其他页面通过快照传值
+    if (this.route.snapshot.queryParamMap.keys.length !== 0) {
+      console.log('Value Passes From Other Pages.');
+      const _appName = this.route.snapshot.queryParamMap.get('appName');
+      const _uri = this.route.snapshot.queryParamMap.get('uri');
+      // 值填充
+      this.searchForm.patchValue({
+        appName: _appName,
+        appUri: _uri,
+        date: this.datePipe.transform(
+                            new Date(this.bsValue.getTime() - 24 * 60 * 60 * 1000),
+                                        format),
+      })
+      // 调用查询访问接口
+      this.queryUriByConditions();
     }
   }
 

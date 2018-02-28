@@ -7,84 +7,49 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf09d82-d95f-4c61-8138-e9762e2fddca" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/ZkController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/ExecutorBuilder.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/BaseInterfaceData.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ZkService.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ZkServiceImpl.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/TestZkConn.java" />
+      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/date/test/TestHourTrans.java" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/UserController.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/UserController.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.java" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/RequestVO.java" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/RequestVO.java" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/inline.bundle.js.map" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/inline.bundle.js.map" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/main.bundle.js" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/main.bundle.js" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/main.bundle.js.map" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/main.bundle.js.map" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/mock-data/uri-performance-check.json" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/mock-data/uri-performance-check.json" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/mock-data/last-max-req.json" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/mock-data/last-max-req.json" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/perform-ays.module.chunk.js" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/perform-ays.module.chunk.js" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/perform-ays.module.chunk.js.map" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/perform-ays.module.chunk.js.map" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/controller/api/UserController.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/controller/api/UserController.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/RequestVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/indiv/dev/grad/hit/pro/vo/performance/RequestVO.class" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/controller/api/UserController.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/controller/api/UserController.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/RequestVO.class" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/indiv/dev/grad/hit/pro/vo/performance/RequestVO.class" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/springmvc.xml" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/inline.bundle.js.map" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/inline.bundle.js.map" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js.map" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js.map" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/uri-performance-check.json" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/uri-performance-check.json" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/last-max-req.json" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/last-max-req.json" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/perform-ays.module.chunk.js" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/perform-ays.module.chunk.js" />
       <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/perform-ays.module.chunk.js.map" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/perform-ays.module.chunk.js.map" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/DataMonitor.java" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Executor.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Executor.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Provider.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Provider.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/BaseData.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/BaseAppData.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModulePerformanceService.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModulePerformanceService.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModuleUriCheckService.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModuleUriCheckService.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.java" />
       <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/resources/log4j.properties" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/resources/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/bootstrap/Provider.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/bootstrap/Provider.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/model/BaseData.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/ModulePerformanceService.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/ModulePerformanceService.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/ModuleUriCheckService.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/ModuleUriCheckService.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java" />
       <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl$1.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl$1.class" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl$2.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl$2.class" />
       <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/log4j.properties" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/log4j.properties" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/mybatis-conf.xml" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/mybatis-conf.xml" />
       <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/provider.xml" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/provider.xml" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.class" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/last-performance.service.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/last-performance.service.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance-base.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance-base.ts" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app-routing.module.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app-routing.module.ts" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.ts" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.ts" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.ts" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.ts" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.ts" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.html" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/providers/email-pass-auth.provider.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/providers/email-pass-auth.provider.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/uri-performance-check.json" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/uri-performance-check.json" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/tslint.json" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/tslint.json" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/last-max-req.json" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/last-max-req.json" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -117,11 +82,23 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="provider.xml" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml">
+          <file leaf-file-name="max-request-control.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="487">
-                  <caret line="56" column="35" lean-forward="false" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
+                <state relative-caret-position="323">
+                  <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+                  <folding>
+                    <marker date="1519790620097" expanded="true" signature="446:547" ph="{&quot;appName&quot;: element.appName...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="seriv-ays.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="855">
+                  <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
                   <folding />
                 </state>
               </provider>
@@ -130,91 +107,84 @@
           <file leaf-file-name="seriv-ays-query.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="342">
-                  <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
+                <state relative-caret-position="209">
+                  <caret line="79" column="48" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="uri-performance-check.json" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/uri-performance-check.json">
+          <file leaf-file-name="max-response-control.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="323">
-                  <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="uri-check.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="103">
-                  <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="seriv-ays.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="551">
-                  <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="PerformanceLastRestController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/PerformanceLastRestController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="133">
-                  <caret line="38" column="53" lean-forward="false" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ApplicationRestController.java" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="591">
-                  <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+                  <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
                   <folding>
-                    <element signature="e#2380#2381#0" expanded="true" />
-                    <element signature="e#2407#2408#0" expanded="true" />
+                    <marker date="1519790620205" expanded="true" signature="452:553" ph="{&quot;appName&quot;: element.appName...}" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app-ays.component.scss" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.scss">
+          <file leaf-file-name="avg-response-control.component.html" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="0">
-                  <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+                <state relative-caret-position="418">
+                  <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+                  <folding>
+                    <marker date="1519790620144" expanded="true" signature="448:549" ph="{&quot;appName&quot;: element.appName...}" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="my-date-form.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-date-form/my-date-form.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="69" column="40" lean-forward="false" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="max-request-control.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html">
+          <file leaf-file-name="max-request-control.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="19">
-                  <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="90" />
+                <state relative-caret-position="304">
+                  <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
+                  <folding>
+                    <element signature="e#0#50#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="MaxResponseVO.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="266">
+                  <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ModuleLastPerformanceServiceImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java">
+          <file leaf-file-name="RequestVO.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/RequestVO.java">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="1072">
-                  <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+                <state relative-caret-position="266">
+                  <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="AverageResponseVO.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="361">
+                  <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
                   <folding />
                 </state>
               </provider>
@@ -223,96 +193,32 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
-          <file leaf-file-name="UriPerformanceCheckRestController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="439">
-                  <caret line="59" column="59" lean-forward="false" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
-                  <folding>
-                    <element signature="e#1521#1539#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="UriPerformanceVO.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="304">
-                  <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="uri-performance-base.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance-base.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="38">
-                  <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app-ays.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.html">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="456">
-                  <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="app-ays.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="mybatis-conf.xml" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/mybatis-conf.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="317">
-                  <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+                <state relative-caret-position="437">
+                  <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="app-ays-query.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.ts">
+          <file leaf-file-name="provider.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-190">
-                  <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
-                  <folding>
-                    <element signature="e#0#70#0" expanded="true" />
-                  </folding>
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="effectives.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="418">
-                  <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+                <state relative-caret-position="425">
+                  <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="65" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="UserServiceImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/UserServiceImpl.java">
+          <file leaf-file-name="app.module.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="217">
-                  <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+                <state relative-caret-position="513">
+                  <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
                   <folding />
                 </state>
               </provider>
@@ -323,6 +229,58 @@
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="133">
                   <caret line="7" column="14" lean-forward="false" selection-start-line="7" selection-start-column="14" selection-end-line="7" selection-end-column="14" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="ModuleUriCheckServiceImpl.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="380">
+                  <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="springmvc.xml" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="418">
+                  <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TestHourTrans.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/date/test/TestHourTrans.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="285">
+                  <caret line="15" column="94" lean-forward="false" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
+                  <folding>
+                    <element signature="imports" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="DateFormatUtils.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/DateFormatUtils.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="800">
+                  <caret line="102" column="23" lean-forward="false" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="TestSelectUriPerformanceByQuery.java" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="399">
+                  <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
                   <folding />
                 </state>
               </provider>
@@ -344,9 +302,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>selectAppUriEffectiveByConditions</find>
-      <find>distinct</find>
-      <find>resultMap</find>
       <find>warningLight</find>
       <find>echart</find>
       <find>ngx-echart</find>
@@ -370,10 +325,13 @@
       <find>/api/auth/login</find>
       <find>mock-data/login-in.json</find>
       <find>selectAverageRspByDate</find>
-      <find>selectUriPerformanceByQuery</find>
       <find>DatePipe</find>
       <find>http://km.int.nuomi.com/index.html#/transactionDetail`</find>
       <find>BaseAppData</find>
+      <find>calling em</find>
+      <find>patchValue</find>
+      <find>patchV</find>
+      <find>selectUriPerformanceByQuery</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Summary\References\GitStorage\statistical-APM\pinpoint-web\web\my-app\src\mock-data</dir>
@@ -390,36 +348,23 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/TestZookeeper.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/DataMonitor.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/Executor.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/ZooKeeperOperator.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/AbstractZooKeeper.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Excecutor.java" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/DataMonitor.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Executor.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Provider.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/zookeeper/test/TestZkConn.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ZkService.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/ExecutorBuilder.java" />
-        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ZkController.java" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/ZkController.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ZkServiceImpl.java" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/last-performance.service.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.ts" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/UserController.java" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/components/auth.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/tslint.json" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/components/login/login.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/providers/email-pass-auth.provider.ts" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/BaseAppData.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModuleUriCheckService.java" />
@@ -429,17 +374,30 @@
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.java" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/uri-performance-check.json" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance-base.ts" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.html" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/resources/log4j.properties" />
-        <option value="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.html" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.java" />
-        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/index.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app-routing.module.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.java" />
+        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.java" />
+        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/RequestVO.java" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/last-max-req.json" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/index.html" />
+        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java" />
+        <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/date/test/TestHourTrans.java" />
+        <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java" />
+        <option value="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" />
+        <option value="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/resources/mybatis-conf.xml" />
       </list>
     </option>
@@ -495,11 +453,11 @@
     <handled-path value="$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules" />
     <handled-path value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="539" />
-    <option name="y" value="-860" />
-    <option name="width" value="974" />
-    <option name="height" value="1047" />
+  <component name="ProjectFrameBounds" extendedState="7">
+    <option name="x" value="-8" />
+    <option name="y" value="-8" />
+    <option name="width" value="1936" />
+    <option name="height" value="1096" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -517,9 +475,9 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
       <pane id="Scratches" />
+      <pane id="AndroidView" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -551,54 +509,11 @@
               <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="rest" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="performance" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="resources" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
               <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
               <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -621,114 +536,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="bootstrap" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="constant" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="encrypt" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="example" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="exceptions" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="chart" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="pojo" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="service" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="impl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
@@ -741,221 +548,17 @@
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
               <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-              <item name="mybatis-mapper" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-service" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="test" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
               <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@core" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-              <item name="app-ays" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-              <item name="app-ays-query" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-              <item name="max-request-control" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-              <item name="seriv-ays" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-              <item name="seriv-ays-query" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="framework" type="462c0819:PsiDirectoryNode" />
-              <item name="auth" type="462c0819:PsiDirectoryNode" />
-              <item name="providers" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="mock-data" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
-      <pane id="AndroidView" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../idea-scala" />
     <property name="nodejs_interpreter_path" value="C:/Program Files/nodejs/node" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
@@ -1008,25 +611,6 @@
       <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
       <module />
     </configuration>
-    <configuration name="Executor" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
-      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
-        <pattern>
-          <option name="PATTERN" value="indiv.dev.grad.hit.pro.zookeeper.test.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="MAIN_CLASS_NAME" value="indiv.dev.grad.hit.pro.zookeeper.test.Executor" />
-      <option name="VM_PARAMETERS" />
-      <option name="PROGRAM_PARAMETERS" />
-      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <option name="ENABLE_SWING_INSPECTOR" value="false" />
-      <option name="ENV_VARIABLES" />
-      <option name="PASS_PARENT_ENVS" value="true" />
-      <module name="pinpoint-service" />
-      <envs />
-    </configuration>
     <configuration name="Provider" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
@@ -1046,14 +630,33 @@
       <module name="pinpoint-service" />
       <envs />
     </configuration>
-    <configuration name="TestParams" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+    <configuration name="TestHourTrans" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
         <pattern>
-          <option name="PATTERN" value="indiv.dev.grad.hit.pro.effect.test.*" />
+          <option name="PATTERN" value="indiv.dev.grad.hit.pro.date.test.*" />
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="MAIN_CLASS_NAME" value="indiv.dev.grad.hit.pro.effect.test.TestParams" />
+      <option name="MAIN_CLASS_NAME" value="indiv.dev.grad.hit.pro.date.test.TestHourTrans" />
+      <option name="VM_PARAMETERS" />
+      <option name="PROGRAM_PARAMETERS" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
+      <option name="ENABLE_SWING_INSPECTOR" value="false" />
+      <option name="ENV_VARIABLES" />
+      <option name="PASS_PARENT_ENVS" value="true" />
+      <module name="pinpoint-service" />
+      <envs />
+    </configuration>
+    <configuration name="TestSelectUriPerformanceByQuery" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <extension name="coverage" enabled="false" merge="false" sample_coverage="true" runner="idea">
+        <pattern>
+          <option name="PATTERN" value="indiv.dev.grad.hit.pro.uri.test.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="MAIN_CLASS_NAME" value="indiv.dev.grad.hit.pro.uri.test.TestSelectUriPerformanceByQuery" />
       <option name="VM_PARAMETERS" />
       <option name="PROGRAM_PARAMETERS" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -1252,18 +855,18 @@
     <list size="6">
       <item index="0" class="java.lang.String" itemvalue="Tomcat Server.Tomcat 7" />
       <item index="1" class="java.lang.String" itemvalue="Application.Provider" />
-      <item index="2" class="java.lang.String" itemvalue="Application.TestParams" />
-      <item index="3" class="java.lang.String" itemvalue="Application.Executor" />
-      <item index="4" class="java.lang.String" itemvalue="Application.ZooKeeperOperator" />
-      <item index="5" class="java.lang.String" itemvalue="Application.TestZkConn" />
+      <item index="2" class="java.lang.String" itemvalue="Application.ZooKeeperOperator" />
+      <item index="3" class="java.lang.String" itemvalue="Application.TestZkConn" />
+      <item index="4" class="java.lang.String" itemvalue="Application.TestSelectUriPerformanceByQuery" />
+      <item index="5" class="java.lang.String" itemvalue="Application.TestHourTrans" />
     </list>
     <recent_temporary>
       <list size="5">
         <item index="0" class="java.lang.String" itemvalue="Application.Provider" />
-        <item index="1" class="java.lang.String" itemvalue="Application.TestZkConn" />
-        <item index="2" class="java.lang.String" itemvalue="Application.ZooKeeperOperator" />
-        <item index="3" class="java.lang.String" itemvalue="Application.Executor" />
-        <item index="4" class="java.lang.String" itemvalue="Application.TestParams" />
+        <item index="1" class="java.lang.String" itemvalue="Application.TestHourTrans" />
+        <item index="2" class="java.lang.String" itemvalue="Application.TestSelectUriPerformanceByQuery" />
+        <item index="3" class="java.lang.String" itemvalue="Application.TestZkConn" />
+        <item index="4" class="java.lang.String" itemvalue="Application.ZooKeeperOperator" />
       </list>
     </recent_temporary>
   </component>
@@ -1334,11 +937,14 @@
       <workItem from="1519424758552" duration="211000" />
       <workItem from="1519610270979" duration="31757000" />
       <workItem from="1519697557438" duration="23793000" />
+      <workItem from="1519735845234" duration="1636000" />
+      <workItem from="1519782277107" duration="3575000" />
+      <workItem from="1519785912604" duration="10399000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="419819000" />
+    <option name="totallyTimeSpent" value="435429000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1350,7 +956,8 @@
     </todo-panel>
   </component>
   <component name="ToolWindowManager">
-    <frame x="-8" y="-1088" width="1936" height="1056" extended-state="6" />
+    <frame x="-8" y="-8" width="1936" height="1056" extended-state="7" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27597404" sideWeight="0.4520256" order="7" side_tool="true" content_ui="tabs" />
@@ -1364,17 +971,17 @@
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29112554" sideWeight="0.45735607" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.1108742" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.29112554" sideWeight="0.4552239" order="6" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32683983" sideWeight="0.10341151" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.26190478" sideWeight="0.5836887" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.5490405" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.4163113" order="12" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.21748401" sideWeight="0.49380806" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.26190478" sideWeight="0.45095947" order="12" side_tool="true" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.2238806" sideWeight="0.49380806" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -1403,266 +1010,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/components/login/login.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="171">
-          <caret line="135" column="47" lean-forward="false" selection-start-line="135" selection-start-column="47" selection-end-line="135" selection-end-column="47" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1518964316287" expanded="true" signature="574:4814" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="773:3780" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="860:1037" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="1130:1313" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="1347:2120" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="1513:1764" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="1871:1921" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="1963:2105" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="2154:3329" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="2323:2741" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="2857:2910" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="2928:3314" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="3386:3589" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="3684:3766" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="3807:4793" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="3877:4638" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="3970:4614" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="4036:4597" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="4078:4304" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="4345:4569" ph="..." />
-            <marker date="1518964316287" expanded="true" signature="4673:4780" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/components/auth.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="21" column="25" lean-forward="false" selection-start-line="21" selection-start-column="25" selection-end-line="21" selection-end-column="25" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-            <marker date="1518804338483" expanded="true" signature="374:672" ph="..." />
-            <marker date="1518804338483" expanded="true" signature="399:655" ph="..." />
-            <marker date="1518804338483" expanded="true" signature="417:629" ph="..." />
-            <marker date="1518804338483" expanded="true" signature="442:610" ph="..." />
-            <marker date="1518804338483" expanded="true" signature="519:584" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app-routing.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="23" lean-forward="false" selection-start-line="16" selection-start-column="23" selection-end-line="16" selection-end-column="23" />
-          <folding>
-            <element signature="e#0#69#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/providers/email-pass-auth.provider.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="370">
-          <caret line="120" column="59" lean-forward="false" selection-start-line="120" selection-start-column="59" selection-end-line="120" selection-end-column="59" />
-          <folding>
-            <element signature="n#!!doc" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="236">
-          <caret line="43" column="55" lean-forward="false" selection-start-line="43" selection-start-column="55" selection-end-line="43" selection-end-column="55" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-serv/app-serv.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="15" lean-forward="false" selection-start-line="0" selection-start-column="15" selection-end-line="0" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModuleLastPerformanceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="12" column="38" lean-forward="false" selection-start-line="12" selection-start-column="38" selection-end-line="12" selection-end-column="38" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/ModulePerformanceService.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="266">
-          <caret line="19" column="44" lean-forward="true" selection-start-line="19" selection-start-column="44" selection-end-line="19" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-serv/app-serv.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/ModulePerformanceApiController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="183">
-          <caret line="27" column="27" lean-forward="false" selection-start-line="27" selection-start-column="27" selection-end-line="27" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="154">
-          <caret line="27" column="21" lean-forward="false" selection-start-line="27" selection-start-column="21" selection-end-line="27" selection-end-column="21" />
-          <folding>
-            <element signature="e#0#50#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/last-performance.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="363">
-          <caret line="68" column="12" lean-forward="false" selection-start-line="68" selection-start-column="12" selection-end-line="68" selection-end-column="12" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-date-form/my-date-form.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="138" column="38" lean-forward="false" selection-start-line="138" selection-start-column="38" selection-end-line="138" selection-end-column="38" />
-          <folding>
-            <element signature="e#0#67#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/ApiQuery.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="13" lean-forward="false" selection-start-line="7" selection-start-column="13" selection-end-line="7" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/BaseAppData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="16" column="21" lean-forward="true" selection-start-line="16" selection-start-column="21" selection-end-line="16" selection-end-column="21" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/effectives-query.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="15" lean-forward="false" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="15" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/effectives.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="10" column="0" lean-forward="true" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/baseUrl.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-3876">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/model/BaseInterfaceData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="688">
-          <caret line="44" column="31" lean-forward="false" selection-start-line="44" selection-start-column="31" selection-end-line="44" selection-end-column="31" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2153#2154#0" expanded="false" />
-            <element signature="e#2183#2184#0" expanded="false" />
-            <element signature="e#2229#2230#0" expanded="false" />
-            <element signature="e#2267#2268#0" expanded="false" />
-            <element signature="e#2297#2298#0" expanded="false" />
-            <element signature="e#2323#2324#0" expanded="false" />
-            <element signature="e#2361#2362#0" expanded="false" />
-            <element signature="e#2391#2392#0" expanded="false" />
-            <element signature="e#2445#2446#0" expanded="false" />
-            <element signature="e#2477#2478#0" expanded="false" />
-            <element signature="e#2545#2546#0" expanded="false" />
-            <element signature="e#2587#2588#0" expanded="false" />
-            <element signature="e#2646#2647#0" expanded="false" />
-            <element signature="e#2683#2684#0" expanded="false" />
-            <element signature="e#2761#2762#0" expanded="false" />
-            <element signature="e#2813#2814#0" expanded="false" />
-            <element signature="e#2845#2846#0" expanded="false" />
-            <element signature="e#2872#2873#0" expanded="false" />
-            <element signature="e#2913#2914#0" expanded="false" />
-            <element signature="e#2945#2946#0" expanded="false" />
-            <element signature="e#2977#2978#0" expanded="false" />
-            <element signature="e#3005#3006#0" expanded="false" />
-            <element signature="e#3047#3048#0" expanded="false" />
-            <element signature="e#3081#3082#0" expanded="false" />
-            <element signature="e#3116#3117#0" expanded="false" />
-            <element signature="e#3146#3147#0" expanded="false" />
-            <element signature="e#3193#3194#0" expanded="false" />
-            <element signature="e#3231#3232#0" expanded="false" />
-            <element signature="e#3263#3264#0" expanded="false" />
-            <element signature="e#3292#3293#0" expanded="false" />
-            <element signature="e#3335#3336#0" expanded="false" />
-            <element signature="e#3371#3372#0" expanded="false" />
-            <element signature="e#3403#3404#0" expanded="false" />
-            <element signature="e#3432#3433#0" expanded="false" />
-            <element signature="e#3475#3476#0" expanded="false" />
-            <element signature="e#3511#3512#0" expanded="false" />
-            <element signature="e#3543#3544#0" expanded="false" />
-            <element signature="e#3572#3573#0" expanded="false" />
-            <element signature="e#3615#3616#0" expanded="false" />
-            <element signature="e#3651#3652#0" expanded="false" />
-            <element signature="e#3688#3689#0" expanded="false" />
-            <element signature="e#3720#3721#0" expanded="false" />
-            <element signature="e#3771#3772#0" expanded="false" />
-            <element signature="e#3813#3814#0" expanded="false" />
-            <element signature="e#3854#3855#0" expanded="false" />
-            <element signature="e#3882#3883#0" expanded="false" />
-            <element signature="e#3933#3934#0" expanded="false" />
-            <element signature="e#3967#3968#0" expanded="false" />
-            <element signature="e#4013#4014#0" expanded="false" />
-            <element signature="e#4046#4047#0" expanded="false" />
-            <element signature="e#4107#4108#0" expanded="false" />
-            <element signature="e#4151#4152#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/PerformanceVO.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
@@ -1682,36 +1029,188 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/pojo/AppUriEffectiveHourly.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="5" column="13" lean-forward="false" selection-start-line="5" selection-start-column="13" selection-end-line="5" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/UriPerformanceCheckRestController.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="439">
+        <state relative-caret-position="798">
           <caret line="59" column="59" lean-forward="false" selection-start-line="59" selection-start-column="59" selection-end-line="59" selection-end-column="59" />
-          <folding>
-            <element signature="e#1521#1539#0" expanded="true" />
-          </folding>
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/UriPerformanceVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
+        <state relative-caret-position="893">
           <caret line="66" column="13" lean-forward="false" selection-start-line="66" selection-start-column="13" selection-end-line="66" selection-end-column="13" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.ts">
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/perform-ays.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="743">
-          <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="615">
+          <caret line="254" column="18" lean-forward="false" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/log4j.properties">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/uri-performance-check.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance-base.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1444">
+          <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.scss">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/UserServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="266">
+          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/ExecutorBuilder.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="14" column="13" lean-forward="false" selection-start-line="14" selection-start-column="13" selection-end-line="14" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Provider.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="76">
+          <caret line="6" column="13" lean-forward="false" selection-start-line="6" selection-start-column="13" selection-end-line="6" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-serv/app-serv.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="287">
+          <caret line="45" column="5" lean-forward="true" selection-start-line="45" selection-start-column="5" selection-end-line="45" selection-end-column="5" />
+          <folding>
+            <element signature="e#2380#2381#0" expanded="false" />
+            <element signature="e#2407#2408#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/perform-ays.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="27" column="12" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="12" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="475">
+          <caret line="31" column="36" lean-forward="false" selection-start-line="31" selection-start-column="36" selection-end-line="31" selection-end-column="36" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/pages-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="228">
+          <caret line="16" column="21" lean-forward="false" selection-start-line="16" selection-start-column="11" selection-end-line="16" selection-end-column="21" />
+          <folding>
+            <element signature="e#0#55#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="684">
+          <caret line="47" column="3" lean-forward="false" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/PerformanceLastRestController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="78">
+          <caret line="65" column="45" lean-forward="false" selection-start-line="65" selection-start-column="45" selection-end-line="65" selection-end-column="45" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/perform-ays-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="136">
+          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding>
+            <element signature="e#0#55#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="16" column="7" lean-forward="false" selection-start-line="16" selection-start-column="7" selection-end-line="16" selection-end-column="7" />
           <folding />
         </state>
       </provider>
@@ -1724,160 +1223,120 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/perform-ays.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModulePerformanceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="615">
-          <caret line="254" column="18" lean-forward="false" selection-start-line="254" selection-start-column="18" selection-end-line="254" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="190">
-          <caret line="40" column="47" lean-forward="false" selection-start-line="40" selection-start-column="47" selection-end-line="40" selection-end-column="47" />
-          <folding>
-            <element signature="method#performanceOrderByHour#0;class#ModuleUriCheckServiceImpl#0" expanded="false" />
-            <element signature="e#4767#4786#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/log4j.properties">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="228">
-          <caret line="12" column="31" lean-forward="true" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="487">
-          <caret line="56" column="35" lean-forward="false" selection-start-line="56" selection-start-column="35" selection-end-line="56" selection-end-column="35" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="84" column="31" lean-forward="false" selection-start-line="84" selection-start-column="31" selection-end-line="84" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="103">
-          <caret line="11" column="57" lean-forward="false" selection-start-line="11" selection-start-column="57" selection-end-line="11" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/uri-performance-check.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="323">
-          <caret line="17" column="24" lean-forward="false" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="551">
+        <state relative-caret-position="740">
           <caret line="39" column="7" lean-forward="false" selection-start-line="39" selection-start-column="7" selection-end-line="39" selection-end-column="7" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/PerformanceLastRestController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="38" column="53" lean-forward="false" selection-start-line="38" selection-start-column="53" selection-end-line="38" selection-end-column="53" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance-base.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleLastPerformanceServiceImpl.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1072">
-          <caret line="88" column="31" lean-forward="false" selection-start-line="88" selection-start-column="31" selection-end-line="88" selection-end-column="31" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="95">
-          <caret line="5" column="22" lean-forward="true" selection-start-line="5" selection-start-column="22" selection-end-line="5" selection-end-column="22" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="456">
+        <state relative-caret-position="246">
           <caret line="24" column="34" lean-forward="false" selection-start-line="24" selection-start-column="34" selection-end-line="24" selection-end-column="34" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html">
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/last-max-req.json">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="19">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="90" />
+        <state relative-caret-position="304">
+          <caret line="22" column="26" lean-forward="false" selection-start-line="22" selection-start-column="26" selection-end-line="22" selection-end-column="26" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/rest/ApplicationRestController.java">
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="591">
+        <state relative-caret-position="345">
           <caret line="61" column="20" lean-forward="false" selection-start-line="61" selection-start-column="20" selection-end-line="61" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays/seriv-ays.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="855">
+          <caret line="48" column="3" lean-forward="false" selection-start-line="48" selection-start-column="3" selection-end-line="48" selection-end-column="3" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="304">
+          <caret line="31" column="25" lean-forward="false" selection-start-line="31" selection-start-column="25" selection-end-line="31" selection-end-column="25" />
           <folding>
-            <element signature="e#2380#2381#0" expanded="true" />
-            <element signature="e#2407#2408#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts">
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/MaxResponseVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="418">
-          <caret line="41" column="28" lean-forward="false" selection-start-line="41" selection-start-column="28" selection-end-line="41" selection-end-column="28" />
+        <state relative-caret-position="266">
+          <caret line="14" column="45" lean-forward="false" selection-start-line="14" selection-start-column="45" selection-end-line="14" selection-end-column="45" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/UserServiceImpl.java">
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/RequestVO.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="217">
-          <caret line="37" column="0" lean-forward="false" selection-start-line="37" selection-start-column="0" selection-end-line="37" selection-end-column="0" />
+        <state relative-caret-position="266">
+          <caret line="14" column="44" lean-forward="false" selection-start-line="14" selection-start-column="44" selection-end-line="14" selection-end-column="44" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/vo/performance/AverageResponseVO.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-date-form/my-date-form.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="69" column="40" lean-forward="false" selection-start-line="69" selection-start-column="40" selection-end-line="69" selection-end-column="40" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="79" column="48" lean-forward="false" selection-start-line="79" selection-start-column="48" selection-end-line="79" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-response-control/max-response-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <marker date="1519790620205" expanded="true" signature="452:553" ph="{&quot;appName&quot;: element.appName...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/max-request-control/max-request-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="323">
+          <caret line="17" column="78" lean-forward="false" selection-start-line="17" selection-start-column="78" selection-end-line="17" selection-end-column="78" />
+          <folding>
+            <marker date="1519790620097" expanded="true" signature="446:547" ph="{&quot;appName&quot;: element.appName...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/webapp/index.jsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1890,28 +1349,89 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.ts">
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/uri/test/TestSelectUriPerformanceByQuery.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-190">
-          <caret line="47" column="3" lean-forward="true" selection-start-line="47" selection-start-column="3" selection-end-line="47" selection-end-column="3" />
+        <state relative-caret-position="399">
+          <caret line="26" column="62" lean-forward="false" selection-start-line="26" selection-start-column="62" selection-end-line="26" selection-end-column="62" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/pojo/AppUriEffectiveHourly.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="143" column="19" lean-forward="false" selection-start-line="143" selection-start-column="19" selection-end-line="143" selection-end-column="19" />
           <folding>
-            <element signature="e#0#70#0" expanded="true" />
+            <element signature="e#2610#2611#0" expanded="false" />
+            <element signature="e#2654#2655#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.ts">
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="361">
-          <caret line="34" column="46" lean-forward="false" selection-start-line="34" selection-start-column="46" selection-end-line="34" selection-end-column="46" />
+        <state relative-caret-position="513">
+          <caret line="49" column="28" lean-forward="false" selection-start-line="49" selection-start-column="28" selection-end-line="49" selection-end-column="28" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/DateFormatUtils.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="800">
+          <caret line="102" column="23" lean-forward="false" selection-start-line="102" selection-start-column="23" selection-end-line="102" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/date/test/TestHourTrans.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="94" lean-forward="false" selection-start-line="15" selection-start-column="94" selection-end-line="15" selection-end-column="94" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/ModuleUriCheckServiceImpl.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="380">
+          <caret line="55" column="48" lean-forward="false" selection-start-line="55" selection-start-column="48" selection-end-line="55" selection-end-column="48" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/avg-response-control/avg-response-control.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="22" column="0" lean-forward="false" selection-start-line="22" selection-start-column="0" selection-end-line="22" selection-end-column="0" />
+          <folding>
+            <marker date="1519790620144" expanded="true" signature="448:549" ph="{&quot;appName&quot;: element.appName...}" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="36" column="65" lean-forward="false" selection-start-line="36" selection-start-column="51" selection-end-line="36" selection-end-column="65" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="418">
+          <caret line="46" column="64" lean-forward="false" selection-start-line="46" selection-start-column="64" selection-end-line="46" selection-end-column="64" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/mybatis-conf.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="317">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+        <state relative-caret-position="437">
+          <caret line="23" column="25" lean-forward="true" selection-start-line="23" selection-start-column="25" selection-end-line="23" selection-end-column="25" />
           <folding />
         </state>
       </provider>

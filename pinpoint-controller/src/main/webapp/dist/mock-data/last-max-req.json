@@ -5,51 +5,51 @@
     "appName": "message-comet",
     "uri": "/comet/connect/keys/lock",
     "requests": 14315494,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "message-comet",
     "uri": "/comet/cometServlet",
     "requests": 14086906,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "message-comet",
     "uri": "/comet/connect/callback/close",
     "requests": 13993727,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "sc-mct-web",
     "uri": "/index.jsp",
     "requests": 10374882,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "mct-center-api",
     "uri": "/napi/fengchao/appointment/list",
     "requests": 9633384,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "sc-mct-na",
     "uri": "/index.jsp",
     "requests": 9444872,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "mct-acl-web",
     "uri": "/auth/validate",
     "requests": 8357595,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "sc-api",
     "uri": "/index.jsp",
     "requests": 6387354,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "tuan-lbc-server",
     "uri": "MctCommonAgent:getMerchantPoiByPoiId",
     "requests": 4693043,
-    "linkage": null
+    "linkage": "../seriays"
   }, {
     "appName": "mct-center-api",
     "uri": "/napi/fengchao/appointment/detail",
     "requests": 4258571,
-    "linkage": null
+    "linkage": "../seriays"
   }]
 }

@@ -13,7 +13,10 @@
     <td> {{ element.appName }} </td>
     <td> {{ element.uri }} </td>
     <td> {{ element.requests }} </td>
-    <td> {{ element.linkage }} </td>
+    <td>
+      <a routerLink={{element.linkage}} [queryParams]="{'appName':element.appName,
+                                                      'uri': element.uri}">传送门</a>
+    </td>
   </tr>
   </tbody>
 </table>

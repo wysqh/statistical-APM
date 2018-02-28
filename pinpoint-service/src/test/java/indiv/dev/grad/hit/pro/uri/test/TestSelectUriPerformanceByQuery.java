@@ -15,17 +15,19 @@ public class TestSelectUriPerformanceByQuery {
     public static void main(String[] args) {
         SqlSession sqlSession = DbConnUtils.getSession().openSession();
         AppUriEffectiveHourlyMapper appUriEffectiveHourlyMapper = sqlSession.getMapper(AppUriEffectiveHourlyMapper.class);
-        Integer day = 20170419;
-        String appName = "sc-cert-create";
-        String uri = "/servicecenter/cert/create";
+        Integer day = 20180227;
+        String appName = "sc-mct-web";
+        String uri = "/index.jsp";
 
         List<AppUriEffectiveHourly> appUriEffectiveHourlyList =
                 appUriEffectiveHourlyMapper.selectUriPerformanceByQuery(appName, day, uri);
+
         System.out.println("size:" + appUriEffectiveHourlyList.size());
         for (AppUriEffectiveHourly appUriEffectiveHourly: appUriEffectiveHourlyList) {
-            System.out.println(appUriEffectiveHourly.getAmount() + ", " +
-            appUriEffectiveHourly.getAvgRsp() + "," +
-            appUriEffectiveHourly.getUri());
+            System.out.println(appUriEffectiveHourly.getHour());
+//            System.out.println(appUriEffectiveHourly.getAmount() + ", " +
+//            appUriEffectiveHourly.getAvgRsp() + "," +
+//            appUriEffectiveHourly.getUri());
         }
     }
 }

@@ -41,7 +41,7 @@ import {DataTablesModule} from 'angular-datatables';
               alwaysFail: false,
               rememberMe: true,
               endpoint: '/api/auth/login',    // 测试Url地址 // '/mock-data/login-in.json',
-              method: 'post',   // 部署只能使用post方式, 测试用get
+              method: 'post',   // 部署只能使用post方式, 测试用getng b
               redirect: {
                 success: '/dashboard',
                 failure: '/auth/login',

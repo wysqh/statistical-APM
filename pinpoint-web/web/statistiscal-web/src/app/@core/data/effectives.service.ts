@@ -29,6 +29,7 @@ export class EffectivesService {
       获取所有性能数据
    */
   getEffectives(): Observable<Performance[]> {
+    console.log('calling overall.');
     return this.http.get<Performance[]>('/rest/effectives') // "/rest/effectives"
       .pipe(
         tap(effectives => this.log(`fetches effectives`)),
@@ -40,6 +41,7 @@ export class EffectivesService {
       获取空数据
    */
   getEmptyEffectives(): Observable<Performance[]> {
+    console.log('calling empty');
     return this.http.get<Performance[]>('/rest/empty');
   }
 

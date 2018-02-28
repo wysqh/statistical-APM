@@ -7,10 +7,12 @@ import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily;
  * @Date: 2018-02-05 16:01
  */
 public class RequestVO {
-    public String appName;
-    public String uri;
-    public Integer requests;
-    public String linkage;
+    private String appName;
+    private String uri;
+    private Integer requests;
+    private String linkage;
+
+    private static final String ROUTER = "../seriays";
 
     public RequestVO() {
 
@@ -65,6 +67,7 @@ public class RequestVO {
     public static RequestVO doTransform(AppUriEffectiveDaily appUriEffectiveDaily) {
         return new RequestVO(appUriEffectiveDaily.getAppName(),
                 appUriEffectiveDaily.getUri(),
-                appUriEffectiveDaily.getAmount());
+                appUriEffectiveDaily.getAmount(),
+                ROUTER);
     }
 }

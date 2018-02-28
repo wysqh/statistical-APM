@@ -7,10 +7,12 @@ import indiv.dev.grad.hit.pro.pojo.AppUriEffectiveDaily;
  * @Date: 2018-02-05 16:00
  */
 public class MaxResponseVO {
-    public String appName;
-    public String uri;
-    public Float maxRsp;
-    public String linkage;
+    private String appName;
+    private String uri;
+    private Float maxRsp;
+    private String linkage;
+
+    private static final String ROUTER = "../seriays";
 
     public MaxResponseVO() {
 
@@ -65,6 +67,7 @@ public class MaxResponseVO {
     public static MaxResponseVO doTransform(AppUriEffectiveDaily appUriEffectiveDaily) {
         return new MaxResponseVO(appUriEffectiveDaily.getAppName(),
                 appUriEffectiveDaily.getUri(),
-                appUriEffectiveDaily.getMaxRsp());
+                appUriEffectiveDaily.getMaxRsp(),
+                ROUTER);
     }
 }
