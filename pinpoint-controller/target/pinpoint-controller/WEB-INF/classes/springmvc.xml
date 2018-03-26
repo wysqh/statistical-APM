@@ -35,7 +35,7 @@
     <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
     <!-- 使用zookeeper注册中心暴露位置 -->
     <dubbo:application name="dubbo_consumer"></dubbo:application>
-    <dubbo:registry protocol="zookeeper" address="172.22.112.49:2181" check="false">
+    <dubbo:registry protocol="zookeeper" address="127.0.0.1:2181" check="false">
     </dubbo:registry>
     <!-- 要引用的服务 -->
     <dubbo:reference interface="indiv.dev.grad.hit.pro.service.ModulePerformanceService"

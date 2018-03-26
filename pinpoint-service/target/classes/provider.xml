@@ -34,7 +34,7 @@
     <dubbo:application name="dubbo_provider"></dubbo:application>
     <!-- zk register address -->
     <!--address="192.168.174.135:2181, 192.168.174.136:2181, 192.168.174.137:2181"-->
-    <dubbo:registry protocol="zookeeper"  address="172.22.112.49:2181"
+    <dubbo:registry protocol="zookeeper"  address="127.0.0.1:2181"
                     check="false" subscribe="false">
     </dubbo:registry>
 
