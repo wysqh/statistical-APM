@@ -1,6 +1,6 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
-import {BarEchart} from '../../../@core/data/BarEchart';
+import {BarEchart} from '../../../@core/data/bar-echart';
 import {ChartService} from '../../../@core/data/chart.service';
 
 @Component({

@@ -17,6 +17,9 @@ const routes: Routes = [{
     path: 'perform-ays',
     loadChildren: './perform-ays/perform-ays.module#PerformAysModule',
   }, {
+    path: 'nutch-extension',
+    loadChildren: './nutch-extension/nutch-extension.module#NutchExtensionModule',
+  }, {
     path: 'components',
     loadChildren: './components/components.module#ComponentsModule',
   }, {

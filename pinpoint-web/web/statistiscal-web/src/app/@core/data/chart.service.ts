@@ -3,7 +3,7 @@ import {HttpClient} from '@angular/common/http';
 import {Observable} from 'rxjs/Observable';
 import {BaseResult} from './base-result';
 import {PieEchart} from './pie-echart';
-import {BarEchart} from './BarEchart';
+import {BarEchart} from './bar-echart';
 
 @Injectable()
 export class ChartService {

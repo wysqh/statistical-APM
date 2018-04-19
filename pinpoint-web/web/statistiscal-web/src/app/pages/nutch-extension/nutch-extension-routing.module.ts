@@ -1,0 +1,36 @@
+import {RouterModule, Routes} from '@angular/router';
+import {NutchExtensionComponent} from './nutch-extension.component';
+import {NerComponent} from './ner/ner.component';
+import {FaceRecComponent} from './face-rec/face-rec.component';
+import {NgModule} from '@angular/core';
+
+const routes: Routes = [{
+  path: '',
+  component: NutchExtensionComponent,
+  children: [{
+    path: 'ner',
+    component: NerComponent,
+  }, {
+    path: 'face-rec',
+    component: FaceRecComponent,
+  }]
+}]
+
+@NgModule({
+  imports: [
+    RouterModule.forChild(routes),
+  ],
+  exports: [
+    RouterModule,
+  ]
+})
+
+export class NutchExtensionRoutingModule {
+
+}
+
+export const nutchRoutedComponents = [
+  NutchExtensionComponent,
+  NerComponent,
+  FaceRecComponent,
+];

@@ -65,6 +65,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Nutch Extension Service',
+    icon: 'nb-lightbulb',
+    children: [
+      {
+        title: 'Name Entity Recognition(NER)',
+        link: '/pages/nutch-extension/ner',
+      },
+      {
+        title: 'Face Recognition',
+        link: '/pages/nutch-extension/face-rec',
+      }
+    ]
+  },
+  {
     title: 'Forms',
     icon: 'nb-compose',
     children: [
@@ -135,10 +149,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'TinyMCE',
         link: '/pages/editors/tinymce',
       },
-      {
-        title: 'CKEditor',
-        link: '/pages/editors/ckeditor',
-      },
+      // {
+      //   title: 'CKEditor',
+      //   link: '/pages/editors/ckeditor',
+      // },
     ],
   },
   {
