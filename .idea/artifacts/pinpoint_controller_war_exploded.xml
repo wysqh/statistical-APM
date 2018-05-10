@@ -20,6 +20,13 @@
           <element id="library" level="project" name="Maven: org.mybatis:mybatis:3.3.0" />
           <element id="library" level="project" name="Maven: org.javassist:javassist:3.18.2-GA" />
           <element id="library" level="project" name="Maven: com.google.code.gson:gson:2.2.4" />
+          <element id="library" level="project" name="Maven: org.apache.kafka:kafka-clients:1.1.0" />
+          <element id="library" level="project" name="Maven: org.lz4:lz4-java:1.4" />
+          <element id="library" level="project" name="Maven: org.xerial.snappy:snappy-java:1.1.7.1" />
+          <element id="library" level="project" name="Maven: org.apache.kafka:kafka-streams:1.1.0" />
+          <element id="library" level="project" name="Maven: org.apache.kafka:connect-json:1.1.0" />
+          <element id="library" level="project" name="Maven: org.apache.kafka:connect-api:1.1.0" />
+          <element id="library" level="project" name="Maven: org.rocksdb:rocksdbjni:5.7.3" />
           <element id="library" level="project" name="Maven: org.springframework:spring-webmvc:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-beans:4.2.6.RELEASE" />
           <element id="library" level="project" name="Maven: org.springframework:spring-context:4.2.6.RELEASE" />

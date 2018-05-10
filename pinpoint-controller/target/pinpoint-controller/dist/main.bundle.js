@@ -11,8 +11,8 @@ var map = {
 	],
 	"./components/components.module": [
 		"../../../../../src/app/pages/components/components.module.ts",
-		"components.module",
-		"common"
+		"common",
+		"components.module"
 	],
 	"./editors/editors.module": [
 		"../../../../../src/app/pages/editors/editors.module.ts",
@@ -24,27 +24,33 @@ var map = {
 	],
 	"./maps/maps.module": [
 		"../../../../../src/app/pages/maps/maps.module.ts",
-		"maps.module",
-		"common"
+		"common",
+		"maps.module"
+	],
+	"./nutch-extension/nutch-extension.module": [
+		"../../../../../src/app/pages/nutch-extension/nutch-extension.module.ts",
+		"common",
+		"nutch-extension.module"
 	],
 	"./perform-ays/perform-ays.module": [
 		"../../../../../src/app/pages/perform-ays/perform-ays.module.ts",
-		"perform-ays.module",
-		"common"
+		"common",
+		"perform-ays.module"
 	],
 	"./tables/tables.module": [
 		"../../../../../src/app/pages/tables/tables.module.ts",
-		"tables.module",
-		"common"
+		"common",
+		"tables.module"
 	],
 	"./ui-features/ui-features.module": [
 		"../../../../../src/app/pages/ui-features/ui-features.module.ts",
+		"common",
 		"ui-features.module"
 	],
 	"app/pages/pages.module": [
 		"../../../../../src/app/pages/pages.module.ts",
-		"pages.module",
-		"common"
+		"common",
+		"pages.module"
 	]
 };
 function webpackAsyncContext(req) {
@@ -1697,7 +1703,7 @@ var SampleLayoutComponent = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'ngx-sample-layout',
             styles: [__webpack_require__("../../../../../src/app/@theme/layouts/sample/sample.layout.scss")],
-            template: "\n    <nb-layout [center]=\"layout.id === 'center-column'\" windowMode>\n      <nb-layout-header fixed>\n        <ngx-header [position]=\"sidebar.id === 'left' ? 'normal': 'inverse'\"></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\"\n                   tag=\"menu-sidebar\"\n                   responsive\n                   [right]=\"sidebar.id === 'right'\">\n        <nb-sidebar-header>\n          <a href=\"#\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-social-github\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"main-content\">\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-column left class=\"small\" *ngIf=\"layout.id === 'two-column' || layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-column right class=\"small\" *ngIf=\"layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n\n      <nb-sidebar class=\"settings-sidebar\"\n                   tag=\"settings-sidebar\"\n                   state=\"collapsed\"\n                   fixed\n                   [right]=\"sidebar.id !== 'right'\">\n        <ngx-theme-settings></ngx-theme-settings>\n      </nb-sidebar>\n    </nb-layout>\n  ",
+            template: "\n    <nb-layout [center]=\"layout.id === 'center-column'\" windowMode>\n      <nb-layout-header fixed>\n        <ngx-header [position]=\"sidebar.id === 'left' ? 'normal': 'inverse'\"></ngx-header>\n      </nb-layout-header>\n\n      <nb-sidebar class=\"menu-sidebar\"\n                   tag=\"menu-sidebar\"\n                   responsive\n                   [right]=\"sidebar.id === 'right'\">\n        <nb-sidebar-header>\n          <a href=\"https://github.com/wysqh/statistical-APM\" class=\"btn btn-hero-success main-btn\">\n            <i class=\"ion ion-social-github\"></i> <span>Support Us</span>\n          </a>\n        </nb-sidebar-header>\n        <ng-content select=\"nb-menu\"></ng-content>\n      </nb-sidebar>\n\n      <nb-layout-column class=\"main-content\">\n        <ng-content select=\"router-outlet\"></ng-content>\n      </nb-layout-column>\n\n      <nb-layout-column left class=\"small\" *ngIf=\"layout.id === 'two-column' || layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-column right class=\"small\" *ngIf=\"layout.id === 'three-column'\">\n        <nb-menu [items]=\"subMenu\"></nb-menu>\n      </nb-layout-column>\n\n      <nb-layout-footer fixed>\n        <ngx-footer></ngx-footer>\n      </nb-layout-footer>\n\n      <nb-sidebar class=\"settings-sidebar\"\n                   tag=\"settings-sidebar\"\n                   state=\"collapsed\"\n                   fixed\n                   [right]=\"sidebar.id !== 'right'\">\n        <ngx-theme-settings></ngx-theme-settings>\n      </nb-sidebar>\n    </nb-layout>\n  ",
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__core_data_state_service__["a" /* StateService */],
             __WEBPACK_IMPORTED_MODULE_1__nebular_theme__["h" /* NbMenuService */],

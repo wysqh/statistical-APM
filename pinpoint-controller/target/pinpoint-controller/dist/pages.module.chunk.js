@@ -2208,6 +2208,20 @@ var MENU_ITEMS = [
         ],
     },
     {
+        title: 'Nutch Extension Service',
+        icon: 'nb-lightbulb',
+        children: [
+            {
+                title: 'Name Entity Recognition(NER)',
+                link: '/pages/nutch-extension/ner',
+            },
+            {
+                title: 'Face Recognition',
+                link: '/pages/nutch-extension/face-rec',
+            }
+        ]
+    },
+    {
         title: 'Forms',
         icon: 'nb-compose',
         children: [
@@ -2277,10 +2291,6 @@ var MENU_ITEMS = [
             {
                 title: 'TinyMCE',
                 link: '/pages/editors/tinymce',
-            },
-            {
-                title: 'CKEditor',
-                link: '/pages/editors/ckeditor',
             },
         ],
     },
@@ -2352,6 +2362,9 @@ var routes = [{
             }, {
                 path: 'perform-ays',
                 loadChildren: './perform-ays/perform-ays.module#PerformAysModule',
+            }, {
+                path: 'nutch-extension',
+                loadChildren: './nutch-extension/nutch-extension.module#NutchExtensionModule',
             }, {
                 path: 'components',
                 loadChildren: './components/components.module#ComponentsModule',
