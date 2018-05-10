@@ -8,10 +8,12 @@ import {NutchExtensionRoutingModule, nutchRoutedComponents} from './nutch-extens
 import {ThemeModule} from '../../@theme/theme.module';
 import {NerServiceService} from '../../@core/data/ner-service.service';
 import {ModalComponent} from '../ui-features/modals/modal/modal.component';
+import {UiFeaturesModule} from '../ui-features/ui-features.module';
 
 @NgModule({
   imports: [
     ThemeModule,
+    UiFeaturesModule,
     DataTablesModule,
     ReactiveFormsModule,
     CommonModule,
@@ -20,15 +22,11 @@ import {ModalComponent} from '../ui-features/modals/modal/modal.component';
   ],
   declarations: [
     ...nutchRoutedComponents,
-    ModalComponent
   ],
   providers: [
     MessageService,
     BsLocaleService,
     NerServiceService,
-  ],
-  entryComponents: [
-    ModalComponent
   ]
 })
 export class NutchExtensionModule { }

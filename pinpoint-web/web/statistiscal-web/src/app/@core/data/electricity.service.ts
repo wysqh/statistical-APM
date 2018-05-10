@@ -5,7 +5,7 @@ export class ElectricityService {
 
   private data = [
     {
-      title: '2015',
+      title: '2016',
       months: [
         { month: 'Jan', delta: '0.97', down: true, kWatts: '816', cost: '97' },
         { month: 'Feb', delta: '1.83', down: true, kWatts: '806', cost: '95' },
@@ -22,7 +22,7 @@ export class ElectricityService {
       ],
     },
     {
-      title: '2016',
+      title: '2017',
       active: true,
       months: [
         { month: 'Jan', delta: '1.56', down: true, kWatts: '789', cost: '91' },
@@ -40,7 +40,7 @@ export class ElectricityService {
       ],
     },
     {
-      title: '2017',
+      title: '2018',
       months: [
         { month: 'Jan', delta: '1.34', down: false, kWatts: '789', cost: '91' },
         { month: 'Feb', delta: '0.95', down: false, kWatts: '793', cost: '93' },

@@ -3,6 +3,7 @@ import {NutchExtensionComponent} from './nutch-extension.component';
 import {NerComponent} from './ner/ner.component';
 import {FaceRecComponent} from './face-rec/face-rec.component';
 import {NgModule} from '@angular/core';
+import {UiFeaturesComponent} from '../ui-features/ui-features.component';
 
 const routes: Routes = [{
   path: '',
