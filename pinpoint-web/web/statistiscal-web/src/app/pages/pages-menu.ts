@@ -69,6 +69,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-lightbulb',
     children: [
       {
+        title: 'Focused Crawling',
+        link: '/pages/nutch-extension/crawl'
+      },
+      {
         title: 'Name Entity Recognition(NER)',
         link: '/pages/nutch-extension/ner',
       },

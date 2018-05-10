@@ -4,6 +4,7 @@ import {NerComponent} from './ner/ner.component';
 import {FaceRecComponent} from './face-rec/face-rec.component';
 import {NgModule} from '@angular/core';
 import {UiFeaturesComponent} from '../ui-features/ui-features.component';
+import {CrawlComponent} from './crawl/crawl.component';
 
 const routes: Routes = [{
   path: '',
@@ -14,6 +15,9 @@ const routes: Routes = [{
   }, {
     path: 'face-rec',
     component: FaceRecComponent,
+  }, {
+    path: 'crawl',
+    component: CrawlComponent,
   }]
 }]
 
