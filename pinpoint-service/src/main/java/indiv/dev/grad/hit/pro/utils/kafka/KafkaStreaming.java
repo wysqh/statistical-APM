@@ -1,4 +1,4 @@
-package indiv.dev.grad.hit.pro.kafka.test;
+package indiv.dev.grad.hit.pro.utils.kafka;
 
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.common.serialization.Serdes;
@@ -16,7 +16,7 @@ import java.util.concurrent.CountDownLatch;
  * @Author: Created By Gu Tiankai
  * @Date: 2018-05-10 12:50
  */
-public class TestKafkaStreaming {
+public class KafkaStreaming {
     public static void main(String[] args) {
         Properties props = new Properties();
         props.put(StreamsConfig.APPLICATION_ID_CONFIG, "streams-wordcount");
