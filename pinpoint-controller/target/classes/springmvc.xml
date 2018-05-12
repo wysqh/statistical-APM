@@ -56,4 +56,7 @@
     <dubbo:reference interface="indiv.dev.grad.hit.pro.service.ZkService"
                      id="zkService">
     </dubbo:reference>
+    <dubbo:reference interface="indiv.dev.grad.hit.pro.service.CrawlService"
+                     id="crawlService">
+    </dubbo:reference>
 </beans>

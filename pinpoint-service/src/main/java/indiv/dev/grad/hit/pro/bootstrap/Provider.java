@@ -15,6 +15,7 @@ public class Provider {
         }
         System.out.println("服务方开始服务");
         ExecutorBuilder.getInstance();
+        ConsumerFactory.getConsumer().start();
         try {
             System.in.read();
         } catch (IOException e) {

@@ -1,6 +1,7 @@
 package indiv.dev.grad.hit.pro.utils.kafka;
 
 import indiv.dev.grad.hit.pro.constant.KafkaProperties;
+import indiv.dev.grad.hit.pro.utils.BlockBuffer;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -16,6 +17,7 @@ import java.util.Properties;
 public class Consumer extends Thread {
     private final KafkaConsumer<Integer, String> consumer;
     private final String topic;
+    private final BlockBuffer block;
 
     public Consumer(String topic) {
         Properties props = new Properties();
@@ -30,13 +32,21 @@ public class Consumer extends Thread {
 
         consumer = new KafkaConsumer<Integer, String>(props);
         this.topic = topic;
+        block = new BlockBuffer<>();
     }
 
     public void run() {
         consumer.subscribe(Collections.singletonList(this.topic));
-        ConsumerRecords<Integer, String> records = consumer.poll(10000);
-        for (ConsumerRecord<Integer, String> record: records) {
-            System.out.println("Recevied message: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
+        while (true) {
+            ConsumerRecords<Integer, String> records = consumer.poll(10000);
+            for (ConsumerRecord<Integer, String> record: records) {
+                block.add(record.value());
+                System.out.println("Recevied message: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
+            }
         }
+    }
+
+    public BlockBuffer getBlock() {
+        return block;
     }
 }

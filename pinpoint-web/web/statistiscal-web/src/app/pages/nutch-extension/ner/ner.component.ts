@@ -17,7 +17,7 @@ export class NerComponent implements OnInit {
     source: 'assets/images/Bi-GRU.jpg',
   };
 
-  nerForm: FormGroup; //实体关系分析表单
+  nerForm: FormGroup; // 实体关系分析表单
   relation: Relation[]; // 关系
   isResponse: boolean;
 

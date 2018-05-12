@@ -1,6 +1,7 @@
 package indiv.dev.grad.hit.pro.utils.kafka;
 
 import indiv.dev.grad.hit.pro.constant.KafkaProperties;
+import indiv.dev.grad.hit.pro.utils.BlockBuffer;
 import org.apache.kafka.clients.producer.*;
 
 import java.util.Properties;
@@ -44,6 +45,11 @@ public class Producer extends Thread {
                 } catch (InterruptedException | ExecutionException e) {
                     e.printStackTrace();
                 }
+            }
+            try {
+                Thread.sleep(2000);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
             }
         }
     }

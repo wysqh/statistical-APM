@@ -16,4 +16,22 @@ export class NerServiceService {
     let mockUrl: string = "/mock-data/relation.json"; //测试url
     return this.http.get<BaseResult<Relation[]>>(mockUrl);
   }
+
+  /*
+      获取外部Url
+   */
+  getUrlSeedsFromInjection(entity: string, theme: string, features: string): Observable<BaseResult<string[]>> {
+    let requestUrl: string = "/api/crawl/injectUrls";
+    let mockUrl: string = "/mock-data/urls-injection.json";
+    return this.http.get<BaseResult<string[]>>(mockUrl);
+  }
+
+  /*
+    获取实时消息更新
+   */
+  getNotifications(): Observable<BaseResult<string>> {
+    let requestUrl: string = "/api/crawl/notice";
+    let mockUrl: string = "/mock-data/notice.json";
+    return this.http.get<BaseResult<string>>(mockUrl);
+  }
 }
