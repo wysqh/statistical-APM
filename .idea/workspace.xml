@@ -7,308 +7,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="fcf09d82-d95f-4c61-8138-e9762e2fddca" name="Default" comment="">
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_9.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_collections_commons_collections_3_2_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_4.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_cssparser_cssparser_0_9_14.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_2_15.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_htmlunit_htmlunit_core_js_2_15.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__net_sourceforge_nekohtml_nekohtml_1_9_21.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_commons_commons_lang3_3_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_3_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_3_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_3_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_8_1_15_v20140411.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_8_1_15_v20140411.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_8_1_15_v20140411.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_websocket_8_1_15_v20140411.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_jsoup_jsoup_1_7_2.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__org_w3c_css_sac_1_3.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_serializer_2_7_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xalan_xalan_2_7_1.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xerces_xercesImpl_2_11_0.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__xml_apis_xml_apis_1_4_01.xml" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/CrawlController.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/ConsumerFactory.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/BlockBuffer.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/logger/TKLogger.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/TestTryCatch.java" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/notice.json" />
-      <change beforePath="" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/urls-injection.json" />
-      <change beforePath="$PROJECT_DIR$/.idea/artifacts/pinpoint_controller_war_exploded.xml" afterPath="$PROJECT_DIR$/.idea/artifacts/pinpoint_controller_war_exploded.xml" />
-      <change beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_2.xml" afterPath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_3.xml" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/pinpoint-controller.iml" afterPath="$PROJECT_DIR$/pinpoint-controller/pinpoint-controller.iml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/src/main/resources/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/classes/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/target/classes/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/springmvc.xml" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/classes/springmvc.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/commons-logging-1.2.jar" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Black.2a82f89b0a35ee7f9d45.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Black.2b8d6922c2c9957356bc.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Black.44236ad507eddcbfd986.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Black.4c3b6229efe63a13dbb4.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Black.ab04c7611d94b690aee3.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BlackItalic.1f37c7545ae9f63d2279.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BlackItalic.38d14dd4ff163c34e45b.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BlackItalic.3a99796b2d8592471fcf.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BlackItalic.4b7407c6740b8294d97a.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BlackItalic.ad0f284c7113fd0aaf39.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Bold.56a76a220d9c9765946d.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Bold.ab96cca26751239828b8.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Bold.ad140ff02a7091257e2b.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Bold.c7f4667b59b9bc95130e.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Bold.c8bcb1cb78f9e45e2bcb.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BoldItalic.355e388740673054493c.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BoldItalic.4b2cc52b05e2a960c4f1.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BoldItalic.a7dce23c0dd99a4afa5c.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BoldItalic.c2e0f75da3677f645034.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-BoldItalic.d23d5bdadc495f12ef69.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Light.054fa50baa6598a7bf0c.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Light.183079184d96a491f16e.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Light.37fbbbad5577a95bdf05.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Light.8e0860f3581b197e9fa4.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Light.a2b8c641546c0e5a95e2.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-LightItalic.056caeabe95749fe2b97.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-LightItalic.1a9e39e536aed26b863b.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-LightItalic.879d940bccbb25f6096e.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-LightItalic.c7b4e746cf8ecbf412fc.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-LightItalic.cdd1c486770034a6122e.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Medium.2741a14e49524efa6059.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Medium.2b4f394ce87ea4e7a68b.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Medium.303ded6436dcf7ea7515.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Medium.76cad5ba6b8a38a77fe0.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Medium.c54f2a3ee42d2a58d82f.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-MediumItalic.7a49ce79b6089d4d37bf.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-MediumItalic.da059a7386fea889c55c.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-MediumItalic.eb65fb18d4446e4ac27d.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-MediumItalic.f10d1f42838680a70ac2.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-MediumItalic.fa183350bf6b814ae552.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Regular.081b11ebaca8ad30fd09.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Regular.6a561d68369fd1fb9768.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Regular.766c8926f6d9061fef24.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Regular.99b14f0da0591e0d7167.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Regular.b2a6341ae7440130ec4b.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-RegularItalic.527502d7927a41ca0b6a.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-RegularItalic.8add1ba317c27e39b778.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-RegularItalic.90dbf902b8d0592e1beb.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-RegularItalic.df8e3a9b9aed94341797.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-RegularItalic.f3660f493ea5e5206484.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Thin.790ebf41d0214f5eda4e.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Thin.90d3804f0231704c15cc.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Thin.ba422f71e799f3d29cbf.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Thin.c25fd8d00fd9f570545d.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-Thin.cc85ce37b4256966e6f3.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-ThinItalic.11b5cc9584f2c007a229.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-ThinItalic.21e9a2e5ed0b0d8d1bb7.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-ThinItalic.588293290e86dad97fcf.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-ThinItalic.64ca718f48db91b27e8c.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/Roboto-ThinItalic.8a2c1a5de09de8bb2c45.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/Bi-GRU.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/alan.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/camera1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/camera2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/camera3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/camera4.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/cover1.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/cover2.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/cover3.jpg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/eva.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/jack.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/kate.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/kitten-cosmic.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/kitten-default.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/lee.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/nick.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/square_pattern.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/square_pattern_cosmic.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/images/team.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/img/markers/layers-2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/img/markers/layers.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/img/markers/marker-icon-2x.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/img/markers/marker-icon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/img/markers/marker-shadow.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/content.inline.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/content.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce-small.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce-small.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce-small.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce-small.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/fonts/tinymce.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/img/anchor.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/img/loader.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/img/object.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/img/trans.gif" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/skin.ie7.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/skins/lightgray/skin.min.css" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/vendors/echarts.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/assets/vendors/echarts.world.min.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/charts.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/charts.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/common.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/common.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/components.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/components.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/editors.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/editors.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100.7a962253b4221d26fc52.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100.86eb901a1b6a952ad4c6.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100.e98b7075717664dffefd.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100.f60defca0bb5c4a76c36.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100italic.09b8eba1e3ca26851758.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100italic.5d74bcc0fa9041da27ab.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100italic.7fd525ae6ef32ca51c2b.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-100italic.d8d1b8142312dc8661ca.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200.459a2b5c4d21445ecaa1.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200.6272ec972e113356a7ac.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200.9154b96a4e182f3f6027.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200.ae44adae71863b09ecbc.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200italic.3487e875e62e19f8725a.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200italic.3a8391359886bc872041.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200italic.cac790357edeabf496ba.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-200italic.fff0b8fbb6361809277d.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300.038973967594a7dab606.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300.21d8997134cbc12e5153.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300.3f0b3ba8796b6e7fe4bd.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300.e0e37075b606d93a9538.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300italic.2f0f55679e620d222711.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300italic.6ce1566735a3d3667090.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300italic.8d40b499402fd4189be2.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-300italic.a2ca6baedb32297ce871.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400.3002b7531096a5092d6e.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400.6b1794f1847a277021b4.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400.9f16e6ee1e3327b7db3a.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400.d72d248cdbced438c110.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400italic.11510e4de28d62aa3aa5.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400italic.92d1911bd4c5f5ef04f7.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400italic.9e4520097381adbfe70f.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-400italic.d672d50caf856a58828c.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500.6596ef88679c21505494.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500.6d4c29b8d9640e68f812.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500.81d3a72e86d04e574f0d.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500.c616c256d4843cc16357.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500italic.1ac05bd5dc0714e32eac.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500italic.3cb9a625a9283be01425.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500italic.bd17cb2d62c226e06fdb.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-500italic.fe40c45465e6e99f006b.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600.bb1d269e07b87773f1a6.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600.ca209404a4885958c612.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600.e0d97cf7ab8d3d75e34b.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600.ed2ff71bda38119fa682.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600italic.88502b7cff2e54cebf90.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600italic.b0a8187a1614891ec57b.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600italic.b7d2928a52331a7f1f07.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-600italic.e711eccd1fadfcd140a0.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700.68cc7fa1f6a3184d73c2.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700.734067b6563affe65beb.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700.7348a6cf42fcb58f0985.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700.d38b55777560c246992c.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700italic.1f6a024d5a00aba4cee1.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700italic.262dcaba2aca4a002e46.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700italic.36b975e60be97473a1e6.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-700italic.dfd1344ebc20ecda89bf.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800.006e7ec97fc14c6682a8.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800.1ae3922dda8cca45438a.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800.855ca29bb887be8df4bb.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800.ca084c98b9f30fcf576f.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800italic.0bc59516445e9a658021.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800italic.ba95c7ebbd3ee83362b2.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800italic.c989d9d241c710a02bba.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-800italic.e75d9cbb1468c3156c59.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900.5f81c4362dcb692ed3d3.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900.6eb1c493737303a66b1b.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900.c45295dd710f6c155910.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900italic.833cc98e0a75891eebef.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900italic.90bea911b093ad5f0cf2.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900italic.951a8bde845d7c17e4de.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/exo-latin-900italic.b64b7ad410228605c1a3.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/favicon.ico" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/favicon.png" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/fontawesome-webfont.674f50d287a8c48dc19b.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/fontawesome-webfont.912ec66d7572ff821749.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/fontawesome-webfont.af7ae505a9eed503f8b8.woff2" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/fontawesome-webfont.b06871f281fee6b241d6.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/fontawesome-webfont.fee66e712a8a08eef580.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/forms.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/forms.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/index.html" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/inline.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/inline.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/ionicons.19e65b89cee273a249fb.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/ionicons.28df6ee7b407fd8a14b4.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/ionicons.2c159d0d05473040b53e.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/ionicons.dd4781d1acc57ba4c480.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/main.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/maps.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/maps.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/applications.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/bar-advanced.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/bar.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/baseUrl.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/data.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/echarts.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/effectives-query.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/effectives.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/last-avg-rsp.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/last-max-req.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/last-max-rsp.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/login-in.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/relation.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/mock-data/uri-performance-check.json" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/nebular.0912b09b3e4c52847e05.eot" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/nebular.25116a35e5d6e6e2e4fa.ttf" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/nebular.bf8ba1e0b1090942a59a.svg" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/nebular.bfbfd2c47a08b07c3a4f.woff" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/nutch-extension.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/nutch-extension.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/pages.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/pages.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/perform-ays.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/perform-ays.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/polyfills.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/polyfills.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/scripts.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/scripts.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/styles.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/styles.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/tables.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/tables.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/ui-features.module.chunk.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/ui-features.module.chunk.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/vendor.bundle.js" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/dist/vendor.bundle.js.map" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/pinpoint-service.iml" afterPath="$PROJECT_DIR$/pinpoint-service/pinpoint-service.iml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/pom.xml" afterPath="$PROJECT_DIR$/pinpoint-service/pom.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Provider.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/Provider.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/CrawlService.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/CrawlService.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/CrawlServiceImpl.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/CrawlServiceImpl.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/kafka/Consumer.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/kafka/Consumer.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/kafka/Producer.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/kafka/Producer.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/KafkaConsumerProducerDemo.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/KafkaConsumerProducerDemo.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/Producer.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/Producer.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/bootstrap/Provider.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/bootstrap/Provider.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/CrawlService.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/CrawlService.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/CrawlServiceImpl.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/service/impl/CrawlServiceImpl.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/kafka/CallsBack.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/kafka/CallsBack.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/kafka/Consumer.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/kafka/Consumer.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/kafka/Producer.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/utils/kafka/Producer.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/provider.xml" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/provider.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/DemoClassBack.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/KafkaConsumerProducerDemo.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/KafkaConsumerProducerDemo.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/Producer.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/Producer.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/TestKafkaStreaming$1.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/TestKafkaStreaming$2.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/TestKafkaStreaming$3.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/test-classes/indiv/dev/grad/hit/pro/kafka/test/TestKafkaStreaming.class" afterPath="" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/ner-service.service.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/ner-service.service.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.ts" />
+      <change beforePath="$PROJECT_DIR$/README.md" afterPath="$PROJECT_DIR$/README.md" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -345,7 +45,7 @@
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="855">
-                  <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+                  <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
                   <folding />
                 </state>
               </provider>
@@ -354,7 +54,7 @@
           <file leaf-file-name="typography.component.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/typography/typography.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="944">
+                <state relative-caret-position="4579">
                   <caret line="241" column="53" lean-forward="false" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="53" />
                   <folding />
                 </state>
@@ -364,8 +64,8 @@
           <file leaf-file-name="crawl.component.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="399">
-                  <caret line="90" column="11" lean-forward="false" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+                <state relative-caret-position="511">
+                  <caret line="99" column="3" lean-forward="true" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
                   <folding>
                     <element signature="e#0#50#0" expanded="true" />
                   </folding>
@@ -377,7 +77,7 @@
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/notice.json">
               <provider selected="true" editor-type-id="text-editor">
                 <state relative-caret-position="57">
-                  <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+                  <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
                   <folding />
                 </state>
               </provider>
@@ -386,11 +86,11 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf>
+        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
           <file leaf-file-name="ner.component.html" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="382">
+                <state relative-caret-position="513">
                   <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
                   <folding />
                 </state>
@@ -400,8 +100,8 @@
           <file leaf-file-name="ner.component.ts" pinned="false" current-in-tab="false">
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="-133">
-                  <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+                <state relative-caret-position="437">
+                  <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
                   <folding>
                     <element signature="e#0#50#0" expanded="true" />
                   </folding>
@@ -867,9 +567,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scratches" />
       <pane id="PackagesPane" />
       <pane id="Scope" />
-      <pane id="Scratches" />
       <pane id="AndroidView" />
     </panes>
   </component>
@@ -1282,12 +982,13 @@
       <workItem from="1525927601456" duration="18084000" />
       <workItem from="1526020292032" duration="4857000" />
       <workItem from="1526042683800" duration="804000" />
-      <workItem from="1526102941407" duration="18241000" />
+      <workItem from="1526102941407" duration="18326000" />
+      <workItem from="1526129881871" duration="153000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="523188000" />
+    <option name="totallyTimeSpent" value="523426000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1303,39 +1004,39 @@
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.43816632" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Tool Output" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27597404" sideWeight="0.4520256" order="9" side_tool="true" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32786885" sideWeight="0.49573562" order="15" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.3030303" sideWeight="0.5191898" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="IvyIDEA" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.49573562" order="16" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.48081023" order="14" side_tool="true" content_ui="tabs" />
       <window_info id="TypeScript" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4936034" order="17" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19296375" sideWeight="0.49380806" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32995737" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="ANTLR Preview" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.28030303" sideWeight="0.43816632" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32359308" sideWeight="0.6529851" order="10" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
-      <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32900432" sideWeight="0.4978678" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.3030303" sideWeight="0.5191898" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.329718" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33333334" sideWeight="0.48081023" order="14" side_tool="true" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.19083156" sideWeight="0.49380806" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.19189766" sideWeight="0.50619197" order="6" side_tool="true" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39869988" sideWeight="0.49573562" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32359308" sideWeight="0.6529851" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32936078" sideWeight="0.48720682" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -1360,7 +1061,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="228">
           <caret line="22" column="60" lean-forward="false" selection-start-line="22" selection-start-column="60" selection-end-line="22" selection-end-column="60" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1368,7 +1068,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="152">
           <caret line="14" column="18" lean-forward="false" selection-start-line="14" selection-start-column="18" selection-end-line="14" selection-end-column="18" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1376,11 +1075,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="301">
           <caret line="16" column="13" lean-forward="false" selection-start-line="16" selection-start-column="13" selection-end-line="16" selection-end-column="13" />
-          <folding>
-            <element signature="imports" expanded="false" />
-            <element signature="e#2080#2081#0" expanded="false" />
-            <element signature="e#2108#2109#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1388,9 +1082,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="126">
           <caret line="12" column="32" lean-forward="false" selection-start-line="12" selection-start-column="32" selection-end-line="12" selection-end-column="32" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1398,7 +1089,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="17" column="46" lean-forward="false" selection-start-line="17" selection-start-column="46" selection-end-line="17" selection-end-column="46" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1406,7 +1096,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="285">
           <caret line="15" column="0" lean-forward="true" selection-start-line="15" selection-start-column="0" selection-end-line="15" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1414,10 +1103,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="195">
           <caret line="11" column="26" lean-forward="false" selection-start-line="11" selection-start-column="26" selection-end-line="11" selection-end-column="26" />
-          <folding>
-            <element signature="e#254#255#0" expanded="false" />
-            <element signature="e#317#318#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1437,19 +1122,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="114">
-          <caret line="6" column="0" lean-forward="true" selection-start-line="6" selection-start-column="0" selection-end-line="6" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/test.txt" />
     <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/logger/TKLogger.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="342">
           <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1457,23 +1134,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/te.txt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="20" lean-forward="true" selection-start-line="0" selection-start-column="20" selection-end-line="0" selection-end-column="20" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
+    <entry file="file://$PROJECT_DIR$/te.txt" />
     <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/CrawlService.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="190">
           <caret line="10" column="76" lean-forward="false" selection-start-line="10" selection-start-column="76" selection-end-line="10" selection-end-column="76" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1497,9 +1165,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="551">
           <caret line="50" column="36" lean-forward="true" selection-start-line="50" selection-start-column="36" selection-end-line="50" selection-end-column="36" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1507,7 +1172,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1515,7 +1179,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="380">
           <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1523,7 +1186,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="260" lean-forward="false" selection-start-line="0" selection-start-column="260" selection-end-line="0" selection-end-column="260" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1531,11 +1193,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="173">
           <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-          <folding>
-            <marker date="1518882695389" expanded="true" signature="1172:1510" ph="..." />
-            <marker date="1518882695389" expanded="true" signature="1235:1340" ph="..." />
-            <marker date="1518882695389" expanded="true" signature="1449:1497" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1543,7 +1200,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1551,7 +1207,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="209">
           <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1559,7 +1214,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="38">
           <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1567,7 +1221,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="304">
           <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1575,7 +1228,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1583,7 +1235,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="133">
           <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1592,7 +1243,7 @@
         <state relative-caret-position="259">
           <caret line="36" column="46" lean-forward="false" selection-start-line="36" selection-start-column="36" selection-end-line="36" selection-end-column="46" />
           <folding>
-            <element signature="e#1755#1769#0" expanded="true" />
+            <element signature="e#1755#1769#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1601,7 +1252,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1609,9 +1259,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-226">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1619,7 +1266,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1627,9 +1273,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1637,9 +1280,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-36">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1647,9 +1287,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="40" column="55" lean-forward="false" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-          <folding>
-            <element signature="e#0#49#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1657,9 +1294,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-741">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1667,9 +1301,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="2">
           <caret line="57" column="58" lean-forward="true" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1677,9 +1308,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-354">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding>
-            <element signature="e#0#43#0" expanded="false" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1687,13 +1315,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="361">
           <caret line="20" column="13" lean-forward="false" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <marker date="1517369113646" expanded="true" signature="186:369" ph="..." />
-            <marker date="1517369113646" expanded="true" signature="294:358" ph="..." />
-            <marker date="1517369113646" expanded="false" signature="329:336" ph="×" />
-            <marker date="1517369113646" expanded="true" signature="398:434" ph="..." />
-            <marker date="1517369113646" expanded="true" signature="465:566" ph="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1701,13 +1322,12 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
           <caret line="53" column="4" lean-forward="false" selection-start-line="53" selection-start-column="4" selection-end-line="53" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="382">
+        <state relative-caret-position="513">
           <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
           <folding />
         </state>
@@ -1715,8 +1335,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-133">
-          <caret line="29" column="12" lean-forward="true" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+        <state relative-caret-position="437">
+          <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
@@ -1745,7 +1365,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="58" column="9" lean-forward="false" selection-start-line="58" selection-start-column="9" selection-end-line="58" selection-end-column="9" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1753,7 +1372,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="76">
           <caret line="4" column="1" lean-forward="false" selection-start-line="4" selection-start-column="1" selection-end-line="4" selection-end-column="1" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1761,14 +1379,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="287">
           <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/notice.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
-          <caret line="3" column="19" lean-forward="true" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
+          <caret line="3" column="19" lean-forward="false" selection-start-line="3" selection-start-column="19" selection-end-line="3" selection-end-column="19" />
           <folding />
         </state>
       </provider>
@@ -1777,21 +1394,20 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="855">
-          <caret line="45" column="23" lean-forward="true" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
+          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/typography/typography.component.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="944">
+        <state relative-caret-position="4579">
           <caret line="241" column="53" lean-forward="false" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="53" />
           <folding />
         </state>
@@ -1799,8 +1415,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="399">
-          <caret line="90" column="11" lean-forward="false" selection-start-line="90" selection-start-column="11" selection-end-line="90" selection-end-column="11" />
+        <state relative-caret-position="511">
+          <caret line="99" column="3" lean-forward="true" selection-start-line="99" selection-start-column="3" selection-end-line="99" selection-end-column="3" />
           <folding>
             <element signature="e#0#50#0" expanded="true" />
           </folding>
