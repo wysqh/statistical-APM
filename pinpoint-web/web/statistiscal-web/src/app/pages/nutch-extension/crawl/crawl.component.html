@@ -5,15 +5,16 @@
         Focused Crawling System
       </nb-card-header>
       <nb-card-body>
+        <toaster-container [toasterconfig]="config"></toaster-container>
         <form [formGroup]="crawlForm">
           <div class="row full-name-inputs">
             <div class="col-sm-4 input-group">
               <input type="text" placeholder="Entity" class="form-control"
-                formControlName="entity"/>
+                formControlName="entity" required/>
             </div>
             <div class="col-sm-4 input-group">
               <input type="text" placeholder="Theme" class="form-control"
-                formControlName="theme"/>
+                formControlName="theme" required/>
             </div>
             <div class="col-sm-4 input-group">
               <input type="text" placeholder="(Features)" class="form-control"
@@ -22,7 +23,7 @@
           </div>
           <div class="input-group input-group-rounded">
             <textarea rows="5" placeholder="Seeds (e.g. www.baidu.com)
-              " class="form-control" formControlName="seeds"></textarea>
+              " class="form-control" formControlName="seeds" required></textarea>
           </div>
           <div class="input-group input-group-rounded">
             <textarea rows="5" placeholder="Injection Seeds" class="form-control"

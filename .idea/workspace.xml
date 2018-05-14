@@ -8,13 +8,9 @@
   <component name="ChangeListManager">
     <list default="true" id="fcf09d82-d95f-4c61-8138-e9762e2fddca" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" afterPath="$PROJECT_DIR$/pinpoint-controller/target/pinpoint-controller/WEB-INF/lib/pinpoint-service-1.0-SNAPSHOT.jar" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/constant/KafkaProperties.java" afterPath="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/constant/KafkaProperties.java" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/bootstrap/ConsumerFactory.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/bootstrap/ConsumerFactory.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/constant/KafkaProperties.class" afterPath="$PROJECT_DIR$/pinpoint-service/target/classes/indiv/dev/grad/hit/pro/constant/KafkaProperties.class" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/ner-service.service.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/ner-service.service.ts" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html" />
       <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts" />
-      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.ts" />
+      <change beforePath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.module.ts" afterPath="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.module.ts" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -47,11 +43,21 @@
     <splitter split-orientation="horizontal" split-proportion="0.5">
       <split-first>
         <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="crawl.component.ts" pinned="false" current-in-tab="false">
+          <file leaf-file-name="crawl.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="133">
+                  <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="crawl.component.ts" pinned="false" current-in-tab="true">
             <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="470">
-                  <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
+                <state relative-caret-position="204">
+                  <caret line="144" column="15" lean-forward="false" selection-start-line="144" selection-start-column="15" selection-end-line="144" selection-end-column="15" />
                   <folding>
                     <element signature="e#0#50#0" expanded="true" />
                   </folding>
@@ -59,71 +65,23 @@
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="index.html" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/index.html">
+          <file leaf-file-name="nutch-extension.module.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="361">
-                  <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-                  <folding />
+                <state relative-caret-position="149">
+                  <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+                  <folding>
+                    <element signature="e#0#39#0" expanded="true" />
+                  </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ner-service.service.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/ner-service.service.ts">
+          <file leaf-file-name="notifications.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/notifications/notifications.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="306">
-                  <caret line="27" column="69" lean-forward="false" selection-start-line="27" selection-start-column="69" selection-end-line="27" selection-end-column="69" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CrawlService.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/CrawlService.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="171">
-                  <caret line="9" column="11" lean-forward="false" selection-start-line="9" selection-start-column="11" selection-end-line="9" selection-end-column="11" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CrawlController.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/CrawlController.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="221">
-                  <caret line="31" column="40" lean-forward="false" selection-start-line="31" selection-start-column="40" selection-end-line="31" selection-end-column="40" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="CrawlServiceImpl.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/service/impl/CrawlServiceImpl.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="241">
-                  <caret line="27" column="53" lean-forward="false" selection-start-line="27" selection-start-column="53" selection-end-line="27" selection-end-column="53" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="ConsumerFactory.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/bootstrap/ConsumerFactory.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="244">
-                  <caret line="17" column="27" lean-forward="false" selection-start-line="17" selection-start-column="27" selection-end-line="17" selection-end-column="27" />
-                  <folding />
-                </state>
-              </provider>
-            </entry>
-          </file>
-          <file leaf-file-name="Producer.java" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/kafka/Producer.java">
-              <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="420">
-                  <caret line="47" column="13" lean-forward="false" selection-start-line="47" selection-start-column="13" selection-end-line="47" selection-end-column="13" />
+                <state relative-caret-position="548">
+                  <caret line="77" column="50" lean-forward="true" selection-start-line="77" selection-start-column="50" selection-end-line="77" selection-end-column="50" />
                   <folding />
                 </state>
               </provider>
@@ -132,34 +90,56 @@
         </leaf>
       </split-first>
       <split-second>
-        <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-          <file leaf-file-name="ner.component.html" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.html">
+        <leaf>
+          <file leaf-file-name="notifications.component.html" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/notifications/notifications.component.html">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="513">
-                  <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+                <state relative-caret-position="95">
+                  <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="68" />
                   <folding />
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="ner.component.ts" pinned="false" current-in-tab="false">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.ts">
+          <file leaf-file-name="notifications.component.ts" pinned="false" current-in-tab="true">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/notifications/notifications.component.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="437">
-                  <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
+                <state relative-caret-position="209">
+                  <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
                   <folding>
-                    <element signature="e#0#50#0" expanded="true" />
+                    <element signature="e#0#42#0" expanded="true" />
                   </folding>
                 </state>
               </provider>
             </entry>
           </file>
-          <file leaf-file-name="my-date-form.component.ts" pinned="false" current-in-tab="true">
-            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-date-form/my-date-form.component.ts">
+          <file leaf-file-name="components.module.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components.module.ts">
               <provider selected="true" editor-type-id="text-editor">
-                <state relative-caret-position="311">
-                  <caret line="122" column="5" lean-forward="true" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
+                <state relative-caret-position="190">
+                  <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+                  <folding>
+                    <element signature="e#0#41#0" expanded="true" />
+                  </folding>
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="components-routing.module.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components-routing.module.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="209">
+                  <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+                  <folding />
+                </state>
+              </provider>
+            </entry>
+          </file>
+          <file leaf-file-name="components.component.ts" pinned="false" current-in-tab="false">
+            <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components.component.ts">
+              <provider selected="true" editor-type-id="text-editor">
+                <state relative-caret-position="152">
+                  <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
                   <folding />
                 </state>
               </provider>
@@ -181,10 +161,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>getData</find>
-      <find>nb-auth</find>
-      <find>component</find>
-      <find>/api/auth/login</find>
       <find>mock-data/login-in.json</find>
       <find>selectAverageRspByDate</find>
       <find>DatePipe</find>
@@ -211,6 +187,10 @@
       <find>$eve</find>
       <find>$event</find>
       <find>event</find>
+      <find>tapToDismiss</find>
+      <find>config</find>
+      <find>ToasterService</find>
+      <find>toast</find>
     </findStrings>
     <dirStrings>
       <dir>E:\Summary\References\GitStorage\statistical-APM\pinpoint-web\web\my-app\src\mock-data</dir>
@@ -227,7 +207,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/relation.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/relation.json" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.html" />
@@ -239,7 +218,6 @@
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/dashboard/electricity/electricity.component.html" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/ui-features.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/pages.module.ts" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/pages-menu.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension-routing.module.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.scss" />
@@ -270,14 +248,16 @@
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/ner/ner.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/urls-injection.json" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/notice.json" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/test.sh" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/ExternalBoot.java" />
         <option value="$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/constant/KafkaProperties.java" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.ts" />
-        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts" />
         <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/ner-service.service.ts" />
         <option value="$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/index.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components.module.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.module.ts" />
+        <option value="$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts" />
       </list>
     </option>
   </component>
@@ -402,15 +382,6 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="462c0819:PsiDirectoryNode" />
               <item name="webapp" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-controller" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="webapp" type="462c0819:PsiDirectoryNode" />
-              <item name="dist" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
@@ -559,27 +530,6 @@
               <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@core" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="@core" type="462c0819:PsiDirectoryNode" />
-              <item name="data" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
@@ -591,42 +541,7 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="app" type="462c0819:PsiDirectoryNode" />
               <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="nutch-extension" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="nutch-extension" type="462c0819:PsiDirectoryNode" />
-              <item name="crawl" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
-              <item name="statistical-APM" type="462c0819:PsiDirectoryNode" />
-              <item name="pinpoint-web" type="462c0819:PsiDirectoryNode" />
-              <item name="web" type="462c0819:PsiDirectoryNode" />
-              <item name="statistiscal-web" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="app" type="462c0819:PsiDirectoryNode" />
-              <item name="pages" type="462c0819:PsiDirectoryNode" />
-              <item name="perform-ays" type="462c0819:PsiDirectoryNode" />
-              <item name="app-ays-query" type="462c0819:PsiDirectoryNode" />
+              <item name="components" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="statistical-APM" type="b2602c69:ProjectViewProjectNode" />
@@ -1058,12 +973,12 @@
       <workItem from="1526042683800" duration="804000" />
       <workItem from="1526102941407" duration="18326000" />
       <workItem from="1526129881871" duration="1249000" />
-      <workItem from="1526274496277" duration="6832000" />
+      <workItem from="1526274496277" duration="11646000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="531354000" />
+    <option name="totallyTimeSpent" value="536168000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1132,171 +1047,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/java/indiv/dev/grad/hit/pro/controller/api/ChartsController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-121">
-          <caret line="23" column="13" lean-forward="false" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test.txt" />
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/java/indiv/dev/grad/hit/pro/utils/logger/TKLogger.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="342">
-          <caret line="47" column="19" lean-forward="false" selection-start-line="47" selection-start-column="19" selection-end-line="47" selection-end-column="19" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/statistical-APM.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/te.txt" />
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/main/resources/provider.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="506">
-          <caret line="63" column="8" lean-forward="true" selection-start-line="63" selection-start-column="8" selection-end-line="63" selection-end-column="8" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/pinpoint-web.iml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-service/src/test/java/indiv/dev/grad/hit/pro/kafka/test/TestTryCatch.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="380">
-          <caret line="20" column="17" lean-forward="false" selection-start-line="20" selection-start-column="17" selection-end-line="20" selection-end-column="17" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/node_modules/@nebular/theme/components/checkbox/checkbox.component.metadata.json">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="260" lean-forward="false" selection-start-line="0" selection-start-column="260" selection-end-line="0" selection-end-column="260" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/framework/theme/components/checkbox/checkbox.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="173">
-          <caret line="50" column="18" lean-forward="false" selection-start-line="50" selection-start-column="18" selection-end-line="50" selection-end-column="18" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/seriv-ays-query/seriv-ays-query.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="22" column="23" lean-forward="false" selection-start-line="22" selection-start-column="23" selection-end-line="22" selection-end-column="23" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/components/reset-password/reset-password.component.scss">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="209">
-          <caret line="11" column="3" lean-forward="false" selection-start-line="11" selection-start-column="3" selection-end-line="11" selection-end-column="3" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays/app-ays.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="38">
-          <caret line="2" column="9" lean-forward="true" selection-start-line="2" selection-start-column="9" selection-end-line="2" selection-end-column="9" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/app-ays-query/app-ays-query.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="304">
-          <caret line="16" column="29" lean-forward="false" selection-start-line="16" selection-start-column="29" selection-end-line="16" selection-end-column="29" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modals.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="133">
-          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-performance.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/users.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-226">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/message.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/state.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/chart.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-36">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/applications.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="76">
-          <caret line="40" column="55" lean-forward="false" selection-start-line="40" selection-start-column="55" selection-end-line="40" selection-end-column="55" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/effectives.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-741">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/last-performance.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="2">
-          <caret line="57" column="58" lean-forward="true" selection-start-line="57" selection-start-column="58" selection-end-line="57" selection-end-column="58" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@core/data/uri-check.service.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="-354">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/@ng-bootstrap/ng-bootstrap/modal/modal.d.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="449">
@@ -1317,7 +1067,7 @@
         <state relative-caret-position="437">
           <caret line="29" column="12" lean-forward="false" selection-start-line="29" selection-start-column="12" selection-end-line="29" selection-end-column="12" />
           <folding>
-            <element signature="e#0#50#0" expanded="true" />
+            <element signature="e#0#50#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1336,13 +1086,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modals.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="287">
-          <caret line="28" column="14" lean-forward="false" selection-start-line="28" selection-start-column="14" selection-end-line="28" selection-end-column="14" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/mock-data/notice.json">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="57">
@@ -1355,22 +1098,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="205">
           <caret line="43" column="16" lean-forward="false" selection-start-line="43" selection-start-column="16" selection-end-line="43" selection-end-column="16" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="45" column="23" lean-forward="false" selection-start-line="45" selection-start-column="23" selection-end-line="45" selection-end-column="23" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/typography/typography.component.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="4579">
-          <caret line="241" column="53" lean-forward="false" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="53" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1454,35 +1181,11 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="285">
-          <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
-          <folding>
-            <marker date="1526282610656" expanded="true" signature="186:369" ph="..." />
-            <marker date="1526282610656" expanded="true" signature="294:358" ph="..." />
-            <marker date="1526282610656" expanded="false" signature="329:336" ph="×" />
-            <marker date="1526282610656" expanded="true" signature="398:434" ph="..." />
-            <marker date="1526282610656" expanded="true" signature="465:556" ph="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-controller/src/main/webapp/dist/forms.module.chunk.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="470">
-          <caret line="67" column="5" lean-forward="false" selection-start-line="67" selection-start-column="5" selection-end-line="67" selection-end-column="5" />
-          <folding>
-            <element signature="e#0#50#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1502,11 +1205,277 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/ui-features.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="40" column="23" lean-forward="false" selection-start-line="40" selection-start-column="23" selection-end-line="40" selection-end-column="23" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="570">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/typography/typography.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#53#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/typography/typography.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-226">
+          <caret line="241" column="53" lean-forward="false" selection-start-line="241" selection-start-column="12" selection-end-line="241" selection-end-column="53" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modals.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="114">
+          <caret line="12" column="31" lean-forward="false" selection-start-line="12" selection-start-column="31" selection-end-line="12" selection-end-column="31" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modal/modal.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="171">
+          <caret line="16" column="70" lean-forward="false" selection-start-line="16" selection-start-column="70" selection-end-line="16" selection-end-column="70" />
+          <folding>
+            <marker date="1526282610656" expanded="true" signature="186:369" ph="..." />
+            <marker date="1526282610656" expanded="true" signature="294:358" ph="..." />
+            <marker date="1526282610656" expanded="false" signature="329:336" ph="×" />
+            <marker date="1526282610656" expanded="true" signature="398:434" ph="..." />
+            <marker date="1526282610656" expanded="true" signature="465:556" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/ui-features/modals/modals.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="56" lean-forward="false" selection-start-line="7" selection-start-column="56" selection-end-line="7" selection-end-column="56" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/pinpoint-web/web/my-app/src/app/my-date-form/my-date-form.component.ts">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="311">
           <caret line="122" column="5" lean-forward="true" selection-start-line="122" selection-start-column="5" selection-end-line="122" selection-end-column="5" />
           <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/perform-ays/perform-ays.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-285">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="e#0#41#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/angular2-toaster/src/toaster-config.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="1" column="21" lean-forward="false" selection-start-line="1" selection-start-column="21" selection-end-line="1" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/angular2-toaster/src/toast.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="3" column="4" lean-forward="false" selection-start-line="3" selection-start-column="4" selection-end-line="3" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/angular2-toaster/src/toaster-container.component.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="10" column="4" lean-forward="false" selection-start-line="10" selection-start-column="4" selection-end-line="10" selection-end-column="4" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="7" column="46" lean-forward="false" selection-start-line="7" selection-start-column="46" selection-end-line="7" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/nutch-extension.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="149">
+          <caret line="19" column="13" lean-forward="false" selection-start-line="19" selection-start-column="13" selection-end-line="19" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#39#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/nutch-extension/crawl/crawl.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="204">
+          <caret line="144" column="15" lean-forward="false" selection-start-line="144" selection-start-column="15" selection-end-line="144" selection-end-column="15" />
+          <folding>
+            <element signature="e#0#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/notifications/notifications.component.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="95">
+          <caret line="5" column="68" lean-forward="true" selection-start-line="5" selection-start-column="4" selection-end-line="5" selection-end-column="68" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="152">
+          <caret line="8" column="13" lean-forward="false" selection-start-line="8" selection-start-column="13" selection-end-line="8" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/framework/auth/services/token.service.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1974">
+          <caret line="36" column="13" lean-forward="false" selection-start-line="36" selection-start-column="13" selection-end-line="36" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/pages-menu.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="38">
+          <caret line="2" column="13" lean-forward="false" selection-start-line="2" selection-start-column="13" selection-end-line="2" selection-end-column="13" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/pages.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="247">
+          <caret line="15" column="13" lean-forward="true" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <marker date="1517369113517" expanded="true" signature="162:266" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/pages.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="285">
+          <caret line="15" column="13" lean-forward="false" selection-start-line="15" selection-start-column="13" selection-end-line="15" selection-end-column="13" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/app.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-706">
+          <caret line="44" column="25" lean-forward="true" selection-start-line="44" selection-start-column="25" selection-end-line="44" selection-end-column="25" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/angular2-toaster/src/toaster.module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/@angular/router/src/router_module.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-25">
+          <caret line="78" column="21" lean-forward="false" selection-start-line="78" selection-start-column="21" selection-end-line="78" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/@theme/theme.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="138">
+          <caret line="76" column="21" lean-forward="true" selection-start-line="76" selection-start-column="21" selection-end-line="76" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="190">
+          <caret line="10" column="16" lean-forward="true" selection-start-line="10" selection-start-column="16" selection-end-line="10" selection-end-column="16" />
+          <folding>
+            <element signature="e#0#41#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/components-routing.module.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="16" column="24" lean-forward="true" selection-start-line="16" selection-start-column="24" selection-end-line="16" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/node_modules/angular2-toaster/src/toaster.service.d.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="19">
+          <caret line="4" column="21" lean-forward="false" selection-start-line="4" selection-start-column="21" selection-end-line="4" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/pinpoint-web/web/statistiscal-web/src/app/pages/components/notifications/notifications.component.ts">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="209">
+          <caret line="11" column="49" lean-forward="false" selection-start-line="11" selection-start-column="49" selection-end-line="11" selection-end-column="49" />
+          <folding>
+            <element signature="e#0#42#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>

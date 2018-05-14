@@ -1,9 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import {FormControl, FormGroup} from '@angular/forms';
+import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ModalComponent} from '../../ui-features/modals/modal/modal.component';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {NerServiceService} from '../../../@core/data/ner-service.service';
 import {Observable} from 'rxjs/Observable';
+import {NotificationsComponent} from '../../components/notifications/notifications.component';
+import {ComponentsModule} from '../../components/components.module';
+import {BodyOutputType, Toast, ToasterConfig, ToasterService} from 'angular2-toaster';
 
 @Component({
   selector: 'app-crawl',
@@ -13,7 +16,16 @@ import {Observable} from 'rxjs/Observable';
 export class CrawlComponent implements OnInit {
 
   constructor(private modalService: NgbModal,
-              private nerService: NerServiceService) { }
+              private nerService: NerServiceService,
+              private toastService: ToasterService) { }
+
+
+  crawlForm: FormGroup; // 爬虫信息流表单
+  urls: string[];
+  notices: string;
+  config: ToasterConfig;
+
+  types: string[] = ['default', 'info', 'success', 'warning', 'error'];
 
   ngOnInit() {
     // 初始化工作
@@ -23,20 +35,17 @@ export class CrawlComponent implements OnInit {
     this.notices = "\n";
   }
 
-  crawlForm: FormGroup; // 爬虫信息流表单
-  isChecked: boolean = false; // 是否允许外部注入
-  urls: string[];
-  notices: string;
-
   /*
     初始化表单组件
    */
   initComponent(): void {
     this.crawlForm = new FormGroup({
-      entity: new FormControl(),  // 实体
-      theme: new FormControl(), // 主题
+      entity: new FormControl("", [Validators.required,
+        Validators.minLength(1)]),  // 实体
+      theme: new FormControl("", [Validators.required,
+        Validators.minLength(1)]), // 主题
       features: new FormControl(),  // 特征
-      seeds: new FormControl(),   // url 种子
+      seeds: new FormControl("", [Validators.required]),   // url 种子
       injection: new FormControl()
     });
   }
@@ -84,11 +93,19 @@ export class CrawlComponent implements OnInit {
       获取关键字并爬取
    */
   crawl(): void {
-    // 调试信息
+    // Logging Start ------------>
     console.log(this.crawlForm.value.entity);
     console.log(this.crawlForm.value.theme);
     console.log(this.crawlForm.value.features);
     console.log(this.crawlForm.value.seeds);
+    // Logging End <----------------
+
+    let entity = this.crawlForm.value.entity, theme = this.crawlForm.value.theme,
+      seeds = this.crawlForm.value.seeds;
+    if (entity == "" || theme == "" || seeds == "") {
+      this.showToast("fade", "Error", "Information is not complete.");
+      return;
+    }
 
     setInterval(() => {
       this.update()
@@ -112,5 +129,30 @@ export class CrawlComponent implements OnInit {
 
     activeModal.componentInstance.modalHeader = 'Fetching';
     activeModal.componentInstance.modalContent = `Please waiting for some time...`;
+  }
+
+  /*
+      展示Toast
+   */
+  private showToast(type: string, title: string, body: string) {
+    this.config = new ToasterConfig({
+      positionClass: 'toast-top-right',
+      timeout: 5000,
+      newestOnTop: true,
+      tapToDismiss: true,
+      preventDuplicates: false,
+      animation: 'fade',
+      limit: 10,
+    });
+    const toast: Toast = {
+      type: type,
+      title: title,
+      body: body,
+      timeout: 5000,
+      showCloseButton: true,
+      bodyOutputType: BodyOutputType.TrustedHtml,
+    }
+
+    this.toastService.popAsync(toast);
   }
 }

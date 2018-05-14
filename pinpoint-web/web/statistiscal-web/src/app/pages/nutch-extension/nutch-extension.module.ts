@@ -10,10 +10,14 @@ import {NerServiceService} from '../../@core/data/ner-service.service';
 import {ModalComponent} from '../ui-features/modals/modal/modal.component';
 import {UiFeaturesModule} from '../ui-features/ui-features.module';
 import { CrawlComponent } from './crawl/crawl.component';
+import {ComponentsModule} from '../components/components.module';
+import {ToasterModule} from 'angular2-toaster';
 
 @NgModule({
   imports: [
     ThemeModule,
+    ToasterModule,
+    ComponentsModule,
     UiFeaturesModule,
     DataTablesModule,
     ReactiveFormsModule,
