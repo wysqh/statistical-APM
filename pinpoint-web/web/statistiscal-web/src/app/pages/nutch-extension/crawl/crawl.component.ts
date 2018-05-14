@@ -61,6 +61,10 @@ export class CrawlComponent implements OnInit {
             console.log(baseResult.message);
           }
       })
+    } else {
+      this.crawlForm.patchValue( {
+        injection: ""
+      });
     }
   }
 

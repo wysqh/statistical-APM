@@ -21,9 +21,16 @@ export class NerServiceService {
       获取外部Url
    */
   getUrlSeedsFromInjection(entity: string, theme: string, features: string): Observable<BaseResult<string[]>> {
-    let requestUrl: string = "/api/crawl/injectUrls";
+    let baseUrl: string = "/api/crawl/injectUrls";
     let mockUrl: string = "/mock-data/urls-injection.json";
-    return this.http.get<BaseResult<string[]>>(mockUrl);
+    let requestUrl: string = "";
+    if (features == "" || features == null) {
+      requestUrl = baseUrl + "?entity=" + entity + "&theme=" + theme;
+    } else {
+      requestUrl = baseUrl + "?entity=" + entity + "&theme=" + theme + "&features=" + features;
+    }
+
+    return this.http.get<BaseResult<string[]>>(requestUrl);
   }
 
   /*
@@ -32,6 +39,6 @@ export class NerServiceService {
   getNotifications(): Observable<BaseResult<string>> {
     let requestUrl: string = "/api/crawl/notice";
     let mockUrl: string = "/mock-data/notice.json";
-    return this.http.get<BaseResult<string>>(mockUrl);
+    return this.http.get<BaseResult<string>>(requestUrl);
   }
 }

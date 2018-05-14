@@ -5,8 +5,8 @@ package indiv.dev.grad.hit.pro.constant;
  * @Date: 2018-05-11 14:45
  */
 public class KafkaProperties {
-    public static final String TOPIC = "test";
-    public static final String TOPIC2 = "topic2";
+    public static final String TOPIC = "nutch";
+    public static final String TOPIC2 = "test";
     public static final String TOPIC3 = "topic3";
     public static final String KAFKA_SERVER_ADDRESS = "192.168.174.135";
     public static final int KAFKA_SERVER_PORT = 9092;
