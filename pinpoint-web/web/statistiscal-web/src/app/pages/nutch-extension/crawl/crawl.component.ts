@@ -11,7 +11,7 @@ import {BodyOutputType, Toast, ToasterConfig, ToasterService} from 'angular2-toa
 @Component({
   selector: 'app-crawl',
   templateUrl: './crawl.component.html',
-  styleUrls: ['./crawl.component.scss']
+  styleUrls: ['./crawl.component.scss'],
 })
 export class CrawlComponent implements OnInit {
 
@@ -32,7 +32,7 @@ export class CrawlComponent implements OnInit {
     this.initComponent();
     // 初始化变量
     this.urls = [];
-    this.notices = "\n";
+    this.notices = '\n';
   }
 
   /*
@@ -40,13 +40,13 @@ export class CrawlComponent implements OnInit {
    */
   initComponent(): void {
     this.crawlForm = new FormGroup({
-      entity: new FormControl("", [Validators.required,
+      entity: new FormControl('', [Validators.required,
         Validators.minLength(1)]),  // 实体
-      theme: new FormControl("", [Validators.required,
+      theme: new FormControl('', [Validators.required,
         Validators.minLength(1)]), // 主题
       features: new FormControl(),  // 特征
-      seeds: new FormControl("", [Validators.required]),   // url 种子
-      injection: new FormControl()
+      seeds: new FormControl('', [Validators.required]),   // url 种子
+      injection: new FormControl(),
     });
   }
 
@@ -55,7 +55,7 @@ export class CrawlComponent implements OnInit {
    */
   injectUrls($event): void {
     console.log($event.returnValue);
-    let isChecked = $event.returnValue;
+    const isChecked = $event.returnValue;
     if (isChecked) {
       this.showModal();
       this.nerService.getUrlSeedsFromInjection(this.crawlForm.value.entity,
@@ -63,7 +63,7 @@ export class CrawlComponent implements OnInit {
         .subscribe(baseResult => {
           this.urls = baseResult.data;
           this.crawlForm.patchValue({
-            injection: this.prettyString(this.urls)
+            injection: this.prettyString(this.urls),
           });
           console.log(this.urls);
           if (!baseResult.status) {
@@ -72,7 +72,7 @@ export class CrawlComponent implements OnInit {
       })
     } else {
       this.crawlForm.patchValue( {
-        injection: ""
+        injection: '',
       });
     }
   }
@@ -81,9 +81,9 @@ export class CrawlComponent implements OnInit {
     格式转化，逗号变成换行
    */
   prettyString(strs: string[]): string {
-    var pretty: string = "";
-    for (var i = 0; i < strs.length; i++) {
-      pretty += ((i+1) + ":" + strs[i] + "\r\n");
+    let pretty: string = '';
+    for (let i = 0; i < strs.length; i++) {
+      pretty += ((i + 1) + ':' + strs[i] + '\r\n');
     }
 
     return pretty;
@@ -100,10 +100,10 @@ export class CrawlComponent implements OnInit {
     console.log(this.crawlForm.value.seeds);
     // Logging End <----------------
 
-    let entity = this.crawlForm.value.entity, theme = this.crawlForm.value.theme,
+    const entity = this.crawlForm.value.entity, theme = this.crawlForm.value.theme,
       seeds = this.crawlForm.value.seeds;
-    if (entity == "" || theme == "" || seeds == "") {
-      this.showToast("fade", "Error", "Information is not complete.");
+    if (entity === '' || theme === '' || seeds === '') {
+      this.showToast('fade', 'Error', 'Information is not complete.');
       return;
     }
 

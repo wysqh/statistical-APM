@@ -40,6 +40,10 @@ public class Consumer extends Thread {
         while (true) {
             ConsumerRecords<Integer, String> records = consumer.poll(10000);
             for (ConsumerRecord<Integer, String> record: records) {
+                if (KafkaProperties.EOF.equals(record.value())) {
+                    continue;
+                }
+
                 block.add(record.value());
                 System.out.println("Recevied message: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
             }
