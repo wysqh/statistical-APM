@@ -30,7 +30,7 @@ import 'rxjs/add/operator/delay';
                    [right]="sidebar.id === 'right'">
         <nb-sidebar-header>
           <a href="https://github.com/wysqh/statistical-APM" class="btn btn-hero-success main-btn">
-            <i class="ion ion-social-github"></i> <span>Support Us</span>
+            <i class="ion ion-social-github"></i> <span>My Github</span>
           </a>
         </nb-sidebar-header>
         <ng-content select="nb-menu"></ng-content>

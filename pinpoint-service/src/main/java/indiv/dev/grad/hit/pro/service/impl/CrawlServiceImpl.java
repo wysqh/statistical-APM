@@ -3,6 +3,7 @@ package indiv.dev.grad.hit.pro.service.impl;
 import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 import indiv.dev.grad.hit.pro.bootstrap.ConsumerFactory;
+import indiv.dev.grad.hit.pro.constant.KafkaProperties;
 import indiv.dev.grad.hit.pro.service.CrawlService;
 import indiv.dev.grad.hit.pro.utils.BlockBuffer;
 import indiv.dev.grad.hit.pro.utils.StringUtils;
@@ -26,6 +27,18 @@ public class CrawlServiceImpl implements CrawlService {
     public String getNotifications() {
         StringBuilder stringBuilder = new StringBuilder();
         Consumer consumer = ConsumerFactory.getConsumer();
+        BlockBuffer<String> block = consumer.getBlock();
+        while (block != null && !block.isEmpty()) {
+            stringBuilder.append(block.fetch()).append("\n");
+        }
+
+        return stringBuilder.toString();
+    }
+
+    @Override
+    public String getRelations() {
+        StringBuilder stringBuilder = new StringBuilder();
+        Consumer consumer = ConsumerFactory.getConsumer(KafkaProperties.TOPIC2);
         BlockBuffer<String> block = consumer.getBlock();
         while (block != null && !block.isEmpty()) {
             stringBuilder.append(block.fetch()).append("\n");

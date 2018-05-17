@@ -3,9 +3,6 @@ import {FormControl, FormGroup, Validators} from '@angular/forms';
 import {ModalComponent} from '../../ui-features/modals/modal/modal.component';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {NerServiceService} from '../../../@core/data/ner-service.service';
-import {Observable} from 'rxjs/Observable';
-import {NotificationsComponent} from '../../components/notifications/notifications.component';
-import {ComponentsModule} from '../../components/components.module';
 import {BodyOutputType, Toast, ToasterConfig, ToasterService} from 'angular2-toaster';
 
 @Component({
@@ -23,7 +20,10 @@ export class CrawlComponent implements OnInit {
   crawlForm: FormGroup; // 爬虫信息流表单
   urls: string[];
   notices: string;
+  relations: string;
   config: ToasterConfig;
+  infoCounter: any;
+  relaCounter: any;
 
   types: string[] = ['default', 'info', 'success', 'warning', 'error'];
 
@@ -33,6 +33,7 @@ export class CrawlComponent implements OnInit {
     // 初始化变量
     this.urls = [];
     this.notices = '\n';
+    this.relations = '\n';
   }
 
   /*
@@ -107,7 +108,7 @@ export class CrawlComponent implements OnInit {
       return;
     }
 
-    setInterval(() => {
+    this.infoCounter = setInterval(() => {
       this.update()
     }, 1000);
   }
@@ -115,8 +116,25 @@ export class CrawlComponent implements OnInit {
   update(): void {
     this.nerService.getNotifications()
       .subscribe(base => {
+        if (base.data.indexOf('^C^Dquit') >= 0) {
+          window.clearInterval(this.infoCounter);
+          this.relaCounter = setInterval(() => {
+            this.fetchRelation()
+          }, 1000); // 开启抓取关系线程
+        }
         this.notices += base.data;
-        console.log(this.notices);
+        console.log(base.data);
+      })
+  }
+
+  fetchRelation(): void {
+    this.nerService.getCorrelations()
+      .subscribe(base => {
+        if (base.data.indexOf('^C^Dquit') >= 0) {
+          window.clearInterval(this.relaCounter);
+        }
+        this.relations += base.data;
+        console.log(base.data);
       })
   }
 

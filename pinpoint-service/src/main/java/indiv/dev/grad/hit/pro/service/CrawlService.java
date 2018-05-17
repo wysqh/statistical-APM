@@ -8,5 +8,6 @@ import java.util.List;
  */
 public interface CrawlService {
     String getNotifications();
+    String getRelations();
     List<String> getInjections(String entity, String theme, String features);
 }

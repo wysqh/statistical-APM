@@ -11,6 +11,8 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.io.UnsupportedEncodingException;
+import java.net.URLDecoder;
 import java.util.List;
 
 /**
@@ -38,11 +40,21 @@ public class CrawlController {
     @ResponseBody
     public BaseObjectResult<List<String>> getInjections(@RequestParam(value = "entity")String entity,
                                                         @RequestParam(value = "theme")String theme,
-                                                        @RequestParam(value = "features", required = false)String features) {
+                                                        @RequestParam(value = "features", required = false)String features) throws UnsupportedEncodingException {
         BaseObjectResult<List<String>> baseObjectResult = new BaseObjectResult<List<String>>();
-        List<String> urls = crawlService.getInjections(entity, theme, features);
-        baseObjectResult.setContent(urls, "success");
-
+        List<String> urls = crawlService.getInjections(new String(entity.getBytes("ISO-8859-1"), "UTF-8"),
+                new String(theme.getBytes("ISO-8859-1"), "UTF-8"),
+                features);
+                baseObjectResult.setContent(urls, "success");
         return baseObjectResult;
+    }
+
+    @RequestMapping(value = "/crawl/relations", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<String> getRelations() {
+        BaseObjectResult<String> result = new BaseObjectResult<String>();
+        String relation = crawlService.getRelations();
+        result.setContent(relation, "success");
+        return result;
     }
 }

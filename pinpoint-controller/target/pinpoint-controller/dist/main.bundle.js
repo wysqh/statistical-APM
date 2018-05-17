@@ -11,8 +11,7 @@ var map = {
 	],
 	"./components/components.module": [
 		"../../../../../src/app/pages/components/components.module.ts",
-		"common",
-		"components.module"
+		"common"
 	],
 	"./editors/editors.module": [
 		"../../../../../src/app/pages/editors/editors.module.ts",

@@ -26,21 +26,22 @@ var NerServiceService = /** @class */ (function () {
         实体与实体之间的关系抽取
      */
     NerServiceService.prototype.getRelationFromEntity = function (e1, e2, s) {
-        var mockUrl = "/mock-data/relation.json"; //测试url
+        var mockUrl = '/mock-data/relation.json'; // 测试url
         return this.http.get(mockUrl);
     };
     /*
         获取外部Url
      */
     NerServiceService.prototype.getUrlSeedsFromInjection = function (entity, theme, features) {
-        var baseUrl = "/api/crawl/injectUrls";
-        var mockUrl = "/mock-data/urls-injection.json";
-        var requestUrl = "";
-        if (features == "" || features == null) {
-            requestUrl = baseUrl + "?entity=" + entity + "&theme=" + theme;
+        var baseUrl = '/api/crawl/injectUrls';
+        var mockUrl = '/mock-data/urls-injection.json';
+        var requestUrl = '';
+        if (features === '' || features === null) {
+            requestUrl = baseUrl + '?entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme);
         }
         else {
-            requestUrl = baseUrl + "?entity=" + entity + "&theme=" + theme + "&features=" + features;
+            requestUrl = baseUrl + '?entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme) +
+                '&features=' + encodeURI(features);
         }
         return this.http.get(requestUrl);
     };
@@ -48,8 +49,15 @@ var NerServiceService = /** @class */ (function () {
       获取实时消息更新
      */
     NerServiceService.prototype.getNotifications = function () {
-        var requestUrl = "/api/crawl/notice";
-        var mockUrl = "/mock-data/notice.json";
+        var requestUrl = '/api/crawl/notice';
+        var mockUrl = '/mock-data/notice.json';
+        return this.http.get(requestUrl);
+    };
+    /*
+       获取相关性分析
+     */
+    NerServiceService.prototype.getCorrelations = function () {
+        var requestUrl = '/api/crawl/relations';
         return this.http.get(requestUrl);
     };
     NerServiceService = __decorate([
@@ -66,7 +74,7 @@ var NerServiceService = /** @class */ (function () {
 /***/ "../../../../../src/app/pages/nutch-extension/crawl/crawl.component.html":
 /***/ (function(module, exports) {
 
-module.exports = "<div class=\"row\">\n  <div class=\"col-lg-6\">\n    <nb-card>\n      <nb-card-header>\n        Focused Crawling System\n      </nb-card-header>\n      <nb-card-body>\n        <form [formGroup]=\"crawlForm\">\n          <div class=\"row full-name-inputs\">\n            <div class=\"col-sm-4 input-group\">\n              <input type=\"text\" placeholder=\"Entity\" class=\"form-control\"\n                formControlName=\"entity\"/>\n            </div>\n            <div class=\"col-sm-4 input-group\">\n              <input type=\"text\" placeholder=\"Theme\" class=\"form-control\"\n                formControlName=\"theme\"/>\n            </div>\n            <div class=\"col-sm-4 input-group\">\n              <input type=\"text\" placeholder=\"(Features)\" class=\"form-control\"\n                formControlName=\"features\"/>\n            </div>\n          </div>\n          <div class=\"input-group input-group-rounded\">\n            <textarea rows=\"5\" placeholder=\"Seeds (e.g. www.baidu.com)\n              \" class=\"form-control\" formControlName=\"seeds\"></textarea>\n          </div>\n          <div class=\"input-group input-group-rounded\">\n            <textarea rows=\"5\" placeholder=\"Injection Seeds\" class=\"form-control\"\n                     formControlName=\"injection\" disabled></textarea>\n          </div>\n          <nb-checkbox (change)=\"injectUrls($event)\">[Allow URL Seeds Injection]</nb-checkbox>\n          <button type=\"submit\" style=\"float: right\" class=\"btn btn-primary\"\n            (click)=\"crawl()\">Submit</button>\n        </form>\n      </nb-card-body>\n    </nb-card>\n  </div>\n  <div class=\"col-lg-6\">\n    <nb-card>\n      <nb-card-header>\n        Grid System\n      </nb-card-header>\n      <nb-card-body>\n        <pre>\n          <div class=\"alert alert-success\" role=\"alert\">\n            {{notices}}\n          </div>\n        </pre>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n"
+module.exports = "<div class=\"row\">\n  <div class=\"col-lg-6\">\n    <nb-card>\n      <nb-card-header>\n        Focused Crawling System\n      </nb-card-header>\n      <nb-card-body>\n        <toaster-container [toasterconfig]=\"config\"></toaster-container>\n        <form [formGroup]=\"crawlForm\">\n          <div class=\"row full-name-inputs\">\n            <div class=\"col-sm-4 input-group\">\n              <input type=\"text\" placeholder=\"Entity\" class=\"form-control\"\n                formControlName=\"entity\" required/>\n            </div>\n            <div class=\"col-sm-4 input-group\">\n              <input type=\"text\" placeholder=\"Theme\" class=\"form-control\"\n                formControlName=\"theme\" required/>\n            </div>\n            <div class=\"col-sm-4 input-group\">\n              <input type=\"text\" placeholder=\"(Features)\" class=\"form-control\"\n                formControlName=\"features\"/>\n            </div>\n          </div>\n          <div class=\"input-group input-group-rounded\">\n            <textarea rows=\"5\" placeholder=\"Seeds (e.g. www.baidu.com)\n              \" class=\"form-control\" formControlName=\"seeds\" required></textarea>\n          </div>\n          <div class=\"input-group input-group-rounded\">\n            <textarea rows=\"5\" placeholder=\"Injection Seeds\" class=\"form-control\"\n                     formControlName=\"injection\" disabled></textarea>\n          </div>\n          <nb-checkbox (change)=\"injectUrls($event)\">[Allow URL Seeds Injection]</nb-checkbox>\n          <button type=\"submit\" style=\"float: right\" class=\"btn btn-primary\"\n            (click)=\"crawl()\">Submit</button>\n        </form>\n      </nb-card-body>\n    </nb-card>\n  </div>\n  <div class=\"col-lg-6\">\n    <nb-card>\n      <nb-card-header>\n        Correlation Analysis\n      </nb-card-header>\n      <nb-card-body>\n        <pre>\n        <div class=\"alert alert-success\" style=\"word-wrap: break-word;  word-break: normal; \" role=\"alert\">\n          <p>序号&nbsp;&nbsp;&nbsp;&nbsp;主题&nbsp;&nbsp;&nbsp;&nbsp;相关系数</p>\n          {{relations}}\n        </div>\n        </pre>\n      </nb-card-body>\n    </nb-card>\n  </div>\n  <div class=\"col-lg-12\">\n    <nb-card>\n      <nb-card-header>\n        Crawl Terminal\n      </nb-card-header>\n      <nb-card-body>\n        <pre>\n          <div class=\"alert alert-success\" style=\"word-wrap: break-word;  word-break: normal; \" role=\"alert\">\n            {{notices}}\n          </div>\n        </pre>\n      </nb-card-body>\n    </nb-card>\n  </div>\n</div>\n"
 
 /***/ }),
 
@@ -98,6 +106,7 @@ module.exports = module.exports.toString();
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ui_features_modals_modal_modal_component__ = __webpack_require__("../../../../../src/app/pages/ui-features/modals/modal/modal.component.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ng_bootstrap_ng_bootstrap__ = __webpack_require__("../../../../@ng-bootstrap/ng-bootstrap/index.js");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__core_data_ner_service_service__ = __webpack_require__("../../../../../src/app/@core/data/ner-service.service.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_angular2_toaster__ = __webpack_require__("../../../../angular2-toaster/angular2-toaster.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -112,29 +121,34 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
+
 var CrawlComponent = /** @class */ (function () {
-    function CrawlComponent(modalService, nerService) {
+    function CrawlComponent(modalService, nerService, toastService) {
         this.modalService = modalService;
         this.nerService = nerService;
-        this.isChecked = false; // 是否允许外部注入
+        this.toastService = toastService;
+        this.types = ['default', 'info', 'success', 'warning', 'error'];
     }
     CrawlComponent.prototype.ngOnInit = function () {
         // 初始化工作
         this.initComponent();
         // 初始化变量
         this.urls = [];
-        this.notices = "\n";
+        this.notices = '\n';
+        this.relations = '\n';
     };
     /*
       初始化表单组件
      */
     CrawlComponent.prototype.initComponent = function () {
         this.crawlForm = new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormGroup"]({
-            entity: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"](),
-            theme: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"](),
+            entity: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required,
+                __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].minLength(1)]),
+            theme: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required,
+                __WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].minLength(1)]),
             features: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"](),
-            seeds: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"](),
-            injection: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]()
+            seeds: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"]('', [__WEBPACK_IMPORTED_MODULE_1__angular_forms__["Validators"].required]),
+            injection: new __WEBPACK_IMPORTED_MODULE_1__angular_forms__["FormControl"](),
         });
     };
     /*
@@ -150,7 +164,7 @@ var CrawlComponent = /** @class */ (function () {
                 .subscribe(function (baseResult) {
                 _this.urls = baseResult.data;
                 _this.crawlForm.patchValue({
-                    injection: _this.prettyString(_this.urls)
+                    injection: _this.prettyString(_this.urls),
                 });
                 console.log(_this.urls);
                 if (!baseResult.status) {
@@ -160,7 +174,7 @@ var CrawlComponent = /** @class */ (function () {
         }
         else {
             this.crawlForm.patchValue({
-                injection: ""
+                injection: '',
             });
         }
     };
@@ -168,9 +182,9 @@ var CrawlComponent = /** @class */ (function () {
       格式转化，逗号变成换行
      */
     CrawlComponent.prototype.prettyString = function (strs) {
-        var pretty = "";
+        var pretty = '';
         for (var i = 0; i < strs.length; i++) {
-            pretty += ((i + 1) + ":" + strs[i] + "\r\n");
+            pretty += ((i + 1) + ':' + strs[i] + '\r\n');
         }
         return pretty;
     };
@@ -179,12 +193,18 @@ var CrawlComponent = /** @class */ (function () {
      */
     CrawlComponent.prototype.crawl = function () {
         var _this = this;
-        // 调试信息
+        // Logging Start ------------>
         console.log(this.crawlForm.value.entity);
         console.log(this.crawlForm.value.theme);
         console.log(this.crawlForm.value.features);
         console.log(this.crawlForm.value.seeds);
-        setInterval(function () {
+        // Logging End <----------------
+        var entity = this.crawlForm.value.entity, theme = this.crawlForm.value.theme, seeds = this.crawlForm.value.seeds;
+        if (entity === '' || theme === '' || seeds === '') {
+            this.showToast('fade', 'Error', 'Information is not complete.');
+            return;
+        }
+        this.infoCounter = setInterval(function () {
             _this.update();
         }, 1000);
     };
@@ -192,8 +212,25 @@ var CrawlComponent = /** @class */ (function () {
         var _this = this;
         this.nerService.getNotifications()
             .subscribe(function (base) {
+            if (base.data.indexOf('^C^Dquit') >= 0) {
+                window.clearInterval(_this.infoCounter);
+                _this.relaCounter = setInterval(function () {
+                    _this.fetchRelation();
+                }, 1000); // 开启抓取关系线程
+            }
             _this.notices += base.data;
-            console.log(_this.notices);
+            console.log(base.data);
+        });
+    };
+    CrawlComponent.prototype.fetchRelation = function () {
+        var _this = this;
+        this.nerService.getCorrelations()
+            .subscribe(function (base) {
+            if (base.data.indexOf('^C^Dquit') >= 0) {
+                window.clearInterval(_this.relaCounter);
+            }
+            _this.relations += base.data;
+            console.log(base.data);
         });
     };
     CrawlComponent.prototype.showModal = function () {
@@ -205,14 +242,38 @@ var CrawlComponent = /** @class */ (function () {
         activeModal.componentInstance.modalHeader = 'Fetching';
         activeModal.componentInstance.modalContent = "Please waiting for some time...";
     };
+    /*
+        展示Toast
+     */
+    CrawlComponent.prototype.showToast = function (type, title, body) {
+        this.config = new __WEBPACK_IMPORTED_MODULE_5_angular2_toaster__["b" /* ToasterConfig */]({
+            positionClass: 'toast-top-right',
+            timeout: 5000,
+            newestOnTop: true,
+            tapToDismiss: true,
+            preventDuplicates: false,
+            animation: 'fade',
+            limit: 10,
+        });
+        var toast = {
+            type: type,
+            title: title,
+            body: body,
+            timeout: 5000,
+            showCloseButton: true,
+            bodyOutputType: __WEBPACK_IMPORTED_MODULE_5_angular2_toaster__["a" /* BodyOutputType */].TrustedHtml,
+        };
+        this.toastService.popAsync(toast);
+    };
     CrawlComponent = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["Component"])({
             selector: 'app-crawl',
             template: __webpack_require__("../../../../../src/app/pages/nutch-extension/crawl/crawl.component.html"),
-            styles: [__webpack_require__("../../../../../src/app/pages/nutch-extension/crawl/crawl.component.scss")]
+            styles: [__webpack_require__("../../../../../src/app/pages/nutch-extension/crawl/crawl.component.scss")],
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_3__ng_bootstrap_ng_bootstrap__["b" /* NgbModal */],
-            __WEBPACK_IMPORTED_MODULE_4__core_data_ner_service_service__["a" /* NerServiceService */]])
+            __WEBPACK_IMPORTED_MODULE_4__core_data_ner_service_service__["a" /* NerServiceService */],
+            __WEBPACK_IMPORTED_MODULE_5_angular2_toaster__["d" /* ToasterService */]])
     ], CrawlComponent);
     return CrawlComponent;
 }());
@@ -515,12 +576,16 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__core_data_ner_service_service__ = __webpack_require__("../../../../../src/app/@core/data/ner-service.service.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_9__ui_features_ui_features_module__ = __webpack_require__("../../../../../src/app/pages/ui-features/ui-features.module.ts");
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_10__crawl_crawl_component__ = __webpack_require__("../../../../../src/app/pages/nutch-extension/crawl/crawl.component.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_11__components_components_module__ = __webpack_require__("../../../../../src/app/pages/components/components.module.ts");
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_12_angular2_toaster__ = __webpack_require__("../../../../angular2-toaster/angular2-toaster.js");
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+
+
 
 
 
@@ -539,6 +604,8 @@ var NutchExtensionModule = /** @class */ (function () {
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["NgModule"])({
             imports: [
                 __WEBPACK_IMPORTED_MODULE_7__theme_theme_module__["a" /* ThemeModule */],
+                __WEBPACK_IMPORTED_MODULE_12_angular2_toaster__["c" /* ToasterModule */],
+                __WEBPACK_IMPORTED_MODULE_11__components_components_module__["ComponentsModule"],
                 __WEBPACK_IMPORTED_MODULE_9__ui_features_ui_features_module__["UiFeaturesModule"],
                 __WEBPACK_IMPORTED_MODULE_3_angular_datatables__["b" /* DataTablesModule */],
                 __WEBPACK_IMPORTED_MODULE_2__angular_forms__["ReactiveFormsModule"],

@@ -13,7 +13,7 @@ export class NerServiceService {
       实体与实体之间的关系抽取
    */
   getRelationFromEntity(e1: string, e2: string, s: string): Observable<BaseResult<Relation[]>> {
-    let mockUrl: string = "/mock-data/relation.json"; //测试url
+    const mockUrl: string = '/mock-data/relation.json'; // 测试url
     return this.http.get<BaseResult<Relation[]>>(mockUrl);
   }
 
@@ -21,13 +21,14 @@ export class NerServiceService {
       获取外部Url
    */
   getUrlSeedsFromInjection(entity: string, theme: string, features: string): Observable<BaseResult<string[]>> {
-    let baseUrl: string = "/api/crawl/injectUrls";
-    let mockUrl: string = "/mock-data/urls-injection.json";
-    let requestUrl: string = "";
-    if (features == "" || features == null) {
-      requestUrl = baseUrl + "?entity=" + entity + "&theme=" + theme;
+    const baseUrl: string = '/api/crawl/injectUrls';
+    const mockUrl: string = '/mock-data/urls-injection.json';
+    let requestUrl: string = '';
+    if (features === '' || features === null) {
+      requestUrl = baseUrl + '?entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme);
     } else {
-      requestUrl = baseUrl + "?entity=" + entity + "&theme=" + theme + "&features=" + features;
+      requestUrl = baseUrl + '?entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme) +
+        '&features=' + encodeURI(features);
     }
 
     return this.http.get<BaseResult<string[]>>(requestUrl);
@@ -37,8 +38,16 @@ export class NerServiceService {
     获取实时消息更新
    */
   getNotifications(): Observable<BaseResult<string>> {
-    let requestUrl: string = "/api/crawl/notice";
-    let mockUrl: string = "/mock-data/notice.json";
+    const requestUrl: string = '/api/crawl/notice';
+    const mockUrl: string = '/mock-data/notice.json';
+    return this.http.get<BaseResult<string>>(requestUrl);
+  }
+
+  /*
+     获取相关性分析
+   */
+  getCorrelations(): Observable<BaseResult<string>> {
+    const requestUrl: string = '/api/crawl/relations';
     return this.http.get<BaseResult<string>>(requestUrl);
   }
 }
