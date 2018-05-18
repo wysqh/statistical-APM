@@ -35,5 +35,6 @@
         <mapper resource="mybatis-mapper/TaskPoolMapper.xml" />
         <mapper resource="mybatis-mapper/WhiteListMapper.xml" />
         <mapper resource="mybatis-mapper/UsersMapper.xml" />
+        <mapper resource="mybatis-mapper/CrawlDataMapper.xml" />
     </mappers>
 </configuration>

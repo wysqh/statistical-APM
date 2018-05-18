@@ -5,12 +5,16 @@ import { ThemeModule } from '../../@theme/theme.module';
 import { TablesRoutingModule, routedComponents } from './tables-routing.module';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { TasksComponent } from './tasks/tasks.component';
+import {ReactiveFormsModule} from '@angular/forms';
+import {DataTablesModule} from 'angular-datatables';
 
 @NgModule({
   imports: [
     ThemeModule,
     TablesRoutingModule,
     Ng2SmartTableModule,
+    DataTablesModule,
+    ReactiveFormsModule,
   ],
   declarations: [
     ...routedComponents,

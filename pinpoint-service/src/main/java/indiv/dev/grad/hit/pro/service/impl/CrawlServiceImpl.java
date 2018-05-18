@@ -4,11 +4,14 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 import indiv.dev.grad.hit.pro.bootstrap.ConsumerFactory;
 import indiv.dev.grad.hit.pro.constant.KafkaProperties;
+import indiv.dev.grad.hit.pro.mapper.CrawlDataMapper;
 import indiv.dev.grad.hit.pro.service.CrawlService;
 import indiv.dev.grad.hit.pro.utils.BlockBuffer;
+import indiv.dev.grad.hit.pro.utils.DbConnUtils;
 import indiv.dev.grad.hit.pro.utils.StringUtils;
 import indiv.dev.grad.hit.pro.utils.kafka.Consumer;
 import indiv.dev.grad.hit.pro.utils.logger.TKLogger;
+import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import java.io.IOException;
@@ -22,6 +25,22 @@ import java.util.List;
  */
 public class CrawlServiceImpl implements CrawlService {
     private static final int INJECT_URL_NUM = 10;
+
+    @Override
+    public void insertInfo(String user, String entity, String theme, String features, String urls) {
+        SqlSession session = DbConnUtils.getSession().openSession();
+        CrawlDataMapper crawlDataMapper = session.getMapper(CrawlDataMapper.class);
+        try {
+            String tsql = constructTsql(entity, theme, features, urls);
+            crawlDataMapper.insertTsqlInfo(user, entity, theme, features, urls, tsql);
+            session.commit();
+        } catch (Exception e) {
+            session.rollback();
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+    }
 
     @Override
     public String getNotifications() {
@@ -69,6 +88,21 @@ public class CrawlServiceImpl implements CrawlService {
         }
 
         return injectUrls;
+    }
+
+    private String constructTsql(String entity, String theme, String features, String urls) {
+        StringBuilder stringBuilder = new StringBuilder();
+        if (!StringUtils.isEmpty(features)) {
+            stringBuilder.append("COLLECT ").append(entity)
+                    .append(" FROM ").append("[").append(urls).append("] ")
+                    .append("ABOUT ").append(theme)
+                    .append(" WHERE ").append(features);
+        } else {
+            stringBuilder.append("COLLECT ").append(entity)
+                    .append(" FROM ").append("[").append(urls).append("] ")
+                    .append("ABOUT ").append(theme);
+        }
+        return stringBuilder.toString();
     }
 
     private HtmlPage webExtractionFast(List<String> keywords) throws Exception {

@@ -1,5 +1,7 @@
 package indiv.dev.grad.hit.pro.utils;
 
+import java.io.UnsupportedEncodingException;
+
 /**
  * @Author: Created By Gu Tiankai
  * @Date: 2018-02-18 3:47
@@ -32,5 +34,9 @@ public class StringUtils {
      */
     public static String reverse(final String str) {
        return new StringBuilder(str).reverse().toString();
+    }
+
+    public static String zhCompatible(String str) throws UnsupportedEncodingException {
+        return new String(str.getBytes("ISO-8859-1"), "UTF-8");
     }
 }

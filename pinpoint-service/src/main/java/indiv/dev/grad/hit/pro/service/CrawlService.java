@@ -10,4 +10,5 @@ public interface CrawlService {
     String getNotifications();
     String getRelations();
     List<String> getInjections(String entity, String theme, String features);
+    void insertInfo(String user, String entity, String theme, String features, String urls);
 }

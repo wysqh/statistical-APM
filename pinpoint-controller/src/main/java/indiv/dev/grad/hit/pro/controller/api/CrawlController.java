@@ -2,6 +2,7 @@ package indiv.dev.grad.hit.pro.controller.api;
 
 import indiv.dev.grad.hit.pro.service.CrawlService;
 import indiv.dev.grad.hit.pro.util.BaseObjectResult;
+import indiv.dev.grad.hit.pro.util.StringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -56,5 +57,30 @@ public class CrawlController {
         String relation = crawlService.getRelations();
         result.setContent(relation, "success");
         return result;
+    }
+
+    @RequestMapping(value = "/crawl/insertTsql", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<Boolean> insertTsql(@RequestParam(value = "users")String users,
+                                                @RequestParam(value = "entity")String  entity,
+                                                @RequestParam(value = "theme")String theme,
+                                                @RequestParam(value = "features", required = false)String features,
+                                                @RequestParam(value = "urls")String urls)  {
+        BaseObjectResult<Boolean> result = new BaseObjectResult<Boolean>();
+        try {
+            String _entity = StringUtils.zhCompatible(entity);
+            String _theme = StringUtils.zhCompatible(theme);
+            String _features = StringUtils.zhCompatible(features);
+            crawlService.insertInfo(users, _entity, _theme, _features, urls);
+            result.setContent(true, "success");
+        } catch (UnsupportedEncodingException e) {
+            result.setFailReason(false, "Charset Transfer Failed");
+            e.printStackTrace();
+        } catch (Exception e) {
+            result.setFailReason(false, "Unknown Error");
+            e.printStackTrace();
+        } finally {
+            return result;
+        }
     }
 }

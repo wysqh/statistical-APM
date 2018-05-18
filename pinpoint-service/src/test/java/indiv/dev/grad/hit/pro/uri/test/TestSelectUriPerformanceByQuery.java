@@ -25,7 +25,7 @@ public class TestSelectUriPerformanceByQuery {
         System.out.println("size:" + appUriEffectiveHourlyList.size());
         for (AppUriEffectiveHourly appUriEffectiveHourly: appUriEffectiveHourlyList) {
             System.out.println(appUriEffectiveHourly.getHour());
-//            System.out.println(appUriEffectiveHourly.getAmount() + ", " +
+//            System.out.println(app    UriEffectiveHourly.getAmount() + ", " +
 //            appUriEffectiveHourly.getAvgRsp() + "," +
 //            appUriEffectiveHourly.getUri());
         }
