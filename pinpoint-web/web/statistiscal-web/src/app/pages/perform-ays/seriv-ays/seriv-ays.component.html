@@ -1,8 +1,11 @@
 <ngx-seriv-ays-query (uriPerformanceLists)="revDataFromChild($event)"></ngx-seriv-ays-query>
+<nb-card>
+  <nb-card-header>Interface Analysis</nb-card-header>
+  <nb-card-body>
 <div class="row">
-  <h1>模块： {{uriPerformanceLists.appName}}</h1>
+  <h1> 模块： {{uriPerformanceLists.appName}}</h1>
   <h1>&nbsp;&nbsp;&nbsp;</h1>
-  <h1>接口： {{uriPerformanceLists.uri}}</h1>
+  <h1> 接口： {{uriPerformanceLists.uri}}</h1>
 </div>
 <table datatable [dtOptions]="dtOptions" [dtTrigger]="dtTrigger" class="row-border hover">
   <thead>
@@ -40,3 +43,5 @@
   </tr>
   </tbody>
 </table>
+  </nb-card-body>
+</nb-card>

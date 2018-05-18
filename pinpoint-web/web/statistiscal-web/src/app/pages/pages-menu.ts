@@ -70,7 +70,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Focused Crawling',
-        link: '/pages/nutch-extension/crawl'
+        link: '/pages/nutch-extension/crawl',
       },
       {
         title: 'Name Entity Recognition(NER)',
@@ -79,8 +79,22 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Face Recognition',
         link: '/pages/nutch-extension/face-rec',
-      }
-    ]
+      },
+    ],
+  },
+  {
+    title: 'Task List',
+    icon: 'nb-tables',
+    children: [
+      // {
+      //   title: 'Smart Table',
+      //   link: '/pages/tables/smart-table',
+      // },
+      {
+        title: 'History Tasks',
+        link: '/pages/tables/tasks',
+      },
+    ],
   },
   {
     title: 'Forms',
@@ -109,24 +123,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
-  {
-    title: 'Maps',
-    icon: 'nb-location',
-    children: [
-      {
-        title: 'Google Maps',
-        link: '/pages/maps/gmaps',
-      },
-      {
-        title: 'Leaflet Maps',
-        link: '/pages/maps/leaflet',
-      },
-      {
-        title: 'Bubble Maps',
-        link: '/pages/maps/bubble',
-      },
-    ],
-  },
+  // {
+  //   title: 'Maps',
+  //   icon: 'nb-location',
+  //   children: [
+  //     {
+  //       title: 'Google Maps',
+  //       link: '/pages/maps/gmaps',
+  //     },
+  //     {
+  //       title: 'Leaflet Maps',
+  //       link: '/pages/maps/leaflet',
+  //     },
+  //     {
+  //       title: 'Bubble Maps',
+  //       link: '/pages/maps/bubble',
+  //     },
+  //   ],
+  // },
   {
     title: 'Charts',
     icon: 'nb-bar-chart',
@@ -145,30 +159,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
     ],
   },
-  {
-    title: 'Editors',
-    icon: 'nb-title',
-    children: [
-      {
-        title: 'TinyMCE',
-        link: '/pages/editors/tinymce',
-      },
-      // {
-      //   title: 'CKEditor',
-      //   link: '/pages/editors/ckeditor',
-      // },
-    ],
-  },
-  {
-    title: 'Tables',
-    icon: 'nb-tables',
-    children: [
-      {
-        title: 'Smart Table',
-        link: '/pages/tables/smart-table',
-      },
-    ],
-  },
+  // {
+  //   title: 'Editors',
+  //   icon: 'nb-title',
+  //   children: [
+  //     {
+  //       title: 'TinyMCE',
+  //       link: '/pages/editors/tinymce',
+  //     },
+  //     // {
+  //     //   title: 'CKEditor',
+  //     //   link: '/pages/editors/ckeditor',
+  //     // },
+  //   ],
+  // },
   {
     title: 'Auth',
     icon: 'nb-locked',

@@ -30,15 +30,14 @@
     </nb-card-body>
   </nb-card>
   <nb-card size="small">
-    <nb-tabset>
-      <nb-tab tabTitle="Relation Tab">
+    <nb-card-header>Relation</nb-card-header>
+      <nb-card-body>
         <p>关系是：</p>
         <div *ngIf="isResponse">
            <div *ngFor="let rela of relation; let i = index">
              <p>No.{{i}}: {{rela.relation}}, Probability is {{rela.probability}} </p>
            </div>
         </div>
-      </nb-tab>
-    </nb-tabset>
+      </nb-card-body>
   </nb-card>
 </div>

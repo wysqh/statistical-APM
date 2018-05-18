@@ -1,23 +1,25 @@
 <link rel="stylesheet" href="https://unpkg.com/ngx-bootstrap/datepicker/bs-datepicker.css">
 
-
+<nb-card>
+  <nb-card-header>Service Query</nb-card-header>
+  <nb-card-body>
 <form [formGroup]="searchForm">
   <div class="row show-grid form-group">
     <div class=".col-6 .col-md-4">
-      <label>模块名称:
-        <input class="form-control" formControlName="appName"/>
+      <label>&nbsp;模块名称:
+        &nbsp;<input class="form-control" formControlName="appName"/>
       </label>
     </div>
     <label>&nbsp;&nbsp;&nbsp;</label>
     <div class=".col-6 .col-md-4">
-      <label>接 口:
-        <input class="form-control" formControlName="appUri"/>
+      <label>&nbsp; 接 口:
+        &nbsp;<input class="form-control" formControlName="appUri"/>
       </label>
     </div>
     <label>&nbsp;&nbsp;&nbsp;</label>
     <div class=".col-6 .col-md-4">
-      <label>日 期:
-        <input class="form-control"
+      <label> &nbsp;日 期:
+        &nbsp; <input class="form-control"
                [minDate]="minDate"
                [maxDate]="maxDate"
                #dp="bsDatepicker"
@@ -33,4 +35,5 @@
     </div>
   </div>
 </form>
-
+  </nb-card-body>
+</nb-card>

@@ -15,14 +15,18 @@ import { MaxResponseControlComponent } from './max-response-control/max-response
 import { AvgResponseControlComponent } from './avg-response-control/avg-response-control.component';
 import { SerivAysQueryComponent } from './seriv-ays-query/seriv-ays-query.component';
 import {DomSanitizer} from '@angular/platform-browser';
+import {UiFeaturesModule} from '../ui-features/ui-features.module';
+import {ThemeModule} from '../../@theme/theme.module';
 
 @NgModule({
   imports: [
     DataTablesModule,
     ReactiveFormsModule,
+    ThemeModule,
     CommonModule,
     PerformAysRoutingModule,
     BsDatepickerModule.forRoot(),
+    UiFeaturesModule,
   ],
   declarations: [
     ...routedComponents,

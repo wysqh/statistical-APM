@@ -18,7 +18,7 @@ const routes: Routes = [{
   }, {
     path: 'crawl',
     component: CrawlComponent,
-  }]
+  }],
 }]
 
 @NgModule({
@@ -27,7 +27,7 @@ const routes: Routes = [{
   ],
   exports: [
     RouterModule,
-  ]
+  ],
 })
 
 export class NutchExtensionRoutingModule {

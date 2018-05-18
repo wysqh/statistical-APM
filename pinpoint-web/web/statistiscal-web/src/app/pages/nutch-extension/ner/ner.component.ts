@@ -9,7 +9,7 @@ import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'app-ner',
   templateUrl: './ner.component.html',
-  styleUrls: ['./ner.component.scss']
+  styleUrls: ['./ner.component.scss'],
 })
 export class NerComponent implements OnInit {
   urls: any = {
