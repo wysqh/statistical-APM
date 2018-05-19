@@ -7,10 +7,12 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
 import { TasksComponent } from './tasks/tasks.component';
 import {ReactiveFormsModule} from '@angular/forms';
 import {DataTablesModule} from 'angular-datatables';
+import {CommonModule} from '@angular/common';
 
 @NgModule({
   imports: [
     ThemeModule,
+    CommonModule,
     TablesRoutingModule,
     Ng2SmartTableModule,
     DataTablesModule,

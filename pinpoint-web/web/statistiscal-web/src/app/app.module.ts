@@ -19,6 +19,7 @@ import {HttpErrorResponse, HttpResponse} from '@angular/common/http';
 import {getDeepFromObject} from '@nebular/auth/helpers';
 import {AuthGuard} from './auth-guard.service';
 import {DataTablesModule} from 'angular-datatables';
+import {UserInfoService} from './@core/data/user-info.service';
 
 @NgModule({
   declarations: [AppComponent],
@@ -112,6 +113,7 @@ import {DataTablesModule} from 'angular-datatables';
     { provide: APP_BASE_HREF, useValue: '/' },
     { provide: NB_AUTH_TOKEN_WRAPPER_TOKEN, useClass: NbAuthJWTToken },
     AuthGuard,
+    UserInfoService,
   ],
 })
 export class AppModule {

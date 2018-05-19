@@ -5,8 +5,12 @@ import com.gargoylesoftware.htmlunit.html.*;
 import indiv.dev.grad.hit.pro.bootstrap.ConsumerFactory;
 import indiv.dev.grad.hit.pro.constant.KafkaProperties;
 import indiv.dev.grad.hit.pro.mapper.CrawlDataMapper;
+import indiv.dev.grad.hit.pro.mapper.UsersMapper;
+import indiv.dev.grad.hit.pro.model.TaskHistory;
+import indiv.dev.grad.hit.pro.pojo.CrawlData;
 import indiv.dev.grad.hit.pro.service.CrawlService;
 import indiv.dev.grad.hit.pro.utils.BlockBuffer;
+import indiv.dev.grad.hit.pro.utils.DateFormatUtils;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
 import indiv.dev.grad.hit.pro.utils.StringUtils;
 import indiv.dev.grad.hit.pro.utils.kafka.Consumer;
@@ -15,9 +19,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashSet;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author: Created By Gu Tiankai
@@ -25,6 +27,38 @@ import java.util.List;
  */
 public class CrawlServiceImpl implements CrawlService {
     private static final int INJECT_URL_NUM = 10;
+
+    @Override
+    public List<TaskHistory> getHistoryTask() {
+        SqlSession session = DbConnUtils.getSession().openSession();
+        UsersMapper usersMapper = session.getMapper(UsersMapper.class);
+        CrawlDataMapper crawlDataMapper = session.getMapper(CrawlDataMapper.class);
+        Map<String, String> name2level = new HashMap<String, String>();
+        Map<String, String> name2Email = new HashMap<String, String>();
+        List<String> fullNameList = crawlDataMapper.selectDistinctFullName();
+        for (String fullName: fullNameList) {
+            String userLevel = usersMapper.selectUsersByFullName(fullName).getUsersLevel().toString();
+            String email = usersMapper.selectUsersByFullName(fullName).getEmailAddress();
+            name2level.put(fullName, userLevel);
+            name2Email.put(fullName, email);
+        }
+
+        List<CrawlData> crawlDataList = crawlDataMapper.findAll();
+        List<TaskHistory> taskHistories = new ArrayList<TaskHistory>();
+        for (CrawlData crawlData: crawlDataList) {
+            taskHistories.add(new TaskHistory(crawlData.getId().toString(),
+                    crawlData.getUsers(),
+                    name2Email.get(crawlData.getUsers()),
+                    name2level.get(crawlData.getUsers()),
+                    crawlData.getTsql(),
+                    DateFormatUtils.format(
+                            DateFormatUtils.unix2current(crawlData.getUpdateTime()),
+                            DateFormatUtils.fullFormat2),
+                    crawlData.getIsFinished()));
+        }
+        session.close();
+        return taskHistories;
+    }
 
     @Override
     public void insertInfo(String user, String entity, String theme, String features, String urls) {

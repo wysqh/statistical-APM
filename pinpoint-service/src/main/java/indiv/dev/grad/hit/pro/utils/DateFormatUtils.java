@@ -26,6 +26,7 @@ public class DateFormatUtils {
 
     public static String fullFormat2 = "yyyy/MM/dd HH:mm";
 
+    public static String fullFormat3 = "yyyy-MM-dd HH:mm";
     /**
      * 格式化日期，如果不指定格式，按照默认的yyyy-MM-dd格式化，没有时分秒
      *
@@ -155,5 +156,22 @@ public class DateFormatUtils {
 
         return DateFormatUtils.format(new Date(second * 1000L),
                 format);
+    }
+
+    /*
+        @Func： 增加/减小当前时间/ 小时
+     */
+    public static Date changeByHour(Date date, int hour) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.HOUR_OF_DAY, hour);
+        return calendar.getTime();
+    }
+
+    /*
+        @Func: 将服务器Unix时间转换为当前时间(16小时)
+     */
+    public static Date unix2current(Date date) {
+        return changeByHour(date, 16);
     }
 }

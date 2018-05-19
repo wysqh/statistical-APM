@@ -339,4 +339,9 @@
        users
        WHERE email_address = #{email, jdbcType = VARCHAR }
    </select>
+  <select id="selectUsersByFullName" parameterType="java.lang.String" resultMap="BaseResultMap">
+      SELECT * FROM
+      users
+      WHERE full_name = #{full_name, jdbcType = VARCHAR}
+  </select>
 </mapper>

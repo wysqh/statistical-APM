@@ -4,6 +4,7 @@ import {ModalComponent} from '../../ui-features/modals/modal/modal.component';
 import {NgbModal} from '@ng-bootstrap/ng-bootstrap';
 import {NerServiceService} from '../../../@core/data/ner-service.service';
 import {BodyOutputType, Toast, ToasterConfig, ToasterService} from 'angular2-toaster';
+import {UserInfoService} from '../../../@core/data/user-info.service';
 
 @Component({
   selector: 'app-crawl',
@@ -14,7 +15,8 @@ export class CrawlComponent implements OnInit {
 
   constructor(private modalService: NgbModal,
               private nerService: NerServiceService,
-              private toastService: ToasterService) { }
+              private toastService: ToasterService,
+              private userInfoService: UserInfoService) { }
 
 
   crawlForm: FormGroup; // 爬虫信息流表单
@@ -107,10 +109,31 @@ export class CrawlComponent implements OnInit {
       this.showToast('fade', 'Error', 'Information is not complete.');
       return;
     }
-
+    const user = this.userInfoService.getUserInfo()
+    if (user === '' || user === undefined) { // 检测登入信息
+      this.showToast('fade', 'Error', 'We cannot get your login information');
+      return;
+    }
+    // 订阅Kafka消息流
     this.infoCounter = setInterval(() => {
       this.update()
     }, 1000);
+
+    // 提交记录
+    this.addRecord(this.crawlForm.value.entity, this.crawlForm.value.theme,
+      this.crawlForm.value.features, this.crawlForm.value.seeds)
+  }
+
+  /*
+      提交爬虫提交记录
+   */
+  addRecord(entity: string, theme: string, features: string, urls: string) {
+    this.nerService.inserCrawlRecord(this.userInfoService.getUserInfo(), entity, theme, features, urls)
+      .subscribe(base => {
+        if (!base.status) {
+          this.showToast('fade', 'Warnning', base.message);
+        }
+      });
   }
 
   update(): void {

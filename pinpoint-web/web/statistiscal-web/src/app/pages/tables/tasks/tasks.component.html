@@ -11,18 +11,17 @@
         <th>Execute TSQL</th>
         <th>Fetch Time</th>
         <th>Finished</th>
-        <th></th>
       </tr>
       </thead>
       <tbody>
-      <tr>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
-        <td></td>
+      <tr *ngFor="let task of tasks">
+        <td> {{task.crawlSeq}} </td>
+        <td> {{task.users}} </td>
+        <td> {{task.email}} </td>
+        <td> {{task.userLevel}} </td>
+        <td> {{task.tsql}} </td>
+        <td> {{task.fetchTime}} </td>
+        <td> {{task.finished}}</td>
       </tr>
       </tbody>
     </table>

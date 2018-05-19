@@ -294,4 +294,10 @@
         #{urls, jdbcType=VARCHAR}, #{tsql, jdbcType=VARCHAR}
         )
   </insert>
+   <select id="findAll" resultMap="BaseResultMap">
+      SELECT * FROM crawl_data
+   </select>
+    <select id="selectDistinctFullName" resultType="java.lang.String">
+        SELECT DISTINCT users FROM crawl_data;
+    </select>
 </mapper>

@@ -5,6 +5,7 @@ import { UserService } from '../../../@core/data/users.service';
 import { AnalyticsService } from '../../../@core/utils/analytics.service';
 import { NbAuthJWTToken, NbAuthService } from '../../../../framework/auth';
 import {equal} from 'assert';
+import {UserInfoService} from '../../../@core/data/user-info.service';
 
 @Component({
   selector: 'ngx-header',
@@ -29,7 +30,8 @@ export class HeaderComponent implements OnInit {
               private menuService: NbMenuService,
               private userService: UserService,
               private analyticsService: AnalyticsService,
-              private authService: NbAuthService) {
+              private authService: NbAuthService,
+              private userInfo: UserInfoService) {
   }
 
   ngOnInit() {
@@ -42,6 +44,7 @@ export class HeaderComponent implements OnInit {
         console.log(token);
         if (token.getValue()) {
           console.log(token.getPayload()) // 测试数据
+          this.userInfo.setUserInfo(token.getPayload().name); // 用户信息DI注入
           this.user = token.getPayload();
         }
       })

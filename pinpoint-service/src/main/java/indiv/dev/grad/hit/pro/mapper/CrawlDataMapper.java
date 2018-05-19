@@ -30,4 +30,8 @@ public interface CrawlDataMapper {
 
     void insertTsqlInfo(@Param("users") String users, @Param("entity")String entity, @Param("theme") String theme,
                         @Param("features") String features, @Param("urls") String urls, @Param("tsql") String tsql);
+
+    List<CrawlData> findAll();
+
+    List<String> selectDistinctFullName();
 }

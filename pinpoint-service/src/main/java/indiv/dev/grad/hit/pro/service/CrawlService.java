@@ -1,5 +1,7 @@
 package indiv.dev.grad.hit.pro.service;
 
+import indiv.dev.grad.hit.pro.model.TaskHistory;
+
 import java.util.List;
 
 /**
@@ -11,4 +13,5 @@ public interface CrawlService {
     String getRelations();
     List<String> getInjections(String entity, String theme, String features);
     void insertInfo(String user, String entity, String theme, String features, String urls);
+    List<TaskHistory> getHistoryTask();
 }

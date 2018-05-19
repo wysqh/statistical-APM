@@ -1,5 +1,6 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
+import indiv.dev.grad.hit.pro.model.TaskHistory;
 import indiv.dev.grad.hit.pro.service.CrawlService;
 import indiv.dev.grad.hit.pro.util.BaseObjectResult;
 import indiv.dev.grad.hit.pro.util.StringUtils;
@@ -82,5 +83,21 @@ public class CrawlController {
         } finally {
             return result;
         }
+    }
+
+    @RequestMapping(value = "/crawl/getTaskHistories", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<List<TaskHistory>> getTaskHistories() {
+        BaseObjectResult<List<TaskHistory>> result = new BaseObjectResult<List<TaskHistory>>();
+        List<TaskHistory> taskHistories = crawlService.getHistoryTask();
+        if (taskHistories == null) {
+            result.setFailReason(null, "Return Value of Null");
+        } else if (taskHistories.isEmpty()){
+            result.setContent(taskHistories, "Empty List");
+        } else {
+            result.setContent(taskHistories, "success");
+        }
+
+        return result;
     }
 }

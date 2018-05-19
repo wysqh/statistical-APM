@@ -41,4 +41,6 @@ public interface UsersMapper {
     Integer updateTokenByEmail(@Param("token")String token, @Param("email")String email);
 
     Users selectUsersByEmail(@Param("email")String email);
+
+    Users selectUsersByFullName(@Param("full_name") String fullName);
 }
