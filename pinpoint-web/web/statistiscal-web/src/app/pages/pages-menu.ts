@@ -101,11 +101,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-bar-chart',
     children: [
       {
-        title: 'Echarts',
+        title: 'Global Statistics',
         link: '/pages/charts/echarts',
       },
       {
-        title: 'Charts.js',
+        title: 'Application Statistics',
         link: '/pages/charts/chartjs',
       },
       // {

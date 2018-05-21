@@ -169,6 +169,16 @@ public class DateFormatUtils {
     }
 
     /*
+       @Func： 增加/减小天
+    */
+    public static Date changeByDay(Date date, int day) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.setTime(date);
+        calendar.add(Calendar.DAY_OF_YEAR, day);
+        return calendar.getTime();
+    }
+
+    /*
         @Func: 将服务器Unix时间转换为当前时间(16小时)
      */
     public static Date unix2current(Date date) {

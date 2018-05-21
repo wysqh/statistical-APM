@@ -1,6 +1,7 @@
 import { AfterViewInit, Component, OnDestroy } from '@angular/core';
 import { NbThemeService } from '@nebular/theme';
 import {ChartService} from '../../../@core/data/chart.service';
+import {VN} from '../../../@core/data/KN';
 
 @Component({
   selector: 'ngx-echarts-bar-advanced',
@@ -16,7 +17,8 @@ export class EchartsBarAdvancedComponent implements AfterViewInit, OnDestroy {
 
   ngAfterViewInit() {
     this.charService.getAdvancedBarDataSource()
-      .subscribe(data => {
+      .subscribe(base => {
+        const data: VN<number, string>[] = base.data;
         // console.log(data);
         this.options = {
           title: {
@@ -28,7 +30,7 @@ export class EchartsBarAdvancedComponent implements AfterViewInit, OnDestroy {
           xAxis: {
             data: data.map(function (item) {
               // console.log(item[0])
-              return item[0];
+              return item.value;
             }),
           },
           yAxis: {
@@ -86,7 +88,7 @@ export class EchartsBarAdvancedComponent implements AfterViewInit, OnDestroy {
             name: 'Annual Requests Statistics',
             type: 'line',
             data: data.map(function (item) {
-              return item[1];
+              return item.name;
             }),
             markLine: {
               silent: true,

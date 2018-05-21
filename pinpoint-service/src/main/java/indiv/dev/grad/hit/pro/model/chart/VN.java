@@ -34,4 +34,12 @@ public class VN<V, N> implements Serializable {
     public void setName(N name) {
         this.name = name;
     }
+
+    @Override
+    public String toString() {
+        return "VN{" +
+                "value=" + value +
+                ", name=" + name +
+                '}';
+    }
 }

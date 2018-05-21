@@ -22,17 +22,17 @@ export class ChartjsLineComponent implements OnDestroy {
         labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
         datasets: [{
           data: [65, 59, 80, 81, 56, 55, 40],
-          label: 'Series A',
+          label: 'inject',
           backgroundColor: NbColorHelper.hexToRgbA(colors.primary, 0.3),
           borderColor: colors.primary,
         }, {
           data: [28, 48, 40, 19, 86, 27, 90],
-          label: 'Series B',
+          label: 'fetch',
           backgroundColor: NbColorHelper.hexToRgbA(colors.danger, 0.3),
           borderColor: colors.danger,
         }, {
           data: [18, 48, 77, 9, 100, 27, 40],
-          label: 'Series C',
+          label: 'parse',
           backgroundColor: NbColorHelper.hexToRgbA(colors.info, 0.3),
           borderColor: colors.info,
         },

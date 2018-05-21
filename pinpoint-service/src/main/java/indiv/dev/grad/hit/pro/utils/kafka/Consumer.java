@@ -42,6 +42,7 @@ public class Consumer extends Thread {
 
     public void run() {
         consumer.subscribe(Collections.singletonList(this.topic));
+        SqlSession session = DbConnUtils.getSession().openSession();
         while (true) {
             ConsumerRecords<Integer, String> records = consumer.poll(10000);
             for (ConsumerRecord<Integer, String> record: records) {
@@ -54,7 +55,6 @@ public class Consumer extends Thread {
             }
             // 实时数据库更新
             if (KafkaProperties.TOPIC3.equals(this.topic)) {
-                SqlSession session = DbConnUtils.getSession().openSession();
                 while (block != null && !block.isEmpty()) {
                     String sequeneces = block.fetch();
                     System.out.println(sequeneces);
@@ -69,9 +69,8 @@ public class Consumer extends Thread {
                         session.commit();
                     } catch (Exception e) {
                         session.rollback();
-                        e.printStackTrace();
-                    } finally {
                         session.close();
+                        e.printStackTrace();
                     }
                 }
             }

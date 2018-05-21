@@ -2,6 +2,7 @@ package indiv.dev.grad.hit.pro.controller.api;
 
 import indiv.dev.grad.hit.pro.model.chart.BarEChartsModel;
 import indiv.dev.grad.hit.pro.model.chart.PieEChartsModel;
+import indiv.dev.grad.hit.pro.model.chart.VN;
 import indiv.dev.grad.hit.pro.service.ChartService;
 import indiv.dev.grad.hit.pro.util.BaseObjectResult;
 import indiv.dev.grad.hit.pro.util.DateFormatUtils;
@@ -14,6 +15,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
+
+import java.util.List;
 
 /**
  * @Author: Created By Gu Tiankai
@@ -55,5 +58,23 @@ public class ChartsController {
         BarEChartsModel barEChartsModel = chartService.getEBarDataInHafHour();
         baseObjectResult.setContent(barEChartsModel, "success");
         return baseObjectResult;
+    }
+
+    @RequestMapping(value = "/echart/getGlobalData", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<List<VN<String, Integer>>> getGlobalData() {
+        BaseObjectResult<List<VN<String, Integer>>> result = new BaseObjectResult<List<VN<String, Integer>>>();
+        List<VN<String, Integer>> lists = chartService.getGlobalData();
+        result.setContent(lists, "success");
+        return result;
+    }
+
+    @RequestMapping(value = "/echart/getCpuOc", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<List<VN<Double, Double>>> getCpuOc() {
+        BaseObjectResult<List<VN<Double, Double>>> result = new BaseObjectResult<List<VN<Double, Double>>>();
+        List<VN<Double, Double>> lists = chartService.getCpuOccupation();
+        result.setContent(lists, "success");
+        return result;
     }
 }

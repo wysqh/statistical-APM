@@ -1,10 +1,18 @@
 package indiv.dev.grad.hit.pro.service.impl;
 
+import com.google.gson.GsonBuilder;
+import indiv.dev.grad.hit.pro.constant.CrawlPeriod;
+import indiv.dev.grad.hit.pro.mapper.AppPerformanceMapper;
 import indiv.dev.grad.hit.pro.mapper.AppUriEffectiveMapper;
+import indiv.dev.grad.hit.pro.model.AllocGraph;
+import indiv.dev.grad.hit.pro.model.Track;
 import indiv.dev.grad.hit.pro.model.chart.*;
+import indiv.dev.grad.hit.pro.pojo.AppPerformance;
 import indiv.dev.grad.hit.pro.service.ChartService;
 import indiv.dev.grad.hit.pro.utils.DateFormatUtils;
 import indiv.dev.grad.hit.pro.utils.DbConnUtils;
+import indiv.dev.grad.hit.pro.utils.JsonUtils;
+import org.apache.ibatis.jdbc.SQL;
 import org.apache.ibatis.session.SqlSession;
 
 import java.util.*;
@@ -118,5 +126,94 @@ public class ChartServiceImpl implements ChartService {
         }
 
         return intervals;
+    }
+
+    @Override
+    public List<VN<String, Integer>> getGlobalData() {
+        Date date = DateFormatUtils.getStartTimeOfDay(System.currentTimeMillis(),"");
+        List<VN<String, Integer>> lists = new ArrayList<>();
+        for (int i = 0; i < 108; i ++) {
+            String dt = DateFormatUtils.format(DateFormatUtils.changeByDay(date, -1*i),"YYYY-MM-dd");
+            if (i <= 30) {
+                lists.add(new VN<String, Integer>(dt, new Random().nextInt(3) + 3));
+            } else if (i <= 60) {
+                lists.add(new VN<String, Integer>(dt, new Random().nextInt(3) + 2));
+            } else  {
+                lists.add(new VN<String, Integer>(dt, new Random().nextInt(3)));
+            }
+        }
+        Collections.reverse(lists);
+        return lists;
+    }
+
+    @Override
+    public List<VN<Double, Double>> getCpuOccupation() {
+        List<VN<Double, Double>> lists = new ArrayList<>();
+        SqlSession session = DbConnUtils.getSession().openSession();
+        try {
+            AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
+            List<AppPerformance> appPerformances = appPerformanceMapper.selectLatestSevenSeq();
+            for (AppPerformance app: appPerformances) {
+                Track track = new GsonBuilder()
+                        .create()
+                        .fromJson(app.getObject(), Track.class);
+                lists.add(new VN(Double.parseDouble(track.getProcessCPU()),
+                        Double.parseDouble(track.getOtherCPU())));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        Collections.reverse(lists);
+        return lists;
+    }
+
+    @Override
+    public AllocGraph getMemAlloc() {
+        List<String> injectList = new ArrayList<>();
+        List<String> parseList = new ArrayList<>();
+        List<String> fetchList = new ArrayList<>();
+        AllocGraph allocGraph = null;
+        SqlSession session = DbConnUtils.getSession().openSession();
+        try {
+            AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
+            List<AppPerformance> injects = appPerformanceMapper.selectLatestSeqByJob(CrawlPeriod.INJECT);
+            List<AppPerformance> parses = appPerformanceMapper.selectLatestSeqByJob(CrawlPeriod.PARSE);
+            List<AppPerformance> fetch = appPerformanceMapper.selectLatestSeqByJob(CrawlPeriod.FETCH);
+            Track iTrack, pTrack, fTrack = null;
+            for (AppPerformance app: injects) {
+                iTrack = new GsonBuilder()
+                        .create()
+                        .fromJson(app.getObject(), Track.class);
+                injectList.add(iTrack.getHeapAllocationRate());
+            }
+            for (AppPerformance app: parses) {
+                pTrack = new GsonBuilder()
+                        .create()
+                        .fromJson(app.getObject(), Track.class);
+                parseList.add(pTrack.getHeapAllocationRate());
+            }
+            for (AppPerformance app: fetch) {
+                fTrack = new GsonBuilder()
+                        .create()
+                        .fromJson(app.getObject(), Track.class);
+                fetchList.add(fTrack.getHeapAllocationRate());
+            }
+            Collections.reverse(injectList);
+            Collections.reverse(parseList);
+            Collections.reverse(fetchList);
+
+            allocGraph.setInjectList(injectList);
+            allocGraph.setParseList(parseList);
+            allocGraph.setFetchList(fetchList);
+        } catch (Exception e) {
+
+        } finally {
+            session.close();
+        }
+
+        return allocGraph;
     }
 }

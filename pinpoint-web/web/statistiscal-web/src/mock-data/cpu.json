@@ -1,0 +1,26 @@
+{
+  "message": "success",
+  "status": true,
+  "data": [{
+    "value": 7.986,
+    "name": 6.45
+  }, {
+    "value": 9.695,
+    "name": 6.617
+  }, {
+    "value": 8.592,
+    "name": 6.444
+  }, {
+    "value": 6.641,
+    "name": 4.226
+  }, {
+    "value": 10.434,
+    "name": 8.593
+  }, {
+    "value": 10.751,
+    "name": 9.215
+  }, {
+    "value": 12.886,
+    "name": -17.181
+  }]
+}

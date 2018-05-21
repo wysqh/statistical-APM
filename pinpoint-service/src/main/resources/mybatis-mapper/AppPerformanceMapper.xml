@@ -215,4 +215,10 @@
     <select id="selectSeqByJob" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
         SELECT object FROM app_performance WHERE job = #{jobName, jdbcType=VARCHAR} ORDER BY update_time ASC
     </select>
+    <select id="selectLatestSevenSeq" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
+        SELECT object FROM app_performance ORDER BY update_time DESC LIMIT 7
+    </select>
+    <select id="selectLatestSeqByJob" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
+        SELECT object FROM app_performance WHERE job = #{jobName, jdbcType=VARCHAR} ORDER BY update_time DESC LIMIT 7
+    </select>
 </mapper>

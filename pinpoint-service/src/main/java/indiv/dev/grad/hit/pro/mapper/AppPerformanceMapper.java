@@ -31,4 +31,8 @@ public interface AppPerformanceMapper {
     void insertByJobAndObj(@Param("job") String job, @Param("object") String obj);
 
     List<AppPerformance> selectSeqByJob(@Param("jobName") String jobName);
+
+    List<AppPerformance> selectLatestSevenSeq();
+
+    List<AppPerformance> selectLatestSeqByJob(@Param("jobName") String jobName);
 }
