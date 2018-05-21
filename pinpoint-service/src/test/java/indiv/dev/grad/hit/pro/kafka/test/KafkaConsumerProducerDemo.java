@@ -9,6 +9,7 @@ public class KafkaConsumerProducerDemo {
         boolean isAsync = args.length == 0 || !args[0].trim().equalsIgnoreCase("sync");
 //        Producer producerThread = new Producer(KafkaProperties.TOPIC3, isAsync);
 //        producerThread.start();
+        System.out.println(KafkaProperties.contains(KafkaProperties.TOPIC3));
         Consumer consumerThread = new Consumer(KafkaProperties.TOPIC3);
         consumerThread.start();
     }

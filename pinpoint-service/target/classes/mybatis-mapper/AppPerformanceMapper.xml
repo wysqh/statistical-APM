@@ -210,6 +210,9 @@
   </update>
   <insert id="insertByJobAndObj" parameterType="java.lang.String">
      INSERT INTO app_performance (job, object)
-    values (#{job,jdbcType=VARCHAR}, #{object,jdbcType=VARCHAR})
+    VALUES (#{job,jdbcType=VARCHAR}, #{object,jdbcType=VARCHAR})
   </insert>
+    <select id="selectSeqByJob" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
+        SELECT object FROM app_performance WHERE job = #{jobName, jdbcType=VARCHAR} ORDER BY update_time ASC
+    </select>
 </mapper>

@@ -8,6 +8,7 @@ import indiv.dev.grad.hit.pro.mapper.AppPerformanceMapper;
 import indiv.dev.grad.hit.pro.mapper.CrawlDataMapper;
 import indiv.dev.grad.hit.pro.mapper.UsersMapper;
 import indiv.dev.grad.hit.pro.model.TaskHistory;
+import indiv.dev.grad.hit.pro.pojo.AppPerformance;
 import indiv.dev.grad.hit.pro.pojo.CrawlData;
 import indiv.dev.grad.hit.pro.service.CrawlService;
 import indiv.dev.grad.hit.pro.utils.BlockBuffer;
@@ -30,6 +31,22 @@ import java.util.concurrent.BlockingQueue;
  */
 public class CrawlServiceImpl implements CrawlService {
     private static final int INJECT_URL_NUM = 10;
+
+    @Override
+    public List<AppPerformance> getSequenceByJobName(String job) {
+        SqlSession session = DbConnUtils.getSession().openSession();
+        List<AppPerformance> appPerformanceList = null;
+        try {
+            AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
+            appPerformanceList = appPerformanceMapper.selectSeqByJob(job);
+        } catch (Exception e) {
+            e.printStackTrace();
+        } finally {
+            session.close();
+        }
+
+        return appPerformanceList;
+    }
 
     @Override
     public List<TaskHistory> getHistoryTask() {
@@ -98,6 +115,9 @@ public class CrawlServiceImpl implements CrawlService {
         SqlSession session = DbConnUtils.getSession().openSession();
         while (block != null && !block.isEmpty()) {
             String sequeneces = block.fetch();
+            if (sequeneces.length() <= 6) {
+                continue;
+            }
             String job = sequeneces.substring(0, 6);
             String obj = sequeneces.substring(6);
             AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);

@@ -1,6 +1,7 @@
 package indiv.dev.grad.hit.pro.service;
 
 import indiv.dev.grad.hit.pro.model.TaskHistory;
+import indiv.dev.grad.hit.pro.pojo.AppPerformance;
 
 import java.util.List;
 
@@ -15,4 +16,5 @@ public interface CrawlService {
     void insertInfo(String user, String entity, String theme, String features, String urls);
     List<TaskHistory> getHistoryTask();
     void updatePerformance();
+    List<AppPerformance> getSequenceByJobName(String job);
 }

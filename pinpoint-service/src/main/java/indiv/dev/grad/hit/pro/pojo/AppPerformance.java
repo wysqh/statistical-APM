@@ -52,4 +52,15 @@ public class AppPerformance {
     public void setExtra(String extra) {
         this.extra = extra == null ? null : extra.trim();
     }
+
+    @Override
+    public String toString() {
+        return "AppPerformance{" +
+                "id=" + id +
+                ", job='" + job + '\'' +
+                ", object='" + object + '\'' +
+                ", updateTime=" + updateTime +
+                ", extra='" + extra + '\'' +
+                '}';
+    }
 }

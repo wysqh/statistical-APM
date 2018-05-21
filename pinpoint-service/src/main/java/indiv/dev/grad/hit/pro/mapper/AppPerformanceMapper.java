@@ -29,4 +29,6 @@ public interface AppPerformanceMapper {
     int updateByPrimaryKey(AppPerformance record);
 
     void insertByJobAndObj(@Param("job") String job, @Param("object") String obj);
+
+    List<AppPerformance> selectSeqByJob(@Param("jobName") String jobName);
 }

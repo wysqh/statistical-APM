@@ -1,7 +1,12 @@
 package indiv.dev.grad.hit.pro.utils.kafka;
 
+import indiv.dev.grad.hit.pro.bootstrap.ConsumerFactory;
 import indiv.dev.grad.hit.pro.constant.KafkaProperties;
+import indiv.dev.grad.hit.pro.mapper.AppPerformanceMapper;
+import indiv.dev.grad.hit.pro.service.impl.CrawlServiceImpl;
 import indiv.dev.grad.hit.pro.utils.BlockBuffer;
+import indiv.dev.grad.hit.pro.utils.DbConnUtils;
+import org.apache.ibatis.session.SqlSession;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.consumer.ConsumerRecord;
 import org.apache.kafka.clients.consumer.ConsumerRecords;
@@ -15,9 +20,9 @@ import java.util.Properties;
  * @Date: 2018-05-11 14:49
  */
 public class Consumer extends Thread {
-    private final KafkaConsumer<String, String> consumer;
+    private final KafkaConsumer<Integer, String> consumer;
     private final String topic;
-    private final BlockBuffer block;
+    private final BlockBuffer<String> block;
 
     public Consumer(String topic) {
         Properties props = new Properties();
@@ -30,7 +35,7 @@ public class Consumer extends Thread {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerDeserializer");
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
 
-        consumer = new KafkaConsumer<String, String>(props);
+        consumer = new KafkaConsumer<Integer, String>(props);
         this.topic = topic;
         block = new BlockBuffer<>();
     }
@@ -38,14 +43,37 @@ public class Consumer extends Thread {
     public void run() {
         consumer.subscribe(Collections.singletonList(this.topic));
         while (true) {
-            ConsumerRecords<String, String> records = consumer.poll(10000);
-            for (ConsumerRecord<String, String> record: records) {
+            ConsumerRecords<Integer, String> records = consumer.poll(10000);
+            for (ConsumerRecord<Integer, String> record: records) {
                 if (KafkaProperties.EOF.equals(record.value())) {
                     continue;
                 }
 
                 block.add(record.value());
                 System.out.println("Recevied message: (" + record.key() + ", " + record.value() + ") at offset " + record.offset());
+            }
+            // 实时数据库更新
+            if (KafkaProperties.TOPIC3.equals(this.topic)) {
+                SqlSession session = DbConnUtils.getSession().openSession();
+                while (block != null && !block.isEmpty()) {
+                    String sequeneces = block.fetch();
+                    System.out.println(sequeneces);
+                    if (sequeneces.length() <= 6) {
+                        continue;
+                    }
+                    String job = sequeneces.substring(0, 6);
+                    String obj = sequeneces.substring(6);
+                    AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
+                    appPerformanceMapper.insertByJobAndObj(job, obj);
+                    try {
+                        session.commit();
+                    } catch (Exception e) {
+                        session.rollback();
+                        e.printStackTrace();
+                    } finally {
+                        session.close();
+                    }
+                }
             }
         }
     }
