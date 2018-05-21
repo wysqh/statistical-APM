@@ -22,7 +22,8 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
         labels: ['January', 'February', 'March', 'April', 'May', 'June'],
         datasets: [{
           label: 'dataset - big points',
-          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(),
+            this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.primary,
           backgroundColor: colors.primary,
           fill: false,
@@ -31,7 +32,8 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
           pointHoverRadius: 10,
         }, {
           label: 'dataset - individual point sizes',
-          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(),
+            this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.dangerLight,
           backgroundColor: colors.dangerLight,
           fill: false,
@@ -40,7 +42,8 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
           pointHoverRadius: 10,
         }, {
           label: 'dataset - large pointHoverRadius',
-          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(),
+            this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.info,
           backgroundColor: colors.info,
           fill: false,
@@ -48,7 +51,8 @@ export class ChartjsMultipleXaxisComponent implements OnDestroy {
           pointHoverRadius: 10,
         }, {
           label: 'dataset - large pointHitRadius',
-          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
+          data: [this.random(), this.random(), this.random(), this.random(), this.random(), this.random(),
+            this.random(), this.random(), this.random(), this.random(), this.random(), this.random()],
           borderColor: colors.success,
           backgroundColor: colors.success,
           fill: false,

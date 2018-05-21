@@ -15,7 +15,7 @@ import java.util.Properties;
  * @Date: 2018-05-11 14:49
  */
 public class Consumer extends Thread {
-    private final KafkaConsumer<Integer, String> consumer;
+    private final KafkaConsumer<String, String> consumer;
     private final String topic;
     private final BlockBuffer block;
 
@@ -30,7 +30,7 @@ public class Consumer extends Thread {
         props.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.IntegerDeserializer");
         props.put(ConsumerConfig.VALUE_DESERIALIZER_CLASS_CONFIG, "org.apache.kafka.common.serialization.StringDeserializer");
 
-        consumer = new KafkaConsumer<Integer, String>(props);
+        consumer = new KafkaConsumer<String, String>(props);
         this.topic = topic;
         block = new BlockBuffer<>();
     }
@@ -38,8 +38,8 @@ public class Consumer extends Thread {
     public void run() {
         consumer.subscribe(Collections.singletonList(this.topic));
         while (true) {
-            ConsumerRecords<Integer, String> records = consumer.poll(10000);
-            for (ConsumerRecord<Integer, String> record: records) {
+            ConsumerRecords<String, String> records = consumer.poll(10000);
+            for (ConsumerRecord<String, String> record: records) {
                 if (KafkaProperties.EOF.equals(record.value())) {
                     continue;
                 }

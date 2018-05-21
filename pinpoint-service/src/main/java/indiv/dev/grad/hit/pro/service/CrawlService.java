@@ -14,4 +14,5 @@ public interface CrawlService {
     List<String> getInjections(String entity, String theme, String features);
     void insertInfo(String user, String entity, String theme, String features, String urls);
     List<TaskHistory> getHistoryTask();
+    void updatePerformance();
 }

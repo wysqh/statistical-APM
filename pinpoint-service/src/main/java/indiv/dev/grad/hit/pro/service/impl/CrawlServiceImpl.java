@@ -4,6 +4,7 @@ import com.gargoylesoftware.htmlunit.WebClient;
 import com.gargoylesoftware.htmlunit.html.*;
 import indiv.dev.grad.hit.pro.bootstrap.ConsumerFactory;
 import indiv.dev.grad.hit.pro.constant.KafkaProperties;
+import indiv.dev.grad.hit.pro.mapper.AppPerformanceMapper;
 import indiv.dev.grad.hit.pro.mapper.CrawlDataMapper;
 import indiv.dev.grad.hit.pro.mapper.UsersMapper;
 import indiv.dev.grad.hit.pro.model.TaskHistory;
@@ -15,11 +16,13 @@ import indiv.dev.grad.hit.pro.utils.DbConnUtils;
 import indiv.dev.grad.hit.pro.utils.StringUtils;
 import indiv.dev.grad.hit.pro.utils.kafka.Consumer;
 import indiv.dev.grad.hit.pro.utils.logger.TKLogger;
+import org.apache.commons.collections.buffer.BlockingBuffer;
 import org.apache.ibatis.session.SqlSession;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import java.io.IOException;
 import java.util.*;
+import java.util.concurrent.BlockingQueue;
 
 /**
  * @Author: Created By Gu Tiankai
@@ -86,6 +89,31 @@ public class CrawlServiceImpl implements CrawlService {
         }
 
         return stringBuilder.toString();
+    }
+
+    @Override
+    public void updatePerformance() {
+        Consumer consumer = ConsumerFactory.getConsumer(KafkaProperties.TOPIC3);
+        BlockBuffer<String> block = consumer.getBlock();
+        SqlSession session = DbConnUtils.getSession().openSession();
+        while (block != null && !block.isEmpty()) {
+            String sequeneces = block.fetch();
+            String job = sequeneces.substring(0, 6);
+            String obj = sequeneces.substring(6);
+            AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
+            appPerformanceMapper.insertByJobAndObj(job, obj);
+            try {
+                session.commit();
+            } catch (Exception e) {
+                session.rollback();
+                e.printStackTrace();
+            } finally {
+                session.close();
+            }
+
+        }
+
+        return;
     }
 
     @Override

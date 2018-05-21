@@ -67,5 +67,6 @@
         <table schema="" tableName="app_administrator"></table>
         <table schema="" tableName="app_uri_issue"></table>
         <table schema="" tableName="crawl_data"></table>
+        <table schema="" tableName="app_performance"></table>
     </context>
 </generatorConfiguration>
