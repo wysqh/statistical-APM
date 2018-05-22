@@ -27,6 +27,7 @@ import { EchartsBarAnimationComponent } from './echarts/echarts-bar-animation.co
 import { EchartsRadarComponent } from './echarts/echarts-radar.component';
 import {ChartService} from '../../@core/data/chart.service';
 import {EchartsBarAdvancedComponent} from './echarts/echarts-bar-advanced.component';
+import { MixedchartsComponent } from './mixedcharts/mixedcharts.component';
 
 const components = [
   ChartjsBarComponent,
@@ -53,7 +54,7 @@ const components = [
 
 @NgModule({
   imports: [ThemeModule, ChartsRoutingModule, NgxEchartsModule, NgxChartsModule, ChartModule],
-  declarations: [...routedComponents, ...components],
+  declarations: [...routedComponents, ...components, MixedchartsComponent],
   providers: [
     ChartService,
   ],

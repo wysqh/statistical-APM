@@ -221,4 +221,16 @@
     <select id="selectLatestSeqByJob" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
         SELECT object FROM app_performance WHERE job = #{jobName, jdbcType=VARCHAR} ORDER BY update_time DESC LIMIT 7
     </select>
+  <select id="selectMostLatestByJob" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
+    SELECT object FROM app_performance WHERE job = #{jobName, jdbcType=VARCHAR} ORDER BY update_time DESC LIMIT 1
+  </select>
+  <select id="selectLatestInTenByJob" parameterType="java.lang.String" resultType="indiv.dev.grad.hit.pro.pojo.AppPerformance">
+    SELECT object FROM app_performance WHERE job = #{jobName, jdbcType=VARCHAR} ORDER BY update_time DESC LIMIT 10
+  </select>
+  <select id="selectRequestByLong" parameterType="java.lang.String" resultType="java.lang.Integer">
+    SELECT COUNT(*) AS counts
+    FROM app_performance
+    WHERE update_time &gt;= #{start}
+    AND update_time &lt;= #{end}
+  </select>
 </mapper>

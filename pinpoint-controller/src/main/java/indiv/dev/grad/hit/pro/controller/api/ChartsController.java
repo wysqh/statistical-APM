@@ -1,5 +1,8 @@
 package indiv.dev.grad.hit.pro.controller.api;
 
+import indiv.dev.grad.hit.pro.model.AllocGraph;
+import indiv.dev.grad.hit.pro.model.CpuGraph;
+import indiv.dev.grad.hit.pro.model.SingleTask;
 import indiv.dev.grad.hit.pro.model.chart.BarEChartsModel;
 import indiv.dev.grad.hit.pro.model.chart.PieEChartsModel;
 import indiv.dev.grad.hit.pro.model.chart.VN;
@@ -35,14 +38,13 @@ public class ChartsController {
      */
     @RequestMapping(value = "/echart/pie", method = RequestMethod.GET)
     @ResponseBody
-    public BaseObjectResult<PieEChartsModel> getPieEChartsGraphDataByAttr(@RequestParam("start")String start,
-                                                         @RequestParam("end")String end) {
+    public BaseObjectResult<PieEChartsModel> getPieEChartsGraphDataByAttr(@RequestParam(value = "start", required = false)String start,
+                                                         @RequestParam(value = "end", required = false)String end) {
         loggger.info("PieRequestParam: " + start + ", " + end);
         BaseObjectResult<PieEChartsModel> baseObjectResult = new BaseObjectResult<PieEChartsModel>();
         if (StringUtils.isEmpty(start) || StringUtils.isEmpty(end)) {
-            baseObjectResult.setFailReason(null, "Provided Date of either start or " +
-                    "end is empty");
-            return baseObjectResult;
+            start = "1970-01-01 00:00";
+            end = DateFormatUtils.getCurrentTime();
         }
         String format =  "yyyy-MM-dd HH:mm";
         PieEChartsModel model = chartService.getEPieDataByCondition(DateFormatUtils.string2date(format, start),
@@ -74,6 +76,42 @@ public class ChartsController {
     public BaseObjectResult<List<VN<Double, Double>>> getCpuOc() {
         BaseObjectResult<List<VN<Double, Double>>> result = new BaseObjectResult<List<VN<Double, Double>>>();
         List<VN<Double, Double>> lists = chartService.getCpuOccupation();
+        result.setContent(lists, "success");
+        return result;
+    }
+
+    @RequestMapping(value = "/echart/getMemAlloc", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<AllocGraph> getMemAlloc() {
+        BaseObjectResult<AllocGraph> result = new BaseObjectResult<AllocGraph>();
+        AllocGraph graph = chartService.getMemAlloc();
+        result.setContent(graph, "succuess");
+        return result;
+    }
+
+    @RequestMapping(value = "/echart/getDisCpuOcc", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<CpuGraph> getDisCpuOcc() {
+        BaseObjectResult<CpuGraph> result = new BaseObjectResult<CpuGraph>();
+        CpuGraph graph = chartService.getCpuOcc();
+        result.setContent(graph, "success");
+        return result;
+    }
+
+    @RequestMapping(value = "/echart/getSingleJobDistribution", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<SingleTask> getSingleJobDistribution() {
+        BaseObjectResult<SingleTask> result = new BaseObjectResult<SingleTask>();
+        SingleTask singleTask = chartService.getDisTaskDis();
+        result.setContent(singleTask, "success");
+        return result;
+    }
+
+    @RequestMapping(value = "/echart/getSafePointPara", method = RequestMethod.GET)
+    @ResponseBody
+    public BaseObjectResult<List<VN<String, String>>> getSafePointPara() {
+        BaseObjectResult<List<VN<String, String>>> result = new BaseObjectResult<List<VN<String, String>>>();
+        List<VN<String, String>> lists = chartService.getSafePointPara();
         result.setContent(lists, "success");
         return result;
     }

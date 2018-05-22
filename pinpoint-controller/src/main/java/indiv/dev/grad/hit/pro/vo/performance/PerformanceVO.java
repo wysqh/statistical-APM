@@ -132,7 +132,8 @@ public class PerformanceVO {
         }
 
         List<MetaTrace> slows = baseData.getSlows();
-        for (int i = 0; i< slows.size(); ++i) {
+        int size = slows.size() >= 10 ? 10 : slows.size();
+        for (int i = 0; i< size; ++i) {
             kvs.add(new VN<String, String>(URL + slows.get(i).getTraceId() + "/" + slows.get(i).getCollectorAcceptTime(),
                     "" + i + "、"  + slows.get(i).getElapsed()));
         }
@@ -146,7 +147,8 @@ public class PerformanceVO {
         }
 
         List<MetaTrace> exceptions = baseData.getExceptions();
-        for (int i = 0; i< exceptions.size(); ++i) {
+        int size = exceptions.size() >= 10 ? 10 : exceptions.size();
+        for (int i = 0; i< size; ++i) {
             kvs.add(new VN<String, String>(URL + exceptions.get(i).getTraceId() + "/" + exceptions.get(i).getCollectorAcceptTime(),
                     "" + i + "、"  + exceptions.get(i).getElapsed()));
         }

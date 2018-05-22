@@ -1,0 +1,28 @@
+<div class="row">
+  <div class="col-lg-9">
+    <nb-card>
+      <nb-card-header>Single Task Thread Occupation (%)</nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-line></ngx-echarts-line>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-3">
+    <nb-card>
+      <nb-card-header>Detailed Threads</nb-card-header>
+      <nb-card-body>
+        <div *ngFor="let thread of threads; let i = index">
+          <p>{{i + 1}}:&nbsp;{{thread}}</p>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+  <div class="col-lg-12">
+    <nb-card>
+      <nb-card-header>Safe Point Rate(events/s) / Safe Point Pause(ms) </nb-card-header>
+      <nb-card-body>
+        <ngx-echarts-multiple-xaxis></ngx-echarts-multiple-xaxis>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>

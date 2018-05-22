@@ -12,41 +12,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
-    title: 'UI Features',
-    icon: 'nb-keypad',
-    link: '/pages/ui-features',
-    children: [
-      {
-        title: 'Buttons',
-        link: '/pages/ui-features/buttons',
-      },
-      {
-        title: 'Grid',
-        link: '/pages/ui-features/grid',
-      },
-      {
-        title: 'Icons',
-        link: '/pages/ui-features/icons',
-      },
-      {
-        title: 'Modals',
-        link: '/pages/ui-features/modals',
-      },
-      {
-        title: 'Typography',
-        link: '/pages/ui-features/typography',
-      },
-      {
-        title: 'Animated Searches',
-        link: '/pages/ui-features/search-fields',
-      },
-      {
-        title: 'Tabs',
-        link: '/pages/ui-features/tabs',
-      },
-    ],
-  },
-  {
     title: 'Performance Analysis',
     icon: 'nb-paper-plane',
     children: [
@@ -108,10 +73,49 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Application Statistics',
         link: '/pages/charts/chartjs',
       },
+      {
+        title: 'Distributed Job Statistics',
+        link: '/pages/charts/mixedcharts',
+      },
       // {
       //   title: 'D3',
       //   link: '/pages/charts/d3',
       // },
+    ],
+  },
+  {
+    title: 'UI Features',
+    icon: 'nb-keypad',
+    link: '/pages/ui-features',
+    children: [
+      {
+        title: 'Buttons',
+        link: '/pages/ui-features/buttons',
+      },
+      {
+        title: 'Grid',
+        link: '/pages/ui-features/grid',
+      },
+      {
+        title: 'Icons',
+        link: '/pages/ui-features/icons',
+      },
+      {
+        title: 'Modals',
+        link: '/pages/ui-features/modals',
+      },
+      {
+        title: 'Typography',
+        link: '/pages/ui-features/typography',
+      },
+      {
+        title: 'Animated Searches',
+        link: '/pages/ui-features/search-fields',
+      },
+      {
+        title: 'Tabs',
+        link: '/pages/ui-features/tabs',
+      },
     ],
   },
   {

@@ -64,6 +64,16 @@ public class DateFormatUtils {
         return date;
     }
 
+    public static String getCurrentTime(String format) {
+        if (StringUtils.isEmpty(format)) {
+            format = indiv.dev.grad.hit.pro.utils.DateFormatUtils.format;
+        }
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat(format);
+        String date = simpleDateFormat.format(new Date());
+
+        return date;
+    }
+
     /*
           以今日为基础, +1 表示明天
                         -1 表示昨天

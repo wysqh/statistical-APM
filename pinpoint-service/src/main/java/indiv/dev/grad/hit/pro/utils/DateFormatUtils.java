@@ -125,6 +125,28 @@ public class DateFormatUtils {
     }
 
     /*
+        @Func: 获取超过当前时间的5分钟时间点,以整点计(xx:x0 和 xx:x5)
+     */
+    public static String getIn5Min() {
+        final Long secondsIn5Min = 5 * 60L;   //  5分钟为300秒
+        Long sec = new Date().getTime() / 1000L;
+
+        String format = "HH:mm";
+        return DateFormatUtils.format(new Date((sec - sec % secondsIn5Min + secondsIn5Min )* 1000L),
+                format);
+    }
+
+    /*
+        @Func: 获取超过当前时间的5分钟时间点(Long),以整点计(xx:x0 和 xx:x5)
+     */
+    public static Long getIn5MinByLong() {
+        final Long secondsIn5Min = 5 * 60L;   //  5分钟为300秒
+        Long sec = new Date().getTime() / 1000L;
+
+        return sec - sec % secondsIn5Min + secondsIn5Min;
+    }
+
+    /*
         @Func: 获取未超过当前时间的5分钟时间点,以整点计(xx:x0 和 xx:x5)
      */
     public static String getNearestIn5Min() {
@@ -183,5 +205,12 @@ public class DateFormatUtils {
      */
     public static Date unix2current(Date date) {
         return changeByHour(date, 16);
+    }
+
+    /*
+            @Func: 将当前时间转换为服务器Unix时间(16小时)
+         */
+    public static Date current2unix(Date date) {
+        return changeByHour(date, -15);
     }
 }

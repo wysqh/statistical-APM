@@ -9,7 +9,7 @@ import java.util.List;
  */
 public class BarEChartsModel implements Serializable {
     List<String> keys;
-    List<Integer> values;
+    List<String> values;
 
     public List<String> getKeys() {
         return keys;
@@ -19,11 +19,19 @@ public class BarEChartsModel implements Serializable {
         this.keys = keys;
     }
 
-    public List<Integer> getValues() {
+    public List<String> getValues() {
         return values;
     }
 
-    public void setValues(List<Integer> values) {
+    public void setValues(List<String> values) {
         this.values = values;
+    }
+
+    @Override
+    public String toString() {
+        return "BarEChartsModel{" +
+                "keys=" + keys +
+                ", values=" + values +
+                '}';
     }
 }

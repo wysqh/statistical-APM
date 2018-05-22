@@ -61,8 +61,8 @@ public class Consumer extends Thread {
                     if (sequeneces.length() <= 6) {
                         continue;
                     }
-                    String job = sequeneces.substring(0, 6);
-                    String obj = sequeneces.substring(6);
+                    String job = sequeneces.substring(0, 5);
+                    String obj = sequeneces.substring(5);
                     AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
                     appPerformanceMapper.insertByJobAndObj(job, obj);
                     try {

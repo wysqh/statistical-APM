@@ -1,0 +1,11 @@
+{
+  "message": "success",
+  "status": true,
+  "data": {
+    "injectList": ["7.67", "0.92", "0.31", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001"],
+    "generateList": ["8.90", "1.23", "0.61", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001"],
+    "fetchList": ["11.04", "0.30", "0.60", "0.30", "0.30", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001"],
+    "parseList": ["15.05", "0.61", "0.92", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001", "0.001"],
+    "labels": ["main", "RMI TCP Connection(1)-192.168.174.1", "Thread-0", "Reference Handler", "Finalizer", "Signal Dispatcher", "Attach Listener", "Thread-1", "Thread-2", "kafka-producer-network-thread | producer-1", "kafka-producer-network-thread | producer-2", "RMI TCP Accept-0", "RMI RenewClean-[192.168.174.1:60124]", "GC Daemon", "RMI Scheduler(0)", "JMX server connection timeout 24", "JMX client heartbeat 2"]
+  }
+}
