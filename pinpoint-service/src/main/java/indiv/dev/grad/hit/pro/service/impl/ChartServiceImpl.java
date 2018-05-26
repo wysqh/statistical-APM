@@ -73,13 +73,14 @@ public class ChartServiceImpl implements ChartService {
         Integer section = 7;
         List<String> requests = new ArrayList<String>();
         Long nearest = DateFormatUtils.current2unix(new Date(DateFormatUtils.getNearestIn5MinByLong()*1000)).getTime() / 1000;
+//        Long nearest = new Date(DateFormatUtils.getNearestIn5MinByLong()*1000).getTime() / 1000;
         List<String> period = getNperiod(section);
         List<String> intervals = periodCombine(period);
 
         try {
             AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
             for (int i = 0; i < section - 1; ++i) {
-                double request = appPerformanceMapper.selectRequestByLong(
+                double request = (double)appPerformanceMapper.selectRequestByLong(
                         DateFormatUtils.format(new Date(1000 * nearest), DateFormatUtils.fullFormat),
                         DateFormatUtils.format(new Date((nearest + DateFormatUtils.secondsIn5) * 1000), DateFormatUtils.fullFormat)) / 4;
                 requests.add(request == 0 ? "0.1" : Double.toString(request));
@@ -156,7 +157,7 @@ public class ChartServiceImpl implements ChartService {
         SqlSession session = DbConnUtils.getSession().openSession();
         try {
             AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
-            List<AppPerformance> appPerformances = appPerformanceMapper.selectLatestSevenSeq();
+            List<AppPerformance> appPerformances = appPerformanceMapper.selectLatestSeqByJob(CrawlPeriod.FETCH);
             for (AppPerformance app: appPerformances) {
                 Track track = new GsonBuilder()
                         .create()

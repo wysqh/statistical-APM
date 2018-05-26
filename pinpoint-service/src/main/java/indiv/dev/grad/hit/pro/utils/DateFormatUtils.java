@@ -20,7 +20,7 @@ public class DateFormatUtils {
     public static String format = "yyyy-MM-dd";
 
     // 日期时间默认格式
-    public static String fullFormat = "yyyy-MM-dd hh:mm:ss";
+    public static String fullFormat = "yyyy-MM-dd HH:mm:ss";
 
     public static String tagDateFormat = "yyyy年MM月dd日";
 
@@ -201,10 +201,10 @@ public class DateFormatUtils {
     }
 
     /*
-        @Func: 将服务器Unix时间转换为当前时间(16小时)
+        @Func: 将服务器Unix时间转换为当前时间(15小时)
      */
     public static Date unix2current(Date date) {
-        return changeByHour(date, 16);
+        return changeByHour(date, 15);
     }
 
     /*

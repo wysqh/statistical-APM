@@ -42,7 +42,7 @@ export class ChartService {
   }
 
   /*
-      获取FetchJob任务流CPU占用比
+      获取任务流CPU占用比
    */
   getCPUoccupation(): Observable<BaseResult<VN<number, number>[]>> {
     const mockUrl: string = '/mock-data/cpu.json';

@@ -21,6 +21,7 @@ public class TestDate {
         Integer section = 7;
         List<Integer> requests = new ArrayList<Integer>();
         Long nearest = DateFormatUtils.current2unix(new Date(DateFormatUtils.getNearestIn5MinByLong()*1000)).getTime() / 1000;
+        System.out.println(nearest);
         List<String> period = getNperiod(section);
         List<String> intervals = periodCombine(period);
 
@@ -28,6 +29,11 @@ public class TestDate {
             AppPerformanceMapper appPerformanceMapper = session.getMapper(AppPerformanceMapper.class);
             for (int i = 0; i < section - 1; ++i) {
                 requests.add(appPerformanceMapper.selectRequestByLong(
+                        DateFormatUtils.format(new Date(1000 * nearest), DateFormatUtils.fullFormat),
+                        DateFormatUtils.format(new Date((nearest + DateFormatUtils.secondsIn5) * 1000), DateFormatUtils.fullFormat)) / 4);
+                System.out.println(DateFormatUtils.format(new Date(1000 * nearest), DateFormatUtils.fullFormat));
+                System.out.println(DateFormatUtils.format(new Date((nearest + DateFormatUtils.secondsIn5) * 1000), DateFormatUtils.fullFormat));
+                System.out.println((double)appPerformanceMapper.selectRequestByLong(
                         DateFormatUtils.format(new Date(1000 * nearest), DateFormatUtils.fullFormat),
                         DateFormatUtils.format(new Date((nearest + DateFormatUtils.secondsIn5) * 1000), DateFormatUtils.fullFormat)) / 4);
                 nearest -= DateFormatUtils.secondsIn5;

@@ -71,7 +71,7 @@ export class NerServiceService {
         requestUrl = baseUrl + '?users=' + user + '&entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme) +
         '&urls=' + urls;
       } else {
-        requestUrl = baseUrl + '?users=' + user + 'entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme) +
+        requestUrl = baseUrl + '?users=' + user + '&entity=' + encodeURI(entity) + '&theme=' + encodeURI(theme) +
           '&features=' + encodeURI(features) + '&urls=' + urls;
       }
       console.log(requestUrl);
